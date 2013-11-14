@@ -44,6 +44,7 @@ for pdf_url in links:
     writefile.write(convert_pdf(tempwritefile))
     tempwritefile.close()
     writefile.close()
+    pdfurl.close()
     i += 1
 
 print "Finished"
