@@ -1,0 +1,151 @@
+EC413:  Computer Organization – Fall, 2013 
+
+ 
+
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+
+ 
+ 
+
+Lake “David” Bu (GTF), Ian Bablewski (UTF), Drew Kelley (UTF) 
+Email:  bulake@bu.edu, icb@bu.edu, atkelley@bu.edu 
+Lab Hours:  M5‐6,7‐8, T6‐8, W6‐8, Th4‐8, Fr2‐7, Su6‐8 
+
+Office Hours:  M 3‐5, W 3‐5, and by appointment 
+Office Phone:  x3‐9850 
+Email:  herbordt@bu.edu 
+Course web page:  http://blackboard.bu.edu 
+
+Basics 
+Instructor:    Prof. Martin Herbordt, PHO 333 
+ 
+ 
+ 
+ 
+ 
+TFs: 
+ 
+ 
+ 
+Mission Statements:  “From gates to programs’’  and “How computers work” 
+ 
+Course Description:    (From programs to gates and back again)   
+EC413 is an introduction to the fundamentals and design of computer systems.  The starting points are your basic 
+knowledge of logic design and high‐level language programming.  The ending points are the ability to create a 
+working computer from logic gates, program that computer in assembly language, and evaluate understand and 
+be able to evaluate design options.  Topics include computer instruction sets, assembly language programming, 
+logic design of arithmetic operations, design of sequential logic with registers and buses, CPU design (data path, 
+control, integrating datapath and control, pipelining), performance evaluation, memory devices, memory systems 
+(including  caching  and  virtual  memory),  and  I/O.    In  parallel  there  is  a  lab  where  the  focus  is  on  in‐depth 
+understanding of selected comp org topics, HDL design using Verilog, and system design methods. 
+ 
+Course Style:  EC413 has both theoretical and practical aspects (lots of both!). 
+ 
+Prerequisites:  EC311, Introduction to Logic Design 
+  Familiarity with Xilinx ISE CAD tools 
+ 
+ 
+  High‐Level Language Programming, preferably in EC327 
+ 
+Texts: Patterson & Hennessy, Computer Organization & Design:  The Hardware/Software Interface,  
+                4th Edition revised printing, Morgan Kaufmann, 2012 
+          Readings from:  Mano & Kime, Logic and Computer Design Fundamentals, Prentice Hall, 2001 (to be posted) 
+          Various articles and tutorials (to be posted) 
+ 
+Course Mechanics 
+  Grading:   Exams:   50% 
+
+Quizzes:  4%‐5% 
+Homework Assignments:  8%  
+Labs:  20%‐25% 
+Final Project:  15%‐20% 
+
+  Exams:  There will be two mid‐term and a final exam.  Exams may be open textbook and open notes (TBD), 
+
+but no calculators are allowed. 
+
+  Quizzes:  There will be 4‐5 very short and relatively easy quizzes.  Their purpose is to ensure that everybody 
+keeps up.  Quizzes are closed book and notes.  Quizzes begin and end punctually (i.e., beginning precisely at 
+2:00  ending  at  2:05  and  2:10  for  5  and  10  minute  quizzes,  respectively).    There  may  also  be  2‐3  or  more 
+“attendance” quizzes. 
+
+  Attendance:  speaking of attendance ….  Attendance is essential – much of what we cover in this course will 
+
+be found nowhere else.   
+
+  Readings:  … are also essential.  There is no way we can (or would want to) go through all of the details of any 
+topic during class.  Good news ‐ the textbook is a standard so you can expect your future colleagues to have 
+learned Computer Organization in similar way. 
+
+  Homework:  There will be around 8 homework assignments.  Unless stated otherwise, homework will be due 
+at  the  beginning  of  class  on  the  date  specified.    You  are  encouraged  to  turn  in  electronic  copies,  but 
+hardcopies are OK too.  Late homework will be penalized 20% for being up to one day late (starting from the 
+beginning  of  the  class  when  it  is  due)  and  will  not  be  accepted  thereafter.    You  are  encouraged  to  work 
+together to learn the material and to discuss approaches to solving homework problems.  However, you must 
+come up with and write up the solutions on your own.  See academic honesty policy. 
+
+  Labs/Final Project:  There will be 7 labs and a major project.  Much more about these later!  But the rules for 
+
+collaboration are the same as for homework:  these are all to be done individually. 
+
+  Lab Practicalities:  The labs are open‐ended in the sense that there is not a specified time during which the 
+labs must be done.  Rather, labs are assigned about a week before they are due and it is your responsibility to 
+get them done on time, generally late Friday afternoons.  The TFs will be in the lab about 15 hours during 
+weeks when labs are due.  Please note that the amount of time any particular lab takes can vary by an order 
+of magnitude (from a few hours to a few days).  The greatest determinants of duration are how well prepared 
+you are before you start coding and how well you understand the tools.  Much more about this later. 
+
+  Discussion Section:  The discussion section is run by the TFs and serves two purposes:  a pre‐lab and/or an 
+extension of the lectures.  Attendance is not required, but is strongly recommended (see previous comment 
+on “duration”). 
+
+ 
+ 
+
+ 
+
+Administration 
+  Office Hours:   Our office hours are listed above and the web site.  The best time to catch me otherwise is 
+right after class; the worst time is right before class!  A few times during the semester I will be travelling and 
+unable to keep office hours ‐‐ I generally announce this in advance. 
+
+  Email:    You  are  required  to  periodically  check  your  email  since  that  is  the  way  many  assignments  will  be 
+distributed.    Questions  via  email  are  always  good.    If  the  question/answer  has  general  interest,  I  will 
+broadcast it to the class (leaving the questioner anonymous); if the solution is very involved, we may need to 
+go over it in person.  Also, please check your email for unexpected occurrences like errors in assignments, 
+cancellations, etc. 
+
+  Course Web Site:  The BlackBoard site is given above.  I will use it to post class notes, lab and homework 
+
+ 
+
+assignments, homework solution sketches, and other course information. 
+Incompletes:  Incompletes will be granted only in accordance with university policy, which (broadly) requires 
+a major personal (non‐academic) crisis near the end of the semester. 
+
+  Course Notes:  Class notes will be handed out at the beginning of class (sometimes for several classes).  Notes 
+are often intentionally incomplete (for obvious reasons).  You are encouraged to annotate them during class. 
+
+  Academic Honesty:  Please read the university academic honesty policy.  If something is not clear, then ask.  
+
+In particular, plagiarism is regarded as a serious offence. 
+
+  Distractions:  What was that?  Please keep all electronic devices off during class. 
+  Punctuality:  I start class promptly so please be here on time (see “distractions”). 
+ 
+
+Instructer Errosr:  Don’t be shy!  If you see me make a mistake, please let me know right away.  If you are not 
+sure, that’s even better – it might give me a chance to clarify something. 
+
+  Your success is something I really care about!  All job markets are incredibly competitive, especially for the 
+really cool jobs!, but students who succeed in this class have a very high probability of becoming successful 
+computer engineers (and doctors, executives, etc.). 
+
+
