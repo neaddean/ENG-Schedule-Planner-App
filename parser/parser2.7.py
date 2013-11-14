@@ -40,7 +40,7 @@ for pdf_url in links:
     f = pdfurl.read()
     tempwritefile = tempfile.TemporaryFile()
     tempwritefile.write(f)
-    writefile = file(str(i)+".txt", "wb")
+    writefile = file('txts/' + str(i)+".txt", "wb")
     writefile.write(convert_pdf(tempwritefile))
     tempwritefile.close()
     writefile.close()
