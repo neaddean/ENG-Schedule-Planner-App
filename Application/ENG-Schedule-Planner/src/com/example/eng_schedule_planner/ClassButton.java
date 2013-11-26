@@ -9,15 +9,11 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.graphics.Color;
 
-import android.view.Gravity;
-
+import android.graphics.PorterDuff;
 import android.view.View;
 
 import android.view.ViewGroup.LayoutParams;
 import android.widget.Button;
-import android.widget.LinearLayout;
-
-import android.widget.PopupWindow;
 
 
 /**
@@ -36,14 +32,17 @@ public class ClassButton extends Button {
 	final static int STANDARD_BUTTON = 0;
 	final static int ADD_BUTTON = 1;
 	
-	public ClassButton(final Context context, int identifier) {
+	AlertDialog.Builder alertDialog;
+	
+	public ClassButton(final Context context, int identifier, final String title) {
 		super(context);
 		this.setLayoutParams(new LayoutParams(
 				WIDTH,HEIGHT)
 				);
 		Random rnd = new Random(); 
 		int color = Color.argb(255, rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256));   
-		this.setBackgroundColor(color);
+		this.getBackground().setColorFilter(color,PorterDuff.Mode.MULTIPLY);
+		this.setText(title);
 		if(identifier == STANDARD_BUTTON)
 		{
 			
@@ -59,20 +58,23 @@ public class ClassButton extends Button {
 					}
 				});
 			
-			final String title = this.getText().toString();
 			this.setOnClickListener(new OnClickListener() {
-				@Override
+				
 				public void onClick(View v) {
-					CharSequence colors[] = new CharSequence[] {"red", "green", "blue", "black"};
-					AlertDialog.Builder builder = new AlertDialog.Builder(context);
-					builder.setTitle(title);
-					builder.setItems(colors, new DialogInterface.OnClickListener() {
-					    @Override
-					    public void onClick(DialogInterface dialog, int which) {
-					        // the user clicked on colors[which]
-					    }
-					});
-					builder.show();
+					CharSequence colors[] = new CharSequence[] {"Mark as Completed", "View Syllabus", "Check for Prerequisites", "Delete"};
+					if(alertDialog == null)
+					{
+						alertDialog = new AlertDialog.Builder(context);
+						alertDialog.setTitle(title);
+						alertDialog.setItems(colors, new DialogInterface.OnClickListener() {
+						    @Override
+						    public void onClick(DialogInterface dialog, int which) {
+						       alertDialog = null;
+						    }
+						});
+						alertDialog.show();
+					}
+					
 				}
 			});
 		}else if(identifier == ADD_BUTTON)
