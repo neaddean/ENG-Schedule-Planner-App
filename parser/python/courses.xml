@@ -1,0 +1,435 @@
+<?xml version="1.0" ?>
+<courses>
+  <course name="Introduction to Probability">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>200</cid>
+    <description>An introductory course designed for sophomore engineering students that introduces the fundamentals of probability and statistics without the use of transforms. Coverage includes  descriptive statistics, basics of probability theory, multiple random variables, expectation, Markov chains, and statistical testing. Computer simulations of probabilistic systems are included. Examples are taken from engineering systems. This course cannot be taken for credit in addition to ENG SC</description>
+  </course>
+  <course name="Principles of Molecular Cell Biology and Biotechnology">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>209</cid>
+    <description>Introduction to the molecular, physical and computational principles of cell function in the context of cutting-edge applications in bioengineering and medicine. Biological concepts include: molecular building blocks, energetics, transport, metabolism, nucleic acids, gene expression and genetics. Applications include bioenergy, synthetic biology, the human genome project, and gene circuit engineering.  Labs will teach fundamental techniques of molecular biology including a multi-week module where students build and quantify bacterial gene expression system. Labs emphasize the experimental, problem solving, and analytical skills required in modern engineering and research. </description>
+  </course>
+  <course name="Signals and Systems in Biomedical Engineering">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>401</cid>
+    <description>Signals and systems with an emphasis on application to biomedical problems. Laplace transforms, Fourier series, Fourier integral, convolution and the response of linear systems, frequency response, and Bode diagrams. Introduction to communication systems, multiplexing, amplitude modulation, and sampling theorem. Cannot be taken for credit in addition to ENG SC</description>
+  </course>
+  <course name="Control Systems in Biomedical Engineering">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>402</cid>
+    <description>Mathematical analysis of dynamic and linear feedback control systems. Emphasis on application to physiological systems, physiological transport, pharmacokinetics, glucose/insulin control, and respiratory control. Performance criteria. Root locus, Nyquist, and other stability criteria. State space analysis with state variable feedback control. Design and compensation. Cannot be taken for credit in addition to ENG</description>
+  </course>
+  <course name="Introduction to Solid Biomechanics">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>420</cid>
+    <description>Introductory course to mechanics of solid elastic continua. Basics of vector and tensor algebra and calculus; kinematics of deformation, stress analysis, constitutive equations, finite elasticity; linear elasticity; virtual work; the Ritz approximation. In addition to the classical Hookean elasticity, finite deformation theory is presented to describe mechanical behavior of biological soft tissues and cells. Illustrative examples from tissue and cell biomechanics. Design elements will be included in problems and examples.</description>
+  </course>
+  <course name="Device Diagnostics and Design">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>428</cid>
+    <description>This course is focused on the fundamentals of modern biomedical device and diagnostics design. Students will design and build an alpha prototype in this project based course. The course is aimed at undergraduates who have completed most of the engineering core coursework (second semester sophomore and above). Mechanical and Biomedical Engineering concepts are introduced and elaborated on in the context of specific applications. Topics include: materials classes; materials selection for medical devices and diagnostics; elementary mechanics of materials topics in the context of design for manufacturing (stress, strain, toughness, torsion, bending, buckling); fracture, fatigue and yielding; failure analysis; biocompatibility; regulatory requirements as they pertain to design, manufacturing and marketing; technology assessment strategies; and engineering ethics. Several case studies of successful and unsuccessful biomedical device design are introduced and discussed throughout the</description>
+  </course>
+  <course name="Transport Phenomena in Biological Systems">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>435</cid>
+    <description>Biological systems operate at multiple length scales and all scales depend on internal and external transport of molecules, ions, fluids and heat. this course is designed to introduce the fundamentals of biological transport and to apply these fundamentals in understanding physiological processes involving fluid, mass and heat transfer. Students will learn the fundamental conservation principles and constitutive laws that govern heat, mass and momentum transport processes and systems as well as the constitutive properties that are encountered in typical biological problems. Transport is also critical to the development and proper functioning of biological and medical instruments and devices, which will also be discussed. Biomedical examples will include applications in development of the heart-lung machine, estimation of time of death in postmortem cases, burn injuries through hot water, respiratory flow in smokers lungs,</description>
+  </course>
+  <course name="Fundamentals of Fluid Mechanics">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>436</cid>
+    <description>Introductory course emphasizing the application of the principles of conservation of mass, momentum, and energy to fluid systems.</description>
+  </course>
+  <course name="Nanometer Scale Processes in Living Systems">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>437</cid>
+    <description>The world at the nanometer-scale is full of dynamic phenomena that are vastly different than those encountered at the macro scale. Biological processes that are of particular contemporary interest, such as cell differentiation, are stimulated by the activity and interaction of biomolecules at the nanoscale.  Thus, an understanding of the physics and engineering in such systems is a vital component toward overcoming an immense array of challenging problems in the biological and medical sciences. This course will focus particularly on a conceptual and mechanistic understanding of technologies that permit the study of events at the nanometer scale, including scanning probe microscopes (including SEM and AFM) and optical methods such as fluorescence microscopy and related techniques (including single particle tracking, FRET, FCS). Finally, two laboratory components in optical trap microscopy and microrheology will be the cornerstone of the course. These two labs will each develop over the course of 5 weeks each, thus providing an experiential aspect to lab learning that will require the willingness to take intellectual risks and teamwork. These &quot;hands on&quot; laboratory modules will uniquely prepare students to face the open-ended, teamwork-oriented problems.</description>
+  </course>
+  <course name="Biomedical Engineering Senior Project">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>465</cid>
+    <description>Selection of project and project supervisor must be approved by course instructor. Project is in an area of biomedical engineering, such as biomedical instrumentation, biosensors, tissue engineering, biological signal processing, biological modeling and simulation, clinical imaging or informational systems, etc.Projects will be conducted by teams of two or three students, and projects must include significant design experience. Research of background, planning and initial work on senior design project. Guidance in performing and presenting (in written and oral form) a technical project proposal. Skills in proposal writing, oral presentation techniques. Formal proposal must be approved by technical advisor.</description>
+  </course>
+  <course name="Biomedical Engineering Senior Project">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>466</cid>
+    <description>Completion of project in an area of biomedical engineering. Expanded training in technical project presentation techniques. Includes writing of progress reports, abstracts, final reports. Course culminates with an oral presentation at annual Senior Project Conference. Written final report must be approved by the faculty.</description>
+  </course>
+  <course name="Product Design and Innovation in Biomedical Engineering">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>467</cid>
+    <description>A combined academic and industry taught course educating students on project definition, and on the design, development, and technology transfer of potential biomedical products in the context of the student's major capstone project. Students will learn from faculty and industry lecturers the best practices for medical device development including: product development via design and process control, intellectual property and innovation in biomedical engineering including patents, and clinical regulatory issues including clinical trial design. School of Management faculty will emphasize marketing, technology transfer and entrepreneurship for bioengineering products. Case study examples will be provided. ENG BE 465 must be taken concurrently.  2</description>
+  </course>
+  <course name="Special Topics in Biomedical Engineering">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>500</cid>
+    <description>&lt;span&gt;Graduate Prerequisites: Engineering graduate student standing. Others by permission of instructor. Specific prerequisites vary according to topic.&lt;/span&gt;&lt;br</description>
+  </course>
+  <course name="Polymers and Soft Materials">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>504</cid>
+    <description>An introduction to soft matter for students with background in materials science, chemistry and physics. This course covers general aspects of structure, properties, and performance polymers, polymer solutions and gels. Emphasis is on chain behavior, local chemical interactions and mechanical behavior across multiple size scales. Topics include forces, energies, kinetics in material synthesis, growth and transformation; methods for preparing synthetic materials; formation assembly, phase behavior, and molecular ordering of synthetic soft materials; structure, function, and phase transitions; multiscale models of polymer mechanical behavior; techniques for characterizing the structure, phase and dynamics of soft materials; application of soft materials in biotechnology and nanotechnology. Meets with ENG ME 504 and ENG MS 504; students may not recieve credit for</description>
+  </course>
+  <course name="Molecular Bioengineering I">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>505</cid>
+    <description>Provides engineering perspectives on the building blocks of living cells and materials for biotechnology. Focuses on origins and synthesis in life and the laboratory, including biological pathways for sythesis of DNA, RNA and proteins; transduction, transmission, storage and retrieval of biological informatin by macromoleclues; polyerase chain reaction, restriction enzymes, DNA sequencing; energetics of protein folding and trafficking; mechanisms of enzymatic catalysts and receptor-ligand binding; cooperative proteins, multi-protein complexes and control of metabolic pathways; generation, storage, transmission and release of biomolecular energy; and methods for study and manipulation of molecules which will include isolation, purification, detection, chemical characterization, imaging and visualization of structure.</description>
+  </course>
+  <course name="Physical Chemistry of Cell Structure and Machinery">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>506</cid>
+    <description>&lt;span&gt;Graduate Prerequisites: ENG BE 505.&lt;/span&gt;&lt;br</description>
+  </course>
+  <course name="Quantitative Studies of the Respiratory and Cardiovascular Systems">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>508</cid>
+    <description>The quantitative physiological aspects of the respiratory and cardiovascular systems are studied. Classical models of these systems are considered including lumped element models, branching tree structures, and distributed parameter models to predict wave propagation in compliant walled tubes filled with compressible or incompressible fluids. Extensive computer models are developed to simulate the behavior of these systems in the frequency and time domains. Includes</description>
+  </course>
+  <course name="Quantitative Physiology of the Auditory System">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>509</cid>
+    <description>Introduction to the mammalian auditory system from a systems prospective. The class follows how sound propagates into the ear, how mechanical energy is transformed into a neural code, how that code is transformed through the mammalian auditory pathway from the cochlea to the cortex, and how auditory sensation and perception are related to this chain of neural processing. Anatomy and physiology will cover the structure and function of the middle ear, cochlea, brainstem, midbrain, thalamus, and cortex. Perceptual topics include basic sensitivity, spatial hearing, pitch perception, auditory scene analysis, attention, and speech perception. Implications for hearing impairment and prosthetic hearing devices will be covered. Associated discussion sessions cover recent research findings from general-interest, high-impact publications.</description>
+  </course>
+  <course name="Biomedical Instrumentation">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>511</cid>
+    <description>Physiological signals, origin of biopotentials (ECG, EMG, EEG), biomedical transducers and electrodes. Biomedical signal detection, amplifications and filtering. Analog front-ends of biomedical instruments. Electrical safety in medical environment. Laboratory experiments supplement lectures.</description>
+  </course>
+  <course name="Biological and Environmental Acoustics">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>513</cid>
+    <description>Application of acoustics to biological and environmental research.  Introduction to physical acoustics with examples from actual terrestrial and marine environments.  The use of sound by animals for communication and echolocation.  Application of acoustics to conservation</description>
+  </course>
+  <course name="Introduction to Medical Imaging">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>515</cid>
+    <description>Methods of obtaining useful images of the interior of the body using X-rays, ultrasound, and radionuclides. Image formation and display. Projection radiography. Radiation detectors. Conventional and computerized tomography. Nuclear imaging. Automating diagnosis and non-invasive testing. Radiation safety. </description>
+  </course>
+  <course name="Speech Signal Processing">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>519</cid>
+    <description>Speech (naturally spoken) is the main mode of communication between humans. Speech technology aims at providing the means for speech-controlled man-machine interaction. The goal of this course is to provide the basic concepts and theories of speech production, speech perception and speech signal processing. The course is organized in a manner that builds a strong foundation of basics first, and then concentrates on a range of signal processing methods for representing and processing the speech</description>
+  </course>
+  <course name="Continuum Mechanics">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>521</cid>
+    <description>The main goal of this course is to present a unified, mathematically rigorous approach to two classical branches of mechanics:  the mechanics of fluids and the mechanics of solids.  Topics will include kinematics, stress analysis, balance laws (mass, momentum, and energy), the entropy inequality, and constitutive equations in the framework of Cartesian vectors and tensors.  Emphasis will be placed on mechanical principles that apply to all materials by using the unifying mathematical framework of Cartesian vectors and tensors.  Illustrative examples from biology and physiology will be used to describe basic concepts in continuum mechanics.  The course will end at the point from which specialized courses devoted to problems in fluid mechanics (e.g. biotransport) and solid mechanics (e.g. cellular biomechanics) could logically proceed.  Same as ENG ME 521; students may not receive credit for both.   </description>
+  </course>
+  <course name="Skeletal Tissue Mechanics">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>524</cid>
+    <description>The course is structured around classical topics in mechanics of materials and their application to study of the mechanical behavior of skeletal tissues, whole bones, bone-implant systems, and diarthroidal joints.  Topics include:  mechanical behavior of tissues, (anisotropy, viscoelasticity, fracture and fatigue) with emphasis on the role of the microstructure of these tissues; structural properties of whole bones and implants (composite and asymmetric bean theories); and mechanical function of joints (contact mechanics, lubrication, and wear).  Emphasis is placed on using experimental data to test and to develop theoretical models, as well as on using the knowledge gained to address common health related problems related to aging, disease, and injury.  Same as ENGME524 and ENGMS524. Students may not receive credit for both.</description>
+  </course>
+  <course name="Fundamentals of Biomaterials">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>526</cid>
+    <description>Provides the chemistry and engineering skills needed to solve challenges in the biomaterials and tissue engineering area, concentrating on the fundamental principles in biomedical engineering, material science, and chemistry.  Covers the structure and properties of hard materials (ceramics and metals) and soft materials (polymers, colloids, and hydrogels). Meets with BE726 lectures. Note that the laboratory portion is not offered in BE 526. </description>
+  </course>
+  <course name="Principles and Applications of Tissue Engineering">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>527</cid>
+    <description>Provides the chemistry and engineering skills needed to solve challenges in the biomaterials and tissue engineering area, concentrating on cell-biomaterial interactions, biomaterial-host response, and inflammation. Covers the rheological properties of polymers and gels as well as fatigue and fracture of materials. Specific applications of tissue engineering. Meets with BE 727 lectures. Note that the laboratory portion is not offered in BE 527.</description>
+  </course>
+  <course name="Structure and Function of the Extracellular Matrix">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>530</cid>
+    <description>This is an introductory course dealing with the detailed structure of the basic units of the extracellular matrix including collagen, elastin, microfibrils and proteoglycans as well as the functional properties of these molecules. The focus is mostly on how the structure of these components determine the functional properties such as elasticity at different scales from molecule to fibrils to organ level behavior. The biological role of these components and their interaction with cells is also covered. Interaction of enzymes and the matrix in the presence of mechanical forces is discussed. Mathematical modeling is applied at various length scales of the extracellular matrix that provides quantitative understanding of the structure and function relationship. Special topics include how diseases affect extracellular matrix in the lung, cartilage and vasculature. The relevance of the properties of native extracellular matrix for tissue engineering is also</description>
+  </course>
+  <course name="Biorheology">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>533</cid>
+    <description>An introductory course emphasizing those rheological properties (such as elasticity, viscoelasticity, poroelasticity, plasticity, and viscoplasticity) that often characterize solid biological tissues and</description>
+  </course>
+  <course name="Biomolecular Architecture">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>560</cid>
+    <description>Provides an introduction to the molecular building blocks and the structure of three major components of the living cells: the nucleic acids, the phospho-lipids membrane, and the proteins. The nucleic acids, DNA and RNA, linear information storing structure as well as their three-dimensional structure are covered in relationship to their function. This includes an introduction to information and coding theory. The analysis tools used in pattern identification representation and functional association are introduced and used to discuss the patterns characteristic of DNA and protein structure and biochemical function. The problems and current approaches to predicting protein structure including those using homology, energy minimization, and modeling are introduced. The future implications of our expanding biomolecular knowledge and of rational drug design are also discussed.</description>
+  </course>
+  <course name="Biophysics of Large Molecules">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>564</cid>
+    <description>The course considers the fundamental concepts of physical and mathematical description of polyatomic molecules and macromolecules on the basis of quantum and statistical mechanics. Special emphasis is given to molecular spectroscopy, the interaction of polyatomic molecules with electromagnetic radiation (visual light, ultraviolet and infrared radiation). Physics of macromolecules (or polymers) is treated in detail. Numerous biomedical applications of the fundamental concepts are considered including photosyntheses, molecular mechanism of vision, DNA damage under UV irradiation, structure of major biological molecules (proteins and nucleic acids). </description>
+  </course>
+  <course name="Molecular Biotechnology">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>565</cid>
+    <description>Covers the basic properties of biological macromolecules and assemblies including proteins, nucleic acids, and membranes. Among the topics covered are the forces that govern biological structures, how proteins act as catalysts, how membranes act to store energy, and how nucleic acids and proteins are synthesized in cells. Methods for manipulating the living cells to change their properties and to produce specific proteins of nucleic acids are detailed.</description>
+  </course>
+  <course name="DNA Structure and Function">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>566</cid>
+    <description>Physical structure and properties of DNA. The physical principles of the major experimental methods to study DNA are explained, among them: X-ray analysis, NMR, optical methods (absorption, circular dichroism, fluorescence), centrifugation, gel electrophoresis, chemical and enzymatic probing. Different theoretical models of DNA are presented, among them the melting (helix-coil) model, the polyelectrolyte model, the elastic-rod model, and the topological model. Theoretical approaches to treat the models, (e.g., the Monte Carlo method) are covered. Special emphasis is placed on DNA topology and DNA unusual structures and their biological significance. Major structural features of RNA are considered in parallel with DNA. The main principles of DNA-protein interaction are presented. the role of DNA and RNA structure in most fundamental biological proceses, replication, transcription, recombination, reparation, and translation is</description>
+  </course>
+  <course name="Nonlinear Systems in Biomedical Engineering">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>567</cid>
+    <description>Introduction to nonlinear dynamical systems in biomedical engineering. Qualitative, analytical and computational techniques. Stability, bifurcations, oscillations, multistability, hysteresis, multiple time-scales, chaos. Introduction to experimental data analysis and control techniques. Applications discussed include population dynamics, biochemical systems, genetic circuits, neural oscillators, etc. 4 cr.</description>
+  </course>
+  <course name="Next Generation Sequencing">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>569</cid>
+    <description>The advent of high throughput sequencing is virtually changing biology and medicine. The technology enables us to catalog the entire functional parts list of living organisms from bacteria to human, develop and validate regulatory networks for controlling gene expression in systems biology models and develop novel biomarkers for personalized medicine that guide pharmacological treatments.   In this course we will review the foundations of the field, starting from the biophysical foundations of current or emerging single molecule DNA sequencing techniques, through an introduction to the analytical tools to model and analyze NGS Data, and finally discussing clinical applications such as predicting drug response focusing on cancer. The course will involve bi-weekly homework assignments that include theoretical analysis and modeling, working with multiple analysis tools for NGS data including assembly, re-sequencing, alignments, RNA-seq, ChIP-seq, DNA methylation, mutation analysis and detection, copy number variation detection, and their applications to cancer.</description>
+  </course>
+  <course name="Introduction to Computational Vision">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>570</cid>
+    <description>. Introductory course in biological  visual neuroscience and computational vision. Provides a survey of the psychophysical, neuroanatomical and  neurophysiological substrates of visual mechanisms underlying  perception of visual motion, depth, objects, and space and of decision making mechanisms.  Discussion of theoretical, explanatory, paradigms for these visual mechanisms. Topics addressed include psychophysics, methods from single cell recording physiology and low field potentials (LFP),multimodal imaging and computational modeling of various visual tasks and their modulation by attention. We will briefly address learning mechanisms and their relationship to brain plasticity. A term project is required for graduate credit. </description>
+  </course>
+  <course name="Introduction to Neuroengineering">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>575</cid>
+    <description>This course covers existing and future neurotechnologies for analyzing brain signals and for treating neurological and psychiatric diseases. It focuses on the biophysical, biochemical, anatomical principles governing the design of current neurotechnologies, with a goal of encouraging innovations of a new generation of therapies.  Topics include basic microscopic and macroscopic architecture of the brain, the fundamental properties of individual neurons and ensemble neural networks, electrophysiology, DBS, TMS, various imaging methods, optical neural control technologies, optogenetics, neuropharmacology, gene therapy, and stem-cell therapy. Discussions of related literatures and design projects will be involved. This course is open to MS, MEng and PhD students as well as qualified undergraduate</description>
+  </course>
+  <course name="Molecular Bioengineering">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>605</cid>
+    <description>Provides engineering perspectives on the building blocks of living cells and materials for biotechnology. Focuses on origins and synthesis in life and the laboratory, including biological pathways for synthesis of DNA, RNA and proteins; transduction, transmission, storage and retrieval of biological information by macromolecules; polymerase chain reaction, restriction enzymes, DNA sequencing; energetics of protein folding and trafficking; mechanisms of enzymatic catalysts and receptor-ligand binding; cooperative proteins, multi-protein complexes and control of metabolic pathways; generation, storage, transmission and release of biomolecular energy; and methods for study and manipulation of molecules which will include isolation, purification, detection, chemical characterization, imaging and visualization of</description>
+  </course>
+  <course name="Quantitative Physiology for Engineers">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>606</cid>
+    <description>Course in human physiology for biomedical engineering students. Fundamentals of cellular and systems physiology, including the nervous , muscular, cardiovascular, respiratory, renal, gastrointestinal, endocrine and immune systems. Quantitative and engineering approaches will be applied to understanding physiological</description>
+  </course>
+  <course name="Advanced Topics in Biomedical Engineering">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>700</cid>
+    <description>Advanced study of a specific research topic in biomedical engineering. Intended primarily for advanced graduate students.</description>
+  </course>
+  <course name="Numerical Methods and Modeling in Biomedical Engineering">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>703</cid>
+    <description>This graduate course is an introduction to the computational tools most commonly applied in biological and physiological research, with emphasis on the art of using models, programming and simulation to reach useful conclusions and insights. Specific topics include exact and iterative methods for the solution of large systems, differentiation and interpolation numerical integration, pseudorandomization, Monte Carlo methods and statistical bootstrap methods, Fourier transform and spectral methods, and also finite difference methods for the solution of ordinary and partial differential equations. Each weekly lecture is accompanied by a computer lab in which the students will gain experience in the use of the techniques under study. Interspersed with learning of methods will be a variety of specific bioengineeering applications covering the range from genes and molecules to cells, organs, and</description>
+  </course>
+  <course name="Single Molecule Approaches for Biophysics and Bioengineering - Fundamentals and Applications">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>705</cid>
+    <description>The emergence of single-molecule (SM) methods in biology and bioengineering in the past decade have revolutionized the way scientists approach the molecular biology of the cell. The ability to directly probe biomolecular process in real-time, in their native cellular environment, revealed the mechanism of fundamental processes in biology with unprecedented detail and accuracy. As SM methods are refined they are increasingly recruited by bioengineers to invent the future platforms for molecular diagnostics and analytical detection. This course covers experimental methods for investigating the molecular machinery of a living cell in vitro and in live cells, and novel tools for sensing biomolecules and their application in biotechnology. Fundamental principles underlying fluorescence of single molecules, force measurements of biomolecules, ion channel kinetics, and stochastic sensing, will be covered in the context of relevant biological and biotechnological examples. There will be an emphasis on fundamental physical concepts underlying these systems, coming from statistical mechanics of soft matter. 4 cr. 1st sem.</description>
+  </course>
+  <course name="Quantitative Studies of Excitable Cells">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>707</cid>
+    <description>Focuses on the properties of the membranes of nerve and muscle cells. Classical models of resting potentials, action potentials, synaptic transmission, and sensory receptors are treated. The structure and function of single ionic channels are characterized in detail from patch-clamp recordings, neuropharmacological studies, and molecular studies. Mechanisms of muscle contraction and other forms of cellular motility are also covered.</description>
+  </course>
+  <course name="Neural Plasticity and Perceptual Learning">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>710</cid>
+    <description>This course explores the capacity of cortical sensory and motor maps in the adult brain to change as a result of alterations in the effectiveness of the input, direct damage, or practice. The lectures will describe and discuss (1) the physiology and anatomy underlying adult dynamics; (2) psychophysical methods and experimental paradigms that have been used to study cortical plasticity in the early stages of the sensory and motor pathways; (3) evidence for perceptual learning; and (4) biologically plausible computational models of learning. We will discuss applications of functional neuroimaging to study perceptual learning and restorative plasticity in the human</description>
+  </course>
+  <course name="Fundamentals of Biomaterials">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>726</cid>
+    <description>Provides the chemistry and engineering skills needed to solve challenges in the biomaterials and tissue engineering area, concentrating on the fundamental principles in biomedical engineering, material science, and chemistry.  Covers the structure and properties of hard materials (ceramics and metals) and soft materials (polymers and hydrogels). Same as ME/MS 726. Students may not receive credit for both. </description>
+  </course>
+  <course name="Principles and Applications of Tissue Engineering">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>727</cid>
+    <description>Provides the chemistry and engineering skills needed to solve challenges in the biomaterials and tissue engineering area, concentrating on cell-biomaterial interactions, soft tissue mechanics and specific research topics.  Students will write a NIH-style grant proposal on a specific research topic.  Same as ME/MS 727. Students may not receive credit for both.</description>
+  </course>
+  <course name="Parameter Estimation and Systems Identification">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>740</cid>
+    <description>Application of models with physical parameters to experimental data. Linear and non-linear systems estimation, system identifiability, time and frequency domain estimation, model sensitivity and experiment multivariate statistical analysis, and optimal design. Application predominantly to biomedical systems (e.g., cardiovascular, respiratory, and pharmokinetics). Other applications included. Same as ENG EC 740; students may not receive credit for both.</description>
+  </course>
+  <course name="Nanomedicine- Principles and Applications">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>745</cid>
+    <description>The use of nanoscience and technology for biomedical problems has spawned a field of applications ranging from nanoparticles for imaging and therapeutics, to biosensors for disease diagnostics. Nanomedicine is a rapidly growing field that exploits the novel properties of nanoscale materials and techniques to rapidly advance our understanding of human biology and the practice of medicine. This course focuses on the fundamental properties, synthesis and characterization of nanomaterials, coupled with their applications in nanomedicine, including: micro- and nano-particles for drug delivery and imaging, microfluidics for in vitro diagnostics, nanomaterials and platforms for biological applications. The biomedical applications include cancer, cardiovascular disease, and infectious diseases.</description>
+  </course>
+  <course name="Advanced Signals and Systems Analysis for Biomedical Engineering">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>747</cid>
+    <description>Introduction to advanced techniques for signals and systems analysis with applications to problems in biomedical engineering research.  Time-domain and frequency-domain analysis of multiple input, multiple output systems using the fundamental matrix approach.  Hilbert transform relations; applications to head-related transfer functions.  Second-order characterization of stochastic processes: power density spectra, cross-spectra, auto-and cross-correlation functions.  Gaussian and Poisson processes.  Models of neural firing patterns.  Effects of linear systems on spectra and correlation functions.  Applications to models of the peripheral auditory system.  Optimum processing applications.  Applications to psychophysical modeling.  Introduction to wavelets and wavelet transforms.  Wavelet filter banks and wavelet signal</description>
+  </course>
+  <course name="Structural Bioinformatics">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>760</cid>
+    <description>Principles and significance of protein structure.  Protein domains and folds.  Functional classification of proteins.  Functional and structural annotation.  Molecular modeling and simulation methods. Structure validation and refinement.  Assignment of structure to genome sequences by homology modeling and fold recognition.  The role of structure in functional annotation.  Protein families and folds in genomes.  Annotation from protein interactions.  Interactions between proteins and small molecules.  Structure-based drug design.  Quantitative Structure-Affinity Relationships (QSAR) and the estimation of affinities.  Chemoinformatics, molecular diversity, and combinatorial library design, DNA structure, protein-DNA interactions, and recognition sites.  Binding of sall molecules to DNA, RNA structure</description>
+  </course>
+  <course name="Protein and Genomic Systems Engineering">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>767</cid>
+    <description>This course will provide a critical review of current research topics in proteomics and systems biology.  Emphasis will be placed on protein engineering (gross structural modifications, pathway perturbations, and biomedical applications including therapeutics and diagnostics) and genome engineering (knockout strains, conditional knockouts, and bioproductions optimization).  Topics covered will include: mass spectrometry, protein microarrays, protein complex and interaction discovery, uses of antibodies as reagents and therapeutics, and pathway and network analyses. </description>
+  </course>
+  <course name="Biological Database Analysis">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>768</cid>
+    <description>Describes relational data models and database management systems. Teaches the theories and techniques of constructing relational databases with emphasis on those aspects needed for various biological data, including sequences, structures, genetic linkages and maps, and signal pathways. Introduces relational database query language SQL. Summarizes currently existing biological databases and the Web-based programming tools for their access. Object-oriented modeling is introduced primarily as a design aid for dealing with the particular complexities of biological information in standard RDB design. Emphasis will be on those problems associated with dealing with data whose nomenclature and interrelationships are undergoing rapid change. </description>
+  </course>
+  <course name="Advanced Optical Microscopy and Biological Imaging">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>773</cid>
+    <description>This course will present a rigorous and detailed overview of the theory of optical microscopy starting from basic notions in light propagation and covering advanced concepts in imaging theory such as Fourier optics and partial coherence. Topics will include basic geometric optics, photometry, diffraction, optical transfer functions, phase contrast microscopy, 3D imaging theory, basic scattering and fluorescence theory, imaging in turbid media, confocal microscopy, optical coherence tomography (OCT), holographic microscopy, fluorescence correlation spectroscopy (FCS), fluorescence resonant energy transfer (FRET), and nonlinear-optics based techniques such as two-photon excited fluorescence (TPEF) and second-harmonic generation (SHG) microscopy. Biological applications such as calcium and membrane-potential imaging will be discussed. A background in optics is preferable. A background in signals and analysis is indispensable. In particular, the student should be comfortable with Fourier transforms, complex analysis, and transfer functions. Meets with ENGEC773.  Students may not receive credit for</description>
+  </course>
+  <course name="Computational Genomics">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>777</cid>
+    <description>A case-study approach to current topics in computational genomics. Mathematical and engineering tools for analyzing genomic data are reviewed. The relationships between sequence, structure, and function in complex biological networks are studied using quantitative modeling. Whole genome analysis is performed. Completion of a series of projects emphasizing real-life data, integrated approaches, practical applications, hands-on analysis, and collaboration. Course projects aim at improving current approaches and involve C and/or PERL programming to interface with existing software packages. The course will be offered in a computer laboratory equipped with one laptop per</description>
+  </course>
+  <course name="Soft Tissue Biomechanics">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>788</cid>
+    <description>This course will introduce students to the mechanics of soft biological tissue.  In particular, the response of the heart, vasculature, and tissue scaffolds to mechanical loads from the perspective of nonlinear solid mechanics will be studied. Constitutive models for hyperelastic materials will be adapted to biomaterials to handle mechanical characteristics such as nonlinearity, viscoelasticity, and orthotropy.  Basic experimental methods, and anatomy and physiology of particular tissue types will also be introduced. Emphasis is placed on integrating the basic analytical, experimental, and computational methods for a  more complete understanding of the underlying mechanobiology.  Meets with ENG ME788.  Students may not receive credit for both.  4</description>
+  </course>
+  <course name="Biomedical Engineering Seminar">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>790</cid>
+    <description>Discussion of current topics in biomedical engineering. Students are expected to read assigned journal articles and to participate actively in weekly discussion meetings. Meetings organized around presentations by invited guests of their research problems, strategy, and technique. </description>
+  </course>
+  <course name="PhD Biomedical Engineering Laboratory Rotation System">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>791</cid>
+    <description>This course allows PhD students to take part in a laboratory rotation system. During these rotations, students become familiar with research activity within departmental laboratories that are of interest to them. These rotations help students identify the laboratory in which they will perform their dissertation research. Postbachelor's PhD students must complete three rotations: one in their first semester of matriculation, and two in their second semester. Post-master's PhD students must complete a minimum of two rotations, one of which must be in their first semester of matriculation. Normally each rotation will last up to seven weeks.</description>
+  </course>
+  <course name="Critical Literature Review">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>792</cid>
+    <description>Peer-reviewed publications in the area of biomedical engineering will be critically evaluated.  Scientific ethics and the process of review and publication of manuscripts will be discussed.  The classes will be a mix of didactic information and group discussion.  Methodological issues covered will include study design, techniques used, and interpretation of research findings.  Students completing this course will understand the principles underlying preparation and publication of scientific manuscripts and will be able to apply these principles as they read the scientific literature.</description>
+  </course>
+  <course name="Teaching Practicum">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>801</cid>
+    <description>This course cannot be used to meet the structured course requirements. Practical teaching experience for an assigned course, includes some combination of running discussion sections, managing laboratory sections, providing some lectures, preparing homework and solution sets, exams, and grading. Attend lectures/seminars on best teaching practices.</description>
+  </course>
+  <course name="Research">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>900</cid>
+    <description>Participation in a research project under the direction of a faculty advisor. Includes research leading to the development of an MS thesis proposal or PhD prospectus, as well as the work necessary to generate an original MS thesis or PhD dissertation.</description>
+  </course>
+  <course name="Independent Study">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>951</cid>
+    <description>A course of reading under the direction of a faculty advisor covering subject matter not available in a lecture course. Final report or examination normally</description>
+  </course>
+  <course name="Introduction to Linear Algebra for Engineers">
+    <school>ENG</school>
+    <dept>EK</dept>
+    <cid>102</cid>
+    <description>Systems of linear equations and matrices. Vector spaces and linear transformation using matrix notation, determinants, and eigenvalues and eigenvectors. Examples drawn from engineering applications. Cannot be taken for credit in addition to CAS MA 142 or MA</description>
+  </course>
+  <course name="Engineering Mechanics I">
+    <school>ENG</school>
+    <dept>EK</dept>
+    <cid>301</cid>
+    <description>&lt;span&gt;Graduate Prerequisites: MET PY 211 or CAS PY 251.&lt;/span&gt;&lt;br</description>
+  </course>
+  <course name="Introduction to Clean energy Generation and Storage Technologies">
+    <school>ENG</school>
+    <dept>EK</dept>
+    <cid>408</cid>
+    <description>This course covers a wide variety of modern energy generation and storage technologies. The engineering principles that govern thermomechanical, thermoelectric,photvotaic and elctrochemical energy conversion processes will be discussed along with the challenges of hydrogen storage and hybrid batteries. The consequences of using renewable energy resources such as solar, hydrogen, biomass, geothermal, hydro, and wind versus  non-renewable fossil fuels and nuclear resources will also be</description>
+  </course>
+  <course name="Engineering Economy">
+    <school>ENG</school>
+    <dept>EK</dept>
+    <cid>409</cid>
+    <description>Analysis of engineering alternatives for replacement. Present worth analysis. Cost control,budgeting, and indirect costs and their allocation. Company startups, stock ownership, and annual reports. Cost optimization, economic life, taxes,inflation, inventories, and depreciation accounting. Contract negotiations,professional ethics, and cost proposal preparation. Evaluation of public projects.</description>
+  </course>
+  <course name="Thermodynamics and Statistical Mechanics">
+    <school>ENG</school>
+    <dept>EK</dept>
+    <cid>424</cid>
+    <description>Thermodynamic systems. Heat,temperature, and pressure. State variables and equations of state. First and second laws of thermodynamics. Kinetic theory. Entropy. Statistical Thermodynamics. Partition function. Thermodynamic potentials. Equilibrium. Chemical reactions. Phase transitions. Colligative Properties. electrochemical reactions. Applications to problems of biomedical interest will be emphasized.4</description>
+  </course>
+  <course name="Undergraduate Part-Time Co-op Experience">
+    <school>ENG</school>
+    <dept>EK</dept>
+    <cid>497</cid>
+    <description>Students work part-time, as defined by their employing company, while registering for 8-11 credits. Registration for 12 or more credits requires the written approval of the director. Students registered in ENG EK 497E are assessed a fee upon placement.</description>
+  </course>
+  <course name="Undergraduate Co-op Experience">
+    <school>ENG</school>
+    <dept>EK</dept>
+    <cid>498</cid>
+    <description>Students register only upon receiving a cooperative education position. The Cooperative Education Program helps students to integrate classroom theory with actual engineering experience. Under professional supervision, students learn firsthand about the engineering environment by working in a paid, full-time position in a medical or research facility, private business, industry, or governmental agency. Through seminars on topics such as self-assessment, identification of work skills, rÃ©sum&amp;#233; writing, interview skills, and understanding the corporate world, students learn the broad career skills required to obtain co-op and permanent employment.</description>
+  </course>
+  <course name="Probability with Statistical Applications">
+    <school>ENG</school>
+    <dept>EK</dept>
+    <cid>500</cid>
+    <description>A first course in probability, random processes, and statistics for students with a level of mathematical maturity and experience comparable to that normally found in entering graduate students. Sample spaces, probability measures, random variables, expectation, applications of transform methods, stochastic convergence and limit theorems, second order statistics, introduction to random processes, estimation, filtering, and elementary hypothesis testing. May not be taken for credit in addition to ENG EC 381 or ENG ME 308. 4</description>
+  </course>
+  <course name="Assessment of Sustainable Energy Technologies">
+    <school>ENG</school>
+    <dept>EK</dept>
+    <cid>546</cid>
+    <description>Critical to launching new energy ventures and implementing new energy policies is developing a broad understanding of how technically feasible the proposed project/technology in meeting the economic, environmental, and end-use requirements.  This course will provide students with the background needed to assess the potential for energy efficiency and effectiveness of different technologies, the related economics, as well as identify the key technical risks in emerging technologies.  Examples will be drawn from a variety of emerging technologies such as solar photovoltaics, fuel cells, advanced transportation technology, as well as conservation options such as motors, cogeneration, building automation and HVAC.  This course will also address evaluating the life cycle implications of emerging technologies, including manufacturing issues, end-of-life, as well as estimating performance. 4cr. 2nd</description>
+  </course>
+  <course name="Graduate Part-time Co-op">
+    <school>ENG</school>
+    <dept>EK</dept>
+    <cid>697</cid>
+    <description>Students work part-time, as defined by their employing company, while registering for 8-11 credits.  Registration for 12 or more credits requires the written approval of the</description>
+  </course>
+  <course name="Graduate Co-op Experience">
+    <school>ENG</school>
+    <dept>EK</dept>
+    <cid>698</cid>
+    <description>Students register only upon receiving a cooperative education position.  The Cooperative Education Program helps students to integrate classroom theory with actual engineering experience.  Under professional supervision, students acquire firsthand knowledge about the engineering environment by working in a paid, full-time position in a medical or research facility, private business, industry, or governmental</description>
+  </course>
+  <course name="Biophotonic System Design and Prototyping">
+    <school>ENG</school>
+    <dept>EK</dept>
+    <cid>720</cid>
+    <description>Theory and practice of biophotonic instrument design with application to biomedical devices. Students will work on problems introduced and defined by physicians and clinical researchers, to develop new medical products from concept to prototype design and development.   Students in physics, chemistry, and engineering will learn fundamentals of biophotonics sensors and systems development and prototyping for three end uses:  in vivo platforms, exploring innovative techniques for sub-cellular imaging of biomolecular structure and interactions in living tissue; resonant and interferometric biosensors, exploring resonance-enhanced photonic pathogen detection or disease diagnosis with high sensitivity and specificity; and point-of-care diagnosis, exploring rapid, low-cost spectroscopic and imaging techniques that will add to our understanding biological behavior at the molecular level and will lead to important new tools for biomedicine, particularly in areas where there are currently few means of diagnosis.   The course provides foundational instruction with respect to core photonic and biomedical design principles, and a case-study based instructional approach to technology transfer and prototyping.  Semester-long projects conducted by interdisciplinary teams involve  design and prototyping based on problems introduced by practitioners and researchers identified by a regional health care consortium, CIMIT.  4 cr.</description>
+  </course>
+</courses>
