@@ -14,9 +14,9 @@ def prettify(elem):
 #numtrans = {"ENG": "0", "CAS" : "1", "EC": "0", "ME": "1", "BE": "2", "EK" : "3"}
 
 links = []
-url_list = [#"http://www.bu.edu/academics/eng/courses/electrical-computer-engineering/0/",
-            #"http://www.bu.edu/academics/eng/courses/mechanical-engineering/0/",
-            #"http://www.bu.edu/academics/eng/courses/biomedical-engineering/0/",
+url_list = ["http://www.bu.edu/academics/eng/courses/electrical-computer-engineering/0/",
+            "http://www.bu.edu/academics/eng/courses/mechanical-engineering/0/",
+            "http://www.bu.edu/academics/eng/courses/biomedical-engineering/0/",
             "http://www.bu.edu/academics/eng/courses/engineering-core/0/"]
             
 for base_url in url_list:
