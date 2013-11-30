@@ -3,6 +3,8 @@ package com.example.eng_schedule_planner.scheduleActivity;
 
 import java.util.Random;
 
+import com.example.eng_schedule_planner.R;
+
 import android.app.AlertDialog;
 import android.content.ClipData;
 import android.content.Context;
@@ -14,6 +16,7 @@ import android.view.View;
 
 import android.view.ViewGroup.LayoutParams;
 import android.widget.Button;
+
 
 
 /**
@@ -31,6 +34,7 @@ public class ClassButton extends Button {
 	
 	final static int STANDARD_BUTTON = 0;
 	final static int ADD_BUTTON = 1;
+	
 	
 	AlertDialog.Builder alertDialog;
 	
@@ -82,6 +86,8 @@ public class ClassButton extends Button {
 			//Pop up menu
 			
 		}
+		
+		this.setBackgroundResource(R.drawable.coursebutton);
 		
 	}
 }
