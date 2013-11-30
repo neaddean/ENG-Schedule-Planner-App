@@ -7,7 +7,7 @@
     android:paddingLeft="0dp"
     android:paddingRight="0dp"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".MainActivity" 
+    tools:context=".ScheduleActivity" 
     android:id="@+id/main_layout"
     >
 
@@ -23,9 +23,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             >
-     
-        
-        
+
          </LinearLayout>
         
     </ScrollView>

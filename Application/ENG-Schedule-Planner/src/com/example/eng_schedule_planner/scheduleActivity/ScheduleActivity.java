@@ -1,4 +1,9 @@
-package com.example.eng_schedule_planner;
+package com.example.eng_schedule_planner.scheduleActivity;
+
+import com.example.eng_schedule_planner.R;
+import com.example.eng_schedule_planner.R.id;
+import com.example.eng_schedule_planner.R.layout;
+import com.example.eng_schedule_planner.R.menu;
 
 import android.os.Bundle;
 import android.app.Activity;
@@ -9,7 +14,7 @@ import android.widget.Space;
 import android.widget.LinearLayout.LayoutParams;
 
 
-public class MainActivity extends Activity {
+public class ScheduleActivity extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

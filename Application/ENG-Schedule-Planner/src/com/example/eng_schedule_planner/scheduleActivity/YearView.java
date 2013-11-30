@@ -1,4 +1,4 @@
-package com.example.eng_schedule_planner;
+package com.example.eng_schedule_planner.scheduleActivity;
 
 import java.util.ArrayList;
 
@@ -17,7 +17,7 @@ import android.widget.ScrollView;
 import android.widget.Space;
 import android.widget.TextView;
 
-import com.example.eng_schedule_planner.ClassButton;
+import com.example.eng_schedule_planner.scheduleActivity.ClassButton;
 
 public class YearView extends LinearLayout {
 
@@ -38,7 +38,6 @@ public class YearView extends LinearLayout {
 	public YearView(final Context context, String yearName)
 	{
 		super(context);
-		
 	
 		//Setting up the layout param for itself
 		this.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.WRAP_CONTENT));
@@ -77,12 +76,11 @@ public class YearView extends LinearLayout {
 		
 		for(int j = 0; j <6; j++)
 		{
-			ClassButton myButton = new ClassButton(context,ClassButton.STANDARD_BUTTON);
+			ClassButton myButton = new ClassButton(context,ClassButton.STANDARD_BUTTON, Integer.toString(j));
 			horizontalLayout.addView(myButton);
 			classList.add(myButton);
-			myButton.setText(Integer.toString(j));
 		}
-		ClassButton addButton = new ClassButton(context, ClassButton.ADD_BUTTON);
+		ClassButton addButton = new ClassButton(context, ClassButton.ADD_BUTTON, "Add");
 		horizontalLayout.addView(addButton);
 		
 		this.addView(horizontalScroll);
