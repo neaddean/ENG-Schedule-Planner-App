@@ -1,4 +1,4 @@
-package xmltest;
+package xmlparser;
 
 import java.util.ArrayList;
 
@@ -9,5 +9,13 @@ public class Course {
 	String cid;
 	String description;
 	ArrayList<Course> prereqs;
+	
+	String getTitle() {
+		return school + dept + cid;
+	}
+	
+	String getFullTitle() {
+		return school + dept + cid + ": " + name;
+	}
 
 }
