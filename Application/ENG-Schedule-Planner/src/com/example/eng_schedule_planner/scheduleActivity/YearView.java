@@ -49,9 +49,11 @@ public class YearView extends LinearLayout {
 		yearLabel = new TextView(context);
 		yearLabel.setText(yearName);
 		yearLabel.setPadding(50, 0, 0, 0);
-		yearLabel.setTextSize(50);
+		yearLabel.setTextSize(30);
+		//NATE: change yearLabel color
+		yearLabel.setTextColor(Color.BLACK);
 		this.addView(yearLabel);
-		
+				
 		//Add the horizontal scroll layout
 		horizontalScroll = new HorizontalScrollView(context);
 		horizontalScroll.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.MATCH_PARENT));

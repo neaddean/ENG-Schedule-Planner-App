@@ -8,6 +8,7 @@ import com.example.eng_schedule_planner.R.menu;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
+import android.view.View;
 
 import android.widget.LinearLayout;
 import android.widget.Space;
@@ -20,6 +21,8 @@ public class ScheduleActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		//NATE:
+		setActivityBackgroundColor(0xffffffff);
 		setUpGrid();
 	}
 
@@ -30,6 +33,11 @@ public class ScheduleActivity extends Activity {
 		return true;
 	}
 	
+	public void setActivityBackgroundColor(int color){
+		//NATE: method to change background color, called in onCreate
+		View view = this.getWindow().getDecorView();
+		view.setBackgroundColor(color);
+	}
 	
 	private void setUpGrid()
 	{
