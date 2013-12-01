@@ -6,6 +6,7 @@ import java.util.Map;
 
 import javax.xml.parsers.DocumentBuilderFactory;
 
+import android.R;
 import android.content.Context;
 import courseModel.Course;
 
@@ -37,9 +38,9 @@ public class CourseModel {
 		}
 	}
 	
-	public CourseModel(Context context, String courseFile) {
+	public CourseModel(Context context) {
 		try {
-		InputStream inputStream = context.getResources().getAssets().open(courseFile); 
+		InputStream inputStream = context.getAssets().open("courses.xml"); 
 		//File fXmlFile = new File(courseFile);
 		//InputStream inputStream= new FileInputStream(fXmlFile);
 		Reader reader = new InputStreamReader(inputStream,"UTF-8");
