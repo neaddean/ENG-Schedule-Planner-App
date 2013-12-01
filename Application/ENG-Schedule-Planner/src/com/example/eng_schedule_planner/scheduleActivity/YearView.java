@@ -9,7 +9,7 @@ import android.graphics.Color;
 import android.view.DragEvent;
 import android.view.Menu;
 import android.view.View;
-
+import android.widget.Button;
 import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;
 import android.widget.PopupMenu;
@@ -97,7 +97,7 @@ public class YearView extends LinearLayout {
 		@Override
 		public boolean onDrag(View v, DragEvent dragEvent) {
 			int action = dragEvent.getAction();
-			ClassButton view = (ClassButton) dragEvent.getLocalState();
+			ClassButton view = (ClassButton) ((Button)dragEvent.getLocalState()).getParent();
 			switch(action)
 			{
 				case DragEvent.ACTION_DRAG_STARTED:
