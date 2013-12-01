@@ -1,0 +1,1083 @@
+<?xml version="1.0" ?>
+<courses>
+  <course name="Introduction to Logic Design">
+    <school>ENG</school>
+    <dept>EC</dept>
+    <cid>311</cid>
+    <description>Introduction to hardware building blocks used in digital computers. Boolean algebra, combinatorial and sequential circuits: analysis and design. Adders, multipliers, decoders, encoders, multiplexors. Programmable logic devices: read-only memory, programmable arrays, Verilog. Counters and registers. Includes lab. 4 cr,</description>
+  </course>
+  <course name="Introduction to Software Engineering">
+    <school>ENG</school>
+    <dept>EC</dept>
+    <cid>327</cid>
+    <description>This course aims to introduce students to software design, programming techniques, data structures, and software engineering principles. The course is structured bottom up, beginning with basic hardware followed by an understanding of machine language that controls the hardware and the assembly language that organizes that control. It then proceeds through fundamental elements of functional programming languages, using C as the case example, and continues with the principles of object-oriented programming, as principally embodied in C++ but also its daughter languages Java, C#, and objective C. The course will conclude with an introduction to elementary data structures and algorithmic analysis. Throughout, the course develops core competencies in software engineering, including programming style, optimization, debugging, compilation, and program management, utilizing a variety of Integrated Development Environments and operating systems. 4</description>
+  </course>
+  <course name="Applied Algorithms for Engineers">
+    <school>ENG</school>
+    <dept>EC</dept>
+    <cid>330</cid>
+    <description>Introduction to the general concept of algorithms. Efficiency and run-time of algorithms. Graph algorithms, priority queues, search trees.  Various approaches to design of algorithms and data structures, together with their applications to numerical and non-numerical problems. 4</description>
+  </course>
+  <course name="Probability Theory in Electrical and Computer Engineering">
+    <school>ENG</school>
+    <dept>EC</dept>
+    <cid>381</cid>
+    <description>Introduction to modeling uncertainty in electrical and computer systems. Experiments, models, and probabilities.  Discrete and continuous random variables. Reliability models for circuits. Probability distributions. Moments and expectations. Random vectors. Functions of random variables. Sums of random variables and limit theorems. Signal detection and estimation. Basic stochastic processes. Discrete-time Markov chains. State-diagrams. Applications to statistical modeling and interpretation of experimental data in computer, communication, and optical systems.</description>
+  </course>
+  <course name="Signals and Systems">
+    <school>ENG</school>
+    <dept>EC</dept>
+    <cid>401</cid>
+    <description>Cannot be taken for credit in addition to ENG BE 401. Continuous-time and discrete-time signals and systems. Convolution sum, convolution integral. Linearity, time-invariance, causality, and stability of systems. Frequency domain analysis of signals and systems. Filtering, sampling, and modulation. Laplace transform, z-transform, pole-zero plots. Linear feedback systems. Includes lab. 4</description>
+  </course>
+  <course name="Control Systems">
+    <school>ENG</school>
+    <dept>EC</dept>
+    <cid>402</cid>
+    <description>Analysis of linear feedback systems, their characteristics, performance, and stability. The Routh-Hurwitz, root-locus, Bode, and Nyquist techniques. Design and compensation of feedback control systems. 4</description>
+  </course>
+  <course name="Introduction to Electronics">
+    <school>ENG</school>
+    <dept>EC</dept>
+    <cid>410</cid>
+    <description>Principles of diode, BJT, and MOSFET circuits. Graphical and analytical means of analysis. Piecewise linear modeling; amplifiers; digital inverters and logic gates. Biasing and small-signal analysis, microelectronic design techniques. Time-domain and frequency domain analysis and design. Includes lab. 4</description>
+  </course>
+  <course name="Analog Electronics">
+    <school>ENG</school>
+    <dept>EC</dept>
+    <cid>412</cid>
+    <description>Continuation of SC 410. Topics include differential amplifiers, frequency response, operational amplifier structure and design, multistage circuit design, BJT, MOSFET, CMOS, and BiCMOS design principles, active filters and oscillators, and power devices. Includes lab. 4</description>
+  </course>
+  <course name="Computer Organization">
+    <school>ENG</school>
+    <dept>EC</dept>
+    <cid>413</cid>
+    <description>Introduction to the fundamentals and design of computer systems. Topics covered include computer instruction sets, assembly language programming, arithmetic circuits, CPU design (data path and control, pipelining), performance evaluation, memory devices, memory systems including caching and virtual memory, and I/O. Project using design automation tools. Includes lab. 4</description>
+  </course>
+  <course name="Communication Systems">
+    <school>ENG</school>
+    <dept>EC</dept>
+    <cid>415</cid>
+    <description>Signal analysis and transmission: amplitude modulation, angle modulation, pulse-amplitude and pulse-code modulation; amplitude shift-keying, frequency shift-keying, phase-shift keying. Case studies of practical communication systems. Includes lab. 4</description>
+  </course>
+  <course name="Introduction to Digital Signal Processing">
+    <school>ENG</school>
+    <dept>EC</dept>
+    <cid>416</cid>
+    <description>Introduces techniques of digital signal processing and application to deterministic as well as random signals. Topics include representation of discrete-time random signals, A/D conversion, D/A conversion, frequency domain and z-domain analysis of discrete-time signals and systems, discrete-time feedback systems, difference equation and FFT based realizations of digital filters, design of IIR Butterworth filters, window-based FIR filter design, digital filtering of random signals, FFT-based power spectrum analysis. Includes lab. 4</description>
+  </course>
+  <course name="Introduction to Operating Systems">
+    <school>ENG</school>
+    <dept>EC</dept>
+    <cid>440</cid>
+    <description>Operating system concepts and design objectives. Concurrent processes, process synchronization, and deadlocks. Resource management including virtual memory, CPU scheduling, and secondary storage. File structures, input/output, and distributed systems. Case studies of popular operating systems. 4</description>
+  </course>
+  <course name="Introduction to Computer Networking">
+    <school>ENG</school>
+    <dept>EC</dept>
+    <cid>441</cid>
+    <description>Computer networks, focusing on the Internet. Application protocols (Web, E-mail), basics of socket programming, major Internet protocols (TCP and IP), fundamental aspects of routing and reliable data transfer over networks, medium access protocols, wired and wireless Local Area Networks (LANs) technologies. Hands-on laboratory modules on client-server programming, Internet experiments, and protocol implementation. Includes lab. 4</description>
+  </course>
+  <course name="Software Design">
+    <school>ENG</school>
+    <dept>EC</dept>
+    <cid>447</cid>
+    <description>Object-oriented software design for windowed graphical environments. Design project using C++ and Microsoft .NET. Provides a solid foundation in modern programming for engineering and other applications. 4</description>
+  </course>
+  <course name="Microprocessors">
+    <school>ENG</school>
+    <dept>EC</dept>
+    <cid>450</cid>
+    <description>This course focuses on the interface between the digital world and the physical world. Hardware and software design methodology for embedded microcomputers. Open laboratory and projects and considerable hands-on work. Architecture, hardware, I/O, interrupts, memory organization and decoding. Uses the TI MSP430 family microcontrollers. Peripheral devices including general digital I/O, timers, analog to digital converters, and synchronous serial interfaces SPI and I2C. The course stresses the dependency of hardware and software design on project identification, rationale, and goals. Includes</description>
+  </course>
+  <course name="Electromagnetic Systems I">
+    <school>ENG</school>
+    <dept>EC</dept>
+    <cid>455</cid>
+    <description>Electric and magnetic fields. Electromagnetic waves. Propagation, reflection, and transmission. Remote sensing applications. Radio frequency coaxial cables, microwave waveguides, and optical fibers. Microwave sources and resonators. Antennas and radiation. Radio links, radar, and wireless communication systems. Electromagnetic effects in high-speed digital systems. Includes lab. 4</description>
+  </course>
+  <course name="Electromagnetic Systems II">
+    <school>ENG</school>
+    <dept>EC</dept>
+    <cid>456</cid>
+    <description>Electric field, energy, and force. Dielectric materials. Steady electric currents. Magnetic field, energy, and force. Magnetic materials. Applications of electrostatics, magnetostatics, and electrodynamics. Time carrying fields and Maxwell's equations. Electromagnetic waves in dielectric and conducting materials. Numerical methods in electromagnetic fields and waves. 4</description>
+  </course>
+  <course name="Senior Design Project I">
+    <school>ENG</school>
+    <dept>EC</dept>
+    <cid>463</cid>
+    <description>Development of the technical, communication, personal, and team skills needed for successful design in electrical and computer engineering. Specifications and standards, information collection, design strategies, modeling, computer-aided design, optimization, system design, failure and reliability, human factors. Oral and written communication of technical information. Team dynamics and ethical issues in design. Design project for a small-scale electrical or computer system. Preparation of detailed proposals for senior design projects in the following semester. Includes lab. 4</description>
+  </course>
+  <course name="Senior Design Project II">
+    <school>ENG</school>
+    <dept>EC</dept>
+    <cid>464</cid>
+    <description>Continuation of a team project in an area of electrical and computer engineering, as proposed in SC 463. Application of technical, communication, personal, and team skills. Oral and written communication of technical information, including progress reports, technical memos, final report, and oral presentations. Includes lab. 4</description>
+  </course>
+  <course name="Senior Honors Thesis">
+    <school>ENG</school>
+    <dept>EC</dept>
+    <cid>467</cid>
+    <description>Well-prepared students may choose to do a formal senior thesis under the direct guidance of a departmental faculty member. Students selecting this option must obtain petitioned approval before the beginning of the semester of thesis registration. 4</description>
+  </course>
+  <course name="Sensors in Space">
+    <school>ENG</school>
+    <dept>EC</dept>
+    <cid>470</cid>
+    <description>This course provides a practical introduction to the development, integration, and deployment of instrumentation on spacecraft platforms.  Students are introduced to the physical concepts and practical designs of sensors that measure particles, magnetic fields, and electric fields over a range of energies and frequencies. Particular attention is given to special constraints presented by the space environment.  In addition to established designs, the course will also cover new and emerging sensor technologies.  The course includes a lab component in which students will learn about small satellite development through design and implementation of a high-altitude balloon (&quot;balloon-sat&quot;) experiment. 4</description>
+  </course>
+  <course name="Physics of Semiconductor Devices">
+    <school>ENG</school>
+    <dept>EC</dept>
+    <cid>471</cid>
+    <description>Study of solid state electronic devices, including growth and structure of semiconductors, energy bands and charge carriers in semiconductors, junctions, diodes, bipolar junction transistors, field effect transistors and devices. 4</description>
+  </course>
+  <course name="Special Topics in Electrical and Computer Engineering">
+    <school>ENG</school>
+    <dept>EC</dept>
+    <cid>500</cid>
+    <description>Specific prerequisites vary according to topic. Coverage of a specific topic in electrical, computer, or systems engineering. Subject varies from year to year and is generally from an area of current or emerging research.</description>
+  </course>
+  <course name="Dynamic System Theory">
+    <school>ENG</school>
+    <dept>EC</dept>
+    <cid>501</cid>
+    <description>Introduction to analytical concepts and examples of dynamic systems and control. Mathematical description and state space formation of dynamic systems; modeling, controllability, and observability. Eigenvector and transform analysis of linear systems including canonical forms. Performance specifications. State feedback: pole placement and the linear quadratic regulator. Introduction to MIMO design and system identification using computer tools and laboratory experiments. Same as ENG ME 501 and ENG SE 501. Students may not receive credit for both.</description>
+  </course>
+  <course name="Advanced Data Structures">
+    <school>ENG</school>
+    <dept>EC</dept>
+    <cid>504</cid>
+    <description>Review of basic data structures and Java syntax. Data abstraction and object-oriented design in the context of high-level languages and databases. Design implementation from the perspective of data structure efficiency and distributed control. Tailoring priority queues, balanced search trees, and graph algorithms to real-world problems, such as network routing, database management, and transaction</description>
+  </course>
+  <course name="Stochastic Processes">
+    <school>ENG</school>
+    <dept>EC</dept>
+    <cid>505</cid>
+    <description>Introduction to discrete and continuous-time random processes. Correlation and power spectral density functions. Linear systems driven by random processes. Optimum detection and estimation. Bayesian, Weiner, and Kalman filtering.</description>
+  </course>
+  <course name="Software Systems Design">
+    <school>ENG</school>
+    <dept>EC</dept>
+    <cid>511</cid>
+    <description>Concept of software product life cycle. Various forms of a software product from requirements definition through operation and maintenance. Life cycle models and the activities performed in each phase. Role of rapid prototyping in requirements analysis and design. Design concepts and design strategies. Comparative evaluation of requirements definition and design methods. Analysis and design validation. Small-team projects involving architectural design and software specification.</description>
+  </course>
+  <course name="Enterprise Client-Server Software Systems Design">
+    <school>ENG</school>
+    <dept>EC</dept>
+    <cid>512</cid>
+    <description>Examination of past, current, and emerging technologies. Client side technologies including DHTML, CSS, scripting, ActiveX, RSS, and proprietary applications. Legacy server side technologies including CGI, ISAPL, and active server pages. Current and emerging server technologies including ASP.NET 2, XML/SOAP web services, wireless and handheld access, WAP/WML, SQL databases, streaming media, CMS, and middleware. Design and implementation of solutions involving database connectivity, session state, security requirements, SSL, and authentication of clients. Small-team projects involving design through implementation.</description>
+  </course>
+  <course name="Computer Architecture">
+    <school>ENG</school>
+    <dept>EC</dept>
+    <cid>513</cid>
+    <description>Computer architecture and design. Topics include computer arithmetic and ALU design; performance evaluation; instruction set design; CPU design, including pipelining, branch prediction, and speculative execution; memory hierarchy, including cache basics, cache design for performance, and virtual memory support; I/O, including devices, interfaces, specification, and modeling. Examples from high-end microprocessors and embedded systems.</description>
+  </course>
+  <course name="Simulation">
+    <school>ENG</school>
+    <dept>EC</dept>
+    <cid>514</cid>
+    <description>Modeling of discrete event systems and their analysis through simulation. Systems considered include, but are not limited to, manufacturing systems, computer-communication networks, and computer systems. Simulating random environments and output analysis in such contexts. A simulation language is introduced and is the main tool for simulation experimentation. Meets with ENG ME 514; students may not receive credit for both.</description>
+  </course>
+  <course name="Digital Communication">
+    <school>ENG</school>
+    <dept>EC</dept>
+    <cid>515</cid>
+    <description>Canonical point-to-point digital communication problem; Communication channel models; Optimal receiver principles with focus on additive Gaussian noise channels: Maximum Aposteriori Probability (MAP) and Maximum Likelihood (ML) receivers for both vector and waveform channels, principles of irrelevance and reversibility; Concepts of signal space and signal constellation; Efficient signaling for message sequences over frequency-flat additive Gaussian noise channels: basic digital modulation and demodulation techniques and their performance analysis; Notions of symbol and bit rate, symbol and bit error probability, and power and bandwidth efficiency; Real passband additive Gaussian noise waveform channels and their equivalent complex base-band representation; Efficient signaling for message sequences over general bandlimited additive Gaussian noise channels: signal design and equalization methods to combat intersymbol interference; Coherent versus Noncoherent digital signaling;  Synchronization; Channel estimation; Error correction coding basics.</description>
+  </course>
+  <course name="Digital Signal Processing">
+    <school>ENG</school>
+    <dept>EC</dept>
+    <cid>516</cid>
+    <description>Advanced structures and techniques for digital signal processing and their properties in relation to application requirements such as real-time, low-bandwidth, and low-power operation. Optimal FIR filter design; time-dependent Fourier transform and filterbanks; Hilbert transform relations; cepstral analysis and deconvolution; parametric signal modeling; multidimensional signal processing; multirate signal processing.</description>
+  </course>
+  <course name="Introduction to Information Theory">
+    <school>ENG</school>
+    <dept>EC</dept>
+    <cid>517</cid>
+    <description>Discrete memoryless stationary sources and channels; Information measures on discrete and continuous alphabets and their properties: entropy, conditional entropy, relative entropy, mutual information, differential entropy; Elementary constrained convex optimization; Fundamental information inequalities: data-processing, and Fano's; Block source coding with outage: weak law of large numbers, entropically typical sequences and typical sets, asymptotic equipartition property; Block channel coding with and without cost constraints: jointly typical sequences, channel capacity, random coding, Shannon's channel coding theorem, introduction to practical linear block codes; Rate-distortion theory: Shannon's block source coding theorem relative to a fidelity criterion; Source and channel coding for Gaussian sources and channels and parallel Gaussian sources and channels (water-filling and reverse water-filling); Shannon's source-channel separation theorem for point-to-point communication; Lossless data compression: Kraft's inequality, Shannon's lossless source coding theorem, variable-length source codes including Huffman, Shannon-Fano-Elias, and Arithmetic codes; Applications; Mini course-project.</description>
+  </course>
+  <course name="Project Management for Software-Intensive Systems">
+    <school>ENG</school>
+    <dept>EC</dept>
+    <cid>518</cid>
+    <description>Planning and control of a project involving the definition, development and implementation of a system in which software provides essential functionality.  Cost factors and cost estimation models; cost/benefit trade-offs, risk analysis; project metrics for quality, schedule, budget, and progress. Role of the project manager and organization of the development team. Case studies used to illustrate successes and failures in the management of actual projects. Small-team projects involving the development of project plans for a system that requires software development and hardware-software integration. 4</description>
+  </course>
+  <course name="Speech Signal Processing">
+    <school>ENG</school>
+    <dept>EC</dept>
+    <cid>519</cid>
+    <description>The goal of this course is to provide the basic concepts and theories of speech production, speech perception and speech signal processing, and their applications to contemporary speech technology. The course is organized in a manner that builds a strong foundation of basics first, and then concentrates on a range of signal processing methods for representing and processing the speech</description>
+  </course>
+  <course name="Digital Image Processing and Communication">
+    <school>ENG</school>
+    <dept>EC</dept>
+    <cid>520</cid>
+    <description>Review of signals and systems in multiple dimensions. Sampling of still images. Quantization of image intensities. Human visual system. Image color spaces. Image models and transformations. Image enhancement and restoration. Image analysis. Image compression fundamentals. Image compression standards (JPEG, JPEG-2000). Homework will include MATLAB assignments. </description>
+  </course>
+  <course name="Optimization Theory and Methods">
+    <school>ENG</school>
+    <dept>EC</dept>
+    <cid>524</cid>
+    <description>Introduction to optimization problems and algorithms emphasizing problem formulation, basic methodologies, and underlying mathematical structures. Classical optimization theory as well as recent advances in the field. Topics include modeling issues and formulations, simplex method, duality theory, sensitivity analysis, large-scale optimization, integer programming, interior-point methods, non-linear programming optimality conditions, gradient methods, and conjugate direction methods. Applications are considered; case studies included. Extensive paradigms from production planning and scheduling in manufacturing systems.  Other illustrative applications include fleet management, air traffic flow management, optimal routing in communication networks, and optimal portfolio selection.  Meets with ENGSE524.  Students may not receive credit for both.  </description>
+  </course>
+  <course name="Advanced Discrete Mathematics">
+    <school>ENG</school>
+    <dept>EC</dept>
+    <cid>533</cid>
+    <description>Selected topics in discrete mathematics. Formal systems. Mathematical deduction. Logical concepts. Theorem proving. Sets, relations on sets, operations on sets. Functions, graphs, mathematical structures, morphisms, algebraic structures, semigroups, quotient groups, finite-state machines, their homomorphism, and simulation. Machines as recognizers, regular sets. Kleene</description>
+  </course>
+  <course name="Discrete Stochastic Models">
+    <school>ENG</school>
+    <dept>EC</dept>
+    <cid>534</cid>
+    <description>Markov chains, Chapman-Kolmogorov equation. Classification of states, limiting probabilities, Poisson process and its generalization, continuous-time Markov chains, queuing theory, reliability</description>
+  </course>
+  <course name="Introduction to Embedded Systems">
+    <school>ENG</school>
+    <dept>EC</dept>
+    <cid>535</cid>
+    <description>This course introduces students to a unified view of hardware and software in embedded systems. The lectures will survey a comprehensive array of techniques including system specification languages, embedded computer architecture, real-time operating systems, hardware-software codesign, and co-verification techniques. The lectures will be complemented by assignments and projects that involve system design, analysis, optimization, and verification.</description>
+  </course>
+  <course name="Computer Communication Networks">
+    <school>ENG</school>
+    <dept>EC</dept>
+    <cid>541</cid>
+    <description>Basic delay and blocking models for computer communications: M/M/1 queue; Jackson networks and loss networks; analysis of MAC protocols; flow control for data traffic; TCP and active queueing mechanisms for congestion control; traffic shaping and network calculus; packet switch architectures and scheduling algorithms; routing algorithms; flow assignment and fairness. </description>
+  </course>
+  <course name="Networking the Physical World">
+    <school>ENG</school>
+    <dept>EC</dept>
+    <cid>544</cid>
+    <description>Considers the evolution of embedded network sensing systems with the introduction of wireless network connectivity. Key themes are computing optimized for resource constrained (cost, energy, memory and storage space) applications and sensing interfaces to connect to the physical world. Studies current technology for networked embedded network sensors including protocol standards. A laboratory component of the course introduces students to the unique characteristics of distributed sensor motes including programming, reliable communication, sensing modalities, calibration, and application development. Meets with ENGME544. Students may not receive credit for both.</description>
+  </course>
+  <course name="Advanced Digital Design with Verilog and FPGA">
+    <school>ENG</school>
+    <dept>EC</dept>
+    <cid>551</cid>
+    <description>Content includes use of HDL (Verilog) for design, synthesis and simulation, and principles of register transfer level (RTL). Programmable logic, such as field programmable gate array (FPGA) devices, has become a major component of digital design. In this class the students learn how to write HDL models that can be automatically synthesized into integrated circuits such as FPGA. Laboratory and homework exercises include writing HDL models of combinational and sequential circuits, synthesizing models, performing simulation, and fitting to an FPGA by using automatic place and route. The course has lab orientation and is based on a sequence of Verilog design examples.</description>
+  </course>
+  <course name="Introduction to Photonics">
+    <school>ENG</school>
+    <dept>EC</dept>
+    <cid>560</cid>
+    <description>Introduction to ray optics; matrix optics; wave optics; Fourier optics; electromagnetic optics including absorption and dispersion. Polarization, reflection and refraction, anisotropic media, liquid crystals, and polarization devices. Guided-wave and fiber optics. Nanophotonics.</description>
+  </course>
+  <course name="Error-Control Codes">
+    <school>ENG</school>
+    <dept>EC</dept>
+    <cid>561</cid>
+    <description>Introduction to codes for error detection and correction in communication and computation channels, linear algebra over finite fields, bounds, Shannon?s Theorem, perfect and quasi-perfect codes, probability of error detection, Hamming, BCH, MDS, Reed-Solomon, and non-linear codes. Application of codes to error detection/correction in communication channels, computer memories, processors, and multiprocessor systems. Data compression and data reconciliation by error-detecting or error-correcting codes.</description>
+  </course>
+  <course name="Fiber Optics and Communications Systems">
+    <school>ENG</school>
+    <dept>EC</dept>
+    <cid>563</cid>
+    <description>This course will cover the theory light propagation and manipulation in an optical fiber both in the linear and nonlinear regimes. This theory will be used to introduce design, both of optical fibers for transmission as well as for devices and components. The latter part of the course will use these concepts to illustrate applications in which fibers and fiber devices are used. The emphasis will be on telecommunications systems, but the course will also touch upon other emerging applications such as lasers, sensors, biomedical systems and astrophotonics. Two lectures, two hours a week. 4</description>
+  </course>
+  <course name="The Atmosphere and Space Environment">
+    <school>ENG</school>
+    <dept>EC</dept>
+    <cid>566</cid>
+    <description>Introduction to the upper atmosphere and ionosphere. The dynamic, electrodynamic, radiative, and chemical processes occurring in the atmosphere from ground level to near-space are developed to establish the conditions found in the upper-atmospheric/ionospheric region. Recent offerings have included numerical simulation of the ionospheric electron density profile. Numerical experiments that change the solar input and neutral atmospheric density, composition, winds, and temperature are then run to study the response of the ionosphere to these factors that control the ionosphere. Recommended for graduate students and advanced undergraduate students in engineering, astronomy, and physics and those with interests in environmental topics.</description>
+  </course>
+  <course name="Optical Fibers and WaveGuides">
+    <school>ENG</school>
+    <dept>EC</dept>
+    <cid>568</cid>
+    <description>Whether it be the FIOSÂ internet connection at our homes, or fiber lasers powerful enough to cut metals (many automobile chassis are now made using fiber lasers), or the ability to perform endoscopic surgery and imaging, or doing frequency metrology with super-continuum sources (the basis of a few recent Nobel prizes)... the optical fiber has played a central, often dominant, role in many applications that impact the way we live. The main function of an optical fiber is to carry an electromagnetic (in the optical frequency) pulse over distances ranging from meters to greater than ten thousand kilometers without distortions. Fibers can also become smart light-pipes when they are intentionally designed to alter, temporally shape or amplify light pulses. Moreover, new developments in this field such as photonic bandgap fibers, fiber nanowires and higher-order mode fibers, are opening up new directions in science and technology.  This course will introduce the optical fiber waveguide and its theory of operation. Specifically, the design and impact of the two most important properties in optical fibers -- dispersion and nonlinearity -- that govern the evolution of light in optical fibers, will be covered in detail. The latter part of the course will describe new fibers and fiber-structures that are active research topics today. One lecture of the course will include a tour of an actual, industrial-scale fiber fabrication facility. 4 cr. </description>
+  </course>
+  <course name="Introduction to Subsurface Imaging">
+    <school>ENG</school>
+    <dept>EC</dept>
+    <cid>569</cid>
+    <description>Introduction to subsurface imaging using electromagnetic, optical, X-ray, and acoustic waves. Transverse and axial imaging using localized probes (confocal scanning, time of flight, and interferometric techniques). Multiview tomographic imaging: computed axial tomography, diffraction tomography, diffuse optical tomography, electrical impedance tomography, and magnetic resonance imaging. Image reconstruction and inverse problems. Hyperspectral and multisensor imaging.</description>
+  </course>
+  <course name="Lasers">
+    <school>ENG</school>
+    <dept>EC</dept>
+    <cid>570</cid>
+    <description>Review of wave optics. Gaussian, Hermite-Gaussian, Laguerre-Gaussian, and Bessel optical beams. Planar- and spherical-mirror resonators; microresonators. Photons and photon streams. Energy levels; absorption, spontaneous emission, and simulated emission. Thermal and scattered light. Laser amplification and gain saturation. Laser oscillation. Common lasers and introduction to pulsed lasers. Photon interactions in semiconductors. LEDs, laser diodes, quantum-confined lasers, and microcavity lasers. Introductoin to photon detectors. Laboratory experiments: beam optics; longitudinal laser modes; laser-diode output characteristics.</description>
+  </course>
+  <course name="Digital VLSI Circuit Design">
+    <school>ENG</school>
+    <dept>EC</dept>
+    <cid>571</cid>
+    <description>Very-large-scale integrated circuit design. Review of FET basics. Functional module design, including BiCMOS, combinational and sequential logic, programmable logic arrays, finite-state machines, ROM, and RAM. Fabrication techniques, layout strategies, scalable design rules, design-rule checking, and guidelines for testing and testability. Analysis of factors affecting speed of charge transfer, power requirements, control and minimization of parasitic effects, survey of VLSI applications. Extensive CAD laboratory accompanies course.</description>
+  </course>
+  <course name="Solar Energy Systems">
+    <school>ENG</school>
+    <dept>EC</dept>
+    <cid>573</cid>
+    <description>This course is designed for first year graduate and senior undergraduate students from engineering disciplines.  It is intended to educate students in the design and applications of solar energy technology.  It will focus on fundamentals of solar energy conversion, solar cells, optical engineering, photoelectrochemical cells, thermoelectric generators, and energy storage and distribution systems.  The course covers solar energy insolation and global energy needs, current trends in photovoltaic energy engineering, solar cell materials science, design and installation of solar panels for residential and industrial applications and connections to the national grid and cost analysis of the overall system.  In addition, basic manufacturing processes for the production of solar panels, environmental impacts, and the related system engineering aspects will be included to provide a comprehensive state-of-the-art approach to solar energy utilization.  Meets with ENG MS573; students may not take credit for both. 4</description>
+  </course>
+  <course name="Physics of Semiconductor Materials">
+    <school>ENG</school>
+    <dept>EC</dept>
+    <cid>574</cid>
+    <description>This course teaches the relevant notions of quantum mechanics and solid state physics necessary to understand the operation and the design of modern semiconductor devices.  Specifically,  this course  focuses on the engineering aspects of solid state physics that are important to study the electrical and optical properties of semiconductor materials and devices. Particular emphasis is placed on the analysis of the electronic structure of semiconductor bulk systems and low-dimensional structures, the study of the carrier transport properties and the calculation of the optical response that are relevant to the design and optimization of electronics and photonics semiconductor devices. The students will learn to apply the quantum mechanical formalism to the solution of  basic engineering device problems (quantum wells, wires, and dots, 2D electron gas)  and to perform numerical calculation on more complex systems (band structure calculation of bulk and low dimensional systems).</description>
+  </course>
+  <course name="Semiconductor Devices">
+    <school>ENG</school>
+    <dept>EC</dept>
+    <cid>575</cid>
+    <description>Fundamentals of carrier generation, transport, recombination, and storage in semiconductors. Physical principles of operation of the PN junction, metal-semiconductor contact, bipolar junction transistor, MOS capacitor, MOSFET (Metal Oxide Semiconductor Field Effect Transistor), JFET (Junction Field Effect Transistor), and bipolar junction transistor. Develops physical principles and models that are useful in the analysis and design of integrated circuits.</description>
+  </course>
+  <course name="Electronic Optical and Magnetic Properties of Materials">
+    <school>ENG</school>
+    <dept>EC</dept>
+    <cid>577</cid>
+    <description>This course in intended to develop an in depth knowledge of solid state concepts that are important for students in the areas of material science and  electrical engineering. Specifically,  this course  focuses on the study of different apsect of solid state physics necessary to study technologically relevant crytalline and amorphous systems.  Particular enphasis is placed on the study of the crystal structure, crystal diffraction and the related techniques used as diagnostic tools; the electronic, thermal, optical and magnetic properties of material systems important for electronics and photonics device applications. Furthermore the course will also consider the theory of superconductivity, the chemistry aspcts of solid state materials and will provide an introduction to solid state biophysics. This course complements EC 574 (Physics of semiconductor material) and EC575 (semiconductor devices) with its focus on technologically relevant structural, optical, thermal and magnetic material properties. Meets with ENG MS 577. Students may not receive credit for both.</description>
+  </course>
+  <course name="Fabrication Technology for Integrated Circuits">
+    <school>ENG</school>
+    <dept>EC</dept>
+    <cid>578</cid>
+    <description>Presentation of fabrication procedures for silicon-integrated circuits: physical properties of bulk and epitaxially grown silicon; silicon processing, such as oxidation, diffusion, epitaxy, deposition, and ion implantation; silicon crystallography, anisotropic etching, photolithography, piezorestivity, and chemical and plasma techniques. The limitations these processes impose on the design of bipolar and MOS devices and integrated circuits are discussed. Design of an integrated circuit and the required processing. Includes lab. 4 cr.</description>
+  </course>
+  <course name="Microelectronic Device Manufacturing">
+    <school>ENG</school>
+    <dept>EC</dept>
+    <cid>579</cid>
+    <description>Physical processes and manufacturing strategies for the fabrication and manufacture of microelectronic devices. Processing and device aspects instrumental in silicon, including the fabrication of doping distributions, etching, photolithography, interconnect construction, and packaging. Future directions and connections to novel devices, MEMS, photonics, and nanoscale structures will be discussed. Emphasis will be on ?designing for manufacturability.? The overall integration with methods and tools employed by device and circuit designers will be covered. Same as ENGME579. Students may not receive credit for both.</description>
+  </course>
+  <course name="Analog VLSI Circuit Design">
+    <school>ENG</school>
+    <dept>EC</dept>
+    <cid>580</cid>
+    <description>Anatomy of an operational amplifier using chip design techniques. Applications of op amps in wave-shaping circuits, active filters including capacitive switching. Analog multiplexing and data acquisition circuits, A/D, D/A, S/H are examined. Frequency selective circuits and interface circuits such as optocouplers are analyzed. 4 cr.</description>
+  </course>
+  <course name="RF/Analog IC Design Fundamentals">
+    <school>ENG</school>
+    <dept>EC</dept>
+    <cid>582</cid>
+    <description>Fundamentals related to CMOS and SiGe BICMOS analog circuits for RF applications. Topics include low noise amplifiers, oscillators, mixers, demodulators, phase-locked loop, switched capacitor circuits, A/D and D/A converters, low power design, RF design techniques, and mixed-signal circuitry typical of modern telecommunications technology. VLSI laboratory exercises involving the design, layout, and simulation of RF/analog integrated circuits using Cadence SpectreRF CAD software tools. Real-world examples in advanced mixed-signal integrated circuit applications, such as a single chip radio.</description>
+  </course>
+  <course name="Power Electronics for Energy systems">
+    <school>ENG</school>
+    <dept>EC</dept>
+    <cid>583</cid>
+    <description>Introduction to power electronics with emphasis on conversion circuits for energy systems. DC to DC conversion using buck, boost, and buck-boost converters. DC to AC inverters. Connection to power grid.  Properties of MOS transistors used for high power conversion applications. Properties of magnetic elements and interactions with power circuits.  Applications of power electronic circuits to energy systems, including solar cell installations, wave and wind power, and electric vehicles. High frequency inductors and transformers.</description>
+  </course>
+  <course name="Engineering Mechanics II">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>302</cid>
+    <description>Fundamentals of engineering dynamics. Kinetics and kinematics of rigid bodies in two and three dimensions. Newton's Laws.  Lagrangian methods.  Introduction to mechanical vibrations.  4</description>
+  </course>
+  <course name="Fluid Mechanics">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>303</cid>
+    <description>Properties of fluids. Fluid statics. Flow kinematics and dynamics. Dimensional analysis. Control volume approach to conservation of mass, momentum, and energy.  Analysis of fluid flow along streamline using the Bernoulli equation. Pipe flow analysis techniques. Discussion of boundary layers, and methods for estimating drag, and lift forces. Course consists of a mixture of lectures and labs.</description>
+  </course>
+  <course name="Energy and Thermodynamics">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>304</cid>
+    <description>&lt;span&gt;Graduate Prerequisites: ( (METPY212 OR CASPY252) &amp; METMA124)&lt;/span&gt;&lt;br</description>
+  </course>
+  <course name="Mechanics of Materials">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>305</cid>
+    <description>Introduction to stress and strain. Axial and shear loading.  Torsion of shafts and thin-walled tubes. Stress within and deflection of bending beams.  Combined loadings.  Stress and strain transformations.  Generalized Hooke's law.  Material failure theories.  Column buckling.  Includes lab and project.  4 cr. either sem.</description>
+  </course>
+  <course name="Introduction to Materials Science">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>306</cid>
+    <description>Structure and properties of solids; crystalline structure; defect structures; atom movement and diffusion; nucleation and growth; deformation; phase diagrams; strengthening mechanisms; heat treatment; ferrous/nonferrous alloys; ceramics; polymers; composites. Includes lab. Meets with ENGMS306.  Students may not receive credit for both. </description>
+  </course>
+  <course name="Structural Mechanics">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>309</cid>
+    <description>Application of solid mechanics to structures and machine elements. Elementary elasticity. Energy principles. Matrix and finite element methods. Stability phenomena. Modes of structural failure. Introduction to FEM.  Includes design project. </description>
+  </course>
+  <course name="Instrumentation and Theory of Experiments">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>310</cid>
+    <description>Designing, assembling, and operating experiments involving mechanical measurements; analyzing experimental data. Safety considerations in the laboratory. Wind tunnel testing. Mechanical and electrical transducers for flow, pressure, temperature, velocity, strain, and force. Electric circuits for static and dynamic analog signal conditioning. Computer use for digital data acquisition and analysis; instrument control. Introduction to frequency domain analysis.  Professional standards for documenting experiments and preparing reports, including formal uncertainty analysis involving elementary statistics.  Discussion of commercial instrument development. Interpretation of experimental results. Includes lab and design</description>
+  </course>
+  <course name="Automation and Manufacturing Methods">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>345</cid>
+    <description>&amp;#8201; An introduction to the major concepts and practices of modern manufacturing, including production system dynamics, process development, and computer-aided design and manufacturing techniques. Topics include numerically controlled machines, robotic control, real-time process control, computer vision, statistical process control, programmable logic control, production system design, discrete event system models, and computer simulation. Strong emphasis is given on hands-on laboratory experience, with a lecture component covering fundamental concepts and supporting the laboratory exercises and projects. Includes lab. 4</description>
+  </course>
+  <course name="Introduction to CAD and Machine Components">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>359</cid>
+    <description>Technical drawing in two and three dimensions will be covered in detail using advanced CAD tools. Geometrical dimensioning and tolerancing methods and specifications will be taught and applied to a variety of tasks and projects. Topics will include initial aspects of machine components and design, computer numerical control (CNC), computer aided manufacturing (CAM), and relation to machining and various manufacturing processes. Cannot be taken for credit in addition to ME 407. 2 cr. </description>
+  </course>
+  <course name="Product Design">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>360</cid>
+    <description>This course emphasizes the profitable conversion of product ideas to useful and attractive products desired by customers.  This course includes aspects of both engineering design and industrial design.  This course consists of a series of design projects of increasing complexity, including the development of an operations plan for product manufacture and delivery.  Exercises include product manufacturing considerations.  Use is made of SolidWorks CAD software.  Resources for design exercises are presented in working studio sessions.  4 cr.</description>
+  </course>
+  <course name="Probability and Statistics for Mechanical Engineers">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>366</cid>
+    <description>Principles of probability and statistics including events, Bayes' theorem, random variables, joint and marginal distributions, random sequences and series, reliability theory, estimation, and quality control.  Examples drawn from engineering applications. Cannot be taken for credit in addition to CAS MA 381, ENG BE 200, or ENG EC 381.  2 cr.</description>
+  </course>
+  <course name="Atmospheric Flight Mechanics and Control">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>403</cid>
+    <description>Introduction to stability and control of atmospheric flight vehicles. Forces and moments on aircraft. Static and dynamic stability. Equations of motion. Feedback design using root locus. Flying quality standards. Longitudinal and lateral autopilots. Cannot be taken for credit in addition to ME 404. Includes design project and lab. </description>
+  </course>
+  <course name="Dynamics and Control of Mechanical Systems">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>404</cid>
+    <description>Modeling of mechanical systems. Introduction to theory of feedback and control. Performance and stability of linear systems. Design of feedback control systems. Practical applications. Includes lab. Cannot be taken for credit in addition to ME 403. </description>
+  </course>
+  <course name="Dynamics of Space Vehicles">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>406</cid>
+    <description>Orbital mechanics of particles, earth satellite trajectories. Rocket propulsion and atmospheric reentry dynamics. Gravitational and electromagnetic fields of the earth. Effects of the space environment on vehicle performance. Rigid body dynamics and vehicle attitude control. Interplanetary trajectories and mission planning.</description>
+  </course>
+  <course name="Computer-Aided Design and Manufacture">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>407</cid>
+    <description>Manufacturability of high-tech products has grown and excelled in the present digital era due to enormous advances in computation, communication, control, and software. Computer-integrated design and manufacturing (CIM) concepts are first introduced, followed by a heavy emphasis on computer-aided design (CAD), manufacturing (CAM), and engineering (CAE) tools. Topics include geometrical tolerancing and specification, transformation and manipulation of objects, description of curves and surfaces, solid modeling, tooling and fixturing, computer numerical-control (CNC) of machine tools, rapid prototyping technologies, optimization of designs, introduction of finite element methods (FEM) and application to stress/strain, deformations, and thermal engineering problems, and testing of parts while incorporating CAD/CAE methods. Projects are selected from a variety of engineering areas. The course includes a lab with extensive use of modern CAD tools such as Solid-Works, plus exposure to COSMOSWorks and COMSOL.  Summer Only.  Cannot be taken for credit along with ME 359. </description>
+  </course>
+  <course name="Aircraft Performance and Design">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>408</cid>
+    <description>This course covers the fundamental elements of designing and analyzing fixed wing aircraft, including general aviation aircraft, commercial transports and selected military products.  Student teams get to design an airplane from start to finish during the semester as well as compete with other teams for Best-in-Class design.  Topics covered include Initial Sizing, Wing, Fuselage and Empennage Design, Propulsion Selection, Takeoff &amp; Landing Performance, Structural Design, Stability &amp; Control and Cost Assessment.  Emphasis is put on modeling existing competitor aircraft in tandem with the students' design, which helps substantiate design choices.  The use of spreadsheets is a key learning tool for this</description>
+  </course>
+  <course name="Operations Research">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>411</cid>
+    <description>Nature of operations research. Scientific approach to industrial problems. Linear programming, including simplex and transportation algorithms, duality. Network analysis, dynamic programming, game theory, queueing theory and inventory control, and analytic methods for decision making.</description>
+  </course>
+  <course name="Heat Transfer">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>419</cid>
+    <description>Fundamentals of heat exchange processes and applications to heat exchanger design. Principles of steady and unsteady conduction. Introduction to numerical analysis. Natural and forced convection heat transfer in internal and external flows. Radiant heat exchange. Introduction to boiling and condensation heat transfer. Includes lab and design project.</description>
+  </course>
+  <course name="Supply Chain Engineering">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>420</cid>
+    <description>Emphasizes the integration of product design with the process of delivering products to customers.  Review of manufacturing processes for process automation.  Supply chain configuration and flow balancing.  Seamless introduction of new products.  Process reengineering and lean manufacturing techniques in established supply chains. Design of decision support systems.</description>
+  </course>
+  <course name="Fluid Mechanics II">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>422</cid>
+    <description>Introduction to nano/micro flows.  Flow kinematics: pathlines, streamlines, streaklines, rate-of-strain, dilatation, and vorticity. Stream function and velocity potential in two-dimensional flows. Potential flow theory: flow past a cylinder, circulation, and lift. Viscous flow: stress in a Newtonian fluid, the continuity, Euler and Navier-Stokes equations. Introduction to turbulence. Fully developed laminar and turbulent flows. Analysis of pumps and turbomachinery. Laminar and turbulent boundary layers. Includes lab and computer use. Cannot be taken in addition to ENG ME 421.</description>
+  </course>
+  <course name="ENG ME 425 Compressible Flow and Propulsion">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>425</cid>
+    <description>Fluid mechanics and thermodynamics of compressible fluid flow with application to external and internal flows as found in propulsion systems. Fluid/thermal related topics include: normal and oblique shocks, Prandtl-Meyer expansion waves, variable area duct flow, and wave drag. Propulsion applications include rocket nozzles, rocket engine staging, supersonic inlets, and exhaust nozzles for airbreathing propulsion systems. Parametric cycle analysis for ramjet, turbojet, turbofan, and turboprop engines. 4 cr.</description>
+  </course>
+  <course name="Directed Study in Mechanical Engineering">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>452</cid>
+    <description>Under faculty supervision, students may study a subject that is relevant to mechanical engineering and is not covered in a regularly offered course. Term paper and/or written examination required at end of semester.</description>
+  </course>
+  <course name="Engineering Projects in Mechanical Engineering">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>457</cid>
+    <description>Project for seniors in mechanical engineering. Students select, develop, and complete a project and prepare a report.</description>
+  </course>
+  <course name="Electro-Mechanical Systems Design">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>460</cid>
+    <description>This course melds traditional machine component design with the design, instrumentation, and control of high precision, computer-controlled automation systems, using concrete examples drawn from the photonics, biotech, and semi-conductor industries. Topics covered include design strategy, high-precision mechanical components, sensors and measurement, servo control, design for controllability, control software development, controller hardware, as well as automated error detection and recovery. Students will work in teams, both in classroom and out-of-classroom, to integrate and apply the material covered in class to a term-long multi-part design project, using modern CAD tools, culminating in a group presentation at the end of the semester. 4</description>
+  </course>
+  <course name="Mechanical Engineering Capstone Experience">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>461</cid>
+    <description>The main activity in this course is the planning, and execution of a capstone project that represents a culmination of the Mechanical Engineering program. Students work in teams on either a research or design problem in some area of Mechanical Engineering that builds upon previous coursework. Class time will be focused on weekly project meetings with faculty.  The course includes lectures on ethics, entrepreneurship, project management and other professional topics. Oral and written communications will be emphasized. 4 cr. </description>
+  </course>
+  <course name="Materials Processing">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>465</cid>
+    <description>The influence of manufacturing processes on structure and properties of materials. Manufacturing by liquid and solid state processing techniques, material removal processes and bonding and joining processes. Surface modification techniques for enhancing performance and product service life. Includes lab. Meets with ENGMS465.  Students may not receive credit for both.</description>
+  </course>
+  <course name="Dynamic System Theory">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>501</cid>
+    <description>Introduction to analytical concepts and examples of dynamic systems and control.  Mathematical description and state space formation of dynamic systems; modeling, controllability, and observability.  Eigenvector and transform analysis of linear systems including canonical forms.  Performance specifications.  State feedback:  pole placement and the linear quadratic regulator.  Introduction to MIMO design and system identification using computer tools and laboratory experiments. Meets with ENG EC 501 and ENG SE 501; students may not receive credit for both.</description>
+  </course>
+  <course name="Kinetic Processes in Materials">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>503</cid>
+    <description>Kinetics of mass transport, continuum and atomistic approaches, chemical diffusion; kinetics of chemical reactions, kinetics of adsorption and evaporation; nucleation and growth; solidification; spinodal decomposition; coarsening; martensitic transformations; order-disorder reactions; point defects and their relation to transport kinetics. Meets with ENGMS503; students may not receive credit for both.</description>
+  </course>
+  <course name="Thermodynamics and Statistical Mechanics">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>505</cid>
+    <description>The laws of thermodynamics; general formulation and applications to mechanical, electromagnetic and electromechanical systems; thermodynamics of solutions, phase diagrams; thermodynamics of interfaces, adsorption; defect equilibrium in crystals; statistical thermodynamics, including ensembles, gases, crystal lattices, and phase transitions.  Same as ENGME505; students may not receive credit for</description>
+  </course>
+  <course name="Process Modeling and Control">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>507</cid>
+    <description>An introduction to modeling and control as applied to industrial unit processes providing the basis for process development and improvement.  Major themes include an integrated treatment of modeling multi-domain physical systems (electrical, mechanical, fluid, thermal), application of classical control techniques, and system design.  Topics include modeling techniques, analysis of linear dynamics, control fundamentals in the time and frequency domain, and actuator selection and control structure design.  Examples drawn from a variety of manufacturing processes and case studies. Meets with ENGMS507.  Students may not receive credit for both.</description>
+  </course>
+  <course name="Computational Methods in Materials Science">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>508</cid>
+    <description>Introduction to computational materials science.  Multi-scale simulation methods; electronic structure, atomistic, micro-structure, continuum, and mathematical analysis methods; rate processes and rare events.  Materials defect theory; modeling of crystal defects, solid micro-structures, fluids, polymers, and bio-polymers.  Materials scaling theory: phase transition, dimensionality, and localization.  Perspectives on predictive materials design.  Same as ENGMS508; students may not receive credit for</description>
+  </course>
+  <course name="Computational Nanomechanics">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>509</cid>
+    <description>This course offers an introduction to the computational techniques that are needed to study the mechanical behavior and properties of nanomaterials. There will be two focus topics of the course. First, we will discretize and study the differential equations at the continuum and atomistic scales. Second, we will study methods of coupling the atomistics to continua via multiple scale simulation techniques that enable length and time scale bridging to</description>
+  </course>
+  <course name="Production Systems Analysis">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>510</cid>
+    <description>Operations research and dynamic systems methods applied in modeling, analysis, and control of production systems. Inventory analysis and control for single and multi-item systems based on deterministic and stochastic demand models. Demand forecasting. Supply chain management. Machine, flow shop and job shop scheduling, project scheduling with PERT and CPM. Production control methods: MRP, MRP-II, Just-in-Time, and Kanban.</description>
+  </course>
+  <course name="Manufacturing Information Systems">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>511</cid>
+    <description>This course provides a basic introduction to Information Systems concepts, design and analysis techniques, and their application to Manufacturing Operations Management. The impact of contemporary Information Technology solutions on Manufacturing Operations Management is explored by focusing on Enterprise Resource Planning, Manufacturing Execution, and Advanced Planning and Scheduling systems. Trends and challenges facing Information Technology solutions to Manufacturing Operations Management are highlighted through case studies focusing on Lean and Agile manufacturing, Supply Chain Management and Electronic Procurement, six sigma, and related methodologies.</description>
+  </course>
+  <course name="Engineering Analysis">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>512</cid>
+    <description>Mathematical methods in aerospace and mechanical engineering; vectors and tensors; partial differential equations of heat and mass transfer, wave motion and potential theory, classification of second order PDEs; eigenfunction expansions, method of characteristics, Fourier and Laplace transforms; complex variable theory, residue integration, conformal mapping; Green's functions, integral equations, variational methods; perturbation methods for non-linear differential equations.</description>
+  </course>
+  <course name="Compressible Aerodynamics">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>513</cid>
+    <description>Aerodynamics and thermodynamics of compressible fluid flow. Laval nozzles, Prandtl-Meyer flow, normal and oblique shock waves. Linearized theory. Application to external and internal flow problems such as airfoils.  Cannot be taken for credit in addition to ENG ME</description>
+  </course>
+  <course name="Simulation">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>514</cid>
+    <description>Modeling of discrete event systems and their analysis through simulation. Systems considered include, but are not limited to, manufacturing systems, computer-communication networks and computer systems. Simulating random environments and output analysis in such contexts. A simulation language is introduced and is the main tool for simulation experimentation. Meets with ENG EC 514; students may not receive credit for both. </description>
+  </course>
+  <course name="Vibration of Complex Mechanical Systems">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>515</cid>
+    <description>Introductory course in mechanical vibrations for graduate students and for undergraduate students with substantial mastery of core undergraduate subjects in mechanics and mathematics. Course includes an elementary introduction to applicable concepts in linear algebra. Potential and kinetic energy functions of single- and multi-degree-of-freedom systems. Matrix formulations of forced vibrations of linear systems. Natural frequencies, resonance, and forced vibration response. Natural modes and mode shapes. Rayleigh's principle. Rayleigh's dissipation function, transient and forced responses of damped vibrations. Random excitation of vibrations. Impedance matrix. O'Hara-Cunniff theorem, modal masses, modal analysis. Vibrations of simple continuous systems such as strings, beams, rods, and torsional shafts. This course cannot be taken for credit in addition to ENG ME 441.</description>
+  </course>
+  <course name="Statistical Mechanical Concepts in Engineering">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>516</cid>
+    <description>Statistical mechanics uses probability theory to establish a connection between the microscopic properties of individual molecules and macroscopic properties of matter, such as temperature, pressure, entropy, heat capacity and viscosity. Review of thermodynamics. Fundamentals of probability theory. Phase space dynamics. Ensembles and averages. Statistical formulation of  photons (Light), phonons (lattice vibrations in solids), electrons in a metals and classical gases. Classical transport. Introduction to non-equilibrium phenomena. 4 cr. either</description>
+  </course>
+  <course name="Product Development">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>517</cid>
+    <description>Dynamics of converting ideas into marketable products. Choosing products and defining their specifications to achieve competitive advantage. The product development process is decomposed and its elements are examined critically in the context of actual case studies; risk evaluation, concurrent engineering, and impact of new product decisions on the factory. A step-by-step methodology for new product development is derived.</description>
+  </course>
+  <course name="Product Quality">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>518</cid>
+    <description>Introduction to statistical methods for design, control and improvement of quality. Includes Statistical Process and Quality Control (SPC &amp; SQC) and Acceptance Sampling. Extensive coverage of Design of Experiments (DOE) with applications to designing quality into products and to process and product performance improvement. Also covers Robust Design and Taguchi's method. Introduction to modern approaches to management of quality (TQM, Six Sigma).</description>
+  </course>
+  <course name="Theory of Heat Transfer">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>519</cid>
+    <description>Analytical, numerical, and physical aspects of heat transfer phenomena, with emphasis on nondimensionalization and scaling. Mathematical treatment of steady and unsteady conduction, including finite difference methods. Forced and natural convection in internal and external flows. Thermal radiation and multimode heat transfer. Melting and solidification. Applications to aerospace heat transfer, energy systems, manufacturing, and biological heat transfer.</description>
+  </course>
+  <course name="Acoustics I">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>520</cid>
+    <description>Introduction to wave propagation and sound. General concepts such as quantitative measures of sound, plane waves, and acoustic energy density and intensity. Derivation of wave equation. Sound radiation from vibrating bodies. Basic ray-acoustic concepts: reflection, refraction, diffraction and scattering of acoustic waves. Other topics may include flow-induced sound, Helmholtz resonators, sound transmission through ducts and mufflers, room acoustics, and absorption and attenuation of sound waves in fluids.</description>
+  </course>
+  <course name="Continuum Mechanics">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>521</cid>
+    <description>The main goal of this course is to present a unified, mathematically rigorous approach to two classical branches of mechanics: the mechanics of fluids and the mechanics of solids.  Topics will include kinematics, stress analysis, balance laws (mass, momentum, and energy), the entropy inequality, and constitutive equations in the framework of Cartesian vectors and tensors. Emphasis will be placed on mechanical principles that apply to all materials by using the unifying mathematical framework of Cartesian vectors and tensors.  Illustrative examples from biology and physiology will be used to describe basic concepts in continuum mechanics. The course will end at the point from which specialized courses devoted to problems in fluid mechanics (e.g. biotransport) and solid mechanics (e.g. cellular biomechanics) could logically proceed; Same as ENGBE521. Students may not receive credit for both. </description>
+  </course>
+  <course name="Underwater Acoustics">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>522</cid>
+    <description>The ocean environment. Physical processes in deep and shallow water. Time and frequency domain wave equations for homogeneous and inhomogeneous acoustics. Spectral and ray methods for wave propagation in layered fluid and elastic media. Uncoupled and adiabatic normal mode theory. Parabolic equations and computational techniques for fluids and solids. Noise sources and surface effects. Sensors, transducers, and signal processing techniques.</description>
+  </course>
+  <course name="Mechanics of Biomaterials">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>523</cid>
+    <description>. Covers the chemical composition, physical structure, and mechanical behavior of engineering materials and the tissues they sometimes replace. Study of materials classes; materials selection; deformation of an elastic solid; yield and fracture; fundamentals of viscoelastic phenomena such as creep, stress relaxation, stress rupture, mechanical damping, impact; effects of chemical composition and structure on mechanical properties; methods of chemical property evaluation. Fracture and fatigue. Influences of plastics fabrication methods on mechanical properties. Emphasis on recent research techniques and results. Discussion of practical matters in medical device design including regulatory approvals, sterilization, packaging and quality control. Students will complete a semester-long design project. Same as ENG ME 523 and ENG MS 523; students can only receive credit for one of these courses. 4</description>
+  </course>
+  <course name="Skeletal Tissue Mechanics">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>524</cid>
+    <description>The course is structured around classical topics in mechanics of materials and their application to study of the mechanical behavior of skeletal tissues, whole bones, bone-implant systems, and diarthroidal joints.  Topics include:  mechanical behavior of tissues, (anisotropy, viscoelasticity, fracture and fatigue) with emphasis on the role of the microstructure of these tissues; structural properties of whole bones and implants (composite and asymmetric bean theories); and mechanical function of joints (contact mechanics, lubrication, and wear).  Emphasis is placed on using experimental data to test and to develop theoretical models, as well as on using the knowledge gained to address common health related problems related to aging, disease, and injury.  Meets with ENGMS524 and ENGBE524. Students may not receive credit for both.</description>
+  </course>
+  <course name="Technology Ventures">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>525</cid>
+    <description>An introduction to the formation and management of technology-based enterprises for engineers and scientists. Modules include opportunity recognition and evaluation, gathering financial and human resources, and managing and harvesting ventures. Goals include an understanding of basic start-up finance and accounting, writing business plans, presenting venture ideas to industry experts, and venture leadership skills. Students become familiar with fundamental technical and engineering issues in a wide variety of high-tech industries, especially information technology, life sciences, biotechnology and telecommunications. Case studies, lectures, workshops, and projects are utilized. 4 cr.</description>
+  </course>
+  <course name="Simulation of Physical Processes">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>526</cid>
+    <description>Modern simulation methods are used for describing and analyzing the behavior of realistic nonlinear systems that occur in the engineering and science disciplines. By developing and applying such methods and tools, much deeper understanding, insight, and control of novel technologies can be gained, thereby often greatly aiding technology development, and sometimes providing the leverage to turn a novel technology into a practical reality. Advanced numerical methods are covered for attacking nonlinear partial differential equations. Key aspects of the finite element method. Extensive use is made of the modern computational tools Maple and Scientific Workplace. Examples  including problems in micro- and nanoelectronics, bioengineering, material science, photonics, and physics are introduced and related to sensing instrumentation and control. Meets with ENGMS526.  Students may not receive credit for both.</description>
+  </course>
+  <course name="Transport Phenomena in Materials Processing">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>527</cid>
+    <description>Introduction to momentum, heat and mass transport phenomena occurring in various processes.  Whereas transport phenomena underlie many processes in engineering, agriculture, meteorology, physiology, biology, analytical chemistry, materials science, pharmacy and other areas, they are key to specific applications in diverse areas such as materials processing, green manufacturing of primary materials, biological membranes, fuel cell engineering, synthesis of clean fuels.  This course covers three closely related transport phenomena: momentum transfer (fluid flow), energy transfer (heat flow) and mass transfer (diffusion).  The mathematical underpinnings of all three transport phenomena are closely related and the differential equations governing them are frequently quite similar.  Since in many situations the three transport phenomena occur together, they are presented and studied together in this course. Meets with ENGMS527.  Students may not receive credit for both.</description>
+  </course>
+  <course name="Biological Physics">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>528</cid>
+    <description>This course offers an introduction to biological physics and consists of four blocks. 1)Thermodynamics and statistical physics with a particular focus on Einstein's approach. 2)Physics of (Bio) polymer networks. 3) Nano and Microfluidics and life and low Reynold numbers. 4) Interface physics and</description>
+  </course>
+  <course name="Thermodynamics and Kinetics of Materials and Processes">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>529</cid>
+    <description>&lt;span&gt;Graduate Prerequisites: ENG ME 306.&lt;/span&gt;&lt;br</description>
+  </course>
+  <course name="Introduction to Micro- and Nano-mechanics of Solids">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>530</cid>
+    <description>Mechanics and physics of solids at the nanometer scale: introductory graduate level course for students with background in undergraduate engineering mechanics (or solid state physics) and mathematics.  Review of continuum solid mechanics fundamentals.  Introduction to dislocation theory.  Continuum elastic theory of dislocations.  Mechanics of thin films.  Review of fundamentals of solid state physics.  Electron motion in a periodic potential.  Derivative of bulk material properties from free-electron and free-atom models.  Phonons.  Introduction to atomistic computational methods. Meets with ENGMS530.  Students may not receive credit for both.</description>
+  </course>
+  <course name="Phase Transformations">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>531</cid>
+    <description>Graduate-level introduction to phase transformations; solution thermodynamics; phase diagrams; kinetics of mass transport and chemical reactions; atomistic models of diffusion; nucleation and growth; spinodal decomposition; martensitic transformations; order-disorder reactions; point defects and their relation to transport kinetics.</description>
+  </course>
+  <course name="Atomic Structures and Dislocations in Materials">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>532</cid>
+    <description>Relates mechanical behavior of crystalline materials to processes occurring at microscopic and/or atomic levels. Topics covered include structure of materials and their determination by X-ray diffraction; dislocations and their relationship to plastic deformation and strength of materials; fracture and creep. Meets with ENGMS532.  Students may not receive credit for both.</description>
+  </course>
+  <course name="Energy Conversion">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>533</cid>
+    <description>Thermodynamic and mechanical aspects of modern conventional energy conversion systems, including steam electric power plants, gas turbine and&amp;#8239;internal combustion engines, and refrigeration systems. Combined cycle and cogeneration are also considered, as well as economic and environmental aspects of energy conversion. Includes design project. 4</description>
+  </course>
+  <course name="Mat Tech Microe">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>534</cid>
+    <description>This course deals with the materials issues in microelectronics processing. Fundamental materials science concepts of bonding, electronic structure, crystal structure, defects, and phase diagrams are applied to key processing steps in microelectronics technology. Also included are single crystal growth, lithography, thermal oxidation of Si, dopant diffusion, ion implantation, thin film deposition, etching and back-end processing: as well as widely used microelectronics software such as SUPREM.</description>
+  </course>
+  <course name="Green Manufacturing">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>535</cid>
+    <description>Provides a systems view of the manufacturing process that aims to efficiently use energy, water, and raw materials to minimize air and water pollution and generation of waste per unit of the manufactured product. Specifically, the course will discuss methods to maximize yield and minimize waste effluents in processes, ways to devise treatment strategies for handling manufacturing wastes, innovative ways to decrease energy consumption in manufacturing, by-product use and product recycling, and policies that encourage green manufacturing. Meets with ENGMS535.  Students may not receive credit for both.</description>
+  </course>
+  <course name="Introduction to Finite Element Methods and Analysis">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>538</cid>
+    <description>This class serves as an introduction to linear finite element method, and its application to static and dynamic problems with an emphasis on solid mechanics. The first half of the course will use the stiffness and energy approaches to developing the finite element equations as applied to bars, beams and trusses. Lab sessions will focus on learning how to utilize commercially-relevant finite element software to find numerical solutions to problems in solid mechanics. The second half of the course will focus on developing the finite element method as one that is applicable as a general numerical method for solving ordinary and partial differential equations that arise in all areas of science and engineering, including solid and fluid mechanics, thermal systems and</description>
+  </course>
+  <course name="Classical and Non-Equilibrium Thermodynamics">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>541</cid>
+    <description>First law and second law.  Entropy.  Extremum principles.  Gases, liquids, and solids.  Phase transition.  Solutions.  Kinetics.  Fields and internal degrees of freedom.  Non-equilibrium systems.  Radiation.  Biological systems.  Small systems.  Stability theory.  Critical phenomena.  Statistical mechanics.  4 cr. either sem.</description>
+  </course>
+  <course name="Advanced Fluid Mechanics">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>542</cid>
+    <description>Incompressible fluid flow. Review of control-volume approach to fluids engineering problems, with advanced applications. Differential analysis of fluid motion. Derivation of full Navier-Stokes, Euler, and Bernoulli equations. Unsteady Bernoulli equation. Velocity potential and its application to steady two-dimensional flows. Vorticity and vortex motion. Eulerian vs Lagrangian analysis.</description>
+  </course>
+  <course name="Networking the Physical World">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>544</cid>
+    <description>Considers the evolution of embedded network sensing systems with the introduction of wireless network connectivity. Key themes are computing optimized for resource constrained (cost, energy, memory and storage space) applications and sensing interfaces to connect to the physical world. Studies current technology for networked embedded network sensors including evolving protocol standards. A laboratory component of the course introduces students to the unique characteristics of distributed sensor motes including programming, reliable communication, sensing modalities, calibration, and application development.  Experience with the C language is required. Meets with ENG EC544; students may not receive credit for</description>
+  </course>
+  <course name="Electrochemistry of Fuel Cells and Batteries">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>545</cid>
+    <description>Electrochemistry of high temperature fuel cells, batteries and ceramic gas separation membranes. Types, advantages and disadvantages of fuel cells currently being developed by the power generation industry, and the electrochemical underpinnings of fuel cell operation.  Thermodynamics of fuel cells, electrode kinetics and mass transport in porous electrodes.  Measurements techniques (dc polarization, ac impedance spectroscopy and blocking electrodes) used extensively in fuel cell research and development.  Operation of batteries and ceramic gas separation membranes. Current manufacturing techniques used in fuel cell industry. Meets with ENGMS545.  Students may not receive credit for</description>
+  </course>
+  <course name="Introduction to Micro/Nanofluidics">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>546</cid>
+    <description>This course is an introductory graduate course in mechanical engineering. It is aiming to introduce unique transport phenomena and major applications of  micro/nanofluidics to senior undergraduates and new graduate students.  Topics  include overview of micro/nanofluidics, scaling laws, intermolecular forces,  lubrication theory, surface tension and Marangoni flow, chaotic mixing,  electrowetting, electrokinetics, dielectrophoresis, chemical reaction in  confined space, micro/nano fabrication, etc.  Special emphasis will be focused  on understanding fundamental mechanism of transport phenomena at the  micro/nanoscale.  This is a 4 credit</description>
+  </course>
+  <course name="Product Supply Chain Design">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>550</cid>
+    <description>Integrated design of systems to deliver quality products to customers.  Lean manufacturing with hard automation.  Worker empowerment with active learning.  Creation of lean supply chains with control of logistics and information.  Creating customer value in a world of excess capacity.  Industry project required.</description>
+  </course>
+  <course name="Fabrication and Materials">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>555</cid>
+    <description>This course will explore the world of microelectromechanical systems (MEMS) and  NEMS. This requires an awareness of design, fabrication, and materials issues  involved in micro/nanosystems. We will go over this through a combination of  lectures, case studies, and individual homework assignments. The course will  cover fabrication technologies, material properties, structural mechanics, basic  sensing and actuation principles, packaging, and MEMS markets and applications.  The course will emphasize the fabrication and materials of micro/nanosystems.  This is not because the other parts aren't important. Instead, it is because  with fabrication and materials expertise there is something concrete you can do  that will always help. When we exam special topics and case studies, a lot of  these other pieces will be put together. </description>
+  </course>
+  <course name="Precision Machine Design and Instrumentation">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>560</cid>
+    <description>This interdisciplinary course teaches the student how to design, instrument, and control high-precision, computer-controlled automation equipment, using concrete examples drawn from the photonics, biotech, and semi-conductor industries. Topics covered include design strategy, high-precision mechanical components, sensors and measurement, servo control, design for controllability, control software development, controller hardware, as well as automated error detection and recovery.  Students will work in teams, both in-classroom and out-of-classroom, to integrate and apply the material covered in class to a term-long multi-part design project in PTC Pro-Engineer or other comparable CAD system, culminating in a group presentation at the end of the class.</description>
+  </course>
+  <course name="Advanced Engineering Mathematics">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>566</cid>
+    <description>Introduces students of engineering to various mathematical techniques which are necessary in order to solve practical problems. Topics covered include a review of calculus methods, elements of probability and statistics, linear algebra, transform methods, difference and differential equations, numerical techniques, and mathematical techniques in optimization theory. Examples and case studies focus on applications to several engineering disciplines. The intended audience for this course is advanced seniors and entering MS engineering students who desire strengthening of their fundamental mathematical skills in preparation for advanced studies and research.</description>
+  </course>
+  <course name="Robot Motion Planning">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>570</cid>
+    <description>Provides an overview of state-of-the-art techniques for robot motion planning. The emphasis is on the algorithms. It covers topology of configuration spaces, potential functions, roadmaps, cell decompositions, sampling-based algorithms, and model checking approaches to robot motion planning and control.</description>
+  </course>
+  <course name="Nano/microelectronic Device Technology">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>579</cid>
+    <description>Physical processes and manufacturing strategies for the fabrication and manufacture of microelectronic devices.  Processing and device aspects instrumental in silicon, including the fabrication of doping distributions, etching, photolithography, interconnect construction, and packaging.  Future directions and connections to novel devices, MEMS, photonics, and nanoscale structures will be discussed.  Emphasis will be on &quot;designing for manufacturability.&quot; The overall integration with methods and tools employed by device and circuit designers will be covered.  Same as ENG EC 579; students may not receive credit for both.</description>
+  </course>
+  <course name="Theory of Elasticity">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>580</cid>
+    <description>An introduction to the general theory of solid deformation; small deformation emphasized. Topics include: Cartesian tensors, indicial notation. Introduction to continuum mechanics: deformation of continuous media, deformation gradient, strain definitions. Stress, Cauchy's postulate, Cauchy and Piola-Kirchhoff stress tensors. Balance laws. Constitutive equations, strain energy and Green's postulate. Linear Elasticity: Two dimensional problems, Airy stress function, in plane loading of strips, St. Venant's principle, complex variable methods, Goursat-Muskhelishvili representation, stress concentrations around holes and cracks. Three dimensional problems, Kelvin's solution, the Boussinesq problem, Hertzian contact, Eshelby's energy-momentum tensor. Meets with ENGMS580.  Students may not receive credit for</description>
+  </course>
+  <course name="Experimental Techniques in Solid Mechanics">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>581</cid>
+    <description>Theory and practice of experimental techniques used in solid mechanics. Topics include ultrasonic NDE, optical strain techniques (e.g., Moire interferometry, spectroscopy), and material strength and stiffness testing (e.g., fracture, fatigue, elastic constants). Also examines the use of computer for data acquisition and control. Some discussion of theory related to filters, sampling theory, uncertainty analysis, and spectra and correlations is incorporated.</description>
+  </course>
+  <course name="Mechanical Behavior of Materials">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>582</cid>
+    <description>Fundamental concepts of modern materials behavior and materials engineering. Emphasis on analytical and numerical methods for predicting material properties and behavior, as well as some discussion of the relationships between solid structure and material properties. Topics include: constitutive relations, fracture, fatigue, plasticity, creep, damping, impact, and deformation. Elastic, plastic, and viscous behavior. Some discussion of the effects of processing--thermodynamics, kinetics--may be addressed. Specific examples from ceramics, metals, polymers, and composites is given, with the emphasis changing for each offering. Meets with ENGMS582.  Students may not receive credit for both.</description>
+  </course>
+  <course name="Product Management">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>583</cid>
+    <description>Planning and execution of the process of bringing new tangible and intangible products to market.  Review of the new product development process.  Establishment of the new product specification.  Setting of financial expectations.  Formation and dynamics of the product implementation team.  Organization of the new product introduction project including matrixed management and financial control.  Contingency planning and risk management.  Taught through case-based discussions, lectures, and readings.</description>
+  </course>
+  <course name="Manufacturing Strategy">
+    <school>ENG</school>
+    <dept>ME</dept>
+    <cid>584</cid>
+    <description>Strategic decision-making for technical people in manufacturing companies.  Provides practice in applying financial, organizational, and operational concepts through analysis and discussion of case situations. Topics include  process alternatives and their implications; interactions among product design, process design, worker skill and worker motivation; supplier relationships; interfaces with marketing and finance; introduction of new technology; capacity planning; and competitive analysis. Taught principally by in-class discussion plus guest lectures.</description>
+  </course>
+  <course name="Introduction to Probability">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>200</cid>
+    <description>An introductory course designed for sophomore engineering students that introduces the fundamentals of probability and statistics without the use of transforms. Coverage includes  descriptive statistics, basics of probability theory, multiple random variables, expectation, Markov chains, and statistical testing. Computer simulations of probabilistic systems are included. Examples are taken from engineering systems. This course cannot be taken for credit in addition to ENG SC</description>
+  </course>
+  <course name="Principles of Molecular Cell Biology and Biotechnology">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>209</cid>
+    <description>Introduction to the molecular, physical and computational principles of cell function in the context of cutting-edge applications in bioengineering and medicine. Biological concepts include: molecular building blocks, energetics, transport, metabolism, nucleic acids, gene expression and genetics. Applications include bioenergy, synthetic biology, the human genome project, and gene circuit engineering.  Labs will teach fundamental techniques of molecular biology including a multi-week module where students build and quantify bacterial gene expression system. Labs emphasize the experimental, problem solving, and analytical skills required in modern engineering and research. </description>
+  </course>
+  <course name="Signals and Systems in Biomedical Engineering">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>401</cid>
+    <description>Signals and systems with an emphasis on application to biomedical problems. Laplace transforms, Fourier series, Fourier integral, convolution and the response of linear systems, frequency response, and Bode diagrams. Introduction to communication systems, multiplexing, amplitude modulation, and sampling theorem. Cannot be taken for credit in addition to ENG SC</description>
+  </course>
+  <course name="Control Systems in Biomedical Engineering">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>402</cid>
+    <description>Mathematical analysis of dynamic and linear feedback control systems. Emphasis on application to physiological systems, physiological transport, pharmacokinetics, glucose/insulin control, and respiratory control. Performance criteria. Root locus, Nyquist, and other stability criteria. State space analysis with state variable feedback control. Design and compensation. Cannot be taken for credit in addition to ENG</description>
+  </course>
+  <course name="Introduction to Solid Biomechanics">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>420</cid>
+    <description>Introductory course to mechanics of solid elastic continua. Basics of vector and tensor algebra and calculus; kinematics of deformation, stress analysis, constitutive equations, finite elasticity; linear elasticity; virtual work; the Ritz approximation. In addition to the classical Hookean elasticity, finite deformation theory is presented to describe mechanical behavior of biological soft tissues and cells. Illustrative examples from tissue and cell biomechanics. Design elements will be included in problems and examples.</description>
+  </course>
+  <course name="Device Diagnostics and Design">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>428</cid>
+    <description>This course is focused on the fundamentals of modern biomedical device and diagnostics design. Students will design and build an alpha prototype in this project based course. The course is aimed at undergraduates who have completed most of the engineering core coursework (second semester sophomore and above). Mechanical and Biomedical Engineering concepts are introduced and elaborated on in the context of specific applications. Topics include: materials classes; materials selection for medical devices and diagnostics; elementary mechanics of materials topics in the context of design for manufacturing (stress, strain, toughness, torsion, bending, buckling); fracture, fatigue and yielding; failure analysis; biocompatibility; regulatory requirements as they pertain to design, manufacturing and marketing; technology assessment strategies; and engineering ethics. Several case studies of successful and unsuccessful biomedical device design are introduced and discussed throughout the</description>
+  </course>
+  <course name="Transport Phenomena in Biological Systems">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>435</cid>
+    <description>Biological systems operate at multiple length scales and all scales depend on internal and external transport of molecules, ions, fluids and heat. this course is designed to introduce the fundamentals of biological transport and to apply these fundamentals in understanding physiological processes involving fluid, mass and heat transfer. Students will learn the fundamental conservation principles and constitutive laws that govern heat, mass and momentum transport processes and systems as well as the constitutive properties that are encountered in typical biological problems. Transport is also critical to the development and proper functioning of biological and medical instruments and devices, which will also be discussed. Biomedical examples will include applications in development of the heart-lung machine, estimation of time of death in postmortem cases, burn injuries through hot water, respiratory flow in smokers lungs,</description>
+  </course>
+  <course name="Fundamentals of Fluid Mechanics">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>436</cid>
+    <description>Introductory course emphasizing the application of the principles of conservation of mass, momentum, and energy to fluid systems.</description>
+  </course>
+  <course name="Nanometer Scale Processes in Living Systems">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>437</cid>
+    <description>The world at the nanometer-scale is full of dynamic phenomena that are vastly different than those encountered at the macro scale. Biological processes that are of particular contemporary interest, such as cell differentiation, are stimulated by the activity and interaction of biomolecules at the nanoscale.  Thus, an understanding of the physics and engineering in such systems is a vital component toward overcoming an immense array of challenging problems in the biological and medical sciences. This course will focus particularly on a conceptual and mechanistic understanding of technologies that permit the study of events at the nanometer scale, including scanning probe microscopes (including SEM and AFM) and optical methods such as fluorescence microscopy and related techniques (including single particle tracking, FRET, FCS). Finally, two laboratory components in optical trap microscopy and microrheology will be the cornerstone of the course. These two labs will each develop over the course of 5 weeks each, thus providing an experiential aspect to lab learning that will require the willingness to take intellectual risks and teamwork. These &quot;hands on&quot; laboratory modules will uniquely prepare students to face the open-ended, teamwork-oriented problems.</description>
+  </course>
+  <course name="Biomedical Engineering Senior Project">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>465</cid>
+    <description>Selection of project and project supervisor must be approved by course instructor. Project is in an area of biomedical engineering, such as biomedical instrumentation, biosensors, tissue engineering, biological signal processing, biological modeling and simulation, clinical imaging or informational systems, etc.Projects will be conducted by teams of two or three students, and projects must include significant design experience. Research of background, planning and initial work on senior design project. Guidance in performing and presenting (in written and oral form) a technical project proposal. Skills in proposal writing, oral presentation techniques. Formal proposal must be approved by technical advisor.</description>
+  </course>
+  <course name="Biomedical Engineering Senior Project">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>466</cid>
+    <description>Completion of project in an area of biomedical engineering. Expanded training in technical project presentation techniques. Includes writing of progress reports, abstracts, final reports. Course culminates with an oral presentation at annual Senior Project Conference. Written final report must be approved by the faculty.</description>
+  </course>
+  <course name="Product Design and Innovation in Biomedical Engineering">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>467</cid>
+    <description>A combined academic and industry taught course educating students on project definition, and on the design, development, and technology transfer of potential biomedical products in the context of the student's major capstone project. Students will learn from faculty and industry lecturers the best practices for medical device development including: product development via design and process control, intellectual property and innovation in biomedical engineering including patents, and clinical regulatory issues including clinical trial design. School of Management faculty will emphasize marketing, technology transfer and entrepreneurship for bioengineering products. Case study examples will be provided. ENG BE 465 must be taken concurrently.  2</description>
+  </course>
+  <course name="Special Topics in Biomedical Engineering">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>500</cid>
+    <description>&lt;span&gt;Graduate Prerequisites: Engineering graduate student standing. Others by permission of instructor. Specific prerequisites vary according to topic.&lt;/span&gt;&lt;br</description>
+  </course>
+  <course name="Polymers and Soft Materials">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>504</cid>
+    <description>An introduction to soft matter for students with background in materials science, chemistry and physics. This course covers general aspects of structure, properties, and performance polymers, polymer solutions and gels. Emphasis is on chain behavior, local chemical interactions and mechanical behavior across multiple size scales. Topics include forces, energies, kinetics in material synthesis, growth and transformation; methods for preparing synthetic materials; formation assembly, phase behavior, and molecular ordering of synthetic soft materials; structure, function, and phase transitions; multiscale models of polymer mechanical behavior; techniques for characterizing the structure, phase and dynamics of soft materials; application of soft materials in biotechnology and nanotechnology. Meets with ENG ME 504 and ENG MS 504; students may not recieve credit for</description>
+  </course>
+  <course name="Molecular Bioengineering I">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>505</cid>
+    <description>Provides engineering perspectives on the building blocks of living cells and materials for biotechnology. Focuses on origins and synthesis in life and the laboratory, including biological pathways for sythesis of DNA, RNA and proteins; transduction, transmission, storage and retrieval of biological informatin by macromoleclues; polyerase chain reaction, restriction enzymes, DNA sequencing; energetics of protein folding and trafficking; mechanisms of enzymatic catalysts and receptor-ligand binding; cooperative proteins, multi-protein complexes and control of metabolic pathways; generation, storage, transmission and release of biomolecular energy; and methods for study and manipulation of molecules which will include isolation, purification, detection, chemical characterization, imaging and visualization of structure.</description>
+  </course>
+  <course name="Physical Chemistry of Cell Structure and Machinery">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>506</cid>
+    <description>&lt;span&gt;Graduate Prerequisites: ENG BE 505.&lt;/span&gt;&lt;br</description>
+  </course>
+  <course name="Quantitative Studies of the Respiratory and Cardiovascular Systems">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>508</cid>
+    <description>The quantitative physiological aspects of the respiratory and cardiovascular systems are studied. Classical models of these systems are considered including lumped element models, branching tree structures, and distributed parameter models to predict wave propagation in compliant walled tubes filled with compressible or incompressible fluids. Extensive computer models are developed to simulate the behavior of these systems in the frequency and time domains. Includes</description>
+  </course>
+  <course name="Quantitative Physiology of the Auditory System">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>509</cid>
+    <description>Introduction to the mammalian auditory system from a systems prospective. The class follows how sound propagates into the ear, how mechanical energy is transformed into a neural code, how that code is transformed through the mammalian auditory pathway from the cochlea to the cortex, and how auditory sensation and perception are related to this chain of neural processing. Anatomy and physiology will cover the structure and function of the middle ear, cochlea, brainstem, midbrain, thalamus, and cortex. Perceptual topics include basic sensitivity, spatial hearing, pitch perception, auditory scene analysis, attention, and speech perception. Implications for hearing impairment and prosthetic hearing devices will be covered. Associated discussion sessions cover recent research findings from general-interest, high-impact publications.</description>
+  </course>
+  <course name="Biomedical Instrumentation">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>511</cid>
+    <description>Physiological signals, origin of biopotentials (ECG, EMG, EEG), biomedical transducers and electrodes. Biomedical signal detection, amplifications and filtering. Analog front-ends of biomedical instruments. Electrical safety in medical environment. Laboratory experiments supplement lectures.</description>
+  </course>
+  <course name="Biological and Environmental Acoustics">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>513</cid>
+    <description>Application of acoustics to biological and environmental research.  Introduction to physical acoustics with examples from actual terrestrial and marine environments.  The use of sound by animals for communication and echolocation.  Application of acoustics to conservation</description>
+  </course>
+  <course name="Introduction to Medical Imaging">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>515</cid>
+    <description>Methods of obtaining useful images of the interior of the body using X-rays, ultrasound, and radionuclides. Image formation and display. Projection radiography. Radiation detectors. Conventional and computerized tomography. Nuclear imaging. Automating diagnosis and non-invasive testing. Radiation safety. </description>
+  </course>
+  <course name="Speech Signal Processing">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>519</cid>
+    <description>Speech (naturally spoken) is the main mode of communication between humans. Speech technology aims at providing the means for speech-controlled man-machine interaction. The goal of this course is to provide the basic concepts and theories of speech production, speech perception and speech signal processing. The course is organized in a manner that builds a strong foundation of basics first, and then concentrates on a range of signal processing methods for representing and processing the speech</description>
+  </course>
+  <course name="Continuum Mechanics">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>521</cid>
+    <description>The main goal of this course is to present a unified, mathematically rigorous approach to two classical branches of mechanics:  the mechanics of fluids and the mechanics of solids.  Topics will include kinematics, stress analysis, balance laws (mass, momentum, and energy), the entropy inequality, and constitutive equations in the framework of Cartesian vectors and tensors.  Emphasis will be placed on mechanical principles that apply to all materials by using the unifying mathematical framework of Cartesian vectors and tensors.  Illustrative examples from biology and physiology will be used to describe basic concepts in continuum mechanics.  The course will end at the point from which specialized courses devoted to problems in fluid mechanics (e.g. biotransport) and solid mechanics (e.g. cellular biomechanics) could logically proceed.  Same as ENG ME 521; students may not receive credit for both.   </description>
+  </course>
+  <course name="Skeletal Tissue Mechanics">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>524</cid>
+    <description>The course is structured around classical topics in mechanics of materials and their application to study of the mechanical behavior of skeletal tissues, whole bones, bone-implant systems, and diarthroidal joints.  Topics include:  mechanical behavior of tissues, (anisotropy, viscoelasticity, fracture and fatigue) with emphasis on the role of the microstructure of these tissues; structural properties of whole bones and implants (composite and asymmetric bean theories); and mechanical function of joints (contact mechanics, lubrication, and wear).  Emphasis is placed on using experimental data to test and to develop theoretical models, as well as on using the knowledge gained to address common health related problems related to aging, disease, and injury.  Same as ENGME524 and ENGMS524. Students may not receive credit for both.</description>
+  </course>
+  <course name="Fundamentals of Biomaterials">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>526</cid>
+    <description>Provides the chemistry and engineering skills needed to solve challenges in the biomaterials and tissue engineering area, concentrating on the fundamental principles in biomedical engineering, material science, and chemistry.  Covers the structure and properties of hard materials (ceramics and metals) and soft materials (polymers, colloids, and hydrogels). Meets with BE726 lectures. Note that the laboratory portion is not offered in BE 526. </description>
+  </course>
+  <course name="Principles and Applications of Tissue Engineering">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>527</cid>
+    <description>Provides the chemistry and engineering skills needed to solve challenges in the biomaterials and tissue engineering area, concentrating on cell-biomaterial interactions, biomaterial-host response, and inflammation. Covers the rheological properties of polymers and gels as well as fatigue and fracture of materials. Specific applications of tissue engineering. Meets with BE 727 lectures. Note that the laboratory portion is not offered in BE 527.</description>
+  </course>
+  <course name="Structure and Function of the Extracellular Matrix">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>530</cid>
+    <description>This is an introductory course dealing with the detailed structure of the basic units of the extracellular matrix including collagen, elastin, microfibrils and proteoglycans as well as the functional properties of these molecules. The focus is mostly on how the structure of these components determine the functional properties such as elasticity at different scales from molecule to fibrils to organ level behavior. The biological role of these components and their interaction with cells is also covered. Interaction of enzymes and the matrix in the presence of mechanical forces is discussed. Mathematical modeling is applied at various length scales of the extracellular matrix that provides quantitative understanding of the structure and function relationship. Special topics include how diseases affect extracellular matrix in the lung, cartilage and vasculature. The relevance of the properties of native extracellular matrix for tissue engineering is also</description>
+  </course>
+  <course name="Biorheology">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>533</cid>
+    <description>An introductory course emphasizing those rheological properties (such as elasticity, viscoelasticity, poroelasticity, plasticity, and viscoplasticity) that often characterize solid biological tissues and</description>
+  </course>
+  <course name="Biomolecular Architecture">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>560</cid>
+    <description>Provides an introduction to the molecular building blocks and the structure of three major components of the living cells: the nucleic acids, the phospho-lipids membrane, and the proteins. The nucleic acids, DNA and RNA, linear information storing structure as well as their three-dimensional structure are covered in relationship to their function. This includes an introduction to information and coding theory. The analysis tools used in pattern identification representation and functional association are introduced and used to discuss the patterns characteristic of DNA and protein structure and biochemical function. The problems and current approaches to predicting protein structure including those using homology, energy minimization, and modeling are introduced. The future implications of our expanding biomolecular knowledge and of rational drug design are also discussed.</description>
+  </course>
+  <course name="Biophysics of Large Molecules">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>564</cid>
+    <description>The course considers the fundamental concepts of physical and mathematical description of polyatomic molecules and macromolecules on the basis of quantum and statistical mechanics. Special emphasis is given to molecular spectroscopy, the interaction of polyatomic molecules with electromagnetic radiation (visual light, ultraviolet and infrared radiation). Physics of macromolecules (or polymers) is treated in detail. Numerous biomedical applications of the fundamental concepts are considered including photosyntheses, molecular mechanism of vision, DNA damage under UV irradiation, structure of major biological molecules (proteins and nucleic acids). </description>
+  </course>
+  <course name="Molecular Biotechnology">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>565</cid>
+    <description>Covers the basic properties of biological macromolecules and assemblies including proteins, nucleic acids, and membranes. Among the topics covered are the forces that govern biological structures, how proteins act as catalysts, how membranes act to store energy, and how nucleic acids and proteins are synthesized in cells. Methods for manipulating the living cells to change their properties and to produce specific proteins of nucleic acids are detailed.</description>
+  </course>
+  <course name="DNA Structure and Function">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>566</cid>
+    <description>Physical structure and properties of DNA. The physical principles of the major experimental methods to study DNA are explained, among them: X-ray analysis, NMR, optical methods (absorption, circular dichroism, fluorescence), centrifugation, gel electrophoresis, chemical and enzymatic probing. Different theoretical models of DNA are presented, among them the melting (helix-coil) model, the polyelectrolyte model, the elastic-rod model, and the topological model. Theoretical approaches to treat the models, (e.g., the Monte Carlo method) are covered. Special emphasis is placed on DNA topology and DNA unusual structures and their biological significance. Major structural features of RNA are considered in parallel with DNA. The main principles of DNA-protein interaction are presented. the role of DNA and RNA structure in most fundamental biological proceses, replication, transcription, recombination, reparation, and translation is</description>
+  </course>
+  <course name="Nonlinear Systems in Biomedical Engineering">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>567</cid>
+    <description>Introduction to nonlinear dynamical systems in biomedical engineering. Qualitative, analytical and computational techniques. Stability, bifurcations, oscillations, multistability, hysteresis, multiple time-scales, chaos. Introduction to experimental data analysis and control techniques. Applications discussed include population dynamics, biochemical systems, genetic circuits, neural oscillators, etc. 4 cr.</description>
+  </course>
+  <course name="Next Generation Sequencing">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>569</cid>
+    <description>The advent of high throughput sequencing is virtually changing biology and medicine. The technology enables us to catalog the entire functional parts list of living organisms from bacteria to human, develop and validate regulatory networks for controlling gene expression in systems biology models and develop novel biomarkers for personalized medicine that guide pharmacological treatments.   In this course we will review the foundations of the field, starting from the biophysical foundations of current or emerging single molecule DNA sequencing techniques, through an introduction to the analytical tools to model and analyze NGS Data, and finally discussing clinical applications such as predicting drug response focusing on cancer. The course will involve bi-weekly homework assignments that include theoretical analysis and modeling, working with multiple analysis tools for NGS data including assembly, re-sequencing, alignments, RNA-seq, ChIP-seq, DNA methylation, mutation analysis and detection, copy number variation detection, and their applications to cancer.</description>
+  </course>
+  <course name="Introduction to Computational Vision">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>570</cid>
+    <description>. Introductory course in biological  visual neuroscience and computational vision. Provides a survey of the psychophysical, neuroanatomical and  neurophysiological substrates of visual mechanisms underlying  perception of visual motion, depth, objects, and space and of decision making mechanisms.  Discussion of theoretical, explanatory, paradigms for these visual mechanisms. Topics addressed include psychophysics, methods from single cell recording physiology and low field potentials (LFP),multimodal imaging and computational modeling of various visual tasks and their modulation by attention. We will briefly address learning mechanisms and their relationship to brain plasticity. A term project is required for graduate credit. </description>
+  </course>
+  <course name="Introduction to Neuroengineering">
+    <school>ENG</school>
+    <dept>BE</dept>
+    <cid>575</cid>
+    <description>This course covers existing and future neurotechnologies for analyzing brain signals and for treating neurological and psychiatric diseases. It focuses on the biophysical, biochemical, anatomical principles governing the design of current neurotechnologies, with a goal of encouraging innovations of a new generation of therapies.  Topics include basic microscopic and macroscopic architecture of the brain, the fundamental properties of individual neurons and ensemble neural networks, electrophysiology, DBS, TMS, various imaging methods, optical neural control technologies, optogenetics, neuropharmacology, gene therapy, and stem-cell therapy. Discussions of related literatures and design projects will be involved. This course is open to MS, MEng and PhD students as well as qualified undergraduate</description>
+  </course>
+  <course name="Introduction to Linear Algebra for Engineers">
+    <school>ENG</school>
+    <dept>EK</dept>
+    <cid>102</cid>
+    <description>Systems of linear equations and matrices. Vector spaces and linear transformation using matrix notation, determinants, and eigenvalues and eigenvectors. Examples drawn from engineering applications. Cannot be taken for credit in addition to CAS MA 142 or MA</description>
+  </course>
+  <course name="Engineering Mechanics I">
+    <school>ENG</school>
+    <dept>EK</dept>
+    <cid>301</cid>
+    <description>&lt;span&gt;Graduate Prerequisites: MET PY 211 or CAS PY 251.&lt;/span&gt;&lt;br</description>
+  </course>
+  <course name="Introduction to Clean energy Generation and Storage Technologies">
+    <school>ENG</school>
+    <dept>EK</dept>
+    <cid>408</cid>
+    <description>This course covers a wide variety of modern energy generation and storage technologies. The engineering principles that govern thermomechanical, thermoelectric,photvotaic and elctrochemical energy conversion processes will be discussed along with the challenges of hydrogen storage and hybrid batteries. The consequences of using renewable energy resources such as solar, hydrogen, biomass, geothermal, hydro, and wind versus  non-renewable fossil fuels and nuclear resources will also be</description>
+  </course>
+  <course name="Engineering Economy">
+    <school>ENG</school>
+    <dept>EK</dept>
+    <cid>409</cid>
+    <description>Analysis of engineering alternatives for replacement. Present worth analysis. Cost control,budgeting, and indirect costs and their allocation. Company startups, stock ownership, and annual reports. Cost optimization, economic life, taxes,inflation, inventories, and depreciation accounting. Contract negotiations,professional ethics, and cost proposal preparation. Evaluation of public projects.</description>
+  </course>
+  <course name="Thermodynamics and Statistical Mechanics">
+    <school>ENG</school>
+    <dept>EK</dept>
+    <cid>424</cid>
+    <description>Thermodynamic systems. Heat,temperature, and pressure. State variables and equations of state. First and second laws of thermodynamics. Kinetic theory. Entropy. Statistical Thermodynamics. Partition function. Thermodynamic potentials. Equilibrium. Chemical reactions. Phase transitions. Colligative Properties. electrochemical reactions. Applications to problems of biomedical interest will be emphasized.4</description>
+  </course>
+  <course name="Undergraduate Part-Time Co-op Experience">
+    <school>ENG</school>
+    <dept>EK</dept>
+    <cid>497</cid>
+    <description>Students work part-time, as defined by their employing company, while registering for 8-11 credits. Registration for 12 or more credits requires the written approval of the director. Students registered in ENG EK 497E are assessed a fee upon placement.</description>
+  </course>
+  <course name="Undergraduate Co-op Experience">
+    <school>ENG</school>
+    <dept>EK</dept>
+    <cid>498</cid>
+    <description>Students register only upon receiving a cooperative education position. The Cooperative Education Program helps students to integrate classroom theory with actual engineering experience. Under professional supervision, students learn firsthand about the engineering environment by working in a paid, full-time position in a medical or research facility, private business, industry, or governmental agency. Through seminars on topics such as self-assessment, identification of work skills, rÃ©sum&amp;#233; writing, interview skills, and understanding the corporate world, students learn the broad career skills required to obtain co-op and permanent employment.</description>
+  </course>
+  <course name="Probability with Statistical Applications">
+    <school>ENG</school>
+    <dept>EK</dept>
+    <cid>500</cid>
+    <description>A first course in probability, random processes, and statistics for students with a level of mathematical maturity and experience comparable to that normally found in entering graduate students. Sample spaces, probability measures, random variables, expectation, applications of transform methods, stochastic convergence and limit theorems, second order statistics, introduction to random processes, estimation, filtering, and elementary hypothesis testing. May not be taken for credit in addition to ENG EC 381 or ENG ME 308. 4</description>
+  </course>
+  <course name="Assessment of Sustainable Energy Technologies">
+    <school>ENG</school>
+    <dept>EK</dept>
+    <cid>546</cid>
+    <description>Critical to launching new energy ventures and implementing new energy policies is developing a broad understanding of how technically feasible the proposed project/technology in meeting the economic, environmental, and end-use requirements.  This course will provide students with the background needed to assess the potential for energy efficiency and effectiveness of different technologies, the related economics, as well as identify the key technical risks in emerging technologies.  Examples will be drawn from a variety of emerging technologies such as solar photovoltaics, fuel cells, advanced transportation technology, as well as conservation options such as motors, cogeneration, building automation and HVAC.  This course will also address evaluating the life cycle implications of emerging technologies, including manufacturing issues, end-of-life, as well as estimating performance. 4cr. 2nd</description>
+  </course>
+</courses>
