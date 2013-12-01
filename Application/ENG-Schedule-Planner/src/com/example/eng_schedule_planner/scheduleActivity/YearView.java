@@ -1,34 +1,37 @@
 package com.example.eng_schedule_planner.scheduleActivity;
 
+
 import java.util.ArrayList;
 
 
 import android.animation.LayoutTransition;
 import android.content.Context;
 import android.graphics.Color;
-import android.view.DragEvent;
-import android.view.Menu;
-import android.view.View;
 
+import android.view.DragEvent;
+
+import android.view.View;
+import android.widget.Button;
 import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;
-import android.widget.PopupMenu;
 import android.widget.ScrollView;
 import android.widget.Space;
 import android.widget.TextView;
 
 import com.example.eng_schedule_planner.scheduleActivity.ClassButton;
 
-public class YearView extends LinearLayout {
+public class YearView extends LinearLayout{
 
+	
 	
 	final int SPACE_WIDTH = 30;
 	//String yearLabel;
-	TextView yearLabel;
+	public TextView yearLabel;
 	ArrayList<ClassButton> classList;
 	HorizontalScrollView horizontalScroll;
 	LinearLayout horizontalLayout;
 	LayoutTransition transition;
+	public boolean addClassClicked;
 	
 	public YearView(Context context) throws Exception {
 		super(context);
@@ -49,9 +52,11 @@ public class YearView extends LinearLayout {
 		yearLabel = new TextView(context);
 		yearLabel.setText(yearName);
 		yearLabel.setPadding(50, 0, 0, 0);
-		yearLabel.setTextSize(50);
+		yearLabel.setTextSize(30);
+		//NATE: change yearLabel color
+		yearLabel.setTextColor(Color.BLACK);
 		this.addView(yearLabel);
-		
+				
 		//Add the horizontal scroll layout
 		horizontalScroll = new HorizontalScrollView(context);
 		horizontalScroll.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.MATCH_PARENT));
@@ -97,7 +102,7 @@ public class YearView extends LinearLayout {
 		@Override
 		public boolean onDrag(View v, DragEvent dragEvent) {
 			int action = dragEvent.getAction();
-			ClassButton view = (ClassButton) dragEvent.getLocalState();
+			ClassButton view = (ClassButton) ((Button)dragEvent.getLocalState()).getParent();
 			switch(action)
 			{
 				case DragEvent.ACTION_DRAG_STARTED:
@@ -160,7 +165,13 @@ public class YearView extends LinearLayout {
 		classList.add(index, button);
 		System.out.println(classList);
 	}
-	
+
+	public void addNewClassWithName(String s)
+	{
+		ClassButton myButton = new ClassButton(this.getContext(),ClassButton.STANDARD_BUTTON, s);
+		horizontalLayout.addView(myButton,horizontalLayout.getChildCount()-2);
+		classList.add(myButton);
+	}
 }
 
 

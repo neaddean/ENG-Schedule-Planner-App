@@ -1,13 +1,14 @@
 package com.example.eng_schedule_planner.scheduleActivity;
 
 import com.example.eng_schedule_planner.R;
-import com.example.eng_schedule_planner.R.id;
-import com.example.eng_schedule_planner.R.layout;
-import com.example.eng_schedule_planner.R.menu;
+
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.view.Menu;
+import android.view.View;
+import android.view.Window;
 
 import android.widget.LinearLayout;
 import android.widget.Space;
@@ -23,17 +24,10 @@ public class ScheduleActivity extends Activity {
 		setUpGrid();
 	}
 
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.main, menu);
-		return true;
-	}
-	
-	
+	LinearLayout listLayout;
 	private void setUpGrid()
 	{
-		LinearLayout listLayout = (LinearLayout) findViewById(R.id.schedule_vertical_layout);
+		listLayout = (LinearLayout) findViewById(R.id.schedule_vertical_layout);
 		listLayout.addView(new YearView(this,"Freshman Fall"));
 		listLayout.addView(new YearView(this,"Freshman Spring"));
 		listLayout.addView(new YearView(this,"Sophomore Fall"));
@@ -46,6 +40,35 @@ public class ScheduleActivity extends Activity {
 		Space afterSpace= new Space(this);
 		afterSpace.setLayoutParams(spaceParam);
 		listLayout.addView(afterSpace);
+		
+	}
+
+
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		
+		super.onActivityResult(requestCode, resultCode, data);
+		
+		
+		String className = data.getStringExtra("className");
+		for(int i = 0; i < listLayout.getChildCount(); i++) {
+	        if(listLayout.getChildAt(i) instanceof YearView){
+	        	YearView yv = (YearView)listLayout.getChildAt(i);
+	        	if(yv.addClassClicked == true)
+	        	{
+	        		if(resultCode == Activity.RESULT_OK)
+	        		   yv.addNewClassWithName(className);
+	        		else if (resultCode == Activity.RESULT_CANCELED);
+	        		yv.addClassClicked = false;
+	        		
+	        	}
+	        }
+	        	
+	       		
+	    }
+		
+		
+		
 		
 	}
 }
