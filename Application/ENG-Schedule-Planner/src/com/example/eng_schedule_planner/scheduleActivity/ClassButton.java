@@ -4,17 +4,18 @@ package com.example.eng_schedule_planner.scheduleActivity;
 import java.util.Random;
 
 import com.example.eng_schedule_planner.R;
+import com.example.eng_schedule_planner.addClassActivity.addClassActivity;
 
 import android.app.AlertDialog;
 import android.content.ClipData;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
+import android.content.Intent;
 import android.graphics.Color;
 
 import android.graphics.PorterDuff;
 import android.view.View;
-
 import android.widget.Button;
 import android.widget.ImageView;
 
@@ -65,7 +66,7 @@ public class ClassButton extends RelativeLayout {
 	Button button;
 	ImageView check;
 	int isCompleted;
-	
+	int buttonType; 
 	
 	AlertDialog.Builder alertDialog;
 	
@@ -84,6 +85,26 @@ public class ClassButton extends RelativeLayout {
 		button.getBackground().setColorFilter(color,PorterDuff.Mode.MULTIPLY);
 		this.addView(button);
 		
+		buttonType = identifier;
+		setUpButtonListener(context, identifier);
+		
+		int randomnumber = rnd.nextInt(buttonPictures.length);
+		button.setBackgroundResource(buttonPictures[randomnumber]);
+		//Set check mark
+		check = new ImageView(context);
+		check.setImageResource(R.drawable.checkmark);
+	
+		RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(CHECK_WIDTH, CHECK_HEIGHT);
+		params.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
+		params.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
+		params.rightMargin = 10;
+		params.bottomMargin = 10;
+		this.addView(check,params);
+		setCompleted(NOT_COMPLETED);
+}
+	
+	private void setUpButtonListener(final Context context, int identifier)
+	{
 		if(identifier == STANDARD_BUTTON)
 		{
 			
@@ -106,7 +127,7 @@ public class ClassButton extends RelativeLayout {
 					if(alertDialog == null)
 					{
 						alertDialog = new AlertDialog.Builder(context);
-						alertDialog.setTitle(title);
+						alertDialog.setTitle(button.getText());
 						alertDialog.setItems(colors, new DialogInterface.OnClickListener() {
 						    @Override
 						    public void onClick(DialogInterface dialog, int which) {
@@ -146,24 +167,19 @@ public class ClassButton extends RelativeLayout {
 		}else if(identifier == ADD_BUTTON)
 		{		
 			button.setText("Add");
-			//Pop up menu
+			button.setOnClickListener(new OnClickListener() {
+				@Override
+				public void onClick(View v) {
+					
+					ScheduleActivity s = (ScheduleActivity) v.getContext();
+					Intent intent = new Intent(s, addClassActivity.class);
+					s.startActivity(intent);
+				}
+			});
 			
 		}
-		
-		int randomnumber = rnd.nextInt(buttonPictures.length);
-		button.setBackgroundResource(buttonPictures[randomnumber]);
-		//Set check mark
-		check = new ImageView(context);
-		check.setImageResource(R.drawable.checkmark);
+	}
 	
-		RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(CHECK_WIDTH, CHECK_HEIGHT);
-		params.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
-		params.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
-		params.rightMargin = 10;
-		params.bottomMargin = 10;
-		this.addView(check,params);
-		setCompleted(NOT_COMPLETED);
-}
 	public void toggleCompleted()
 	{
 		if(isCompleted == 0) setCompleted(1);
