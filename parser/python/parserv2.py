@@ -11,12 +11,13 @@ def prettify(elem):
     reparsed = minidom.parseString(rough_string)
     return reparsed.toprettyxml(indent="  ")
 
+#numtrans = {"ENG": "0", "CAS" : "1", "EC": "0", "ME": "1", "BE": "2", "EK" : "3"}
+
 links = []
-url_list = ["http://www.bu.edu/academics/eng/courses/electrical-computer-engineering/0/"
+url_list = ["http://www.bu.edu/academics/eng/courses/electrical-computer-engineering/0/",
             "http://www.bu.edu/academics/eng/courses/mechanical-engineering/0/",
             "http://www.bu.edu/academics/eng/courses/biomedical-engineering/0/",
-            "http://www.bu.edu/academics/eng/courses/engineering-core/0/"
-            ]
+            "http://www.bu.edu/academics/eng/courses/engineering-core/0/"]
             
 for base_url in url_list:
     i = 0
@@ -39,7 +40,7 @@ for base_url in url_list:
 root = ElementTree.Element("courses")
 
 for i in links:
-    if not ":" in " ".join(i[1:4]):
+    if (not ":" in " ".join(i[1:4])) and int(i[3]) < 600:
         course = ElementTree.SubElement(root, "course")
         course.set ("name", i[4])
         school = ElementTree.SubElement(course, "school")
@@ -57,5 +58,5 @@ xmlfile = open("courses.xml", "w")
 xmlfile.write(towrite.encode('utf-8'))
 xmlfile.close()
 
-print "done"
-#print towrite
+#print "done"
+print towrite
