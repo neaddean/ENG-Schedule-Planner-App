@@ -23,7 +23,7 @@ public class ScheduleActivity extends Activity {
 		setContentView(R.layout.activity_main);
 		setUpGrid();
 		
-		CourseModel model = new CourseModel("courses.xml");
+		CourseModel model = new CourseModel(this.getApplicationContext(), "courses.xml");
 		model.printStuff();	  
 		model.printLists();  
 	}

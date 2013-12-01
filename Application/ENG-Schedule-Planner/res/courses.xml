@@ -1,4 +1,4 @@
-<?xml version="1.0" ?>
+<assets>
 <courses>
   <course name="Introduction to Logic Design">
     <school>ENG</school>
@@ -1081,3 +1081,4 @@
     <description>Critical to launching new energy ventures and implementing new energy policies is developing a broad understanding of how technically feasible the proposed project/technology in meeting the economic, environmental, and end-use requirements.  This course will provide students with the background needed to assess the potential for energy efficiency and effectiveness of different technologies, the related economics, as well as identify the key technical risks in emerging technologies.  Examples will be drawn from a variety of emerging technologies such as solar photovoltaics, fuel cells, advanced transportation technology, as well as conservation options such as motors, cogeneration, building automation and HVAC.  This course will also address evaluating the life cycle implications of emerging technologies, including manufacturing issues, end-of-life, as well as estimating performance. 4cr. 2nd</description>
   </course>
 </courses>
+</assets>
