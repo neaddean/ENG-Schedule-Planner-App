@@ -59,6 +59,7 @@ public  class ClassButton extends RelativeLayout {
 		
 		button = new Button(context);
 		button.setLayoutParams(new LayoutParams(WIDTH,HEIGHT));
+		button.setTextSize(20);
 		button.setText(title);
 		Random rnd = new Random(); 
 		int color = Color.argb(255, rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256));   

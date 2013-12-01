@@ -34,7 +34,6 @@ public class ScheduleActivity extends Activity {
 	private void setUpGrid()
 	{
 		LinearLayout listLayout = (LinearLayout) findViewById(R.id.schedule_vertical_layout);
-		
 		listLayout.addView(new YearView(this,"Freshman Fall"));
 		listLayout.addView(new YearView(this,"Freshman Spring"));
 		listLayout.addView(new YearView(this,"Sophomore Fall"));
