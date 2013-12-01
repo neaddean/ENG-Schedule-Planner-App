@@ -26,7 +26,7 @@ import android.widget.RelativeLayout;
  * @author timothychongg
  *
  */
-public  class ClassButton extends RelativeLayout {
+public class ClassButton extends RelativeLayout {
 
 	/**
 	 * @param context
@@ -39,7 +39,7 @@ public  class ClassButton extends RelativeLayout {
 	final static int ADD_BUTTON = 1;
 	
 	final static int NOT_COMPLETED = 0;
-	final static int COMLPLETED = 1;
+	final static int COMPLETED = 1;
 	
 	final static int CHECK_WIDTH = 50;
 	final static int CHECK_HEIGHT = 50;
@@ -82,9 +82,9 @@ public  class ClassButton extends RelativeLayout {
 				});
 			
 			button.setOnClickListener(new OnClickListener() {
-				
-				public void onClick(View v) {
-					CharSequence colors[] = new CharSequence[] {"Mark as Completed", "View Syllabus", "Check for Prerequisites", "Delete"};
+				public void onClick(final View v) {
+					String completeStr =(isCompleted == COMPLETED)? "Mark as not Completed" : "Mark as Completed";
+					CharSequence colors[] = new CharSequence[] {completeStr, "View Syllabus", "Check for Prerequisites", "Delete"};
 					if(alertDialog == null)
 					{
 						alertDialog = new AlertDialog.Builder(context);
@@ -93,6 +93,16 @@ public  class ClassButton extends RelativeLayout {
 						    @Override
 						    public void onClick(DialogInterface dialog, int which) {
 						       alertDialog = null;
+						       switch(which)
+						       {
+						       case 0:{
+						    	   ClassButton buttonPtr = (ClassButton) ((Button)v).getParent();
+						    	   buttonPtr.toggleCompleted();
+						    	   break;
+						       }
+						       
+						       }
+						       
 						    }
 						});
 						alertDialog.show();
@@ -117,9 +127,13 @@ public  class ClassButton extends RelativeLayout {
 		params.rightMargin = 10;
 		params.bottomMargin = 10;
 		this.addView(check,params);
-		setCompleted(COMLPLETED);
+		setCompleted(NOT_COMPLETED);
 }
-
+	public void toggleCompleted()
+	{
+		if(isCompleted == 0) setCompleted(1);
+		else setCompleted(0);
+	}
 	
 	public void setCompleted(int completed)
 	{
@@ -130,7 +144,7 @@ public  class ClassButton extends RelativeLayout {
 			check.setVisibility(View.INVISIBLE);
 			break;
 		}
-		case COMLPLETED:{
+		case COMPLETED:{
 			isCompleted = completed;
 			check.setVisibility(View.VISIBLE);
 			break;
@@ -139,6 +153,8 @@ public  class ClassButton extends RelativeLayout {
 		}
 		
 	}
+	
+	
 }
 
 	
