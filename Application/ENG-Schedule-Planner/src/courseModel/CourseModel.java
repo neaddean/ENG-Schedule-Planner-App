@@ -39,7 +39,7 @@ public class CourseModel {
 	
 	public CourseModel(Context context, String courseFile) {
 		try {
-		InputStream inputStream = context.getAssets().open(courseFile); 
+		InputStream inputStream = context.getResources().getAssets().open(courseFile); 
 		//File fXmlFile = new File(courseFile);
 		//InputStream inputStream= new FileInputStream(fXmlFile);
 		Reader reader = new InputStreamReader(inputStream,"UTF-8");
