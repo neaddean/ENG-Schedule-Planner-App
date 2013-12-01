@@ -44,6 +44,24 @@ public class ClassButton extends RelativeLayout {
 	final static int CHECK_WIDTH = 50;
 	final static int CHECK_HEIGHT = 50;
 	
+	final static int buttonPictures[] = {
+		R.drawable.aero_conc,
+		R.drawable.bme_elec,
+		R.drawable.aero_conc,
+		R.drawable.bme_req,
+		R.drawable.ece_elec,
+		R.drawable.ece_req,
+		R.drawable.energy_conc,
+		R.drawable.eng_core,
+		R.drawable.gen_ed,
+		R.drawable.manuf_conc,
+		R.drawable.math,
+		R.drawable.me_elec,
+		R.drawable.nano_conc,
+		R.drawable.nat_sci,
+		R.drawable.tech_conc
+		};
+	
 	Button button;
 	ImageView check;
 	int isCompleted;
@@ -132,7 +150,8 @@ public class ClassButton extends RelativeLayout {
 			
 		}
 		
-		button.setBackgroundResource(R.drawable.eng_core);
+		int randomnumber = rnd.nextInt(buttonPictures.length);
+		button.setBackgroundResource(buttonPictures[randomnumber]);
 		//Set check mark
 		check = new ImageView(context);
 		check.setImageResource(R.drawable.checkmark);
