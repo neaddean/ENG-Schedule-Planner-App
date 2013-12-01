@@ -9,15 +9,15 @@ import android.app.AlertDialog;
 import android.content.ClipData;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.DialogInterface.OnCancelListener;
 import android.graphics.Color;
 
 import android.graphics.PorterDuff;
 import android.view.View;
 
-import android.view.ViewGroup.LayoutParams;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
+
 import android.widget.RelativeLayout;
 
 
@@ -92,18 +92,34 @@ public class ClassButton extends RelativeLayout {
 						alertDialog.setItems(colors, new DialogInterface.OnClickListener() {
 						    @Override
 						    public void onClick(DialogInterface dialog, int which) {
-						       alertDialog = null;
-						       switch(which)
+						    	alertDialog = null;
+						    	switch(which)
 						       {
 						       case 0:{
 						    	   ClassButton buttonPtr = (ClassButton) ((Button)v).getParent();
 						    	   buttonPtr.toggleCompleted();
 						    	   break;
 						       }
-						       
+						       case 3:{
+						    	   ClassButton buttonPtr = (ClassButton) ((Button)v).getParent();
+						    	   YearView yearPtr = (YearView) buttonPtr.getParent().getParent().getParent();
+						    	   try {
+									yearPtr.removeButton(buttonPtr);
+								} catch (Exception e) {
+									// TODO Auto-generated catch block
+									e.printStackTrace();
+								}						    	   
+						       }
 						       }
 						       
 						    }
+						});
+						alertDialog.setOnCancelListener(new OnCancelListener() {
+							
+							@Override
+							public void onCancel(DialogInterface dialog) {
+								alertDialog = null;
+							}
 						});
 						alertDialog.show();
 					}

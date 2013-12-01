@@ -7,12 +7,11 @@ import android.animation.LayoutTransition;
 import android.content.Context;
 import android.graphics.Color;
 import android.view.DragEvent;
-import android.view.Menu;
+
 import android.view.View;
 import android.widget.Button;
 import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;
-import android.widget.PopupMenu;
 import android.widget.ScrollView;
 import android.widget.Space;
 import android.widget.TextView;
