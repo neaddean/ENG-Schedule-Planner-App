@@ -172,7 +172,9 @@ public class ClassButton extends RelativeLayout {
 				public void onClick(View v) {
 					
 					ScheduleActivity s = (ScheduleActivity) v.getContext();
+						
 					Intent intent = new Intent(s, addClassActivity.class);
+					
 					s.startActivity(intent);
 				}
 			});
