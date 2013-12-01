@@ -15,6 +15,7 @@ import android.content.Intent;
 import android.graphics.Color;
 
 import android.graphics.PorterDuff;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -70,7 +71,7 @@ public class ClassButton extends RelativeLayout {
 	
 	AlertDialog.Builder alertDialog;
 	
-	public ClassButton(final Context context, int identifier, final String title) {
+ 	public ClassButton(final Context context, int identifier, final String title) {
 		super(context);
 		
 			
@@ -103,6 +104,8 @@ public class ClassButton extends RelativeLayout {
 		setCompleted(NOT_COMPLETED);
 }
 	
+ 	
+ 	
 	private void setUpButtonListener(final Context context, int identifier)
 	{
 		if(identifier == STANDARD_BUTTON)
@@ -174,8 +177,11 @@ public class ClassButton extends RelativeLayout {
 					ScheduleActivity s = (ScheduleActivity) v.getContext();
 						
 					Intent intent = new Intent(s, addClassActivity.class);
+					YearView yearPtr = (YearView) v.getParent().getParent().getParent().getParent();
+					yearPtr.addClassClicked = true;
+					intent.putExtra("str", yearPtr.yearLabel.getText());
 					
-					s.startActivity(intent);
+					s.startActivityForResult(intent, 0);
 				}
 			});
 			

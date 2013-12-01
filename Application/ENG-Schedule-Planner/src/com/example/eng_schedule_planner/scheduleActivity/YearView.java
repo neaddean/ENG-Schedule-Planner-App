@@ -1,11 +1,13 @@
 package com.example.eng_schedule_planner.scheduleActivity;
 
+
 import java.util.ArrayList;
 
 
 import android.animation.LayoutTransition;
 import android.content.Context;
 import android.graphics.Color;
+
 import android.view.DragEvent;
 
 import android.view.View;
@@ -18,16 +20,18 @@ import android.widget.TextView;
 
 import com.example.eng_schedule_planner.scheduleActivity.ClassButton;
 
-public class YearView extends LinearLayout {
+public class YearView extends LinearLayout{
 
+	
 	
 	final int SPACE_WIDTH = 30;
 	//String yearLabel;
-	TextView yearLabel;
+	public TextView yearLabel;
 	ArrayList<ClassButton> classList;
 	HorizontalScrollView horizontalScroll;
 	LinearLayout horizontalLayout;
 	LayoutTransition transition;
+	public boolean addClassClicked;
 	
 	public YearView(Context context) throws Exception {
 		super(context);
@@ -161,7 +165,13 @@ public class YearView extends LinearLayout {
 		classList.add(index, button);
 		System.out.println(classList);
 	}
-	
+
+	public void addNewClassWithName(String s)
+	{
+		ClassButton myButton = new ClassButton(this.getContext(),ClassButton.STANDARD_BUTTON, s);
+		horizontalLayout.addView(myButton,horizontalLayout.getChildCount()-2);
+		classList.add(myButton);
+	}
 }
 
 
