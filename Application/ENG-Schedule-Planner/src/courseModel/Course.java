@@ -10,7 +10,7 @@ public class Course {
 	String description;
 	ArrayList<Course> prereqs;
 	
-	String getTitle() {
+	public String getTitle() {
 		return school + dept + cid;
 	}
 	

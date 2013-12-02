@@ -22,9 +22,14 @@ public class ScheduleActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		setUpGrid();
+<<<<<<< HEAD
 		
 		CourseModel model = new CourseModel(this.getApplicationContext());
 		
+=======
+		CourseModel model = CourseModel.getInstance();
+		model.loadCourseFile(this); 
+>>>>>>> ca5dcea93a5a03702cc33b0e9e56ec9980770501
 	}
 
 	LinearLayout listLayout;

@@ -3,6 +3,8 @@ package com.example.eng_schedule_planner.scheduleActivity;
 
 import java.util.ArrayList;
 
+import courseModel.CourseModel;
+
 
 import android.animation.LayoutTransition;
 import android.content.Context;
@@ -78,10 +80,13 @@ public class YearView extends LinearLayout{
 		beforeSpace.setLayoutParams(spaceParam);
 		
 		horizontalLayout.addView(beforeSpace);
-		
+		CourseModel model = CourseModel.getInstance();// = CourseModel.getInstance();
+		//model.loadCourseFile(getContext());		
 		for(int j = 0; j <6; j++)
 		{
-			ClassButton myButton = new ClassButton(context,ClassButton.STANDARD_BUTTON, Integer.toString(j));
+//			ClassButton myButton = new ClassButton(context,ClassButton.STANDARD_BUTTON, Integer.toString(j));
+//			CourseModel.getInstance().printLists();
+			ClassButton myButton = new ClassButton(context,ClassButton.STANDARD_BUTTON, model.getCourseList().get(j).getTitle());
 			horizontalLayout.addView(myButton);
 			classList.add(myButton);
 		}

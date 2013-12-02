@@ -23,10 +23,23 @@ import java.io.Reader;
 
 public class CourseModel {
 	
-	ArrayList<Course> courseList;
+	static ArrayList<Course> courseList;
 	
 	HashMap<String, ArrayList<Course>> semesterLists;
 	
+	public ArrayList<Course> getCourseList() {
+		return courseList;
+	}
+	
+	private static CourseModel instance = null;
+	protected CourseModel() {}
+	public static CourseModel getInstance() {
+		if (instance == null) {
+			instance = new CourseModel();
+		}
+		return instance;
+	}
+		
 	public void printStuff() {
 		for (Course c : courseList) {
 			 
@@ -35,7 +48,7 @@ public class CourseModel {
 		}
 	}
 	
-	public CourseModel(Context context) {
+	public void loadCourseFile(Context context) {
 		try {
 		InputStream inputStream = context.getAssets().open("courses.xml"); 
 		//File fXmlFile = new File(courseFile);
@@ -119,47 +132,9 @@ public class CourseModel {
 		 }
 		 
 		 semesterLists = tempSemesters;
-//		 
-//		 
-//		 for (int i = 0; i < 5; i++) {
-//			 tempList.add(courseList.get(i));
-//		 }
-//		 tempSemesters.put("1f", tempList);
-//		 
-//		 tempList.clear();
-//		 for (int i = 0; i < 5; i++) {
-//			 tempList.add(courseList.get(i));
-//		 }
-//		 tempSemesters.put("1f", tempList);
-//		 
-		 
-//		 tempSemesters.put("1f", new ArrayList<Course>());
-//		 tempSemesters.put("1s", new ArrayList<Course>());
-//		 tempSemesters.put("1u", new ArrayList<Course>());
-//		 tempSemesters.put("2f", new ArrayList<Course>());
-//		 tempSemesters.put("2s", new ArrayList<Course>());
-//		 tempSemesters.put("2u", new ArrayList<Course>());
-//		 tempSemesters.put("3f", new ArrayList<Course>());
-//		 tempSemesters.put("3s", new ArrayList<Course>());
-//		 tempSemesters.put("3u", new ArrayList<Course>());
-//		 tempSemesters.put("4f", new ArrayList<Course>());
-//		 tempSemesters.put("4s", new ArrayList<Course>());
-//		 tempSemesters.put("4u", new ArrayList<Course>());
-		 
-//			 for (Map.Entry entry : hm.entrySet()) { 
-//				 System.out.println("key,val: " + entry.getKey() + "," + entry.getValue()); 
-//				 }
-//		 
-//	      // Put elements to the map
-//	      hm.put("Zara", new Double(3434.34));
-//	      hm.put("Mahnaz", new Double(123.22));
-//	      hm.put("Ayan", new Double(1378.00));
-//	      hm.put("Daisy", new Double(99.22));
-//	      hm.put("Qadir", new Double(-19.08));
-
 	}
 
-	public ArrayList<Course> getClassWithYear( char year, char semester) {
+	public ArrayList<Course> getClassWithYear(char year, char semester) {
 	StringBuilder semesterChoice = new StringBuilder(2).append(year).append(semester);
 	return semesterLists.get(semesterChoice.toString());
 }
@@ -171,10 +146,9 @@ public class CourseModel {
 					System.out.println(entry.getKey() + " : " + c.getFullTitle()); 
 			 }
 		 }
-//			 System.out.println("key,val: " + entry.getKey() + "," + entry.getValue()); 
-//			 }
 	}
 
+	
 }
 
 
