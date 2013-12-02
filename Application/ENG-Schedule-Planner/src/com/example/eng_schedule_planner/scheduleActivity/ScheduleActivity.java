@@ -21,12 +21,12 @@ public class ScheduleActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		setUpGrid();
+		
 
 		
 		CourseModel model = CourseModel.getInstance();
 		model.loadCourseFile(this); 
-
+		setUpGrid();
 	}
 
 	LinearLayout listLayout;

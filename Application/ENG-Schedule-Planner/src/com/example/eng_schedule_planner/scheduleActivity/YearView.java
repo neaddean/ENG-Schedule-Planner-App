@@ -64,7 +64,7 @@ public class YearView extends LinearLayout{
 		horizontalScroll.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.MATCH_PARENT));
 		horizontalScroll.setHorizontalScrollBarEnabled(false);
 		horizontalScroll.setOverScrollMode(ScrollView.OVER_SCROLL_NEVER);
-		//horizontalScroll.setBackgroundColor(Color.GREEN);
+
 		
 		//Linear layout inside horizontal scroll layout
 		horizontalLayout = new LinearLayout(context);
@@ -72,7 +72,6 @@ public class YearView extends LinearLayout{
 		horizontalLayout.setOrientation(LinearLayout.HORIZONTAL);
 		horizontalScroll.addView(horizontalLayout);
 
-		//horizontalLayout.setBackgroundColor(Color.RED);	
 		
 		//Add space in front and the end
 		LayoutParams spaceParam = new LayoutParams(SPACE_WIDTH,LayoutParams.WRAP_CONTENT);
@@ -80,8 +79,8 @@ public class YearView extends LinearLayout{
 		beforeSpace.setLayoutParams(spaceParam);
 		
 		horizontalLayout.addView(beforeSpace);
-		CourseModel model = CourseModel.getInstance();// = CourseModel.getInstance();
-		//model.loadCourseFile(getContext());		
+		CourseModel model = CourseModel.getInstance();
+		model.loadCourseFile(getContext());		
 		for(int j = 0; j <6; j++)
 		{
 //			ClassButton myButton = new ClassButton(context,ClassButton.STANDARD_BUTTON, Integer.toString(j));
