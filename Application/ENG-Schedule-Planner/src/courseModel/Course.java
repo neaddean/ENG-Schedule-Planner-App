@@ -11,7 +11,7 @@ public class Course {
 	ArrayList<Course> prereqs;
 	
 	public String getTitle() {
-		return school + dept + cid;
+		return school+" "+ dept+" " + cid;
 	}
 	
 	String getFullTitle() {

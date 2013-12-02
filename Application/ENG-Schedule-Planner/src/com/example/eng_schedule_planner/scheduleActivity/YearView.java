@@ -24,8 +24,6 @@ import com.example.eng_schedule_planner.scheduleActivity.ClassButton;
 
 public class YearView extends LinearLayout{
 
-	
-	
 	final int SPACE_WIDTH = 30;
 	//String yearLabel;
 	public TextView yearLabel;
@@ -83,8 +81,7 @@ public class YearView extends LinearLayout{
 		model.loadCourseFile(getContext());		
 		for(int j = 0; j <6; j++)
 		{
-//			ClassButton myButton = new ClassButton(context,ClassButton.STANDARD_BUTTON, Integer.toString(j));
-//			CourseModel.getInstance().printLists();
+
 			ClassButton myButton = new ClassButton(context,ClassButton.STANDARD_BUTTON, model.getCourseList().get(j).getTitle());
 			horizontalLayout.addView(myButton);
 			classList.add(myButton);

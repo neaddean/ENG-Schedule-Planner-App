@@ -21,11 +21,23 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader; 
 
-public class CourseModel {
+public class CourseModel implements ModelAccessor{
 	
 	ArrayList<Course> courseList;
 	
 	HashMap<String, ArrayList<Course>> semesterLists;
+
+	
+	public final static char FALL = 'f';
+	public final static char SPRING = 's';
+	public final static char SUMMER = 'u';
+	
+	public final static int EXTERNAL_CREDITS = 0;
+	public final static int FRESHMAN_YEAR = 1;
+	public final static int SOPHOMORE_YEAR = 2;
+	public final static int JUNIOR_YEAR = 3;
+	public final static int SENIOR_YEAR = 4;
+	
 	
 	public ArrayList<Course> getCourseList() {
 		return courseList;
@@ -135,8 +147,9 @@ public class CourseModel {
 		 semesterLists = tempSemesters;
 	}
 
-	public ArrayList<Course> getClassWithYear(char year, char semester) {
-	StringBuilder semesterChoice = new StringBuilder(2).append(year).append(semester);
+	public ArrayList<Course> getClassWithYear(int year, char semester) {
+	char yearChar = Character.forDigit(year, 10); 
+	StringBuilder semesterChoice = new StringBuilder(2).append(yearChar).append(semester);
 	return semesterLists.get(semesterChoice.toString());
 }
 
