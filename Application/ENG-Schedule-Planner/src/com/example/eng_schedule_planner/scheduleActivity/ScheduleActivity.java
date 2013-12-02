@@ -22,10 +22,8 @@ public class ScheduleActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		setUpGrid();
-		
-		CourseModel model = new CourseModel(this.getApplicationContext());
-		model.printStuff();	  
-		model.printLists();  
+		CourseModel model = CourseModel.getInstance();
+		model.loadCourseFile(this); 
 	}
 
 	LinearLayout listLayout;
