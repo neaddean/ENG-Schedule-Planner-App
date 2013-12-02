@@ -24,8 +24,7 @@ public class ScheduleActivity extends Activity {
 		setUpGrid();
 		
 		CourseModel model = new CourseModel(this.getApplicationContext());
-		model.printStuff();	  
-		model.printLists();  
+		
 	}
 
 	LinearLayout listLayout;
