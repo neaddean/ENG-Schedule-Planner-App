@@ -4,6 +4,7 @@ package com.example.eng_schedule_planner.scheduleActivity;
 import java.util.Random;
 
 import com.example.eng_schedule_planner.R;
+import com.example.eng_schedule_planner.Global.Global;
 import com.example.eng_schedule_planner.addClassActivity.addClassActivity;
 
 import android.app.AlertDialog;
@@ -16,6 +17,9 @@ import android.graphics.Color;
 
 import android.graphics.PorterDuff;
 
+import android.support.v4.view.GestureDetectorCompat;
+import android.view.GestureDetector;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -28,7 +32,7 @@ import android.widget.RelativeLayout;
  * @author timothychongg
  *
  */
-public class ClassButton extends RelativeLayout {
+public class ClassButton extends RelativeLayout implements GestureDetector.OnGestureListener{
 
 	/**
 	 * @param context
@@ -64,26 +68,33 @@ public class ClassButton extends RelativeLayout {
 		R.drawable.tech_conc
 		};
 	
-	Button button;
-	ImageView check;
+	private Button button;
+	private ImageView check;
 	int isCompleted;
 	int buttonType; 
-	
-	AlertDialog.Builder alertDialog;
+	private GestureDetectorCompat myDetector;
+	private AlertDialog.Builder alertDialog;
 	
  	public ClassButton(final Context context, int identifier, final String title) {
 		super(context);
 		
-			
 		this.setLayoutParams(new LayoutParams(WIDTH,HEIGHT));
+		
+		myDetector = new GestureDetectorCompat(context, this);
 		
 		button = new Button(context);
 		button.setLayoutParams(new LayoutParams(WIDTH,HEIGHT));
 		button.setTextSize(20);
-		button.setText(title);
+		button.setText(title);		
 		Random rnd = new Random(); 
 		int color = Color.argb(255, rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256));   
 		button.getBackground().setColorFilter(color,PorterDuff.Mode.MULTIPLY);
+		button.setOnTouchListener(new OnTouchListener() {
+			@Override
+			public boolean onTouch(View v, MotionEvent event) {
+				return myDetector.onTouchEvent(event);
+			}
+		});
 		this.addView(button);
 		
 		buttonType = identifier;
@@ -111,80 +122,9 @@ public class ClassButton extends RelativeLayout {
 		if(identifier == STANDARD_BUTTON)
 		{
 			
-			button.setOnLongClickListener(
-				new View.OnLongClickListener() {
-					@Override
-					public boolean onLongClick(View view) {
-						((ClassButton)view.getParent()).setVisibility(View.GONE);
-						ClipData data = ClipData.newPlainText("", "");
-				        DragShadowBuilder shadowBuilder = new View.DragShadowBuilder(view);
-				        view.startDrag(data, shadowBuilder, view, 0);
-						return true;
-					}
-				});
-			
-			button.setOnClickListener(new OnClickListener() {
-				public void onClick(final View v) {
-					String completeStr =(isCompleted == COMPLETED)? "Mark as not Completed" : "Mark as Completed";
-					CharSequence colors[] = new CharSequence[] {completeStr, "View Syllabus", "Check for Prerequisites", "Delete"};
-					if(alertDialog == null)
-					{
-						alertDialog = new AlertDialog.Builder(context);
-						alertDialog.setTitle(button.getText());
-						alertDialog.setItems(colors, new DialogInterface.OnClickListener() {
-						    @Override
-						    public void onClick(DialogInterface dialog, int which) {
-						    	alertDialog = null;
-						    	switch(which)
-						       {
-						       case 0:{
-						    	   ClassButton buttonPtr = (ClassButton) ((Button)v).getParent();
-						    	   buttonPtr.toggleCompleted();
-						    	   break;
-						       }
-						       case 3:{
-						    	   ClassButton buttonPtr = (ClassButton) ((Button)v).getParent();
-						    	   YearView yearPtr = (YearView) buttonPtr.getParent().getParent().getParent();
-						    	   try {
-									yearPtr.removeButton(buttonPtr);
-								} catch (Exception e) {
-									// TODO Auto-generated catch block
-									e.printStackTrace();
-								}						    	   
-						       }
-						       }
-						       
-						    }
-						});
-						alertDialog.setOnCancelListener(new OnCancelListener() {
-							
-							@Override
-							public void onCancel(DialogInterface dialog) {
-								alertDialog = null;
-							}
-						});
-						alertDialog.show();
-					}
-				}
-			});
 		}else if(identifier == ADD_BUTTON)
 		{		
-			button.setText("Add");
-			button.setOnClickListener(new OnClickListener() {
-				@Override
-				public void onClick(View v) {
-					
-					ScheduleActivity s = (ScheduleActivity) v.getContext();
-						
-					Intent intent = new Intent(s, addClassActivity.class);
-					YearView yearPtr = (YearView) v.getParent().getParent().getParent().getParent();
-					yearPtr.addClassClicked = true;
-					intent.putExtra("str", yearPtr.yearLabel.getText());
-					
-					s.startActivityForResult(intent, 0);
-				}
-			});
-			
+			button.setText("Add");	
 		}
 	}
 	
@@ -212,7 +152,119 @@ public class ClassButton extends RelativeLayout {
 		}
 		
 	}
-	
+
+
+
+	@Override
+	public boolean onDown(MotionEvent e) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+
+
+	@Override
+	public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX,
+			float velocityY) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+
+
+	@Override
+	public void onLongPress(MotionEvent e) {
+		((ClassButton)this).setVisibility(View.GONE);
+		ClipData data = ClipData.newPlainText("", "");
+        DragShadowBuilder shadowBuilder = new View.DragShadowBuilder(this.button);
+        this.button.startDrag(data, shadowBuilder, this.button, 0);
+		
+	}
+
+
+
+	@Override
+	public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX,
+			float distanceY) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+
+
+	@Override
+	public void onShowPress(MotionEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+	@Override
+	public boolean onSingleTapUp(MotionEvent e) {
+		if(buttonType == STANDARD_BUTTON)
+		{
+			String completeStr =(isCompleted == COMPLETED)? "Mark as not Completed" : "Mark as Completed";
+			CharSequence colors[] = new CharSequence[] {completeStr, "View Syllabus", "Check for Prerequisites", "Delete"};
+			if(alertDialog == null)
+			{
+				final ClassButton buttonPtr = this;
+				alertDialog = new AlertDialog.Builder(this.getContext());
+				alertDialog.setTitle(button.getText());
+				alertDialog.setItems(colors, new DialogInterface.OnClickListener() {
+				    @Override
+				    public void onClick(DialogInterface dialog, int which) {
+				    	alertDialog = null;
+				    	switch(which)
+				       {
+				       case 0:{
+				    	   buttonPtr.toggleCompleted();
+				    	   break;
+				       }
+				       case 3:{
+				    	   YearView yearPtr = (YearView) buttonPtr.getParent().getParent().getParent();
+				    	   try {
+							yearPtr.removeButton(buttonPtr);
+						} catch (Exception e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}						    	   
+				       }
+				       }
+				       
+				    }
+				});
+				alertDialog.setOnCancelListener(new OnCancelListener() {
+					
+					@Override
+					public void onCancel(DialogInterface dialog) {
+						alertDialog = null;
+					}
+				});
+				alertDialog.show();
+			}
+		}else if(buttonType == ADD_BUTTON)
+		{
+			ScheduleActivity s = (ScheduleActivity) this.getContext();
+			
+			Intent intent = new Intent(s, addClassActivity.class);
+			
+			YearView yearPtr = (YearView) this.getParent().getParent().getParent();
+			if(Global.YearToAddClass == null)
+				Global.YearToAddClass = yearPtr;
+			else
+				System.out.println ("YearView Already set");
+
+			intent.putExtra("str", yearPtr.yearLabel.getText());
+			
+			s.startActivityForResult(intent, 0);
+		}
+		
+		return false;
+	}
+
+
+
 	
 }
 

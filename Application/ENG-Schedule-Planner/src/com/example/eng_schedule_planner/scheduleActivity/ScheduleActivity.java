@@ -3,6 +3,7 @@ package com.example.eng_schedule_planner.scheduleActivity;
 import java.util.ArrayList;
 
 import com.example.eng_schedule_planner.R;
+import com.example.eng_schedule_planner.Global.Global;
 
 import courseModel.Course;
 import courseModel.CourseModel;
@@ -29,10 +30,7 @@ public class ScheduleActivity extends Activity {
 		model.loadCourseFile(this); 
 		
 		ArrayList<Course> c = model.getClassWithYear(CourseModel.FRESHMAN_YEAR, CourseModel.FALL);
-		for(Course co : c)
-		{
-			System.out.println(co.getTitle());
-		}
+
 		
 		setUpGrid();
 	}
@@ -41,14 +39,14 @@ public class ScheduleActivity extends Activity {
 	private void setUpGrid()
 	{
 		listLayout = (LinearLayout) findViewById(R.id.schedule_vertical_layout);
-		listLayout.addView(new YearView(this,"Freshman Fall"));
-		listLayout.addView(new YearView(this,"Freshman Spring"));
-		listLayout.addView(new YearView(this,"Sophok omore Fall"));
-		listLayout.addView(new YearView(this,"Sophomore Spring"));
-		listLayout.addView(new YearView(this,"Junior Fall"));
-		listLayout.addView(new YearView(this,"Junior Spring"));
-		listLayout.addView(new YearView(this,"Senior Fall"));
-		listLayout.addView(new YearView(this,"Senior Spring"));
+		listLayout.addView(new YearView(this,"Freshman Fall",CourseModel.FRESHMAN_YEAR,CourseModel.FALL));
+		listLayout.addView(new YearView(this,"Freshman Spring",CourseModel.FRESHMAN_YEAR,CourseModel.SPRING));
+		listLayout.addView(new YearView(this,"Sophomore Fall",CourseModel.SOPHOMORE_YEAR,CourseModel.FALL));
+		listLayout.addView(new YearView(this,"Sophomore Spring",CourseModel.SOPHOMORE_YEAR,CourseModel.SPRING));
+		listLayout.addView(new YearView(this,"Junior Fall",CourseModel.JUNIOR_YEAR,CourseModel.FALL));
+		listLayout.addView(new YearView(this,"Junior Spring",CourseModel.JUNIOR_YEAR,CourseModel.SPRING));
+		listLayout.addView(new YearView(this,"Senior Fall",CourseModel.SENIOR_YEAR,CourseModel.FALL));
+		listLayout.addView(new YearView(this,"Senior Spring",CourseModel.SENIOR_YEAR,CourseModel.SPRING));
 		LayoutParams spaceParam = new LayoutParams(LayoutParams.WRAP_CONTENT,50);
 		Space afterSpace= new Space(this);
 		afterSpace.setLayoutParams(spaceParam);
@@ -61,28 +59,19 @@ public class ScheduleActivity extends Activity {
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		
 		super.onActivityResult(requestCode, resultCode, data);
-		
-		for(int i = 0; i < listLayout.getChildCount(); i++) {
-	        if(listLayout.getChildAt(i) instanceof YearView){
-	        	YearView yv = (YearView)listLayout.getChildAt(i);
-	        	if(yv.addClassClicked == true)
-	        	{
-	        		
-	        		if(resultCode == Activity.RESULT_OK)
-	        		{
-	        		String className = data.getStringExtra("className");
-	        		   yv.addNewClassWithName(className);
-	        		}
-	        		else if (resultCode == Activity.RESULT_CANCELED);
-	        		yv.addClassClicked = false;
-	        		
-	        	}
-	        }
-	        	
-	       		
-	    }
-		
-		
+		YearView yToAdd = Global.YearToAddClass;
+		Global.YearToAddClass = null;
+		if(resultCode == Activity.RESULT_OK)
+		{
+			if(yToAdd != null)
+			{
+				String className = data.getStringExtra("className");
+				yToAdd.addNewClassWithName(className);
+				
+			}else
+				System.out.println("Error: Schedul Acitvity: No year to add");
+		}
+		  				
 		
 		
 	}

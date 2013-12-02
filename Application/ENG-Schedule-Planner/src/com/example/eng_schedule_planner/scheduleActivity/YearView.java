@@ -3,6 +3,7 @@ package com.example.eng_schedule_planner.scheduleActivity;
 
 import java.util.ArrayList;
 
+import courseModel.Course;
 import courseModel.CourseModel;
 
 
@@ -27,21 +28,26 @@ public class YearView extends LinearLayout{
 	final int SPACE_WIDTH = 30;
 	//String yearLabel;
 	public TextView yearLabel;
+	
 	ArrayList<ClassButton> classList;
 	HorizontalScrollView horizontalScroll;
 	LinearLayout horizontalLayout;
 	LayoutTransition transition;
-	public boolean addClassClicked;
+	int year;
+	char semester;
+
 	
-	public YearView(Context context) throws Exception {
+	private YearView(Context context) {
 		super(context);
-		throw new Exception("Invalid YearView Class Object Created");
 	}
-	
-	public YearView(final Context context, String yearName)
+		
+	public YearView(final Context context, String yearName, int year, char semester)
 	{
 		super(context);
 	
+		this.year = year;
+		this.semester = semester;
+		
 		//Setting up the layout param for itself
 		this.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.WRAP_CONTENT));
 		this.setOrientation(1);
@@ -77,12 +83,11 @@ public class YearView extends LinearLayout{
 		beforeSpace.setLayoutParams(spaceParam);
 		
 		horizontalLayout.addView(beforeSpace);
-		CourseModel model = CourseModel.getInstance();
-		model.loadCourseFile(getContext());		
-		for(int j = 0; j <6; j++)
+		ArrayList<Course> cs= CourseModel.getInstance().getClassWithYear(year, semester);
+		for(int j = 0; j <cs.size(); j++)
 		{
 
-			ClassButton myButton = new ClassButton(context,ClassButton.STANDARD_BUTTON, model.getCourseList().get(j).getTitle());
+			ClassButton myButton = new ClassButton(context,ClassButton.STANDARD_BUTTON, cs.get(j).getTitle());
 			horizontalLayout.addView(myButton);
 			classList.add(myButton);
 		}
@@ -107,15 +112,15 @@ public class YearView extends LinearLayout{
 			switch(action)
 			{
 				case DragEvent.ACTION_DRAG_STARTED:
-					System.out.println("Drag started");
+					//System.out.println("Drag started");
 					break;
 				case DragEvent.ACTION_DRAG_ENTERED:
-					System.out.println("Drag entered");
+					//System.out.println("Drag entered");
 			        break;
 				case DragEvent.ACTION_DRAG_LOCATION:
 					break;
 		      case DragEvent.ACTION_DRAG_EXITED:
-		    	  System.out.println("Drag exited");
+		    	  //System.out.println("Drag exited");
 		        break;
 		      case DragEvent.ACTION_DROP:
 		          YearView yearView  = (YearView) view.getParent().getParent().getParent();
@@ -161,10 +166,10 @@ public class YearView extends LinearLayout{
 		index = index < 0 ? 0 : index;
 		int childCount = horizontalLayout.getChildCount();
 		index = index >= childCount-2? childCount - 3 : index;
-		System.out.println(index);
+		//System.out.println(index);
 		horizontalLayout.addView(button,index+1);
 		classList.add(index, button);
-		System.out.println(classList);
+		//System.out.println(classList);
 	}
 
 	public void addNewClassWithName(String s)
