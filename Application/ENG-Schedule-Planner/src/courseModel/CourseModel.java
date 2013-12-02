@@ -26,7 +26,7 @@ import java.io.Reader;
 
 public class CourseModel {
 	
-	static ArrayList<Course> courseList;
+	ArrayList<Course> courseList;
 	
 	HashMap<String, ArrayList<Course>> semesterLists;
 	
@@ -39,6 +39,7 @@ public class CourseModel {
 	public static CourseModel getInstance() {
 		if (instance == null) {
 			instance = new CourseModel();
+			System.out.println("creating singleton");
 		}
 		return instance;
 	}
