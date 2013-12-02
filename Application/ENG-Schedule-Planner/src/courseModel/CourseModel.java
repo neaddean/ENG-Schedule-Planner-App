@@ -23,7 +23,7 @@ import java.io.Reader;
 
 public class CourseModel {
 	
-	static ArrayList<Course> courseList;
+	ArrayList<Course> courseList;
 	
 	HashMap<String, ArrayList<Course>> semesterLists;
 	
