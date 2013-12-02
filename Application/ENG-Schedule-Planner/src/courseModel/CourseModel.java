@@ -36,6 +36,7 @@ public class CourseModel {
 	public static CourseModel getInstance() {
 		if (instance == null) {
 			instance = new CourseModel();
+			System.out.println("creating singleton");
 		}
 		return instance;
 	}
