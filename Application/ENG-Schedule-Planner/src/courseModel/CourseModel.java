@@ -21,7 +21,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader; 
 
-public class CourseModel implements ModelAccessor{
+public class CourseModel{// implements ModelAccessor{
 	
 	ArrayList<Course> courseList;
 	
@@ -51,6 +51,30 @@ public class CourseModel implements ModelAccessor{
 			System.out.println("creating singleton");
 		}
 		return instance;
+	}
+	
+	public Course getCourseByTitle(String Title) {
+		for (Course c: courseList) {
+			if (c.getTitle() == Title)
+				return c;
+		}
+		return null;
+	}
+	
+	HashMap <String, ArrayList<Course>> EEDefault() {
+		HashMap <String, ArrayList<Course>> tempSemesters = new HashMap<String, ArrayList<Course>> ();
+		
+		ArrayList<Course> tempList = new ArrayList<Course>();
+		
+		tempList.add(getCourseByTitle("ENGEK100"));
+		//add more courses
+		tempSemesters.put("1f", tempList);
+		
+		tempList.clear();
+		//do other semesters
+		//must also initialize summer semester
+		//see load file for example
+		//(its in a confusing for loop though)
 	}
 		
 	public void printStuff() {
