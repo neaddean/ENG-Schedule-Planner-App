@@ -75,6 +75,7 @@ public class CourseModel{// implements ModelAccessor{
 		//must also initialize summer semester
 		//see load file for example
 		//(its in a confusing for loop though)
+		return null;
 	}
 		
 	public void printStuff() {
