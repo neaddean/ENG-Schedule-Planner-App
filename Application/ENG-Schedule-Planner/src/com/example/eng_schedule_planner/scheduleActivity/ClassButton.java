@@ -26,12 +26,6 @@ import android.widget.ImageView;
 
 import android.widget.RelativeLayout;
 
-
-
-/**
- * @author timothychongg
- *
- */
 public class ClassButton extends RelativeLayout implements GestureDetector.OnGestureListener{
 
 	/**
@@ -68,12 +62,12 @@ public class ClassButton extends RelativeLayout implements GestureDetector.OnGes
 		R.drawable.tech_conc
 		};
 	
-	private Button button;
-	private ImageView check;
+	Button button;
+	ImageView check;
 	int isCompleted;
 	int buttonType; 
-	private GestureDetectorCompat myDetector;
-	private AlertDialog.Builder alertDialog;
+	GestureDetectorCompat myDetector;
+	AlertDialog.Builder alertDialog;
 	
  	public ClassButton(final Context context, int identifier, final String title) {
 		super(context);
