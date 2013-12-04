@@ -186,33 +186,30 @@ public class CourseModel{// implements ModelAccessor{
 			 }
 		 }
 	}
-<<<<<<< HEAD
+	
+	//Nate commented because i think i broke it
+/*
 	@Override
-=======
->>>>>>> 10e2c3867a7ce0d7dcff3c7a711bdc017a1a0a54
 	public void printCourseArray(ArrayList<Course> list) {
 		// TODO Auto-generated method stub
 		
 	}
-<<<<<<< HEAD
+
 	@Override
-=======
->>>>>>> 10e2c3867a7ce0d7dcff3c7a711bdc017a1a0a54
+
 	public boolean addClassWithYear(int year, char semester, int position) {
 		// TODO Auto-generated method stub
 		return false;
 	}
-<<<<<<< HEAD
+
 	@Override
-=======
->>>>>>> 10e2c3867a7ce0d7dcff3c7a711bdc017a1a0a54
+
 	public Course removeClassWithYear(int year, char semester, Course c)
 			throws Exception {
 		// TODO Auto-generated method stub
 		return null;
 	}
-
+*/
 	
 }
-
 

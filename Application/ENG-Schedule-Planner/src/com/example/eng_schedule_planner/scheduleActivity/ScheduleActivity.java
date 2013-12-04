@@ -33,7 +33,7 @@ public class ScheduleActivity extends Activity {
 		ArrayList<Course> c = model.getClassWithYear(CourseModel.FRESHMAN_YEAR, CourseModel.FALL);
 		
 		//NATE: HERE
-		getWindow().getDecorView().setBackgroundColor(Color.MAGENTA);
+		getWindow().getDecorView().setBackgroundColor(0xFFFFDDB7);
 		
 		setUpGrid();
 	}
