@@ -21,7 +21,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader; 
 
-public class CourseModel implements ModelAccessor{
+public class CourseModel{// implements ModelAccessor{
 	
 	ArrayList<Course> courseList;
 	
@@ -51,6 +51,31 @@ public class CourseModel implements ModelAccessor{
 			System.out.println("creating singleton");
 		}
 		return instance;
+	}
+	
+	public Course getCourseByTitle(String Title) {
+		for (Course c: courseList) {
+			if (c.getTitle() == Title)
+				return c;
+		}
+		return null;
+	}
+	
+	HashMap <String, ArrayList<Course>> EEDefault() {
+		HashMap <String, ArrayList<Course>> tempSemesters = new HashMap<String, ArrayList<Course>> ();
+		
+		ArrayList<Course> tempList = new ArrayList<Course>();
+		
+		tempList.add(getCourseByTitle("ENGEK100"));
+		//add more courses
+		tempSemesters.put("1f", tempList);
+		
+		tempList.clear();
+		//do other semesters
+		//must also initialize summer semester
+		//see load file for example
+		//(its in a confusing for loop though)
+		return null;
 	}
 		
 	public void printStuff() {
@@ -160,6 +185,31 @@ public class CourseModel implements ModelAccessor{
 					System.out.println(entry.getKey() + " : " + c.getFullTitle()); 
 			 }
 		 }
+	}
+<<<<<<< HEAD
+	@Override
+=======
+>>>>>>> 10e2c3867a7ce0d7dcff3c7a711bdc017a1a0a54
+	public void printCourseArray(ArrayList<Course> list) {
+		// TODO Auto-generated method stub
+		
+	}
+<<<<<<< HEAD
+	@Override
+=======
+>>>>>>> 10e2c3867a7ce0d7dcff3c7a711bdc017a1a0a54
+	public boolean addClassWithYear(int year, char semester, int position) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+<<<<<<< HEAD
+	@Override
+=======
+>>>>>>> 10e2c3867a7ce0d7dcff3c7a711bdc017a1a0a54
+	public Course removeClassWithYear(int year, char semester, Course c)
+			throws Exception {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	

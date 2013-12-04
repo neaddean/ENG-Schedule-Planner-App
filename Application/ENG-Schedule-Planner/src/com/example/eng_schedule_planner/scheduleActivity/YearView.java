@@ -58,7 +58,7 @@ public class YearView extends LinearLayout{
 		yearLabel = new TextView(context);
 		yearLabel.setText(yearName);
 		yearLabel.setPadding(50, 0, 0, 0);
-		yearLabel.setTextSize(30);
+		yearLabel.setTextSize(20);
 		//NATE: change yearLabel color
 		yearLabel.setTextColor(Color.BLACK);
 		this.addView(yearLabel);

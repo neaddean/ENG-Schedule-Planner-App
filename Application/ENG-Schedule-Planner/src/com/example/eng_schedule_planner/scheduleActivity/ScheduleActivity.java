@@ -12,6 +12,7 @@ import courseModel.CourseModel;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 
 
 import android.widget.LinearLayout;
@@ -25,12 +26,14 @@ public class ScheduleActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-
+		
 		CourseModel model = CourseModel.getInstance();
 		model.loadCourseFile(this); 
 		
 		ArrayList<Course> c = model.getClassWithYear(CourseModel.FRESHMAN_YEAR, CourseModel.FALL);
-
+		
+		//NATE: HERE
+		getWindow().getDecorView().setBackgroundColor(Color.MAGENTA);
 		
 		setUpGrid();
 	}
