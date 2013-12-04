@@ -62,7 +62,6 @@ for base_url in url_list:
             links.append(delta.copy())
         if not delta:
             break
-    break
     
 root = ET.Element("courses")
 
