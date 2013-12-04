@@ -31,6 +31,7 @@ for base_url in url_list:
             print "INVALD URL"
         source = res.read().decode('utf-8').replace("\t","")
         delta += re.findall(r'href=[\'"](.*)[\'"]><strong>(.*) (.*) (.*): (.*)</strong></a><br />\n.*<span>.*:(.*)</span><br />\n([^<]+)', source)
+        delta += re.findall(r'href=[\'"](.*)[\'"]><strong>(.*) (.*) (.*): (.*)</strong></a><br />\n.*<span>.*:(.*)</span><br />\n([^<]+)', source)
         if delta == []:
             break
         links += delta
