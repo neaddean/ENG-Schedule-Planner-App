@@ -161,6 +161,22 @@ public class CourseModel implements ModelAccessor{
 			 }
 		 }
 	}
+	@Override
+	public void printCourseArray(ArrayList<Course> list) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public boolean addClassWithYear(int year, char semester, int position) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+	@Override
+	public Course removeClassWithYear(int year, char semester, Course c)
+			throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 	
 }

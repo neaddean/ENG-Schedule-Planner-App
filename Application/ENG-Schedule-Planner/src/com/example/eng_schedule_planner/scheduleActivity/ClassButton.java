@@ -38,8 +38,8 @@ public class ClassButton extends RelativeLayout implements GestureDetector.OnGes
 	 * @param context
 	 */
 	 
-	final static int WIDTH = 200;
-	final static int HEIGHT = 150;
+	final static int WIDTH = 150;
+	final static int HEIGHT = 100;
 	
 	final static int STANDARD_BUTTON = 0;
 	final static int ADD_BUTTON = 1;
@@ -47,8 +47,8 @@ public class ClassButton extends RelativeLayout implements GestureDetector.OnGes
 	final static int NOT_COMPLETED = 0;
 	final static int COMPLETED = 1;
 	
-	final static int CHECK_WIDTH = 50;
-	final static int CHECK_HEIGHT = 50;
+	final static int CHECK_WIDTH = 40;
+	final static int CHECK_HEIGHT = 40;
 	
 	final static int buttonPictures[] = {
 		R.drawable.aero_conc,
@@ -84,7 +84,7 @@ public class ClassButton extends RelativeLayout implements GestureDetector.OnGes
 		
 		button = new Button(context);
 		button.setLayoutParams(new LayoutParams(WIDTH,HEIGHT));
-		button.setTextSize(20);
+		button.setTextSize(15);
 		button.setText(title);		
 		Random rnd = new Random(); 
 		int color = Color.argb(255, rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256));   
