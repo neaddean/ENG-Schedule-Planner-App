@@ -1,4 +1,4 @@
-#!/usr/bin/python2
+#!/usr/bin/python
 import urllib.request, re
 import xml.etree.ElementTree as ElementTree
 from xml.etree import ElementTree as ET
@@ -19,7 +19,8 @@ def prettify(elem):
 url_list = ["http://www.bu.edu/academics/eng/courses/electrical-computer-engineering/0/",
             "http://www.bu.edu/academics/eng/courses/mechanical-engineering/0/",
             "http://www.bu.edu/academics/eng/courses/biomedical-engineering/0/",
-            "http://www.bu.edu/academics/eng/courses/engineering-core/0/"]
+            "http://www.bu.edu/academics/eng/courses/engineering-core/0/",
+            "http://www.bu.edu/academics/cas/courses/mathematics-statistics/0"]
 
 delta = {}
 for base_url in url_list:

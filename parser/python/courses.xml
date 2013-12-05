@@ -1492,4 +1492,444 @@
     <credits>4</credits>
     <prereqs>CASPY211 ENGEK127</prereqs>
   </course>
+  <course name=" Mathematical Reasoning in the Elementary Grades: Number Systems">
+    <school>CAS</school>
+    <dept>MA</dept>
+    <cid>107</cid>
+    <description>Required for undergraduates seeking licensure in elementary education, special education, or deaf studies. Focuses on number systems, operations including mental mathematics, proportionality, number theory, and probability. Non-SED students by signed permission only. Does not satisfy CAS Divisional Studies or Math/Stat major.</description>
+    <link>http://www.bu.edu/academics/cas/courses/cas-ma-107/</link>
+    <credits>4</credits>
+  </course>
+  <course name=" Mathematical Reasoning in the Elementary Grades: Algebra, Geometry, and Statistics">
+    <school>CAS</school>
+    <dept>MA</dept>
+    <cid>108</cid>
+    <description>Required for undergraduates seeking licensure in elementary education, special education, or deaf studies. Focuses on topics in algebra, geometry, measurement, and statistics.  Non-SED students by signed permission only. Does not satisfy CAS Divisional Studies or Math/Stat major.</description>
+    <link>http://www.bu.edu/academics/cas/courses/cas-ma-108/</link>
+    <credits>4</credits>
+    <prereqs>CASMA107 SEDME107</prereqs>
+  </course>
+  <course name=" The Art and Science of Quantitative Reasoning">
+    <school>CAS</school>
+    <dept>MA</dept>
+    <cid>109</cid>
+    <description>Buying music on-line, making phone calls, predicting the weather, or controlling disease outbreaks would be impossible without mathematics, statistics, and computer science.  Focuses on methods of reasoning common to these disciplines, and how they enable the modern world. Also offered as CAS CS 109. Carries MCS divisional credit in CAS. </description>
+    <link>http://www.bu.edu/academics/cas/courses/cas-ma-109/</link>
+    <credits>4</credits>
+    <prereqs>CASMA107 SEDME107</prereqs>
+  </course>
+  <course name=" Elementary Statistics">
+    <school>CAS</school>
+    <dept>MA</dept>
+    <cid>113</cid>
+    <description>MA 113 may not be taken for credit by any student who has completed any MA course numbered 300 or higher. Students may receive credit for not more than one of the following courses: CAS MA 113, MA 115, or MA 213. Basic concepts of estimation and tests of hypotheses, ideas from probability; one-, two-, and multiple-sample problems. Applications in social sciences. Primarily for students in the social sciences who require a one-semester introduction to statistics; others should consider CAS MA 115 or MA 213. Carries MCS divisional credit in CAS.  </description>
+    <link>http://www.bu.edu/academics/cas/courses/cas-ma-113/</link>
+    <credits>4</credits>
+    <prereqs>CASMA107 SEDME107</prereqs>
+  </course>
+  <course name=" Statistics I">
+    <school>CAS</school>
+    <dept>MA</dept>
+    <cid>115</cid>
+    <description>MA 115 may not be taken for credit by any student who has completed any MA course numbered 300 or higher. Students may receive credit for not more than one of the following courses: CAS MA 113, MA 115, or MA 213. Numerical and graphical summaries of univariate and bivariate data. Basic probability, random variables, binomial distribution, normal distribution. One-sample statistical inference for normal means and binomial probabilities. Primarily for students in the social sciences with limited mathematics preparation.Carries MCS divisional credit in CAS. </description>
+    <link>http://www.bu.edu/academics/cas/courses/cas-ma-115/</link>
+    <credits>4</credits>
+    <prereqs>CASMA107 SEDME107</prereqs>
+  </course>
+  <course name=" Statistics II">
+    <school>CAS</school>
+    <dept>MA</dept>
+    <cid>116</cid>
+    <description>MA 116 may not be taken for credit by any student who has completed any MA course numbered 300 or higher. Students may receive credit for not more than one of the following courses: CAS MA 116, MA 214, or MA 614. One- or two-sample inference for normal means and binomial probabilities, analysis of variance, simple linear regression, multiple regression, analysis of categorical data. Introduction to survey design and design of experiments. Primarily for students in the social sciences with limited mathematics preparation. Carries MCS divisional credit in CAS. </description>
+    <link>http://www.bu.edu/academics/cas/courses/cas-ma-116/</link>
+    <credits>4</credits>
+    <prereqs>CASMA115</prereqs>
+  </course>
+  <course name=" College Algebra and Trigonometry">
+    <school>CAS</school>
+    <dept>MA</dept>
+    <cid>118</cid>
+    <description>MA 118 may not be taken for credit by any student who has completed any MA course numbered 121 or higher. Functions and graphs. Linear and quadratic equations. Exponents; logarithms. Right and oblique triangles; trigonometric functions. Optimization. Specifically intended to prepare students with insufficient background in mathematics for the study of calculus. This course may not be used in fulfillment of the divisional studies requirement. Satisfies the mathematics requirement in the College program.</description>
+    <link>http://www.bu.edu/academics/cas/courses/cas-ma-118/</link>
+    <credits>4</credits>
+    <prereqs>CASMA115</prereqs>
+  </course>
+  <course name=" Pre-Calculus Review">
+    <school>CAS</school>
+    <dept>MA</dept>
+    <cid>119</cid>
+    <description>Review of pre-calculus material, including college algebra and trigonometry, necessary for completion of MA 123. Topics include functions, inequalities, coordinate geometry, trigonometric functions, and relations. For ENG freshmen only.</description>
+    <link>http://www.bu.edu/academics/cas/courses/cas-ma-119/</link>
+    <credits>4</credits>
+    <prereqs/>
+  </course>
+  <course name=" Applied Mathematics for Social and Management Sciences">
+    <school>CAS</school>
+    <dept>MA</dept>
+    <cid>120</cid>
+    <description>MA 120 may not be taken for credit by any student who has completed any MA course numbered 124 or higher. Linear equations, systems of linear equations, matrix algebra, exponential functions and logarithms, elements of differential calculus, optimization, probability. Applications in economics, finance, and management. Satisfies both mathematics requirement and divisional studies requirement. Carries MCS divisional credit in CAS. </description>
+    <link>http://www.bu.edu/academics/cas/courses/cas-ma-120/</link>
+    <credits>4</credits>
+    <prereqs/>
+  </course>
+  <course name=" Calculus for the Life and Social Sciences I">
+    <school>CAS</school>
+    <dept>MA</dept>
+    <cid>121</cid>
+    <description>Students may receive credit for either CAS MA 121 or 123, but not both. Differentiation and integration of functions of one variable. Same topics as CAS MA 123, but with less emphasis on mathematical generality and more on application. Especially suitable for students concentrating in the biological and social sciences. Carries MCS divisional credit in CAS. </description>
+    <link>http://www.bu.edu/academics/cas/courses/cas-ma-121/</link>
+    <credits>4</credits>
+    <prereqs/>
+  </course>
+  <course name=" Calculus for the Life and Social Sciences II">
+    <school>CAS</school>
+    <dept>MA</dept>
+    <cid>122</cid>
+    <description>Students may receive credit for not more than one of the following courses: CAS MA 122, MA 124, MA  127 or MA 129. Continuation of CAS MA 121. Review of univariate calculus, calculus of the elementary  transcendental functions, elementary differential equations, elementary multivariate calculus. Applications  to exponential growth, optimization, equilibrium, and dynamic modeling problems. Carries MCS divisional credit in CAS. </description>
+    <link>http://www.bu.edu/academics/cas/courses/cas-ma-122/</link>
+    <credits>4</credits>
+    <prereqs>CASMA121 CASMA123</prereqs>
+  </course>
+  <course name=" Calculus I">
+    <school>CAS</school>
+    <dept>MA</dept>
+    <cid>123</cid>
+    <description>Students may receive credit for either CAS MA 121 or 123, but not both. Limits; derivatives; differentiation of algebraic functions. Applications to maxima, minima, and convexity of functions. The definite integral; the fundamental theorem of integral calculus; applications of integration. Carries MCS divisional credit in CAS. </description>
+    <link>http://www.bu.edu/academics/cas/courses/cas-ma-123/</link>
+    <credits>4</credits>
+    <prereqs>CASMA121 CASMA123</prereqs>
+  </course>
+  <course name=" Calculus II">
+    <school>CAS</school>
+    <dept>MA</dept>
+    <cid>124</cid>
+    <description>Students may receive credit for not more than one of the following courses: CAS MA 122, MA 124, MA 127, or MA 129. Logarithmic, exponential, and trigonometric functions. Sequences and series; Taylor's series with the remainder. Methods of integration. Calculus I and II together constitute an introduction to calculus of a function of a single real variable. Carries MCS divisional credit in CAS. </description>
+    <link>http://www.bu.edu/academics/cas/courses/cas-ma-124/</link>
+    <credits>4</credits>
+    <prereqs>CASMA121 CASMA123</prereqs>
+  </course>
+  <course name=" Enriched Calculus">
+    <school>CAS</school>
+    <dept>MA</dept>
+    <cid>127</cid>
+    <description>Students may receive credit for not more than one of the following courses: CAS MA 122, MA 124, MA 127, or MA 129. For students with prior experience in calculus. Emphasizes material from the end of Calculus 2 (sequences, Taylor series), reviews more challenging problems from Calculus 1. Carries MCS divisional credit in CAS. </description>
+    <link>http://www.bu.edu/academics/cas/courses/cas-ma-127/</link>
+    <credits>4</credits>
+    <prereqs>CASMA123</prereqs>
+  </course>
+  <course name=" Honors Calculus">
+    <school>CAS</school>
+    <dept>MA</dept>
+    <cid>129</cid>
+    <description>Students may receive credit for not more than one of the following courses: CAS MA 122, MA 124, MA 127, or MA 129. Alternative to CAS MA 127 for advanced students with a deep interest in mathematics. Continuity, degrees of differentiability, integrability. Transcendental functions. Techniques of differentiation and integration. Sequences, series, summability, uniform convergence. Complex numbers, Taylor series. Application to mechanics, probability. Carries MCS divisional credit in CAS. </description>
+    <link>http://www.bu.edu/academics/cas/courses/cas-ma-129/</link>
+    <credits>4</credits>
+    <prereqs/>
+  </course>
+  <course name=" Introduction to Linear Algebra">
+    <school>CAS</school>
+    <dept>MA</dept>
+    <cid>142</cid>
+    <description>Systems of linear equations; matrices. Vector spaces and linear transformations. Determinants. Eigenvalues  and eigenvectors. Applications. Cannot be taken for credit in addition to CAS MA 242, MA 442, or ENG EK  102.</description>
+    <link>http://www.bu.edu/academics/cas/courses/cas-ma-142/</link>
+    <credits>4</credits>
+    <prereqs/>
+  </course>
+  <course name=" Investigations in Number Theory">
+    <school>CAS</school>
+    <dept>MA</dept>
+    <cid>148</cid>
+    <description>An immersion experience in mathematical thinking and mathematical habits of mind. Students investigate topics in number theory, starting from elementary notions of primes and divisibility and culminating in examples of number rings in which unique factorization does not hold.</description>
+    <link>http://www.bu.edu/academics/cas/courses/cas-ma-148/</link>
+    <credits>4</credits>
+    <prereqs/>
+  </course>
+  <course name=" Investigations in Geometry">
+    <school>CAS</school>
+    <dept>MA</dept>
+    <cid>150</cid>
+    <description>An immersion experience in mathematical thinking and mathematical habits of mind. Students investigate  topics in Euclidean and non-Euclidean geometry starting from basic elementary material and leading to an  overview of current research topics. Does not satisfy MCS Divisional requirement. Does satisfy CAS WR 150  requirement.</description>
+    <link>http://www.bu.edu/academics/cas/courses/cas-ma-150/</link>
+    <credits>4</credits>
+    <prereqs/>
+  </course>
+  <course name=" Discrete Mathematics for Engineering">
+    <school>CAS</school>
+    <dept>MA</dept>
+    <cid>193</cid>
+    <description>Propositional logic, set theory, relations, combinatorics, graphs. Topics are treated with particular emphasis on applications to the engineering discipline. (Cannot be taken for credit in addition to CAS MA 293.)</description>
+    <link>http://www.bu.edu/academics/cas/courses/cas-ma-193/</link>
+    <credits>4</credits>
+    <prereqs/>
+  </course>
+  <course name=" Introductory Quantitative Biology">
+    <school>CAS</school>
+    <dept>MA</dept>
+    <cid>196</cid>
+    <description>An introduction to the application of mathematics to problems in biology, with particular emphasis on questions arising from ecology, physiology, neuroscience, and genetics. Major focus on building  mathematical models for biological problems and analysis with graphical and mathematical techniques. Also offered as CAS BI 196.</description>
+    <link>http://www.bu.edu/academics/cas/courses/cas-ma-196/</link>
+    <credits>4</credits>
+    <prereqs>CASMA121 CASMA123</prereqs>
+  </course>
+  <course name=" Basic Statistics and Probability">
+    <school>CAS</school>
+    <dept>MA</dept>
+    <cid>213</cid>
+    <description>Students may receive credit for not more than one of the following courses: CAS MA 113, MA 115, or MA 213. Elementary treatment of probability densities, means, variances, correlation, independence, the binomial distribution, the central limit theorem. Stresses understanding and theoretical manipulation of statistical concepts. Carries MCS divisional credit in CAS. </description>
+    <link>http://www.bu.edu/academics/cas/courses/cas-ma-213/</link>
+    <credits>4</credits>
+    <prereqs/>
+  </course>
+  <course name=" Applied Statistics">
+    <school>CAS</school>
+    <dept>MA</dept>
+    <cid>214</cid>
+    <description>Students may receive credit for not more than one of the following courses: CAS MA 116, MA 214, or MA 614. Inference about proportions, goodness of fit, student's t-distribution, tests for normality; two-sample comparisons, regression and correlation, tests for linearity and outliers, residual analysis, contingency tables, analysis of variance. Carries MCS divisional credit in CAS. </description>
+    <link>http://www.bu.edu/academics/cas/courses/cas-ma-214/</link>
+    <credits>4</credits>
+    <prereqs>CASMA213</prereqs>
+  </course>
+  <course name=" Multivariate Calculus">
+    <school>CAS</school>
+    <dept>MA</dept>
+    <cid>225</cid>
+    <description>Vectors, lines, planes. Multiple integration, cylindrical and spherical coordinates. Partial derivatives,  directional derivatives, scalar and vector fields, the gradient, potentials, approximation, multivariate  minimization, Stokes's and related theorems. (Cannot be taken for credit in addition to CAS MA 230.) </description>
+    <link>http://www.bu.edu/academics/cas/courses/cas-ma-225/</link>
+    <credits>4</credits>
+    <prereqs>CASMA124 CASMA127 CASMA129</prereqs>
+  </course>
+  <course name=" Differential Equations">
+    <school>CAS</school>
+    <dept>MA</dept>
+    <cid>226</cid>
+    <description>First-order linear and separable equations. Second-order equations and first-order systems. Linear equations and linearization. Numerical and qualitative analysis. Laplace transforms. Applications and modeling of real phenomena throughout. (Cannot be taken for credit in addition to CAS MA 231.)</description>
+    <link>http://www.bu.edu/academics/cas/courses/cas-ma-226/</link>
+    <credits>4</credits>
+    <prereqs>CASMA225 CASMA230</prereqs>
+  </course>
+  <course name=" Honors-Level Vector Calculus">
+    <school>CAS</school>
+    <dept>MA</dept>
+    <cid>230</cid>
+    <description>Linear algebra: linear transformations and matrices, inner products, cross products. Differentiation: tangent spaces, directional derivatives, gradients, vector fields and flow, divergence, curl. Integration: multiple integrals, line integrals, Green's theorem, surface integrals, Stokes's theorem, the divergence theorem.  (Cannot be taken for credit in addition to CAS MA 225.)</description>
+    <link>http://www.bu.edu/academics/cas/courses/cas-ma-230/</link>
+    <credits>4</credits>
+    <prereqs>CASMA124 CASMA127 CASMA129</prereqs>
+  </course>
+  <course name=" Honors-Level Differential Equations">
+    <school>CAS</school>
+    <dept>MA</dept>
+    <cid>231</cid>
+    <description>Ordinary differential equations with applications to mechanics, biology, and physics. First- and second-order equations, linear and nonlinear systems, Sturm-Louisville problems, vibrating strings, special functions, power series solutions, regular singular points, Laplace transforms, calculus of variations, isoperimetric problems, and Hamilton's principle. (Cannot be taken for credit in addition to CAS MA 226.)</description>
+    <link>http://www.bu.edu/academics/cas/courses/cas-ma-231/</link>
+    <credits>4</credits>
+    <prereqs>CASMA225 CASMA230</prereqs>
+  </course>
+  <course name=" Linear Algebra">
+    <school>CAS</school>
+    <dept>MA</dept>
+    <cid>242</cid>
+    <description>Matrix algebra, solution of linear systems, determinants, Gaussian elimination, fundamental theory, row-echelon form. Vector spaces, bases, norms. Computer methods. Eigenvalues and eigenvectors, canonical decomposition. Applications. (Cannot be taken for credit in addition to CAS MA 142, MA 442, or ENG EK 102.)</description>
+    <link>http://www.bu.edu/academics/cas/courses/cas-ma-242/</link>
+    <credits>4</credits>
+    <prereqs>CASMA225 CASMA230</prereqs>
+  </course>
+  <course name=" Discrete Mathematics">
+    <school>CAS</school>
+    <dept>MA</dept>
+    <cid>293</cid>
+    <description>Propositional logic, set theory. Elementary probability theory. Number theory. Combinatorics with applications.</description>
+    <link>http://www.bu.edu/academics/cas/courses/cas-ma-293/</link>
+    <credits>4</credits>
+    <prereqs>CASMA123</prereqs>
+  </course>
+  <course name=" Applied Abstract Algebra">
+    <school>CAS</school>
+    <dept>MA</dept>
+    <cid>294</cid>
+    <description>Abstract algebra and its applications to combinatorics. A first exposure to groups, rings, and fields via  significant combinatorial applications. Students who have already received credit for MA 541 or MA 542  may not subsequently receive credit for MA 294.</description>
+    <link>http://www.bu.edu/academics/cas/courses/cas-ma-294/</link>
+    <credits>4</credits>
+    <prereqs>CASMA293</prereqs>
+  </course>
+  <course name=" Introduction to Number Theory">
+    <school>CAS</school>
+    <dept>MA</dept>
+    <cid>341</cid>
+    <description>Study of integers and basic results of number theory. Topics include Linear Diophantine equations, prime numbers and factorization, congruences, and quadratic reciprocity. </description>
+    <link>http://www.bu.edu/academics/cas/courses/cas-ma-341/</link>
+    <credits>4</credits>
+    <prereqs>CASMA242</prereqs>
+  </course>
+  <course name=" Foundations of Mathematics">
+    <school>CAS</school>
+    <dept>MA</dept>
+    <cid>532</cid>
+    <description>Axiomatic set theory as a foundation for mathematics and as a field of mathematics: Axiom of Choice, the  Continuum Hypothesis, and consistency results. Also offered as CAS PH 461.</description>
+    <link>http://www.bu.edu/academics/cas/courses/cas-ma-532/</link>
+    <credits>4</credits>
+    <prereqs>CASMA531</prereqs>
+  </course>
+  <course name=" Modern Algebra I">
+    <school>CAS</school>
+    <dept>MA</dept>
+    <cid>541</cid>
+    <description>Basic properties of groups, Sylow theorems, basic properties of rings and ideals, Euclidean rings, polynomial rings. </description>
+    <link>http://www.bu.edu/academics/cas/courses/cas-ma-541/</link>
+    <credits>4</credits>
+    <prereqs>CASMA531</prereqs>
+  </course>
+  <course name=" Modern Algebra II">
+    <school>CAS</school>
+    <dept>MA</dept>
+    <cid>542</cid>
+    <description>Vector spaces and modules, Galois theory, linear transformations and matrices, canonical forms, bilinear and quadratic forms. </description>
+    <link>http://www.bu.edu/academics/cas/courses/cas-ma-542/</link>
+    <credits>4</credits>
+    <prereqs>CASMA531</prereqs>
+  </course>
+  <course name=" Numerical Analysis I">
+    <school>CAS</school>
+    <dept>MA</dept>
+    <cid>555</cid>
+    <description>Numerical solutions of equations, iterative methods, analysis of sequences. Theory of interpolation and functional approximation, divided differences. Numerical differentiation and integration. Polynomial theory. Ordinary differential equations. </description>
+    <link>http://www.bu.edu/academics/cas/courses/cas-ma-555/</link>
+    <credits>4</credits>
+    <prereqs>CASMA225 CASMA230</prereqs>
+  </course>
+  <course name=" Numerical Analysis II">
+    <school>CAS</school>
+    <dept>MA</dept>
+    <cid>556</cid>
+    <description>Numerical linear algebra; norms, elimination methods, error analysis, conditioning, eigenvalues, iterative methods, least squares and nonlinear functional minimization. Partial differentiation equation boundary value and initial value problems. Finite element methods. Legendre and Chebyshev polynomials. Treatment in greater depth of selected topics from CAS MA 555. </description>
+    <link>http://www.bu.edu/academics/cas/courses/cas-ma-556/</link>
+    <credits>4</credits>
+    <prereqs>CASMA555 CASMA242 CASMA442</prereqs>
+  </course>
+  <course name=" Methods of Applied Mathematics I">
+    <school>CAS</school>
+    <dept>MA</dept>
+    <cid>561</cid>
+    <description>Derivation and analysis of the classical equations of mathematical physics; heat equation, wave equation, and potential equation. Initial boundary value problems, method of separation of variables, eigenvalue problems, eigenfunction expansions. Fourier analysis. Existence and uniqueness of solution. </description>
+    <link>http://www.bu.edu/academics/cas/courses/cas-ma-561/</link>
+    <credits>4</credits>
+    <prereqs>CASMA226 CASMA231</prereqs>
+  </course>
+  <course name=" Methods of Applied Mathematics II">
+    <school>CAS</school>
+    <dept>MA</dept>
+    <cid>562</cid>
+    <description>Calculus of variations, first-order non-linear partial differential equations, Hamilton-Jacobi theory, Rayleigh-Ritz procedure, perturbation methods. </description>
+    <link>http://www.bu.edu/academics/cas/courses/cas-ma-562/</link>
+    <credits>4</credits>
+    <prereqs>CASMA561</prereqs>
+  </course>
+  <course name=" Introduction to Differential Geometry">
+    <school>CAS</school>
+    <dept>MA</dept>
+    <cid>563</cid>
+    <description>Study of local properties of curves and surfaces in the three-dimensional Euclidean space; curvature, torsion, Frenet equations, tangent and normal planes; first and second fundamental form; developable surfaces, principal, mean and Gaussian curvature; vector fields, covariant differentiation, geodesics, surfaces of constant curvature. </description>
+    <link>http://www.bu.edu/academics/cas/courses/cas-ma-563/</link>
+    <credits>4</credits>
+    <prereqs>CASMA225 CASMA230</prereqs>
+  </course>
+  <course name=" Introduction to Topology">
+    <school>CAS</school>
+    <dept>MA</dept>
+    <cid>564</cid>
+    <description>Introduction to point set and algebraic topology. Topological spaces and continuity. Compactness and connectedness. Metrizable topological spaces. Product topology and Tychonoff's theorem. The fundamental group and van Kampen's theorem. Covering spaces and the universal cover.</description>
+    <link>http://www.bu.edu/academics/cas/courses/cas-ma-564/</link>
+    <credits>4</credits>
+    <prereqs>CASMA225 CASMA230</prereqs>
+  </course>
+  <course name=" Mathematical Models in the Life Sciences">
+    <school>CAS</school>
+    <dept>MA</dept>
+    <cid>565</cid>
+    <description>An introduction to mathematical modeling, using applications in the biological sciences. Mathematics includes linear difference and differential equations, and an introduction to nonlinear phenomena and qualitative methods. An elementary knowledge of differential equations and linear algebra is assumed. </description>
+    <link>http://www.bu.edu/academics/cas/courses/cas-ma-565/</link>
+    <credits>4</credits>
+    <prereqs>CASMA226 CASMA231</prereqs>
+  </course>
+  <course name=" Geometric Methods in Mechanics">
+    <school>CAS</school>
+    <dept>MA</dept>
+    <cid>566</cid>
+    <description>Modern geometric theories applied to motion of physical objects. Differential forms. Symplectic manifolds.  Lie groups and their Lie algebras. Hamiltonian and Lagrangian systems; Liouville's theorem. Poincaré's  return theorem, Noether's theorem. Additional topics according to instructor.</description>
+    <link>http://www.bu.edu/academics/cas/courses/cas-ma-566/</link>
+    <credits>4</credits>
+    <prereqs/>
+  </course>
+  <course name=" Statistical Analysis of Point Process Data">
+    <school>CAS</school>
+    <dept>MA</dept>
+    <cid>568</cid>
+    <description>Introduces the theory of point processes and develops practical problem-solving skills to construct models, assess goodness-of-fit, and perform estimation from point process data. Applications to neural data, earthquake analysis, financial modeling, and queuing theory.</description>
+    <link>http://www.bu.edu/academics/cas/courses/cas-ma-568/</link>
+    <credits>4</credits>
+    <prereqs>CASMA213 CASMA214</prereqs>
+  </course>
+  <course name=" Optimization Methods of Operations Research">
+    <school>CAS</school>
+    <dept>MA</dept>
+    <cid>569</cid>
+    <description>Optimization of linear functions: linear programming, simplex method; transportation, assignment, and network problems. Optimization of non-linear functions: unconstrained optima, constrained optima and Lagrange multipliers, Kuhn-Tucker conditions, calculus of variations, and Euler's equation. </description>
+    <link>http://www.bu.edu/academics/cas/courses/cas-ma-569/</link>
+    <credits>4</credits>
+    <prereqs>CASMA225 CASMA230</prereqs>
+  </course>
+  <course name=" Probability">
+    <school>CAS</school>
+    <dept>MA</dept>
+    <cid>581</cid>
+    <description>Basic probability, conditional probability, independence. Discrete and continuous random variables, mean and variance, functions of random variables, moment generating function. Jointly distributed random variables, conditional distributions, independent random variables. Methods of transformations, law of large numbers, central limit theorem. Cannot be taken for credit in addition to CAS MA 381.</description>
+    <link>http://www.bu.edu/academics/cas/courses/cas-ma-581/</link>
+    <credits>4</credits>
+    <prereqs>CASMA225 CASMA230</prereqs>
+  </course>
+  <course name=" Mathematical Statistics">
+    <school>CAS</school>
+    <dept>MA</dept>
+    <cid>582</cid>
+    <description>Point estimation including unbiasedness, efficiency, consistency, sufficiency, minimum variance unbiased estimator, Rao-Blackwell theorem, and Rao-Cramer inequality. Maximum likelihood and method of moment estimations; interval estimation; tests of hypothesis, uniformly most powerful tests, uniformly most powerful unbiased tests, likelihood ratio test, and chi-square test. </description>
+    <link>http://www.bu.edu/academics/cas/courses/cas-ma-582/</link>
+    <credits>4</credits>
+    <prereqs>CASMA581 CASMA381</prereqs>
+  </course>
+  <course name=" Introduction to Stochastic Processes">
+    <school>CAS</school>
+    <dept>MA</dept>
+    <cid>583</cid>
+    <description>Basic concepts and techniques of stochastic process as they are most often used to construct models for a variety of problems of practical interest. Topics include Markov chains, Poisson process, birth and death processes, queuing theory, renewal processes, and reliability. </description>
+    <link>http://www.bu.edu/academics/cas/courses/cas-ma-583/</link>
+    <credits>4</credits>
+    <prereqs>CASMA581 CASMA381</prereqs>
+  </course>
+  <course name=" Time Series and Forecasting">
+    <school>CAS</school>
+    <dept>MA</dept>
+    <cid>585</cid>
+    <description>Autocorrelation and partial autocorrelation functions; stationary and nonstationary processes; ARIMA and Seasonal ARIMA model identification, estimation, diagnostics, and forecasting. Modeling financial data via ARCH and GARCH models. Volatility estimation; additional topics, including long-range dependence and state-space models.</description>
+    <link>http://www.bu.edu/academics/cas/courses/cas-ma-585/</link>
+    <credits>4</credits>
+    <prereqs>CASMA581</prereqs>
+  </course>
+  <course name=" Nonparametric Statistics">
+    <school>CAS</school>
+    <dept>MA</dept>
+    <cid>588</cid>
+    <description>The theory and logic in the development of nonparametric techniques including order statistics, tests based on runs, goodness of fit, rank-order (for location and scale), measures of association, analysis of variance, asymptotic relative efficiency. </description>
+    <link>http://www.bu.edu/academics/cas/courses/cas-ma-588/</link>
+    <credits>4</credits>
+    <prereqs>CASMA582</prereqs>
+  </course>
+  <course name=" Computational Statistics">
+    <school>CAS</school>
+    <dept>MA</dept>
+    <cid>589</cid>
+    <description>Topics from computational statistics that are relevant to modern statistical applications: random number  generation, sampling, Monte Carlo methods, computational inference, MCMC methods, graphical models,  data partitioning, and bootstrapping. Emphasis on developing solid conceptual understanding of the  methods through applications.</description>
+    <link>http://www.bu.edu/academics/cas/courses/cas-ma-589/</link>
+    <credits>4</credits>
+    <prereqs>CASMA213 CASMA442</prereqs>
+  </course>
 </courses>
