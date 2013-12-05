@@ -466,44 +466,37 @@ public class CourseModel{// implements ModelAccessor{
 		tempSemesters.put("4s", tempList);
 		tempList.clear();
 		
-		
-		/*Technical Elective Defined as:
-		Any ENGEC Classes
-		All ENG BE, EK, and ME courses at the 300-level and above
-		Pre-approved CAS courses:
-			CASAS414: Solar and Space Physics
-			CASCS440: Artificial Intelligence
-			CASCS480: Introduction to Computer Graphics
-			CASCS585: Image and Video Computing
-			CASMA511: Introduction to Analysis I
-			CASMA528: Introduction to Geometry
-			CASMA531: Computability and Logic
-			CASMA541: Modern Algebra I
-			CASMA583: Introduction to Stochastic Processes
-			CASPY451: Quantum Physics I
-			CASPY452: Quantum Physics II
-			SMG SI480:The Business of Technology Innovation						
-		*/
-		
-		/*Breadth Elective Defined as:
-		  Any ENG course 400 or above
-		  Any CS class 500 or above
-		  Pre-approved Courses:
-		 	ENGBE209: Principles of Molecular Cell Biology and Biotechnology
-		 	CASCS410: Advanced Software Systems 
-			CASPY313: Modern Physics 
-			CASCS411: Software Engineering 
-			CASCS212: Distributed Programming
-			CASCS431: Algorithms for Life Sciences 
-			CASCS235: Algebraic Algorithms 
-			CASCS440: Artificial Intelligence 
-			CASCS320: Concepts in Programming Languages 
-			CASCS451: Distributed Systems 
-			CASCS332: Elementary Theory of Computation 
-			CASCS460: Database Systems 
-			CASCS350: Fundamentals of Computer Systems
-			CASCS480: Computer Graphics
+		/* Advanced Elective Defined as:
+		  	All ENG courses 300 level or above, (without overlap)
+			Additional Pre-approved:
+				CAS AS 414 Ð Solar and Space Physics 
+				SMG SI 480 Ð The Business of Technology Innovation. 
+			Other 300-level or above Mathematics and Natural Science courses may be acceptable by petition
 		 */
+		
+		/*
+		 * The Natural Science Elective:
+			ENG BE 209 Ð Principles of Molecular Cell Biology & Biotechnology 
+			Astronomy (AS) - 200-level or higher course or any 100-level course that includes a lab 
+			Biology (BI) - Any 200-level or higher course or any 100-level course that includes a lab 
+			Neuroscience (NE) - All 
+			Chemistry (CH) - Any 200-level or higher course 
+			Physics (PY) - Any 300-level or higher course, CAS PY 231- The Physics in Music 
+			Earth Science (ES) - Any 300-level or higher course. Also the following: 
+				CAS ES 101 Ð Dynamic Earth CAS ES 142 Ð Intro Beach & Shoreline Processes 
+ 				CAS ES 105 Ð Environmental Earth Sciences CAS ES 144 - Oceanography 
+ 				CAS ES 140 Ð Earthquakes, Volcanoes, Natural Disasters CAS ES 222 - Mineralogy 
+			The following GE courses: 
+ 				CAS GE 101 Ð Natural Environ: Atmosphere CAS GE 375 Ð Intro Quant Environmental Modeling 
+ 				CAS GE 104 Ð Natural Environ: Physical Landscape CAS GE 440 Ð Digital Image Proc & Remote Sensing 
+ 				CAS GE 110 Ð Our Changing Planet CAS GE 445 Ð Physical Models in Remote Sensing 
+ 				CAS GE 302 Ð Remote Sensing of the Environment CAS GE 448 Ð Remote Sensing of Vegetation 
+ 				CAS GE 307 Ð Biogeography CAS GE 456 Ð Terrestrial Ecosystems & Carbon Cycle 
+ 				CAS GE 310 Ð Climate & the Environment CAS GE 483 Ð Geodynamics II: Fluids & Fluid Transport 
+ 				CAS GE 365 Ð Intro Geographic Information Systems 
+
+		 */
+	
 		return null;
 	}
 	
