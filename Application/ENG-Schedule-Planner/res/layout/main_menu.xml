@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="0dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:id="@+id/main_layout"
+    >
+    
+    <TextView
+        android:id="@+id/main_menu_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        
+        android:text="Main Menu"
+        android:typeface="sans"
+        android:textSize="50sp"
+        android:textColor="#ff000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowColor="#ff000000"
+        android:shadowRadius="10"
+        />
+    
+    <Button
+        android:id="@+id/newplan_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/main_menu_title"
+        
+        android:text="New Plan"
+        android:typeface="sans"
+        android:textSize="30sp"
+        android:textColor="#ff000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        />
+        
+    <Button
+        android:id="@+id/loadplan_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/newplan_button"
+        
+        android:text="Load Plan"
+        android:typeface="sans"
+        android:textSize="30sp"
+        android:textColor="#ff000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        />
+    
+    <Button
+        android:id="@+id/settings_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/loadplan_button"
+        
+        android:text="Settings"
+        android:typeface="sans"
+        android:textSize="30sp"
+        android:textColor="#ff000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        />
+
+
+        
+
+</RelativeLayout>
