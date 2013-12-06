@@ -1,6 +1,7 @@
 package courseModel;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -549,6 +550,10 @@ public class CourseModel{// implements ModelAccessor{
 				tempCourse.dept = eElement.getElementsByTagName("dept").item(0).getTextContent();
 				tempCourse.cid = eElement.getElementsByTagName("cid").item(0).getTextContent();
 				tempCourse.description = eElement.getElementsByTagName("description").item(0).getTextContent();
+				tempCourse.cid = eElement.getElementsByTagName("link").item(0).getTextContent();
+				String prereqs = eElement.getElementsByTagName("prereqs").item(0).getTextContent();
+				ArrayList<String> prereqlist = new ArrayList<String>(Arrays.asList(prereqs.split(",")));
+				tempCourse.prereqs = prereqlist;
 	 
 				tempCourseList.add(tempCourse);
 	 
@@ -608,6 +613,19 @@ public class CourseModel{// implements ModelAccessor{
 		semesterLists.get(semesterChoice.toString()).add(new Course(course));
 	}
 	
+	public Course removeClassWithYear(Course c, int year, char semester) {
+		char yearChar = Character.forDigit(year, 10); 
+		StringBuilder semesterChoice = new StringBuilder(2).append(yearChar).append(semester);
+		for (Course remc: semesterLists.get(semesterChoice.toString())) {
+			if (c.getTitle() == remc.getTitle()) {
+				semesterLists.get(semesterChoice.toString()).remove(remc);
+				return c;
+			}
+		}
+	    return null;
+	}
+	
+	
 	public void printLists() {
 		 for (Map.Entry entry : semesterLists.entrySet()) {
 			 ArrayList<Course> iterList = (ArrayList<Course>) entry.getValue();
@@ -616,30 +634,6 @@ public class CourseModel{// implements ModelAccessor{
 			 }
 		 }
 	}
-	
-	//Nate commented because i think i broke it
-/*
-	@Override
-	public void printCourseArray(ArrayList<Course> list) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-
-	public boolean addClassWithYear(int year, char semester, int position) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-
-	public Course removeClassWithYear(int year, char semester, Course c)
-			throws Exception {
-		// TODO Auto-generated method stub
-		return null;
-	}
-*/
 	
 }
 
