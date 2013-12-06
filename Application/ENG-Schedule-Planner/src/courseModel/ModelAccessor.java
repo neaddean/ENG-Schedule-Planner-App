@@ -8,7 +8,7 @@ public interface ModelAccessor{
 	public void printCourseArray (ArrayList<Course> list);
 	
 	//position of zero-indexed.
-	public boolean addClassWithYear(int year, char semester, int position);
+	public boolean addClassWithYear(Course course, int year, char semester, int position);
 	
 	//Return the course that is removed
 	//Throw exception if can't removed 

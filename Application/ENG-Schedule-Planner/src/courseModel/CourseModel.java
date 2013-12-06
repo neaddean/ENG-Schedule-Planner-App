@@ -55,8 +55,10 @@ public class CourseModel{// implements ModelAccessor{
 	
 	public Course getCourseByTitle(String Title) {
 		for (Course c: courseList) {
-			if (c.getTitle() == Title)
-				return c;
+			if (c.getTitle() == Title) {
+				Course retCourse  = new Course(c);
+				return retCourse;
+			}
 		}
 		return null;
 	}
@@ -351,7 +353,7 @@ public class CourseModel{// implements ModelAccessor{
 		All CAS PY 300 and 400 level courses (except PY 371, 401, 402, 482, 491, 492). 
 		All CAS MA 300, 400, and 500 level courses (except CAS MA 381, 401, 402). 
 		All CAS BI 300, 400 and 500 level courses (except BI 315, 371, 372, 391, 392) 
-		ENG BF 527 Applications in Bioinformatics SAR HS 360 Muscle Biology in Health & Disease CAS CH 629 Ð DNA Nanotechnology 
+		ENG BF 527 Applications in Bioinformatics SAR HS 360 Muscle Biology in Health & Disease CAS CH 629 ï¿½ DNA Nanotechnology 
 		ENG EK 156 Design & Manufacture SMG SI 480 The Business of Technology Innovation
 		 */
 		
@@ -469,31 +471,31 @@ public class CourseModel{// implements ModelAccessor{
 		/* Advanced Elective Defined as:
 		  	All ENG courses 300 level or above, (without overlap)
 			Additional Pre-approved:
-				CAS AS 414 Ð Solar and Space Physics 
-				SMG SI 480 Ð The Business of Technology Innovation. 
+				CAS AS 414 ï¿½ Solar and Space Physics 
+				SMG SI 480 ï¿½ The Business of Technology Innovation. 
 			Other 300-level or above Mathematics and Natural Science courses may be acceptable by petition
 		 */
 		
 		/*
 		 * The Natural Science Elective:
-			ENG BE 209 Ð Principles of Molecular Cell Biology & Biotechnology 
+			ENG BE 209 ï¿½ Principles of Molecular Cell Biology & Biotechnology 
 			Astronomy (AS) - 200-level or higher course or any 100-level course that includes a lab 
 			Biology (BI) - Any 200-level or higher course or any 100-level course that includes a lab 
 			Neuroscience (NE) - All 
 			Chemistry (CH) - Any 200-level or higher course 
 			Physics (PY) - Any 300-level or higher course, CAS PY 231- The Physics in Music 
 			Earth Science (ES) - Any 300-level or higher course. Also the following: 
-				CAS ES 101 Ð Dynamic Earth CAS ES 142 Ð Intro Beach & Shoreline Processes 
- 				CAS ES 105 Ð Environmental Earth Sciences CAS ES 144 - Oceanography 
- 				CAS ES 140 Ð Earthquakes, Volcanoes, Natural Disasters CAS ES 222 - Mineralogy 
+				CAS ES 101 ï¿½ Dynamic Earth CAS ES 142 ï¿½ Intro Beach & Shoreline Processes 
+ 				CAS ES 105 ï¿½ Environmental Earth Sciences CAS ES 144 - Oceanography 
+ 				CAS ES 140 ï¿½ Earthquakes, Volcanoes, Natural Disasters CAS ES 222 - Mineralogy 
 			The following GE courses: 
- 				CAS GE 101 Ð Natural Environ: Atmosphere CAS GE 375 Ð Intro Quant Environmental Modeling 
- 				CAS GE 104 Ð Natural Environ: Physical Landscape CAS GE 440 Ð Digital Image Proc & Remote Sensing 
- 				CAS GE 110 Ð Our Changing Planet CAS GE 445 Ð Physical Models in Remote Sensing 
- 				CAS GE 302 Ð Remote Sensing of the Environment CAS GE 448 Ð Remote Sensing of Vegetation 
- 				CAS GE 307 Ð Biogeography CAS GE 456 Ð Terrestrial Ecosystems & Carbon Cycle 
- 				CAS GE 310 Ð Climate & the Environment CAS GE 483 Ð Geodynamics II: Fluids & Fluid Transport 
- 				CAS GE 365 Ð Intro Geographic Information Systems 
+ 				CAS GE 101 ï¿½ Natural Environ: Atmosphere CAS GE 375 ï¿½ Intro Quant Environmental Modeling 
+ 				CAS GE 104 ï¿½ Natural Environ: Physical Landscape CAS GE 440 ï¿½ Digital Image Proc & Remote Sensing 
+ 				CAS GE 110 ï¿½ Our Changing Planet CAS GE 445 ï¿½ Physical Models in Remote Sensing 
+ 				CAS GE 302 ï¿½ Remote Sensing of the Environment CAS GE 448 ï¿½ Remote Sensing of Vegetation 
+ 				CAS GE 307 ï¿½ Biogeography CAS GE 456 ï¿½ Terrestrial Ecosystems & Carbon Cycle 
+ 				CAS GE 310 ï¿½ Climate & the Environment CAS GE 483 ï¿½ Geodynamics II: Fluids & Fluid Transport 
+ 				CAS GE 365 ï¿½ Intro Geographic Information Systems 
 
 		 */
 	
@@ -600,6 +602,12 @@ public class CourseModel{// implements ModelAccessor{
 	return semesterLists.get(semesterChoice.toString());
 }
 
+	public void addClassWithYear(Course course, int year, char semester, int position) {
+		char yearChar = Character.forDigit(year, 10); 
+		StringBuilder semesterChoice = new StringBuilder(2).append(yearChar).append(semester);
+		semesterLists.get(semesterChoice.toString()).add(new Course(course));
+	}
+	
 	public void printLists() {
 		 for (Map.Entry entry : semesterLists.entrySet()) {
 			 ArrayList<Course> iterList = (ArrayList<Course>) entry.getValue();
