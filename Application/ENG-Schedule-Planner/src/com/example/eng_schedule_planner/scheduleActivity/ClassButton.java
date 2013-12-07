@@ -7,6 +7,7 @@ import com.example.eng_schedule_planner.R;
 import com.example.eng_schedule_planner.Global.Global;
 import com.example.eng_schedule_planner.addClassActivity.addClassActivity;
 
+import android.app.ActivityOptions;
 import android.app.AlertDialog;
 import android.content.ClipData;
 import android.content.Context;
@@ -24,6 +25,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import android.widget.RelativeLayout;
 
@@ -163,14 +165,22 @@ public class ClassButton extends RelativeLayout implements GestureDetector.OnDou
 	}
 
 	public void onLongPress(MotionEvent e) {
-		((ClassButton)this).setVisibility(View.GONE);
-		ClipData data = ClipData.newPlainText("", "");
-        DragShadowBuilder shadowBuilder = new View.DragShadowBuilder(this.button);
-        this.button.startDrag(data, shadowBuilder, this.button, 0);
+		if(buttonType == STANDARD_BUTTON)
+		{
+			final Button b = this.button;
+			this.animate().alpha(0).scaleX(0).withEndAction(new Runnable() {
+				
+				public void run() {
+					ClipData data = ClipData.newPlainText("", "");
+					DragShadowBuilder shadowBuilder = new View.DragShadowBuilder(b);
+					b.startDrag(data, shadowBuilder, b, 0);
+					setVisibility(View.GONE);
+				}
+			});
+			
+		}
 		
 	}
-
-
 
 	public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX,
 			float distanceY) {
@@ -219,6 +229,7 @@ public class ClassButton extends RelativeLayout implements GestureDetector.OnDou
 				       {
 				       case 0:{
 				    	   buttonPtr.toggleCompleted();
+				    	   Toast.makeText(buttonPtr.getContext(), "Tip: Double Click Button to Mark Complete", Toast.LENGTH_SHORT).show();
 				    	   break;
 				       }
 				       case 3:{
@@ -254,8 +265,10 @@ public class ClassButton extends RelativeLayout implements GestureDetector.OnDou
 				Global.YearToAddClass = yearPtr;
 			else
 				System.out.println ("YearView Already set");
-			
-			s.startActivityForResult(intent, 0);
+			Button view = button;
+			ActivityOptions options = ActivityOptions.makeScaleUpAnimation(view, 0,
+				      0, view.getWidth(), view.getHeight());
+			s.startActivityForResult(intent, 0,options.toBundle());
 			System.out.println();
 		}
 		return false;

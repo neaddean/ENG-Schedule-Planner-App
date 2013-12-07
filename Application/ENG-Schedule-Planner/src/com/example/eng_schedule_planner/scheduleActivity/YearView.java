@@ -44,7 +44,6 @@ public class YearView extends LinearLayout{
 	public YearView(final Context context, String yearName, int year, char semester)
 	{
 		super(context);
-	
 		this.year = year;
 		this.semester = semester;
 		
@@ -115,7 +114,7 @@ public class YearView extends LinearLayout{
 		@Override
 		public boolean onDrag(View v, DragEvent dragEvent) {
 			int action = dragEvent.getAction();
-			ClassButton view = (ClassButton) ((Button)dragEvent.getLocalState()).getParent();
+			final ClassButton view = (ClassButton) ((Button)dragEvent.getLocalState()).getParent();
 			switch(action)
 			{
 				case DragEvent.ACTION_DRAG_STARTED:
@@ -143,6 +142,12 @@ public class YearView extends LinearLayout{
 		        YearView currentView = (YearView)v.getParent().getParent();
 		        currentView.addButton((ClassButton) view,index);
 		        view.setVisibility(View.VISIBLE);
+		        view.animate().scaleX(1).alpha(1).withEndAction(new Runnable() {
+					@Override
+					public void run() {
+						 
+					}
+				});
 		        break;
 		      case DragEvent.ACTION_DRAG_ENDED:
 		    	 
