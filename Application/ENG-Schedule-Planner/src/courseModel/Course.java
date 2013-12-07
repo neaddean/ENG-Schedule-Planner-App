@@ -23,7 +23,7 @@ public class Course {
 		this.description = c.description;
 		this.prereqs = c.prereqs;
 	}
-	
+	 
 	public Course() {}
 
 	String name;
@@ -34,7 +34,7 @@ public class Course {
 	ArrayList<String> prereqs;
 	
 	public String getTitle() {
-		return school+" "+ dept+" " + cid;
+		return school+ dept + cid;
 	}
 	
 	String getFullTitle() {

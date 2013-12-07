@@ -24,7 +24,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader; 
 
-public class CourseModel{// implements ModelAccessor{
+public class CourseModel implements ModelAccessor{
 	
 	ArrayList<Course> courseList;
 	
@@ -59,7 +59,8 @@ public class CourseModel{// implements ModelAccessor{
 	
 	public Course getCourseByTitle(String Title) {
 		for (Course c: courseList) {
-			if (c.getTitle() == Title) {
+			System.out.println(c.getTitle());
+			if (c.getTitle().equals(Title)) {
 				Course retCourse  = new Course(c);
 				return retCourse;
 			}
@@ -410,6 +411,21 @@ public class CourseModel{// implements ModelAccessor{
 		return tempSemesters;
 	}
 	
+	
+	HashMap <String, ArrayList<Course>> TestDefault(){
+		HashMap <String, ArrayList<Course>> tempSemesters = new HashMap<String, ArrayList<Course>> ();
+		
+		
+		ArrayList<Course> tempList = new ArrayList<Course>();
+		tempList.add(getCourseByTitle("CASMA123"));
+		tempList.add(getCourseByTitle("CASCH131"));
+		tempList.add(getCourseByTitle("ENGEK100"));
+		tempList.add(getCourseByTitle("ENGEK127")); //Should this be given as a choice with EK128?
+		tempList.add(getCourseByTitle("CASWR100"));
+		tempSemesters.put("1f", tempList);
+		return tempSemesters;
+
+	}
 	HashMap <String, ArrayList<Course>> MEDefault() {
 		HashMap <String, ArrayList<Course>> tempSemesters = new HashMap<String, ArrayList<Course>> ();
 		
@@ -581,6 +597,7 @@ public class CourseModel{// implements ModelAccessor{
 		}
 		
 		courseList = tempCourseList;
+		
 	} 
 	catch (Exception e) {
 	    e.printStackTrace();
@@ -619,7 +636,10 @@ public class CourseModel{// implements ModelAccessor{
 		 }
 		 
 		 semesterLists = tempSemesters;
-		 
+		 //Tim : Added to change default stores
+		 semesterLists = this.BMEDefault();
+		 System.out.println(getCourseByTitle("ENGEK127"));
+
 	}
 
 	public ArrayList<Course> getClassWithYear(int year, char semester) {
@@ -662,6 +682,15 @@ public class CourseModel{// implements ModelAccessor{
 					System.out.println(entry.getKey() + " : " + c.getFullTitle()); 
 			 }
 		 }
+	}
+	@Override
+	public void printCourseArray(ArrayList<Course> list) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public int getIndexWithTitle(String s) {
+		return courseTitleList.indexOf(s);
 	}
 	
 }

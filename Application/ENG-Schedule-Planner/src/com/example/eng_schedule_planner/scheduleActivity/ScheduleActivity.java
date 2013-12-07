@@ -55,13 +55,19 @@ public class ScheduleActivity extends Activity {
 		Global.YearToAddClass = null;
 		if(resultCode == Activity.RESULT_OK)
 		{
-			if(yToAdd != null)
-			{
-				String className = data.getStringExtra("className");
-				yToAdd.addNewClassWithName(className);
-				
+			if(Global.courseToAdd == null){
+				if(yToAdd != null)
+					{
+						String className = data.getStringExtra("className");
+						yToAdd.addNewClassWithName(className);
+						
+					}else
+						System.out.println("Error: Schedul Acitvity: No year to add");
 			}else
-				System.out.println("Error: Schedul Acitvity: No year to add");
+			{
+				yToAdd.addNewClassWithCourse(Global.courseToAdd);
+				Global.courseToAdd = null;
+			}
 		}
 		  				
 		

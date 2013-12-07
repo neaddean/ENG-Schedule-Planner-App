@@ -8,10 +8,11 @@ public interface ModelAccessor{
 	public void printCourseArray (ArrayList<Course> list);
 	
 	//position of zero-indexed.
-	public boolean addClassWithYear(Course course, int year, char semester, int position);
+	public void addClassWithYear(Course course, int year, char semester, int position);
 	
 	//Return the course that is removed
 	//Throw exception if can't removed 
-	public Course removeClassWithYear(int year, char semester, Course c) throws Exception;
+	public Course removeClassWithYear(Course c, int year, char semester) throws Exception;
 
+	public int getIndexWithTitle(String s);
 }

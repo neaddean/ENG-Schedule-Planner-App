@@ -26,8 +26,6 @@ public class SplashActivity extends Activity {
         /* New Handler to start the Menu-Activity 
          * and close this Splash-Screen after some seconds.*/
         final Activity s = this;
-        CourseModel model = CourseModel.getInstance();
-		model.loadCourseFile(this);
         new Handler().postDelayed(new Runnable(){
           
             public void run() {
@@ -37,5 +35,15 @@ public class SplashActivity extends Activity {
                 s.finish();
             }
         }, SPLASH_DISPLAY_LENGHT);
+    }
+    
+    @Override
+    protected void onStart() {
+    	// TODO Auto-generated method stub
+    	super.onStart();
+    	
+        CourseModel model = CourseModel.getInstance();
+		model.loadCourseFile(this);
+    	
     }
 }

@@ -7,6 +7,7 @@ import com.example.eng_schedule_planner.R;
 import com.example.eng_schedule_planner.Global.Global;
 import com.example.eng_schedule_planner.scheduleActivity.YearView;
 
+import courseModel.Course;
 import courseModel.CourseModel;
 
 import android.app.Activity;
@@ -16,6 +17,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
@@ -39,8 +41,6 @@ public class addClassActivity extends Activity {
     // Search EditText
     EditText inputSearch;
 
-    // ArrayList for Listview
-    ArrayList<HashMap<String, String>> productList;
 	
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -59,6 +59,14 @@ public class addClassActivity extends Activity {
 			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
 					long arg3) {
 				
+				Intent i = new Intent();
+				addClassActivity.this.adapter.getFilter().filter("");
+				addClassActivity.this.adapter.notifyDataSetChanged();
+				TextView t = (TextView) ((ViewGroup) arg1).getChildAt(0);
+				int num = CourseModel.getInstance().getIndexWithTitle(t.getText().toString());
+				Global.courseToAdd = CourseModel.getInstance().getCourseList().get(num);
+                setResult(Activity.RESULT_OK,i);
+				finish();
 			}
         });
         // Adding items to listview
