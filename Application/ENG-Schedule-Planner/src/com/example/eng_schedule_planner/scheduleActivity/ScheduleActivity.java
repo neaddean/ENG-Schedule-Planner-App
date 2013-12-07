@@ -1,15 +1,19 @@
 package com.example.eng_schedule_planner.scheduleActivity;
 
+import java.util.ArrayList;
 
 import com.example.eng_schedule_planner.R;
 import com.example.eng_schedule_planner.Global.Global;
 
+import courseModel.Course;
 import courseModel.CourseModel;
 
 
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
+
 
 import android.widget.LinearLayout;
 import android.widget.Space;
