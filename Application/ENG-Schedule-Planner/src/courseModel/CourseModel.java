@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.Semaphore;
 
 import javax.xml.parsers.DocumentBuilderFactory;
 
@@ -12,6 +13,7 @@ import courseModel.Course;
 
 import javax.xml.parsers.DocumentBuilder;
 
+import org.apache.http.conn.BasicManagedEntity;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 import org.w3c.dom.Node;
@@ -176,7 +178,7 @@ public class CourseModel{// implements ModelAccessor{
 			CASCS350: Fundamentals of Computer Systems
 			CASCS480: Computer Graphics
 		 */
-		return null;
+		return tempSemesters;
 	}
 
 	HashMap <String, ArrayList<Course>> EEDefault() {
@@ -266,7 +268,7 @@ public class CourseModel{// implements ModelAccessor{
 		//must also initialize summer semester
 		//see load file for example
 		//(its in a confusing for loop though)
-		return null;
+		return tempSemesters;
 	}
 	
 	HashMap <String, ArrayList<Course>> BMEDefault() {
@@ -390,7 +392,7 @@ public class CourseModel{// implements ModelAccessor{
 		 * 
 		 * 
 		 */
-		return null;
+		return tempSemesters;
 	}
 	
 	HashMap <String, ArrayList<Course>> MEDefault() {
@@ -500,7 +502,7 @@ public class CourseModel{// implements ModelAccessor{
 
 		 */
 	
-		return null;
+		return tempSemesters;
 	}
 	
 	public void printStuff() {
@@ -554,7 +556,8 @@ public class CourseModel{// implements ModelAccessor{
 				String prereqs = eElement.getElementsByTagName("prereqs").item(0).getTextContent();
 				ArrayList<String> prereqlist = new ArrayList<String>(Arrays.asList(prereqs.split(",")));
 				tempCourse.prereqs = prereqlist;
-	 
+
+				
 				tempCourseList.add(tempCourse);
 	 
 			}

@@ -7,6 +7,7 @@ import com.example.eng_schedule_planner.R;
 import com.example.eng_schedule_planner.Global.Global;
 import com.example.eng_schedule_planner.addClassActivity.addClassActivity;
 
+import android.app.ActivityOptions;
 import android.app.AlertDialog;
 import android.content.ClipData;
 import android.content.Context;
@@ -19,14 +20,16 @@ import android.graphics.PorterDuff;
 
 import android.support.v4.view.GestureDetectorCompat;
 import android.view.GestureDetector;
+import android.view.GestureDetector.OnGestureListener;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import android.widget.RelativeLayout;
 
-public class ClassButton extends RelativeLayout implements GestureDetector.OnGestureListener{
+public class ClassButton extends RelativeLayout implements GestureDetector.OnDoubleTapListener, OnGestureListener{
 
 	/**
 	 * @param context
@@ -75,6 +78,7 @@ public class ClassButton extends RelativeLayout implements GestureDetector.OnGes
 		this.setLayoutParams(new LayoutParams(WIDTH,HEIGHT));
 		
 		myDetector = new GestureDetectorCompat(context, this);
+		myDetector.setOnDoubleTapListener(this);
 		
 		button = new Button(context);
 		button.setLayoutParams(new LayoutParams(WIDTH,HEIGHT));
@@ -107,7 +111,7 @@ public class ClassButton extends RelativeLayout implements GestureDetector.OnGes
 		params.bottomMargin = 10;
 		this.addView(check,params);
 		setCompleted(NOT_COMPLETED);
-}
+ 	}
 	
  	
  	
@@ -147,9 +151,6 @@ public class ClassButton extends RelativeLayout implements GestureDetector.OnGes
 		
 	}
 
-
-
-	@Override
 	public boolean onDown(MotionEvent e) {
 		// TODO Auto-generated method stub
 		return false;
@@ -157,45 +158,60 @@ public class ClassButton extends RelativeLayout implements GestureDetector.OnGes
 
 
 
-	@Override
 	public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX,
 			float velocityY) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
-
-
-	@Override
 	public void onLongPress(MotionEvent e) {
-		((ClassButton)this).setVisibility(View.GONE);
-		ClipData data = ClipData.newPlainText("", "");
-        DragShadowBuilder shadowBuilder = new View.DragShadowBuilder(this.button);
-        this.button.startDrag(data, shadowBuilder, this.button, 0);
+		if(buttonType == STANDARD_BUTTON)
+		{
+			final Button b = this.button;
+			this.animate().alpha(0).scaleX(0).withEndAction(new Runnable() {
+				
+				public void run() {
+					ClipData data = ClipData.newPlainText("", "");
+					DragShadowBuilder shadowBuilder = new View.DragShadowBuilder(b);
+					b.startDrag(data, shadowBuilder, b, 0);
+					setVisibility(View.GONE);
+				}
+			});
+			
+		}
 		
 	}
 
-
-
-	@Override
 	public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX,
 			float distanceY) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
-
-
-	@Override
 	public void onShowPress(MotionEvent e) {
 		// TODO Auto-generated method stub
 		
 	}
 
+	public boolean onSingleTapUp(MotionEvent e) {
+		return false;
+	}
 
+	public boolean onDoubleTap(MotionEvent arg0) {
+		if(buttonType == STANDARD_BUTTON)
+		{
+			toggleCompleted();
+		}
+		return false;
+	}
 
 	@Override
-	public boolean onSingleTapUp(MotionEvent e) {
+	public boolean onDoubleTapEvent(MotionEvent e) {
+		return false;
+	}
+
+	@Override
+	public boolean onSingleTapConfirmed(MotionEvent e) {
 		if(buttonType == STANDARD_BUTTON)
 		{
 			String completeStr =(isCompleted == COMPLETED)? "Mark as not Completed" : "Mark as Completed";
@@ -213,6 +229,7 @@ public class ClassButton extends RelativeLayout implements GestureDetector.OnGes
 				       {
 				       case 0:{
 				    	   buttonPtr.toggleCompleted();
+				    	   Toast.makeText(buttonPtr.getContext(), "Tip: Double Click Button to Mark Complete", Toast.LENGTH_SHORT).show();
 				    	   break;
 				       }
 				       case 3:{
@@ -248,12 +265,12 @@ public class ClassButton extends RelativeLayout implements GestureDetector.OnGes
 				Global.YearToAddClass = yearPtr;
 			else
 				System.out.println ("YearView Already set");
-
-			intent.putExtra("str", yearPtr.yearLabel.getText());
-			
-			s.startActivityForResult(intent, 0);
+			Button view = button;
+			ActivityOptions options = ActivityOptions.makeScaleUpAnimation(view, 0,
+				      0, view.getWidth(), view.getHeight());
+			s.startActivityForResult(intent, 0,options.toBundle());
+			System.out.println();
 		}
-		
 		return false;
 	}
 

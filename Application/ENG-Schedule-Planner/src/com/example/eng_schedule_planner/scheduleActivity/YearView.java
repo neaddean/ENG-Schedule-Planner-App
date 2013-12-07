@@ -44,7 +44,6 @@ public class YearView extends LinearLayout{
 	public YearView(final Context context, String yearName, int year, char semester)
 	{
 		super(context);
-	
 		this.year = year;
 		this.semester = semester;
 		
@@ -83,11 +82,18 @@ public class YearView extends LinearLayout{
 		beforeSpace.setLayoutParams(spaceParam);
 		
 		horizontalLayout.addView(beforeSpace);
-		ArrayList<Course> cs= CourseModel.getInstance().getClassWithYear(year, semester);
-		for(int j = 0; j <cs.size(); j++)
+		//ArrayList<Course> cs= CourseModel.getInstance().getClassWithYear(year, semester);
+		/*for(int j = 0; j <cs.size(); j++)
 		{
 
 			ClassButton myButton = new ClassButton(context,ClassButton.STANDARD_BUTTON, cs.get(j).getTitle());
+			horizontalLayout.addView(myButton);
+			classList.add(myButton);
+		}*/
+		
+		for(int i = 0; i < 3; i ++)
+		{
+			ClassButton myButton = new ClassButton(context, ClassButton.STANDARD_BUTTON, String.valueOf(i));
 			horizontalLayout.addView(myButton);
 			classList.add(myButton);
 		}
@@ -108,7 +114,7 @@ public class YearView extends LinearLayout{
 		@Override
 		public boolean onDrag(View v, DragEvent dragEvent) {
 			int action = dragEvent.getAction();
-			ClassButton view = (ClassButton) ((Button)dragEvent.getLocalState()).getParent();
+			final ClassButton view = (ClassButton) ((Button)dragEvent.getLocalState()).getParent();
 			switch(action)
 			{
 				case DragEvent.ACTION_DRAG_STARTED:
@@ -136,11 +142,15 @@ public class YearView extends LinearLayout{
 		        YearView currentView = (YearView)v.getParent().getParent();
 		        currentView.addButton((ClassButton) view,index);
 		        view.setVisibility(View.VISIBLE);
+		        view.animate().scaleX(1).alpha(1);
 		        break;
 		      case DragEvent.ACTION_DRAG_ENDED:
 		    	 
-		    	  if(!dragEvent.getResult())
+		    	  if(!dragEvent.getResult()){
 		    		  view.setVisibility(View.VISIBLE);
+		    		  view.animate().scaleX(1).alpha(1);
+		    	  }
+		    	  
 
 		    	  break;
 		      default:

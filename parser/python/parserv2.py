@@ -84,12 +84,14 @@ for i in links:
         link.text = i["link"]
         credit = ET.SubElement(course, "credits")
         credit.text = i["credits"]
+        prereqs = ET.SubElement(course, "prereqs")
         if "prereqs" in i:
             ger = ""
             for req in i["prereqs"]:
                 ger += " " + "".join(map(str,req))
-            prereqs = ET.SubElement(course, "prereqs")
             prereqs.text = ger.lstrip()
+        else:
+            prereqs.text = " "
 
             
 towrite =  prettify(root)
