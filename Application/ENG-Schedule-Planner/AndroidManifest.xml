@@ -28,6 +28,9 @@
         <activity
             android:name="com.example.eng_schedule_planner.mainMenuActivity.mainMenuActivity">
         </activity>
+        <activity
+            android:name="com.example.eng_schedule_planner.addClassActivity.addCustomClassActivity">
+        </activity>
     </application>
 
 </manifest>

@@ -31,7 +31,7 @@ public class Course {
 	String dept;
 	String cid;
 	String description;
-	ArrayList<Course> prereqs;
+	ArrayList<String> prereqs;
 	
 	public String getTitle() {
 		return school+" "+ dept+" " + cid;
