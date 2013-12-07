@@ -24,12 +24,11 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader; 
 
-public class CourseModel{// implements ModelAccessor{
+public class CourseModel implements ModelAccessor{
 	
 	ArrayList<Course> courseList;
 	
 	HashMap<String, ArrayList<Course>> semesterLists;
-
 	
 	public final static char FALL = 'f';
 	public final static char SPRING = 's';
@@ -636,6 +635,21 @@ public class CourseModel{// implements ModelAccessor{
 					System.out.println(entry.getKey() + " : " + c.getFullTitle()); 
 			 }
 		 }
+	}
+	@Override
+	public void printCourseArray(ArrayList<Course> list) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public ArrayList<String> getCourseTitles() {
+		
+		ArrayList<String> strList = new ArrayList<String>();
+		for (Course c : courseList) {
+			strList.add(new String(c.getFullTitle()));
+		}
+		
+		return strList;
 	}
 	
 }
