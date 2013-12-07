@@ -1,5 +1,6 @@
 #!/usr/bin/python
 import urllib.request, re
+#import urllib, re
 import xml.etree.ElementTree as ElementTree
 from xml.etree import ElementTree as ET
 from xml.dom import minidom
