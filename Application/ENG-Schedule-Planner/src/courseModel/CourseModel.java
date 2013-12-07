@@ -646,6 +646,14 @@ public class CourseModel{// implements ModelAccessor{
 	    return null;
 	}
 	
+	public Course addCourse(String name, String school, String dept, String cid,
+			String description, ArrayList<String> prereqs) {
+		Course c = new Course(name, school, dept, cid,
+				description, prereqs);
+		courseList.add(c);
+		return c;
+	}
+	
 	
 	public void printLists() {
 		 for (Map.Entry entry : semesterLists.entrySet()) {
