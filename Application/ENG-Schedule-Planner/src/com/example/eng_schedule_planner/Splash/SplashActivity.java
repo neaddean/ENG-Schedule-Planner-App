@@ -3,6 +3,8 @@ package com.example.eng_schedule_planner.Splash;
 import com.example.eng_schedule_planner.R;
 import com.example.eng_schedule_planner.scheduleActivity.ScheduleActivity;
 
+import courseModel.CourseModel;
+
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -24,6 +26,8 @@ public class SplashActivity extends Activity {
         /* New Handler to start the Menu-Activity 
          * and close this Splash-Screen after some seconds.*/
         final Activity s = this;
+        CourseModel model = CourseModel.getInstance();
+		model.loadCourseFile(this);
         new Handler().postDelayed(new Runnable(){
           
             public void run() {

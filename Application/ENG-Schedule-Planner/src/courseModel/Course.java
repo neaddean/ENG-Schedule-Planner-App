@@ -38,7 +38,7 @@ public class Course {
 	}
 	
 	String getFullTitle() {
-		return school + " " + dept + " " + cid + ": " + name;
+		return school + " " + dept + cid + ": " + name;
 	}
 
 }

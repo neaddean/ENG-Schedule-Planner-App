@@ -30,6 +30,7 @@ public class CourseModel{// implements ModelAccessor{
 	
 	HashMap<String, ArrayList<Course>> semesterLists;
 
+	ArrayList<String> courseTitleList;
 	
 	public final static char FALL = 'f';
 	public final static char SPRING = 's';
@@ -64,6 +65,20 @@ public class CourseModel{// implements ModelAccessor{
 			}
 		}
 		return null;
+	}
+	
+	
+	public ArrayList<String> getCourseTitleList()
+	{
+		if(courseTitleList == null){
+			courseTitleList = new ArrayList<String>();
+			for(Course c: courseList)
+			{
+				courseTitleList.add(c.getFullTitle());
+			}
+			
+		}
+		return courseTitleList;
 	}
 	
 	HashMap <String, ArrayList<Course>> CEDefault() {
@@ -552,7 +567,7 @@ public class CourseModel{// implements ModelAccessor{
 				tempCourse.dept = eElement.getElementsByTagName("dept").item(0).getTextContent();
 				tempCourse.cid = eElement.getElementsByTagName("cid").item(0).getTextContent();
 				tempCourse.description = eElement.getElementsByTagName("description").item(0).getTextContent();
-				tempCourse.cid = eElement.getElementsByTagName("link").item(0).getTextContent();
+				//tempCourse.cid = eElement.getElementsByTagName("link").item(0).getTextContent();
 				String prereqs = eElement.getElementsByTagName("prereqs").item(0).getTextContent();
 				ArrayList<String> prereqlist = new ArrayList<String>(Arrays.asList(prereqs.split(",")));
 				tempCourse.prereqs = prereqlist;
@@ -589,6 +604,8 @@ public class CourseModel{// implements ModelAccessor{
 		 
 		 int i = 0;
 		 
+		 //Tim : I added some line to make an array of Strings of Course names For display on serach
+		 
 		 ArrayList<Course> tempList = new ArrayList<Course>();
 
 		 for (String mystr : semesterLabels) {
@@ -602,6 +619,7 @@ public class CourseModel{// implements ModelAccessor{
 		 }
 		 
 		 semesterLists = tempSemesters;
+		 
 	}
 
 	public ArrayList<Course> getClassWithYear(int year, char semester) {

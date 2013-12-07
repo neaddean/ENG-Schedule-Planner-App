@@ -7,6 +7,8 @@ import com.example.eng_schedule_planner.R;
 import com.example.eng_schedule_planner.Global.Global;
 import com.example.eng_schedule_planner.scheduleActivity.YearView;
 
+import courseModel.CourseModel;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -46,11 +48,8 @@ public class addClassActivity extends Activity {
 		setContentView(R.layout.activity_addsearchableclass);
 		addCustomButton = (Button) findViewById(R.id.customClassButton);
 		// Listview Data
-        String products[] = {"Dell Inspiron", "HTC One X", "HTC Wildfire S", "HTC Sense", "HTC Sensation XE",
-                                "iPhone 4S", "Samsung Galaxy Note 800",
-                                "Samsung Galaxy S3", "MacBook Air", "Mac Mini", "MacBook Pro","Dell Inspiron", "HTC One X", "HTC Wildfire S", "HTC Sense", "HTC Sensation XE",
-                                "iPhone 4S", "Samsung Galaxy Note 800",
-                                "Samsung Galaxy S3", "MacBook Air", "Mac Mini", "MacBook Pro"};
+        
+        ArrayList<String> titleList = CourseModel.getInstance().getCourseTitleList();
         title = (TextView) findViewById(R.id.addClassText);
         lv = (ListView) findViewById(R.id.list_view);
         inputSearch = (EditText) findViewById(R.id.inputSearch);
@@ -63,7 +62,7 @@ public class addClassActivity extends Activity {
 			}
         });
         // Adding items to listview
-        adapter = new ArrayAdapter<String>(this, R.layout.addsearchableclass_item, R.id.product_name, products);
+        adapter = new ArrayAdapter<String>(this, R.layout.addsearchableclass_item, R.id.product_name, titleList);
         lv.setAdapter(adapter);       
 		
   	  inputSearch.addTextChangedListener(new TextWatcher() {
