@@ -32,7 +32,8 @@ public class ScheduleActivity extends Activity {
 		
 		//ArrayList<Course> c = model.getClassWithYear(CourseModel.FRESHMAN_YEAR, CourseModel.FALL);
 		
-		getWindow().getDecorView().setBackgroundColor(0xFFFFDDB7);
+		//getWindow().getDecorView().setBackgroundColor(0xFFFFDDB7);
+		getWindow().setBackgroundDrawableResource(R.drawable.background_texture);
 		
 		setUpGrid();
 	}
