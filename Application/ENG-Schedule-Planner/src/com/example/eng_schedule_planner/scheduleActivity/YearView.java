@@ -142,17 +142,15 @@ public class YearView extends LinearLayout{
 		        YearView currentView = (YearView)v.getParent().getParent();
 		        currentView.addButton((ClassButton) view,index);
 		        view.setVisibility(View.VISIBLE);
-		        view.animate().scaleX(1).alpha(1).withEndAction(new Runnable() {
-					@Override
-					public void run() {
-						 
-					}
-				});
+		        view.animate().scaleX(1).alpha(1);
 		        break;
 		      case DragEvent.ACTION_DRAG_ENDED:
 		    	 
-		    	  if(!dragEvent.getResult())
+		    	  if(!dragEvent.getResult()){
 		    		  view.setVisibility(View.VISIBLE);
+		    		  view.animate().scaleX(1).alpha(1);
+		    	  }
+		    	  
 
 		    	  break;
 		      default:
