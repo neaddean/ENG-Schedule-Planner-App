@@ -19,6 +19,7 @@ import android.graphics.PorterDuff;
 
 import android.support.v4.view.GestureDetectorCompat;
 import android.view.GestureDetector;
+import android.view.GestureDetector.OnGestureListener;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
@@ -26,7 +27,7 @@ import android.widget.ImageView;
 
 import android.widget.RelativeLayout;
 
-public class ClassButton extends RelativeLayout implements GestureDetector.OnGestureListener{
+public class ClassButton extends RelativeLayout implements GestureDetector.OnDoubleTapListener, OnGestureListener{
 
 	/**
 	 * @param context
@@ -75,6 +76,7 @@ public class ClassButton extends RelativeLayout implements GestureDetector.OnGes
 		this.setLayoutParams(new LayoutParams(WIDTH,HEIGHT));
 		
 		myDetector = new GestureDetectorCompat(context, this);
+		myDetector.setOnDoubleTapListener(this);
 		
 		button = new Button(context);
 		button.setLayoutParams(new LayoutParams(WIDTH,HEIGHT));
@@ -107,7 +109,7 @@ public class ClassButton extends RelativeLayout implements GestureDetector.OnGes
 		params.bottomMargin = 10;
 		this.addView(check,params);
 		setCompleted(NOT_COMPLETED);
-}
+ 	}
 	
  	
  	
@@ -147,9 +149,6 @@ public class ClassButton extends RelativeLayout implements GestureDetector.OnGes
 		
 	}
 
-
-
-	@Override
 	public boolean onDown(MotionEvent e) {
 		// TODO Auto-generated method stub
 		return false;
@@ -157,16 +156,12 @@ public class ClassButton extends RelativeLayout implements GestureDetector.OnGes
 
 
 
-	@Override
 	public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX,
 			float velocityY) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
-
-
-	@Override
 	public void onLongPress(MotionEvent e) {
 		((ClassButton)this).setVisibility(View.GONE);
 		ClipData data = ClipData.newPlainText("", "");
@@ -177,25 +172,36 @@ public class ClassButton extends RelativeLayout implements GestureDetector.OnGes
 
 
 
-	@Override
 	public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX,
 			float distanceY) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
-
-
-	@Override
 	public void onShowPress(MotionEvent e) {
 		// TODO Auto-generated method stub
 		
 	}
 
+	public boolean onSingleTapUp(MotionEvent e) {
+		return false;
+	}
 
+	public boolean onDoubleTap(MotionEvent arg0) {
+		if(buttonType == STANDARD_BUTTON)
+		{
+			toggleCompleted();
+		}
+		return false;
+	}
 
 	@Override
-	public boolean onSingleTapUp(MotionEvent e) {
+	public boolean onDoubleTapEvent(MotionEvent e) {
+		return false;
+	}
+
+	@Override
+	public boolean onSingleTapConfirmed(MotionEvent e) {
 		if(buttonType == STANDARD_BUTTON)
 		{
 			String completeStr =(isCompleted == COMPLETED)? "Mark as not Completed" : "Mark as Completed";
@@ -252,8 +258,8 @@ public class ClassButton extends RelativeLayout implements GestureDetector.OnGes
 			intent.putExtra("str", yearPtr.yearLabel.getText());
 			
 			s.startActivityForResult(intent, 0);
+			System.out.println();
 		}
-		
 		return false;
 	}
 

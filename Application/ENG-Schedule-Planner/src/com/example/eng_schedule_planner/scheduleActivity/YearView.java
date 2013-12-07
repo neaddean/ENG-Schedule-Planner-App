@@ -83,11 +83,18 @@ public class YearView extends LinearLayout{
 		beforeSpace.setLayoutParams(spaceParam);
 		
 		horizontalLayout.addView(beforeSpace);
-		ArrayList<Course> cs= CourseModel.getInstance().getClassWithYear(year, semester);
-		for(int j = 0; j <cs.size(); j++)
+		//ArrayList<Course> cs= CourseModel.getInstance().getClassWithYear(year, semester);
+		/*for(int j = 0; j <cs.size(); j++)
 		{
 
 			ClassButton myButton = new ClassButton(context,ClassButton.STANDARD_BUTTON, cs.get(j).getTitle());
+			horizontalLayout.addView(myButton);
+			classList.add(myButton);
+		}*/
+		
+		for(int i = 0; i < 3; i ++)
+		{
+			ClassButton myButton = new ClassButton(context, ClassButton.STANDARD_BUTTON, String.valueOf(i));
 			horizontalLayout.addView(myButton);
 			classList.add(myButton);
 		}
