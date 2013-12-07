@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 import com.example.eng_schedule_planner.R;
+import com.example.eng_schedule_planner.Global.Global;
+import com.example.eng_schedule_planner.scheduleActivity.YearView;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -42,7 +44,7 @@ public class addClassActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		
 		setContentView(R.layout.activity_addsearchableclass);
-		
+		addCustomButton = (Button) findViewById(R.id.customClassButton);
 		// Listview Data
         String products[] = {"Dell Inspiron", "HTC One X", "HTC Wildfire S", "HTC Sense", "HTC Sensation XE",
                                 "iPhone 4S", "Samsung Galaxy Note 800",
@@ -84,20 +86,28 @@ public class addClassActivity extends Activity {
 		        // TODO Auto-generated method stub                          
 		    }
 		});
-
+  	  final addClassActivity s = this;
+  	  addCustomButton.setOnClickListener(new OnClickListener() {
+		public void onClick(View arg0) {
+			Intent intent = new Intent(s,addCustomClassActivity.class);
+			s.startActivityForResult(intent, 0);
+		}
+	});
+  	  
+  	  
 	}
 
 	@Override
 	protected void onStart() {
 		super.onStart();
-		String str = getIntent().getStringExtra("str");
-		title.setText("Add Class to "+str+":");
+		YearView str = Global.YearToAddClass;
+		title.setText("Add Class to "+str.yearLabel.getText()+":");
 	}
-	  
-	private boolean isEmpty(EditText etText) {
-	        return etText.getText().toString().trim().length() == 0;
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+	    if((resultCode == RESULT_OK)) {
+	        setResult(RESULT_OK, data);
+	        finish();
 	    }
-	  
-	
+	}
 	
 }

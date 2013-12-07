@@ -254,8 +254,6 @@ public class ClassButton extends RelativeLayout implements GestureDetector.OnDou
 				Global.YearToAddClass = yearPtr;
 			else
 				System.out.println ("YearView Already set");
-
-			intent.putExtra("str", yearPtr.yearLabel.getText());
 			
 			s.startActivityForResult(intent, 0);
 			System.out.println();
