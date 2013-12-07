@@ -176,7 +176,7 @@ public class CourseModel{// implements ModelAccessor{
 			CASCS350: Fundamentals of Computer Systems
 			CASCS480: Computer Graphics
 		 */
-		return null;
+		return tempSemesters;
 	}
 
 	HashMap <String, ArrayList<Course>> EEDefault() {
@@ -266,7 +266,7 @@ public class CourseModel{// implements ModelAccessor{
 		//must also initialize summer semester
 		//see load file for example
 		//(its in a confusing for loop though)
-		return null;
+		return tempSemesters;
 	}
 	
 	HashMap <String, ArrayList<Course>> BMEDefault() {
@@ -390,7 +390,7 @@ public class CourseModel{// implements ModelAccessor{
 		 * 
 		 * 
 		 */
-		return null;
+		return tempSemesters;
 	}
 	
 	HashMap <String, ArrayList<Course>> MEDefault() {
@@ -500,7 +500,7 @@ public class CourseModel{// implements ModelAccessor{
 
 		 */
 	
-		return null;
+		return tempSemesters;
 	}
 	
 	public void printStuff() {
