@@ -27,7 +27,7 @@ public class ScheduleActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 				
-		//CourseModel model = CourseModel.getInstance();
+		CourseModel model = CourseModel.getInstance();
 		//model.loadCourseFile(this);
 		
 		//ArrayList<Course> c = model.getClassWithYear(CourseModel.FRESHMAN_YEAR, CourseModel.FALL);
@@ -35,7 +35,6 @@ public class ScheduleActivity extends Activity {
 		getWindow().getDecorView().setBackgroundColor(0xFFFFDDB7);
 		
 		setUpGrid();
-		System.out.println("ad");
 	}
 
 	LinearLayout listLayout;

@@ -12,6 +12,8 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -23,7 +25,7 @@ public class addClassActivity extends Activity {
 
 	TextView title;
 	EditText editText;
-	Button addButton;
+	Button addCustomButton;
 	
 	// List view
     private ListView lv;
@@ -44,11 +46,20 @@ public class addClassActivity extends Activity {
 		// Listview Data
         String products[] = {"Dell Inspiron", "HTC One X", "HTC Wildfire S", "HTC Sense", "HTC Sensation XE",
                                 "iPhone 4S", "Samsung Galaxy Note 800",
+                                "Samsung Galaxy S3", "MacBook Air", "Mac Mini", "MacBook Pro","Dell Inspiron", "HTC One X", "HTC Wildfire S", "HTC Sense", "HTC Sensation XE",
+                                "iPhone 4S", "Samsung Galaxy Note 800",
                                 "Samsung Galaxy S3", "MacBook Air", "Mac Mini", "MacBook Pro"};
-         
+        title = (TextView) findViewById(R.id.addClassText);
         lv = (ListView) findViewById(R.id.list_view);
         inputSearch = (EditText) findViewById(R.id.inputSearch);
-         
+        
+        lv.setOnItemClickListener(new OnItemClickListener() {
+			@Override
+			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
+					long arg3) {
+				
+			}
+        });
         // Adding items to listview
         adapter = new ArrayAdapter<String>(this, R.layout.addsearchableclass_item, R.id.product_name, products);
         lv.setAdapter(adapter);       
@@ -80,7 +91,7 @@ public class addClassActivity extends Activity {
 	protected void onStart() {
 		super.onStart();
 		String str = getIntent().getStringExtra("str");
-		//title.setText("Add Class to "+str+":");
+		title.setText("Add Class to "+str+":");
 	}
 	  
 	private boolean isEmpty(EditText etText) {
