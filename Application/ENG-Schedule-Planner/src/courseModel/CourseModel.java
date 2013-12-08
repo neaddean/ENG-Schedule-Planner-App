@@ -93,80 +93,87 @@ public class CourseModel implements ModelAccessor{
 		return courseTitleList;
 	}
 	
+	//Computer Engineering Planning Sheet
 	HashMap <String, ArrayList<Course>> CEDefault() {
 		HashMap <String, ArrayList<Course>> tempSemesters = new HashMap<String, ArrayList<Course>> ();
 		
-		ArrayList<Course> tempList = new ArrayList<Course>();
 		
 		//Freshman Semester 1
-		tempList.add(getCourseByTitle("CASMA123"));
-		tempList.add(getCourseByTitle("CASCH131"));
-		tempList.add(getCourseByTitle("ENGEK100"));
-		tempList.add(getCourseByTitle("ENGEK128")); //Should this be given as a choice with EK127?
-		tempList.add(getCourseByTitle("CASWR100"));
-		tempSemesters.put("1f", tempList);
-		tempList.clear();
+		ArrayList<Course> f1List = new ArrayList<Course>();
+		f1List.add(getCourseByTitle("CASMA123"));
+		f1List.add(getCourseByTitle("CASCH131"));
+		f1List.add(getCourseByTitle("ENGEK100"));
+		f1List.add(getCourseByTitle("ENGEK128")); //Should this be given as a choice with EK127?
+		f1List.add(getCourseByTitle("CASWR100"));
+		tempSemesters.put("1f", f1List);
+
+		
 		
 		//Freshman Semester 2
-		tempList.add(getCourseByTitle("CASMA124"));
-		tempList.add(getCourseByTitle("CASPY211"));
-		tempList.add(getCourseByTitle("ENGEK131"));
-		tempList.add(getCourseByTitle("ENGEK132"));
-		tempList.add(getCourseByTitle("CASWR150"));
-		tempSemesters.put("1s", tempList);
-		tempList.clear();
+		ArrayList<Course> s1List = new ArrayList<Course>();
+		s1List.add(getCourseByTitle("CASMA124"));
+		s1List.add(getCourseByTitle("CASPY211"));
+		s1List.add(getCourseByTitle("ENGEK131"));
+		s1List.add(getCourseByTitle("ENGEK132"));
+		s1List.add(getCourseByTitle("CASWR150"));
+		tempSemesters.put("1s", s1List);
+
 		
 		//Sophomore Semester 1
-		tempList.add(getCourseByTitle("CASMA225"));
-		tempList.add(getCourseByTitle("CASPY212"));
-		tempList.add(getCourseByTitle("ENGEK307"));
-		tempList.add(getCourseByTitle("ENGEC327")); 
-		tempSemesters.put("2f", tempList);
-		tempList.clear();
+		ArrayList<Course> f2List = new ArrayList<Course>();
+		f2List.add(getCourseByTitle("CASMA225"));
+		f2List.add(getCourseByTitle("CASPY212"));
+		f2List.add(getCourseByTitle("ENGEK307"));
+		f2List.add(getCourseByTitle("ENGEC327")); 
+		tempSemesters.put("2f", f2List);
+
 		
 		//Sophomore Semester 2
-		tempList.add(getCourseByTitle("CASMA226"));
-		tempList.add(getCourseByTitle("CASEC311"));
-		tempList.add(getCourseByTitle("ENGEK301"));
-		tempList.add(getCourseByTitle("ENGEK102")); //Or CASMA142
-		//tempList.add(getCourseByTitle("Social Science Elective"));
-		tempSemesters.put("2s", tempList);
-		tempList.clear();
+		ArrayList<Course> s2List = new ArrayList<Course>();
+		s2List.add(getCourseByTitle("CASMA226"));
+		s2List.add(getCourseByTitle("CASEC311"));
+		s2List.add(getCourseByTitle("ENGEK301"));
+		s2List.add(getCourseByTitle("ENGEK102")); //Or CASMA142
+		//s2List.add(getCourseByTitle("Social Science Elective"));
+		tempSemesters.put("2s", s2List);
+
 		
 		//Junior Semester 1
-		tempList.add(getCourseByTitle("ENGEC481"));
-		tempList.add(getCourseByTitle("ENGEC413"));
-		tempList.add(getCourseByTitle("ENGEC410"));
-		tempList.add(getCourseByTitle("ENGEC193"));
-		//tempList.add(getCourseByTitle("Humanities Elective"));
-		tempSemesters.put("3f", tempList);
-		tempList.clear();
+		ArrayList<Course> f3List = new ArrayList<Course>();
+		f3List.add(getCourseByTitle("ENGEC481"));
+		f3List.add(getCourseByTitle("ENGEC413"));
+		f3List.add(getCourseByTitle("ENGEC410"));
+		f3List.add(getCourseByTitle("ENGEC193"));
+		//f3List.add(getCourseByTitle("Humanities Elective"));
+		tempSemesters.put("3f", f3List);
+
 		
 		//Junior Semester 2
-		tempList.add(getCourseByTitle("ENGEC401"));
-		tempList.add(getCourseByTitle("ENGEC440"));
-		tempList.add(getCourseByTitle("ENGEC330"));
-		tempList.add(getCourseByTitle("ENGEC450"));
-		tempSemesters.put("3s", tempList);
-		tempList.clear();
+		ArrayList<Course> s3List = new ArrayList<Course>();
+		s3List.add(getCourseByTitle("ENGEC401"));
+		s3List.add(getCourseByTitle("ENGEC440"));
+		s3List.add(getCourseByTitle("ENGEC330"));
+		s3List.add(getCourseByTitle("ENGEC450"));
+		tempSemesters.put("3s", s3List);
+
 		
 		//Senior Semester 1
-		tempList.add(getCourseByTitle("ENGEC463"));
-		//tempList.add(getCourseByTitle("Track Elective")); //ENGEC441, ENGEC447, ENGEC535, or ENGEC571
-		//tempList.add(getCourseByTitle("Breadth Elective"));
-		//tempList.add(getCourseByTitle("Social Science/Humanities"));
-		tempSemesters.put("4f", tempList);
-		tempList.clear();
+		ArrayList<Course> f4List = new ArrayList<Course>();
+		f4List.add(getCourseByTitle("ENGEC463"));
+		//f4List.add(getCourseByTitle("Track Elective")); //ENGEC441, ENGEC447, ENGEC535, or ENGEC571
+		//f4List.add(getCourseByTitle("Breadth Elective"));
+		//f4List.add(getCourseByTitle("Social Science/Humanities"));
+		tempSemesters.put("4f", f4List);
+
 		
 		//Senior Semester 2
-		tempList.add(getCourseByTitle("ENGEC464"));
-		//tempList.add(getCourseByTitle("Technical Elective"));
-		//tempList.add(getCourseByTitle("Technical Elective"));
-		//tempList.add(getCourseByTitle("General Education Elective"));
+		ArrayList<Course> s4List = new ArrayList<Course>();
+		s4List.add(getCourseByTitle("ENGEC464"));
+		//s4List.add(getCourseByTitle("Technical Elective"));
+		//s4List.add(getCourseByTitle("Technical Elective"));
+		//s4List.add(getCourseByTitle("General Education Elective"));
+		tempSemesters.put("4s", s4List);
 
-		tempSemesters.put("4s", tempList);
-		tempList.clear();
-		
 		
 		/*Technical Elective Defined as:
 		Any ENGEC Classes
@@ -208,75 +215,82 @@ public class CourseModel implements ModelAccessor{
 		return tempSemesters;
 	}
 
+	//Electrical Engineering Planning Sheet
 	HashMap <String, ArrayList<Course>> EEDefault() {
 		HashMap <String, ArrayList<Course>> tempSemesters = new HashMap<String, ArrayList<Course>> ();
 		
-		ArrayList<Course> tempList = new ArrayList<Course>();
-		
 		//Freshman Semester 1
-		tempList.add(getCourseByTitle("CASMA123"));
-		tempList.add(getCourseByTitle("CASCH131"));
-		tempList.add(getCourseByTitle("ENGEK100"));
-		tempList.add(getCourseByTitle("ENGEK127")); //Should this be given as a choice with EK128?
-		tempList.add(getCourseByTitle("CASWR100"));
-		tempSemesters.put("1f", tempList);
-		tempList.clear();
+		ArrayList<Course> f1List = new ArrayList<Course>();
+		f1List.add(getCourseByTitle("CASMA123"));
+		f1List.add(getCourseByTitle("CASCH131"));
+		f1List.add(getCourseByTitle("ENGEK100"));
+		f1List.add(getCourseByTitle("ENGEK127")); //Should this be given as a choice with EK128?
+		f1List.add(getCourseByTitle("CASWR100"));
+		tempSemesters.put("1f", f1List);
+
 		
 		//Freshman Semester 2
-		tempList.add(getCourseByTitle("CASMA124"));
-		tempList.add(getCourseByTitle("CASPY211"));
-		tempList.add(getCourseByTitle("ENGEK131"));
-		tempList.add(getCourseByTitle("ENGEK132"));
-		tempList.add(getCourseByTitle("CASWR150"));
-		tempSemesters.put("1s", tempList);
-		tempList.clear();
+		ArrayList<Course> s1List = new ArrayList<Course>();
+		s1List.add(getCourseByTitle("CASMA124"));
+		s1List.add(getCourseByTitle("CASPY211"));
+		s1List.add(getCourseByTitle("ENGEK131"));
+		s1List.add(getCourseByTitle("ENGEK132"));
+		s1List.add(getCourseByTitle("CASWR150"));
+		tempSemesters.put("1s", s1List);
+
 		
 		//Sophomore Semester 1
-		tempList.add(getCourseByTitle("CASMA225"));
-		tempList.add(getCourseByTitle("CASPY212"));
-		tempList.add(getCourseByTitle("ENGEK307"));
-		tempList.add(getCourseByTitle("ENGEK102")); //Or CASMA142
-		//tempList.add(getCourseByTitle("Social Science Elective"));
-		tempSemesters.put("2f", tempList);
-		tempList.clear();
+		ArrayList<Course> f2List = new ArrayList<Course>();
+		f2List.add(getCourseByTitle("CASMA225"));
+		f2List.add(getCourseByTitle("CASPY212"));
+		f2List.add(getCourseByTitle("ENGEK307"));
+		f2List.add(getCourseByTitle("ENGEK102")); //Or CASMA142
+		//f2List.add(getCourseByTitle("Social Science Elective"));
+		tempSemesters.put("2f", f2List);
+
 		
 		//Sophomore Semester 2
-		tempList.add(getCourseByTitle("CASMA226"));
-		tempList.add(getCourseByTitle("CASPY313"));
-		tempList.add(getCourseByTitle("ENGEK301"));
-		//tempList.add(getCourseByTitle("Humanities Elective"));
-		tempSemesters.put("2s", tempList);
-		tempList.clear();
+		ArrayList<Course> s2List = new ArrayList<Course>();
+		s2List.add(getCourseByTitle("CASMA226"));
+		s2List.add(getCourseByTitle("CASPY313"));
+		s2List.add(getCourseByTitle("ENGEK301"));
+		//s2List.add(getCourseByTitle("Humanities Elective"));
+		tempSemesters.put("2s", s2List);
+
 		
 		//Junior Semester 1
-		tempList.add(getCourseByTitle("ENGEC401"));
-		tempList.add(getCourseByTitle("ENGEC410"));
-		tempList.add(getCourseByTitle("ENGEC311"));
-		tempList.add(getCourseByTitle("ENGEC455"));
-		tempSemesters.put("3f", tempList);
-		tempList.clear();
+		ArrayList<Course> f3List = new ArrayList<Course>();
+		f3List.add(getCourseByTitle("ENGEC401"));
+		f3List.add(getCourseByTitle("ENGEC410"));
+		f3List.add(getCourseByTitle("ENGEC311"));
+		f3List.add(getCourseByTitle("ENGEC455"));
+		tempSemesters.put("3f",f3List);
+
 		
 		//Junior Semester 2
-		tempList.add(getCourseByTitle("ENGEC381"));
-		//tempList.add(getCourseByTitle("Systems Elective")); //ENGEC402, ENGEC415, or ENGEC416
+		ArrayList<Course> s3List = new ArrayList<Course>();
+		s3List.add(getCourseByTitle("ENGEC381"));
+		//s3List.add(getCourseByTitle("Systems Elective")); //ENGEC402, ENGEC415, or ENGEC416
 		//tempList.add(getCourseByTitle("Electronics Elective")); //ENGEC412, ENGEC417, ENGEC450, ENGEC470, ENGEC571, or ENGEC583
-		//tempList.add(getCourseByTitle("Electrophysics Elective")); //ENGEC456, ENGEC470, ENGEC471, ENGEC481, or ENGEC560
-		tempSemesters.put("3s", tempList);
-		tempList.clear();
+		//s3List.add(getCourseByTitle("Electrophysics Elective")); //ENGEC456, ENGEC470, ENGEC471, ENGEC481, or ENGEC560
+		tempSemesters.put("3s", s3List);
+
 		
 		//Senior Semester 1
-		tempList.add(getCourseByTitle("ENGEC463"));
-		//tempList.add(getCourseByTitle("Technical Elective"));
-		//tempList.add(getCourseByTitle("Computer Elective")); //ENGEC327, ENGEC413, or ENGEC441
-		//tempList.add(getCourseByTitle("Social Science/Humanities Elective"));
-		tempSemesters.put("4f", tempList);
-		tempList.clear();
+		ArrayList<Course> f4List = new ArrayList<Course>();
+		f4List.add(getCourseByTitle("ENGEC463"));
+		//f4List.add(getCourseByTitle("Technical Elective"));
+		//f4List.add(getCourseByTitle("Computer Elective")); //ENGEC327, ENGEC413, or ENGEC441
+		//f4List.add(getCourseByTitle("Social Science/Humanities Elective"));
+		tempSemesters.put("4f", f4List);
+
 		
 		//Senior Semester 2
-		tempList.add(getCourseByTitle("ENGEC464"));
-		//tempList.add(getCourseByTitle("Technical Elective"));
-		//tempList.add(getCourseByTitle("Technical Elective"));
-		//tempList.add(getCourseByTitle("General Education Elective"));
+		ArrayList<Course> s4List = new ArrayList<Course>();
+		s4List.add(getCourseByTitle("ENGEC464"));
+		//s4List.add(getCourseByTitle("Technical Elective"));
+		//s4List.add(getCourseByTitle("Technical Elective"));
+		//s4List.add(getCourseByTitle("General Education Elective"));
 		/*Technical Elective Defined as:
 		Any ENGEC Classes
 		All ENG BE, EK, and ME courses at the 300-level and above
@@ -287,93 +301,95 @@ public class CourseModel implements ModelAccessor{
 			SMG SI480:The Business of Technology Innovation
 								
 		*/
-		tempSemesters.put("4s", tempList);
-		tempList.clear();
-		
-		
-		//do other semesters
-		//must also initialize summer semester
-		//see load file for example
-		//(its in a confusing for loop though)
+		tempSemesters.put("4s", s4List);
+
 		return tempSemesters;
 	}
 	
+	//Biomedical Engineering Planning Sheet
 	HashMap <String, ArrayList<Course>> BMEDefault() {
 		HashMap <String, ArrayList<Course>> tempSemesters = new HashMap<String, ArrayList<Course>> ();
-		
-		ArrayList<Course> tempList = new ArrayList<Course>();
+
 		
 		//Freshman Semester 1
-		tempList.add(getCourseByTitle("CASMA123"));
-		tempList.add(getCourseByTitle("ENGEK100"));
-		tempList.add(getCourseByTitle("CASCH101"));
-		tempList.add(getCourseByTitle("ENGEK127"));
-		tempList.add(getCourseByTitle("CASWR100"));
-		tempSemesters.put("1f", tempList);
-		tempList.clear();
+		ArrayList<Course> f1List = new ArrayList<Course>();
+		f1List.add(getCourseByTitle("CASMA123"));
+		f1List.add(getCourseByTitle("ENGEK100"));
+		f1List.add(getCourseByTitle("CASCH101"));
+		f1List.add(getCourseByTitle("ENGEK127"));
+		f1List.add(getCourseByTitle("CASWR100"));
+		tempSemesters.put("1f", f1List);
+
 		
 		//Freshman Semester 2
-		tempList.add(getCourseByTitle("CASMA124"));
-		tempList.add(getCourseByTitle("CASPY211"));
-		tempList.add(getCourseByTitle("CASCH102"));
-		tempList.add(getCourseByTitle("ENGEK131"));
-		tempList.add(getCourseByTitle("ENGEK132"));
-		tempSemesters.put("1s", tempList);
-		tempList.clear();
+		ArrayList<Course> s1List = new ArrayList<Course>();
+		s1List.add(getCourseByTitle("CASMA124"));
+		s1List.add(getCourseByTitle("CASPY211"));
+		s1List.add(getCourseByTitle("CASCH102"));
+		s1List.add(getCourseByTitle("ENGEK131"));
+		s1List.add(getCourseByTitle("ENGEK132"));
+		tempSemesters.put("1s", s1List);
+
 		
 		//Sophomore Semester 1
-		tempList.add(getCourseByTitle("CASMA225"));
-		tempList.add(getCourseByTitle("CASPY212"));
-		tempList.add(getCourseByTitle("ENGEK307"));
-		tempList.add(getCourseByTitle("ENGEK102")); //Or CASMA142
-		tempList.add(getCourseByTitle("CASWR150"));
-		tempSemesters.put("2f", tempList);
-		tempList.clear();
+		ArrayList<Course> f2List = new ArrayList<Course>();
+		f2List.add(getCourseByTitle("CASMA225"));
+		f2List.add(getCourseByTitle("CASPY212"));
+		f2List.add(getCourseByTitle("ENGEK307"));
+		f2List.add(getCourseByTitle("ENGEK102")); //Or CASMA142
+		f2List.add(getCourseByTitle("CASWR150"));
+		tempSemesters.put("2f", f2List);
+
 		
 		//Sophomore Semester 2
-		tempList.add(getCourseByTitle("CASMA226"));
-		tempList.add(getCourseByTitle("ENGBE209"));
-		tempList.add(getCourseByTitle("ENGEK301"));
-		tempList.add(getCourseByTitle("ENGBE200"));
-		//tempList.add(getCourseByTitle("Social Science Elective"));
-		tempSemesters.put("2s", tempList);
-		tempList.clear();
+		ArrayList<Course> s2List = new ArrayList<Course>();
+		s2List.add(getCourseByTitle("CASMA226"));
+		s2List.add(getCourseByTitle("ENGBE209"));
+		s2List.add(getCourseByTitle("ENGEK301"));
+		s2List.add(getCourseByTitle("ENGBE200"));
+		//s2List.add(getCourseByTitle("Social Science Elective"));
+		tempSemesters.put("2s", s2List);
+
 		
 		//Junior Semester 1
-		tempList.add(getCourseByTitle("ENGEC424"));
-		tempList.add(getCourseByTitle("CASBI315"));
-		tempList.add(getCourseByTitle("ENGBE491"));
-		tempList.add(getCourseByTitle("ENGBE401"));
-		//tempList.add(getCourseByTitle("Humanities Elective"));
-		tempSemesters.put("3f", tempList);
-		tempList.clear();
+		ArrayList<Course> f3List = new ArrayList<Course>();
+		f3List.add(getCourseByTitle("ENGEC424"));
+		f3List.add(getCourseByTitle("CASBI315"));
+		f3List.add(getCourseByTitle("ENGBE491"));
+		f3List.add(getCourseByTitle("ENGBE401"));
+		//f3List.add(getCourseByTitle("Humanities Elective"));
+		tempSemesters.put("3f", f3List);
+
 		
 		//Junior Semester 2
-		//tempList.add(getCourseByTitle("Biomedical Elective"));
-		//tempList.add(getCourseByTitle("Fields Elective")); //ENGBE419, ENGBE420, ENGBE435, ENGBE436
-		tempList.add(getCourseByTitle("ENGEC492"));
-		tempList.add(getCourseByTitle("ENGEC402"));
-		//tempList.add(getCourseByTitle("Social Science/Humanities Elective");
-		tempSemesters.put("3s", tempList);		
-		tempList.clear();
+		ArrayList<Course> s3List = new ArrayList<Course>();
+		//s3List.add(getCourseByTitle("Biomedical Elective"));
+		//s3List.add(getCourseByTitle("Fields Elective")); //ENGBE419, ENGBE420, ENGBE435, ENGBE436
+		s3List.add(getCourseByTitle("ENGEC492"));
+		s3List.add(getCourseByTitle("ENGEC402"));
+		//s3List.add(getCourseByTitle("Social Science/Humanities Elective");
+		tempSemesters.put("3s", s3List);		
+
 		
 		//Senior Semester 1
-		//tempList.add(getCourseByTitle("Engineering Elective"));
-		//tempList.add(getCourseByTitle("Professional Elective"));
-		tempList.add(getCourseByTitle("ENGBE467"));
-		tempList.add(getCourseByTitle("ENGBE465"));
-		//tempList.add(getCourseByTitle("Computer Elective")); //ENGEC327, ENGEC413, or ENGEC441
-		//tempList.add(getCourseByTitle("General Education Elective"));
-		tempSemesters.put("4f", tempList);
-		tempList.clear();
+		ArrayList<Course> f4List = new ArrayList<Course>();
+		//f4List.add(getCourseByTitle("Engineering Elective"));
+		//f4List.add(getCourseByTitle("Professional Elective"));
+		f4List.add(getCourseByTitle("ENGBE467"));
+		f4List.add(getCourseByTitle("ENGBE465"));
+		//f4List.add(getCourseByTitle("Computer Elective")); //ENGEC327, ENGEC413, or ENGEC441
+		//f4List.add(getCourseByTitle("General Education Elective"));
+		tempSemesters.put("4f", f4List);
+
 		
 		//Senior Semester 2
-		//tempList.add(getCourseByTitle("Biomedical Elective"));
-		//tempList.add(getCourseByTitle("Biomedical Elective"));
-		//tempList.add(getCourseByTitle("Professional Elective"));
-		tempList.add(getCourseByTitle("ENGEC464"));
-		tempSemesters.put("4s", tempList);
-		tempList.clear();
+		ArrayList<Course> s4List = new ArrayList<Course>();
+		//s4List.add(getCourseByTitle("Biomedical Elective"));
+		//s4List.add(getCourseByTitle("Biomedical Elective"));
+		//s4List.add(getCourseByTitle("Professional Elective"));
+		s4List.add(getCourseByTitle("ENGEC464"));
+		tempSemesters.put("4s", s4List);
+
 		
 		
 		/*
@@ -437,81 +453,89 @@ public class CourseModel implements ModelAccessor{
 		return tempSemesters;
 
 	}
+	
+	//Mechanical Engineering Planning Sheet
 	HashMap <String, ArrayList<Course>> MEDefault() {
 		HashMap <String, ArrayList<Course>> tempSemesters = new HashMap<String, ArrayList<Course>> ();
-		
-		ArrayList<Course> tempList = new ArrayList<Course>();
+	
 		
 		//Freshman Semester 1
-		tempList.add(getCourseByTitle("CASMA123"));
-		tempList.add(getCourseByTitle("CASCH131"));
-		tempList.add(getCourseByTitle("ENGEK100"));
-		tempList.add(getCourseByTitle("ENGEK127")); //Should this be given as a choice with EK128?
-		tempList.add(getCourseByTitle("CASWR100"));
-		tempSemesters.put("1f", tempList);
-		tempList.clear();
+		ArrayList<Course> f1List = new ArrayList<Course>();
+		f1List.add(getCourseByTitle("CASMA123"));
+		f1List.add(getCourseByTitle("CASCH131"));
+		f1List.add(getCourseByTitle("ENGEK100"));
+		f1List.add(getCourseByTitle("ENGEK127")); //Should this be given as a choice with EK128?
+		f1List.add(getCourseByTitle("CASWR100"));
+		tempSemesters.put("1f", f1List);
+
 		
 		//Freshman Semester 2
-		tempList.add(getCourseByTitle("CASMA124"));
-		tempList.add(getCourseByTitle("CASPY211"));
-		tempList.add(getCourseByTitle("ENGEK131"));
-		tempList.add(getCourseByTitle("ENGEK132"));
-		tempList.add(getCourseByTitle("CASWR150"));
-		tempSemesters.put("1s", tempList);
-		tempList.clear();
+		ArrayList<Course> s1List = new ArrayList<Course>();
+		s1List.add(getCourseByTitle("CASMA124"));
+		s1List.add(getCourseByTitle("CASPY211"));
+		s1List.add(getCourseByTitle("ENGEK131"));
+		s1List.add(getCourseByTitle("ENGEK132"));
+		s1List.add(getCourseByTitle("CASWR150"));
+		tempSemesters.put("1s", s1List);
+
 		
 		//Sophomore Semester 1
-		tempList.add(getCourseByTitle("CASMA225"));
-		tempList.add(getCourseByTitle("CASPY212"));
-		tempList.add(getCourseByTitle("ENGEK301"));
-		tempList.add(getCourseByTitle("ENGEK156"));
-		//tempList.add(getCourseByTitle("Social Science Elective")); 
-		tempSemesters.put("2f", tempList);
-		tempList.clear();
+		ArrayList<Course> f2List = new ArrayList<Course>();
+		f2List.add(getCourseByTitle("CASMA225"));
+		f2List.add(getCourseByTitle("CASPY212"));
+		f2List.add(getCourseByTitle("ENGEK301"));
+		f2List.add(getCourseByTitle("ENGEK156"));
+		//f2List.add(getCourseByTitle("Social Science Elective")); 
+		tempSemesters.put("2f", f2List);
+
 		
 		//Sophomore Semester 2
-		tempList.add(getCourseByTitle("CASMA226"));
-		//tempList.add(getCourseByTitle("Natural Science Elective"));
-		tempList.add(getCourseByTitle("ENGEK307"));
-		tempList.add(getCourseByTitle("ENGEK102")); //Or CASMA142
-		//tempList.add(getCourseByTitle("Humanities Elective"));
-		tempSemesters.put("2s", tempList);
-		tempList.clear();
+		ArrayList<Course> s2List = new ArrayList<Course>();
+		s2List.add(getCourseByTitle("CASMA226"));
+		//s2List.add(getCourseByTitle("Natural Science Elective"));
+		s2List.add(getCourseByTitle("ENGEK307"));
+		s2List.add(getCourseByTitle("ENGEK102")); //Or CASMA142
+		//s2List.add(getCourseByTitle("Humanities Elective"));
+		tempSemesters.put("2s", s2List);
+
 		
 		//Junior Semester 1
-		tempList.add(getCourseByTitle("ENGME359"));
-		tempList.add(getCourseByTitle("ENGME305"));
-		tempList.add(getCourseByTitle("ENGME304"));
-		tempList.add(getCourseByTitle("ENGME303"));
-		//tempList.add(getCourseByTitle("Social Science OR Humanities Elective"));
-		tempSemesters.put("3f", tempList);
-		tempList.clear();
+		ArrayList<Course> f3List = new ArrayList<Course>();
+		f3List.add(getCourseByTitle("ENGME359"));
+		f3List.add(getCourseByTitle("ENGME305"));
+		f3List.add(getCourseByTitle("ENGME304"));
+		f3List.add(getCourseByTitle("ENGME303"));
+		//f3List.add(getCourseByTitle("Social Science OR Humanities Elective"));
+		tempSemesters.put("3f", f3List);
+
 		
 		//Junior Semester 2
-		tempList.add(getCourseByTitle("ENGME360"));
-		tempList.add(getCourseByTitle("ENGME302"));
-		tempList.add(getCourseByTitle("ENGME306"));
-		tempList.add(getCourseByTitle("ENGME419"));
-		tempList.add(getCourseByTitle("ENGME366"));
-		tempSemesters.put("3s", tempList);
-		tempList.clear();
+		ArrayList<Course> s3List = new ArrayList<Course>();
+		s3List.add(getCourseByTitle("ENGME360"));
+		s3List.add(getCourseByTitle("ENGME302"));
+		s3List.add(getCourseByTitle("ENGME306"));
+		s3List.add(getCourseByTitle("ENGME419"));
+		s3List.add(getCourseByTitle("ENGME366"));
+		tempSemesters.put("3s", s3List);
+
 		
 		//Senior Semester 1
-		tempList.add(getCourseByTitle("ENGME460"));
-		//tempList.add(getCourseByTitle("Advanced Elective"));
-		//tempList.add(getCourseByTitle("Advanced Elective"));
-		tempList.add(getCourseByTitle("ENGME410"));
-		tempSemesters.put("4f", tempList);
-		tempList.clear();
+		ArrayList<Course> f4List = new ArrayList<Course>();
+		f4List.add(getCourseByTitle("ENGME460"));
+		//f4List.add(getCourseByTitle("Advanced Elective"));
+		//f4List.add(getCourseByTitle("Advanced Elective"));
+		f4List.add(getCourseByTitle("ENGME410"));
+		tempSemesters.put("4f", f4List);
+
 		
 		//Senior Semester 2
-		tempList.add(getCourseByTitle("ENGME461"));
-		//tempList.add(getCourseByTitle("Advanced Elective"));
-		//tempList.add(getCourseByTitle("Advanced Elective"));
-		//tempList.add(getCourseByTitle("General Education Elective"));
+		ArrayList<Course> s4List = new ArrayList<Course>();
+		s4List.add(getCourseByTitle("ENGME461"));
+		//s4List.add(getCourseByTitle("Advanced Elective"));
+		//s4List.add(getCourseByTitle("Advanced Elective"));
+		//s4List.add(getCourseByTitle("General Education Elective"));
+		tempSemesters.put("4s", s4List);
 
-		tempSemesters.put("4s", tempList);
-		tempList.clear();
 		
 		/* Advanced Elective Defined as:
 		  	All ENG courses 300 level or above, (without overlap)
@@ -597,7 +621,7 @@ public class CourseModel implements ModelAccessor{
 				//tempCourse.cid = eElement.getElementsByTagName("link").item(0).getTextContent();
 				String prereqs = eElement.getElementsByTagName("prereqs").item(0).getTextContent();
 				ArrayList<String> prereqlist = new ArrayList<String>(Arrays.asList(prereqs.split(",")));
-				tempCourse.prereqs = prereqlist;
+				tempCourse.prereqs = (ArrayList<String>) prereqlist;
 				tempCourse.credits = eElement.getElementsByTagName("credits").item(0).getTextContent();
 
 				
