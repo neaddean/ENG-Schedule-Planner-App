@@ -222,7 +222,7 @@ public class ClassButton extends RelativeLayout implements GestureDetector.OnDou
 			{
 				final ClassButton buttonPtr = this;
 				alertDialog = new AlertDialog.Builder(this.getContext());
-				alertDialog.setTitle(button.getText());
+				alertDialog.setTitle(myCourse.getFullTitle());
 				alertDialog.setItems(colors, new DialogInterface.OnClickListener() {
 				    @Override
 				    public void onClick(DialogInterface dialog, int which) {

@@ -88,7 +88,6 @@ public class CourseModel implements ModelAccessor{
 			{
 				courseTitleList.add(c.getFullTitle());
 			}
-			
 		}
 		return courseTitleList;
 	}
@@ -131,7 +130,7 @@ public class CourseModel implements ModelAccessor{
 		//Sophomore Semester 2
 		ArrayList<Course> s2List = new ArrayList<Course>();
 		s2List.add(getCourseByTitle("CASMA226"));
-		s2List.add(getCourseByTitle("CASEC311"));
+		s2List.add(getCourseByTitle("ENGEC311"));
 		s2List.add(getCourseByTitle("ENGEK301"));
 		s2List.add(getCourseByTitle("ENGEK102")); //Or CASMA142
 		//s2List.add(getCourseByTitle("Social Science Elective"));
@@ -143,7 +142,7 @@ public class CourseModel implements ModelAccessor{
 		f3List.add(getCourseByTitle("ENGEC481"));
 		f3List.add(getCourseByTitle("ENGEC413"));
 		f3List.add(getCourseByTitle("ENGEC410"));
-		f3List.add(getCourseByTitle("ENGEC193"));
+		f3List.add(getCourseByTitle("CASMA193"));
 		//f3List.add(getCourseByTitle("Humanities Elective"));
 		tempSemesters.put("3f", f3List);
 
@@ -353,7 +352,7 @@ public class CourseModel implements ModelAccessor{
 		
 		//Junior Semester 1
 		ArrayList<Course> f3List = new ArrayList<Course>();
-		f3List.add(getCourseByTitle("ENGEC424"));
+		f3List.add(getCourseByTitle("ENGEK424"));
 		f3List.add(getCourseByTitle("CASBI315"));
 		f3List.add(getCourseByTitle("ENGBE491"));
 		f3List.add(getCourseByTitle("ENGBE401"));
@@ -365,8 +364,8 @@ public class CourseModel implements ModelAccessor{
 		ArrayList<Course> s3List = new ArrayList<Course>();
 		//s3List.add(getCourseByTitle("Biomedical Elective"));
 		//s3List.add(getCourseByTitle("Fields Elective")); //ENGBE419, ENGBE420, ENGBE435, ENGBE436
-		s3List.add(getCourseByTitle("ENGEC492"));
-		s3List.add(getCourseByTitle("ENGEC402"));
+		s3List.add(getCourseByTitle("ENGBE492"));
+		s3List.add(getCourseByTitle("ENGBE402"));
 		//s3List.add(getCourseByTitle("Social Science/Humanities Elective");
 		tempSemesters.put("3s", s3List);		
 
@@ -573,7 +572,6 @@ public class CourseModel implements ModelAccessor{
 	
 	public void printStuff() {
 		for (Course c : courseList) {
-			 
 			System.out.println("name : " + c.getFullTitle());
 			System.out.println(courseList.indexOf(c));
 		}
@@ -673,8 +671,7 @@ public class CourseModel implements ModelAccessor{
 		 
 		 semesterLists = tempSemesters;
 		 //Tim : Added to change default stores
-		 semesterLists = this.BMEDefault();
-		 System.out.println(getCourseByTitle("ENGEK127"));
+		 semesterLists = this.CEDefault();
 
 	}
 
