@@ -704,12 +704,8 @@ public class CourseModel implements ModelAccessor{
 	public int getIndexWithTitle(String s) {
 		return courseTitleList.indexOf(s);
 	}
-<<<<<<< HEAD
-/*
-	public void saveState(String filename) {
-=======
 
-<<<<<<< HEAD
+
 	public void saveState(String filename, Context context) {
 		 // try {
 //			DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
@@ -719,21 +715,7 @@ public class CourseModel implements ModelAccessor{
 //			Document doc = docBuilder.newDocument();
 //			Element semestersElement = doc.createElement("semesters");
 //			doc.appendChild(semestersElement);
-=======
-	/*public void saveState(String filename) {
->>>>>>> 8903b5ea06fe660ad48c08327fee2bb72798d935
-		FileOutputStream fos = openFileOutput(filename, Context.MODE_PRIVATE);
-		
-		  try {
-	 
-			DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
-			DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
-	 
-			// semester elements
-			Document doc = docBuilder.newDocument();
-			Element semestersElement = doc.createElement("semesters");
-			doc.appendChild(semestersElement);
->>>>>>> origin/combineModel
+
 	 
 			 ArrayList <String> semesterLabels = new ArrayList<String>();
 			 semesterLabels.add("1f");
@@ -766,52 +748,12 @@ public class CourseModel implements ModelAccessor{
 			
 			// Output to console for testing
 			// StreamResult result = new StreamResult(System.out);
-<<<<<<< HEAD
-//	 
-//			FileOutputStream fos = context.getApplicationContext().openFileOutput(filename, context.MODE_PRIVATE);		
-////			OutputStream fos = context.getAssets().
-//			transformer.transform(source, (Result) fos);
-//			fos.close();
-////			System.out.println("File saved!");
-//	 
-//		  }
-//		  catch (ParserConfigurationException pce) {
-//			pce.printStackTrace();
-//		  } 
-////		  catch (TransformerException tfe) {
-//			tfe.printStackTrace();
-//		  }
-//		  catch (FileNotFoundException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		  } catch (IOException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-	}
-		
-=======
 	 
-			transformer.transform(source, result);
+			//transformer.transform(source, result);
 	 
 			System.out.println("File saved!");
 	 
-		  } catch (ParserConfigurationException pce) {
-			pce.printStackTrace();
-		  } catch (TransformerException tfe) {
-			tfe.printStackTrace();
-		
-		
-<<<<<<< HEAD
-	}*/
-	
-=======
-	}
-	}
-	*/
->>>>>>> 8903b5ea06fe660ad48c08327fee2bb72798d935
-	
-	
->>>>>>> origin/combineModel
+		  } 
+
 }
 

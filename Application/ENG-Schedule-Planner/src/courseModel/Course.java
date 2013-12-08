@@ -1,5 +1,7 @@
 package courseModel;
 
+import java.util.ArrayList;
+
 public class Course {
 	
 	public Course(String name, String school, String dept, String cid,
