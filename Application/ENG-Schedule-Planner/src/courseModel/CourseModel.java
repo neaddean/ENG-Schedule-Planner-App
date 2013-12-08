@@ -4,8 +4,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Map.Entry;
-import java.util.concurrent.Semaphore;
 
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -14,32 +12,29 @@ import android.content.Context;
 import courseModel.Course;
 
 import javax.xml.parsers.DocumentBuilder;
-import javax.xml.transform.Result;
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 
-import org.apache.http.conn.BasicManagedEntity;
-import org.w3c.dom.Attr;
-import org.w3c.dom.DOMException;
 import org.w3c.dom.Document;
-import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.NodeList;
 import org.w3c.dom.Node;
 import org.w3c.dom.Element;
-import org.w3c.dom.TypeInfo;
-import org.w3c.dom.UserDataHandler;
 import org.xml.sax.InputSource;
+import org.xml.sax.SAXException;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.OutputStream;
 import java.io.Reader; 
+import java.io.StringReader;
 import java.io.StringWriter;
 
 public class CourseModel implements ModelAccessor{
@@ -180,6 +175,15 @@ public class CourseModel implements ModelAccessor{
 		//s4List.add(getCourseByTitle("General Education Elective"));
 		tempSemesters.put("4s", s4List);
 
+		//To initialize summer semesters as empty
+		ArrayList<Course> u1List = new ArrayList<Course>();
+		tempSemesters.put("1u", u1List);
+		ArrayList<Course> u2List = new ArrayList<Course>();
+		tempSemesters.put("2u", u2List);
+		ArrayList<Course> u3List = new ArrayList<Course>();
+		tempSemesters.put("3u", u3List);
+		ArrayList<Course> u4List = new ArrayList<Course>();
+		tempSemesters.put("4u", u4List);
 		
 		/*Technical Elective Defined as:
 		Any ENGEC Classes
@@ -308,7 +312,17 @@ public class CourseModel implements ModelAccessor{
 								
 		*/
 		tempSemesters.put("4s", s4List);
-
+		
+		//To initialize summer semesters as empty
+		ArrayList<Course> u1List = new ArrayList<Course>();
+		tempSemesters.put("1u", u1List);
+		ArrayList<Course> u2List = new ArrayList<Course>();
+		tempSemesters.put("2u", u2List);
+		ArrayList<Course> u3List = new ArrayList<Course>();
+		tempSemesters.put("3u", u3List);
+		ArrayList<Course> u4List = new ArrayList<Course>();
+		tempSemesters.put("4u", u4List);
+		
 		return tempSemesters;
 	}
 	
@@ -396,7 +410,15 @@ public class CourseModel implements ModelAccessor{
 		s4List.add(getCourseByTitle("ENGEC464"));
 		tempSemesters.put("4s", s4List);
 
-		
+		//To initialize summer semesters as empty
+		ArrayList<Course> u1List = new ArrayList<Course>();
+		tempSemesters.put("1u", u1List);
+		ArrayList<Course> u2List = new ArrayList<Course>();
+		tempSemesters.put("2u", u2List);
+		ArrayList<Course> u3List = new ArrayList<Course>();
+		tempSemesters.put("3u", u3List);
+		ArrayList<Course> u4List = new ArrayList<Course>();
+		tempSemesters.put("4u", u4List);
 		
 		/*
 		Professional Electives Defined as:
@@ -542,6 +564,15 @@ public class CourseModel implements ModelAccessor{
 		//s4List.add(getCourseByTitle("General Education Elective"));
 		tempSemesters.put("4s", s4List);
 
+		//To initialize summer semesters as empty
+		ArrayList<Course> u1List = new ArrayList<Course>();
+		tempSemesters.put("1u", u1List);
+		ArrayList<Course> u2List = new ArrayList<Course>();
+		tempSemesters.put("2u", u2List);
+		ArrayList<Course> u3List = new ArrayList<Course>();
+		tempSemesters.put("3u", u3List);
+		ArrayList<Course> u4List = new ArrayList<Course>();
+		tempSemesters.put("3u", u4List);
 		
 		/* Advanced Elective Defined as:
 		  	All ENG courses 300 level or above, (without overlap)
@@ -678,8 +709,9 @@ public class CourseModel implements ModelAccessor{
 		 
 		 semesterLists = tempSemesters;
 		 //Tim : Added to change default stores
-		// semesterLists = this.BMEDefault();
+		 //semesterLists = this.BMEDefault();
 		 //System.out.println(getCourseByTitle("ENGEK127"));
+		semesterLists = new HashMap<String, ArrayList<Course>> ();
 
 	}
 
@@ -740,7 +772,6 @@ public class CourseModel implements ModelAccessor{
 	public int getIndexWithTitle(String s) {
 		return courseTitleList.indexOf(s);
 	}
-
 
 	public void saveState(String filename, Context context) {
 		  try {
@@ -812,5 +843,113 @@ public class CourseModel implements ModelAccessor{
 			e.printStackTrace();
 		} finally {} 
 	}
+
+	public void loadState(String filename, Context context) {
+		try {
+			FileInputStream fis = context.getApplicationContext().openFileInput(filename);
+			 InputStreamReader inputStreamReader = new InputStreamReader(fis);
+			 BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+			 StringBuilder sb = new StringBuilder();
+			 String line;
+			 while ((line = bufferedReader.readLine()) != null) {
+			     sb.append(line);
+			 }
+			//InputStream inputStream= new FileInputStream(fXmlFile);
+			System.out.println("dean" + sb.toString());
+			DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+			DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+			
+			InputSource is = new InputSource(new StringReader(sb.toString()));
+			
+			Document doc = dBuilder.parse(is);
+		 
+			//optional, but recommended
+			//read this - http://stackoverflow.com/questions/13786607/normalization-in-dom-parsing-with-java-how-does-it-work
+			doc.getDocumentElement().normalize();
+		 
+//			NodeList nList = doc.getElementsByTagName("course");
+//			
+//			ArrayList <Course> tempCourseList = new ArrayList<Course> ();
+//			
+//			for (int temp = 0; temp < nList.getLength(); temp++) {
+//				 
+//				Node nNode = nList.item(temp);
+//				
+//				Course tempCourse = new Course();
+//		 
+//				if (nNode.getNodeType() == Node.ELEMENT_NODE) {
+//		 
+//					Element eElement = (Element) nNode;
+//					
+//					tempCourse.name = eElement.getElementsByTagName("name").item(0).getTextContent();
+//					tempCourse.school = eElement.getElementsByTagName("school").item(0).getTextContent();
+//					tempCourse.dept = eElement.getElementsByTagName("dept").item(0).getTextContent();
+//					tempCourse.cid = eElement.getElementsByTagName("cid").item(0).getTextContent();
+//					tempCourse.description = eElement.getElementsByTagName("description").item(0).getTextContent();
+//					//tempCourse.cid = eElement.getElementsByTagName("link").item(0).getTextContent();
+//					String prereqs = eElement.getElementsByTagName("prereqs").item(0).getTextContent();
+//					ArrayList<String> prereqlist = new ArrayList<String>(Arrays.asList(prereqs.split(",")));
+//					tempCourse.prereqs = (ArrayList<String>) prereqlist;
+//					tempCourse.credits = eElement.getElementsByTagName("credits").item(0).getTextContent();
+//					
+//					tempCourseList.add(tempCourse);
+//		 
+//				}
+//		 
+//			
+//			}
+//			
+//			courseList.addAll(tempCourseList);
+			
+			NodeList sList = doc.getElementsByTagName("semesters");
+			
+			ArrayList<String> tempSemCourses = new ArrayList<String>();
+			
+			for (int temp = 0; temp < sList.getLength(); temp++) {
+				 
+				Node sNode = sList.item(temp);
+			
+				tempSemCourses.clear();
+				
+				if (sNode.getNodeType() == Node.ELEMENT_NODE) {
+					 
+					Element eElement = (Element) sNode;
+					String semCourseList = eElement.getTextContent();
+					//String semCourseList = eElement.getElementsByTagName(eElement.getNodeName()).item(0).getTextContent();
+					tempSemCourses = new ArrayList<String>(Arrays.asList(semCourseList.split(".")));
+					
+					ArrayList<Course> tempSemCourseList = new ArrayList<Course>();
+					for (String courseTitle: tempSemCourses) {
+						System.out.println(courseTitle);
+						tempSemCourseList.add(getCourseByTitle(courseTitle));
+					}
+					semesterLists.put(new StringBuffer(eElement.getNodeName()).reverse().toString(), new ArrayList<Course>(tempSemCourseList)); 
+				}
+			}
+			
+			fis.close();
+			
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SAXException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (ParserConfigurationException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		
+		
+	}
+
+
+
+
+
 }
 

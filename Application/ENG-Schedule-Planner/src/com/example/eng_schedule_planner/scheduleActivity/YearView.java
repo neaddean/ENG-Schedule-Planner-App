@@ -139,6 +139,7 @@ public class YearView extends LinearLayout{
 		        currentView.addButton((ClassButton) view,index);
 		        view.setVisibility(View.VISIBLE);
 		        view.animate().scaleX(1).alpha(1);
+		        YearView.this.printCoursesInStore();
 		        break;
 		      case DragEvent.ACTION_DRAG_ENDED:
 		    	 
@@ -147,7 +148,6 @@ public class YearView extends LinearLayout{
 		    		  view.animate().scaleX(1).alpha(1);
 		    	  }
 		    	  
-
 		    	  break;
 		      default:
 		        break;
@@ -165,6 +165,7 @@ public class YearView extends LinearLayout{
 		parent.removeView(button);
 		if(!classList.remove(button))
 			throw new Exception("Fail to remove button from classlist.");
+		
 	}
 	
 	public void addButton(ClassButton button, int index)
@@ -194,6 +195,17 @@ public class YearView extends LinearLayout{
 		horizontalLayout.addView(myButton,horizontalLayout.getChildCount()-2);
 		classList.add(myButton);
 		CourseModel.getInstance().addClassWithYearToEnd(s, year, semester);
+	}
+
+
+	public void printCoursesInStore()
+	{
+		System.out.println("List:");
+		ArrayList<Course> c = CourseModel.getInstance().getClassWithYear(year, semester);
+		for(Course a : c)
+		{
+			System.out.println(a.getTitle());
+		}
 	}
 }
 

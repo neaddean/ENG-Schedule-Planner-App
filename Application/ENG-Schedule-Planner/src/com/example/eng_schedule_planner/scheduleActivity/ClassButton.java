@@ -279,7 +279,7 @@ public class ClassButton extends RelativeLayout implements GestureDetector.OnDou
 		return false;
 	}
 
-
+	
 
 	
 }
