@@ -25,7 +25,7 @@ public class addCustomClassActivity extends Activity {
 		setContentView(R.layout.add_class);
 		
 		title = (TextView) findViewById(R.id.addClassLabel);
-		editText = (EditText) findViewById(R.id.editText1);
+		editText = (EditText) findViewById(R.id.editClassName);
 		addCustomButton = (Button) findViewById(R.id.addClassButton);
 		
 		addCustomButton.setOnClickListener(new OnClickListener() {

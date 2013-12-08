@@ -85,7 +85,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Ex: 327" >
+        android:hint="Ex: 4" >
     </EditText>
 
     <Button

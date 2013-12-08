@@ -2223,7 +2223,6 @@
     <credits>4</credits>
     <prereqs>CASPY351</prereqs>
   </course>
-</courses>
  <course name="Writing Seminar">
     <school>CAS</school>
     <dept>WR</dept>
@@ -2287,3 +2286,4 @@
     <credits>4</credits>
     <prereqs>ENGBE209 CASCH101 CASCH102</prereqs>
   </course>
+  </courses>
