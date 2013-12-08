@@ -28,8 +28,9 @@ public class aboutActivity  extends Activity{
 
 			@Override
 			public void onClick(View arg0) {
-				Intent goToMainMenuActivity = new Intent(arg0.getContext(), mainMenuActivity.class);
-				startActivity(goToMainMenuActivity);				
+				//Intent goToMainMenuActivity = new Intent(arg0.getContext(), mainMenuActivity.class);
+				//startActivity(goToMainMenuActivity);			
+				finish();
 			}
 		
 		

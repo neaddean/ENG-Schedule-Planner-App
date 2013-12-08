@@ -19,12 +19,18 @@ import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
 
 import org.apache.http.conn.BasicManagedEntity;
+import org.w3c.dom.Attr;
+import org.w3c.dom.DOMException;
 import org.w3c.dom.Document;
+import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.NodeList;
 import org.w3c.dom.Node;
 import org.w3c.dom.Element;
+import org.w3c.dom.TypeInfo;
+import org.w3c.dom.UserDataHandler;
 import org.xml.sax.InputSource;
 
 import java.io.FileNotFoundException;
@@ -34,6 +40,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.Reader; 
+import java.io.StringWriter;
 
 public class CourseModel implements ModelAccessor{
 	
@@ -671,7 +678,8 @@ public class CourseModel implements ModelAccessor{
 		 
 		 semesterLists = tempSemesters;
 		 //Tim : Added to change default stores
-		 semesterLists = this.CEDefault();
+		// semesterLists = this.BMEDefault();
+		 //System.out.println(getCourseByTitle("ENGEK127"));
 
 	}
 
@@ -735,16 +743,18 @@ public class CourseModel implements ModelAccessor{
 
 
 	public void saveState(String filename, Context context) {
-		 // try {
-//			DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
-//			DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
-//	 
-//			// semester elements
-//			Document doc = docBuilder.newDocument();
-//			Element semestersElement = doc.createElement("semesters");
-//			doc.appendChild(semestersElement);
-
+		  try {
+			  
+			FileOutputStream fos = context.getApplicationContext().openFileOutput(filename, 0);
+			  
+			DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
+			DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
 	 
+			// semester elements
+			Document doc = docBuilder.newDocument();
+			Element semestersElement = doc.createElement("semesters");
+			doc.appendChild(semestersElement);
+
 			 ArrayList <String> semesterLabels = new ArrayList<String>();
 			 semesterLabels.add("1f");
 			 semesterLabels.add("1s");
@@ -759,29 +769,48 @@ public class CourseModel implements ModelAccessor{
 			 semesterLabels.add("4s");
 			 semesterLabels.add("4u");
 
-			 String tempString = "";
+			 String tempString;
 			 for (String semString: semesterLabels) {
+				 tempString = new String("");
 				 for (Course c: semesterLists.get(semString)) {
-					 tempString += c.getTitle();
+					 if (c!= null)
+						 tempString = tempString + c.getTitle() + " ";
 				 }
-				// Element tempEl = doc.createElement(semString);
-			//	 tempEl.appendChild(doc.createTextNode(new String (tempString)));
+				 Element tempEl = doc.createElement(new StringBuffer(semString).reverse().toString());
+				 tempEl.appendChild(doc.createTextNode(tempString));
+				 semestersElement.appendChild(tempEl);
 			 }
 			 
 			
 			// write the content into xml file
-		//	TransformerFactory transformerFactory = TransformerFactory.newInstance();
-	//		Transformer transformer = transformerFactory.newTransformer();
-		//	DOMSource source = new DOMSource(doc);
+			TransformerFactory transformerFactory = TransformerFactory.newInstance();
+			Transformer transformer = transformerFactory.newTransformer();
+			DOMSource source = new DOMSource(doc);
+			StringWriter writer = new StringWriter();
 			
+			transformer.transform(source, new StreamResult(writer));
+			String output = writer.getBuffer().toString().replaceAll("\n|\r", "");
 			// Output to console for testing
 			// StreamResult result = new StreamResult(System.out);
-	 
-			//transformer.transform(source, result);
-	 
-			System.out.println("File saved!");
-	 
-		  } 
-
+			fos.write(output.getBytes());
+			fos.close();
+		//	System.out.println("File saved!");
+		  
+		  } catch (TransformerException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			System.out.println("transformer exception");
+		} catch (ParserConfigurationException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			System.out.println("parser exception");
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {} 
+	}
 }
 

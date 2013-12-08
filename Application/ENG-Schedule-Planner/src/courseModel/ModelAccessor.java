@@ -18,4 +18,6 @@ public interface ModelAccessor{
 
 	public int getIndexWithTitle(String s);
 	
+	public void saveState(String filename, Context context);
+	
 }
