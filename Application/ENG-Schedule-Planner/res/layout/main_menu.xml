@@ -7,7 +7,7 @@
     android:paddingLeft="0dp"
     android:paddingRight="0dp"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:id="@+id/main_layout"
+    android:id="@+id/main_menu"
     android:background="@drawable/background_texture"
     >
     
@@ -29,10 +29,10 @@
     
     <Button
         android:id="@+id/newplan_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="75dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         android:layout_below="@+id/main_menu_title"
         
         android:text="New Plan"
@@ -45,10 +45,10 @@
         
     <Button
         android:id="@+id/loadplan_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="75dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         android:layout_below="@+id/newplan_button"
         
         android:text="Load Plan"
@@ -60,19 +60,29 @@
         />
     
     <Button
-        android:id="@+id/settings_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/about_button"
+        android:layout_width="200dp"
+        android:layout_height="75dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         android:layout_below="@+id/loadplan_button"
         
-        android:text="Settings"
+        android:text="About"
         android:typeface="sans"
         android:textSize="30sp"
         android:textColor="#ff000000"
         android:shadowDx="2"
         android:shadowDy="2"
+        />
+    
+    <ImageView
+        android:id="@+id/splashicon"
+        android:layout_centerHorizontal="true"
+        android:layout_width="225dp"
+        android:layout_height="225dp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/about_button"
+        android:src="@drawable/splash_title_text"
         />
 
 

@@ -1,6 +1,7 @@
 package com.example.eng_schedule_planner.Splash;
 
 import com.example.eng_schedule_planner.R;
+import com.example.eng_schedule_planner.menus.mainMenuActivity;
 import com.example.eng_schedule_planner.scheduleActivity.ScheduleActivity;
 
 import courseModel.CourseModel;
@@ -14,11 +15,11 @@ import android.view.Menu;
 
 public class SplashActivity extends Activity {
 
-    private final int SPLASH_DISPLAY_LENGHT = 2000;
+    private final int SPLASH_DISPLAY_LENGHT = 3000;
 
     /** Called when the activity is first created. */
-    public void onCreate(Bundle savedInstanceStat) {
-        super.onCreate(savedInstanceStat);
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         
         
         setContentView(R.layout.splash_screen);
@@ -30,7 +31,10 @@ public class SplashActivity extends Activity {
           
             public void run() {
                 /* Create an Intent that will start the Menu-Activity. */
-                Intent mainIntent = new Intent(s,ScheduleActivity.class);
+                //Intent mainIntent = new Intent(s,ScheduleActivity.class);
+            	//Nate -- should take us to main menu first
+            	//can switch back to scheduleActivity by uncommenting above and commenting below
+            	Intent mainIntent = new Intent(s,mainMenuActivity.class);
                 s.startActivity(mainIntent);
                 s.finish();
             }

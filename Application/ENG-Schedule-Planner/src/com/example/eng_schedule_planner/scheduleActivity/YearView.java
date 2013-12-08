@@ -187,7 +187,7 @@ public class YearView extends LinearLayout{
 	
 	public void addNewClassWithCourse(Course s)
 	{
-		ClassButton myButton = new ClassButton(this.getContext(),ClassButton.STANDARD_BUTTON, s.getTitle());
+		ClassButton myButton = new ClassButton(this.getContext(),ClassButton.STANDARD_BUTTON, s.getTitleWithSpace());
 		horizontalLayout.addView(myButton,horizontalLayout.getChildCount()-2);
 		classList.add(myButton);
 	}

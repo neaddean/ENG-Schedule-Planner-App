@@ -35,8 +35,8 @@ public class ClassButton extends RelativeLayout implements GestureDetector.OnDou
 	 * @param context
 	 */
 	 
-	final static int WIDTH = 150;
-	final static int HEIGHT = 100;
+	final static int WIDTH = 160;
+	final static int HEIGHT = 120;
 	
 	final static int STANDARD_BUTTON = 0;
 	final static int ADD_BUTTON = 1;
