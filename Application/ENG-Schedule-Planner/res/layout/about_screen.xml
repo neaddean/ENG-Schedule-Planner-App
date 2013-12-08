@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="0dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:id="@+id/about_screen"
+    android:background="@drawable/background_texture"
+    >
+    
+    <TextView
+        android:id="@+id/about_screen_title"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:singleLine="false"
+        android:text="About Engineer Your Degree"
+        android:gravity="center"
+        android:typeface="sans"
+        android:textSize="30sp"
+        android:textColor="#ff000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowColor="#ff000000"
+        android:shadowRadius="10"
+        />
+    
+    <TextView
+        android:id="@+id/about_text"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/about_screen_title"
+        
+        android:text="Use this app to plan your four years of study.  Simply start a new plan based on your major to begin.  Tap a class to delete it or mark it as completed.  Add new classes with the button to the right in each semester.  Hold and drag courses to move them between semesters."
+        android:typeface="sans"
+        android:textSize="20sp"
+        android:textColor="#ff000000"
+        />
+    
+    <TextView
+        android:id="@+id/suntand_productions_text"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/about_text"
+        
+        android:text="Best of luck from sunTAND productions. Copyright 2013."
+        android:typeface="sans"
+        android:textSize="20sp"
+        android:textColor="#ff000000"
+        />
+        
+
+    
+    <Button
+        android:id="@+id/back_button"
+        android:layout_centerHorizontal="true"
+        android:layout_width="200dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/suntand_productions_text"
+        android:text="Main Menu"
+        android:textSize="30sp"
+        />
+
+
+</RelativeLayout>

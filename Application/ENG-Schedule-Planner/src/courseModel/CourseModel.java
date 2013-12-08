@@ -700,7 +700,7 @@ public class CourseModel implements ModelAccessor{
 	public int getIndexWithTitle(String s) {
 		return courseTitleList.indexOf(s);
 	}
-
+/*
 	public void saveState(String filename) {
 		FileOutputStream fos = openFileOutput(filename, Context.MODE_PRIVATE);
 		
@@ -791,7 +791,7 @@ public class CourseModel implements ModelAccessor{
 			tfe.printStackTrace();
 		
 		
-	}
+	}*/
 	
 	
 	
