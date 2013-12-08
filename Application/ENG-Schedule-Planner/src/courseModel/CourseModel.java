@@ -636,7 +636,7 @@ public class CourseModel implements ModelAccessor{
 	    e.printStackTrace();
 	    }
 		
-		 HashMap <String, ArrayList<Course>> tempSemesters = new HashMap<String, ArrayList<Course>> ();
+		 /*HashMap <String, ArrayList<Course>> tempSemesters = new HashMap<String, ArrayList<Course>> ();
 		 
 		 ArrayList <String> semesterLabels = new ArrayList<String>();
 		 semesterLabels.add("1f");
@@ -670,9 +670,9 @@ public class CourseModel implements ModelAccessor{
 		 
 		 semesterLists = tempSemesters;
 		 //Tim : Added to change default stores
-		 semesterLists = this.BMEDefault();
-		 //System.out.println(getCourseByTitle("ENGEK127"));
-
+		 //semesterLists = this.BMEDefault();
+		 //System.out.println(getCourseByTitle("ENGEK127"));*/
+		semesterLists = new HashMap<String, ArrayList<Course>> ();
 	}
 
 	public ArrayList<Course> getClassWithYear(int year, char semester) {

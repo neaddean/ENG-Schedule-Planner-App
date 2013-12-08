@@ -139,6 +139,7 @@ public class YearView extends LinearLayout{
 		        currentView.addButton((ClassButton) view,index);
 		        view.setVisibility(View.VISIBLE);
 		        view.animate().scaleX(1).alpha(1);
+		        YearView.this.printCoursesInStore();
 		        break;
 		      case DragEvent.ACTION_DRAG_ENDED:
 		    	 
