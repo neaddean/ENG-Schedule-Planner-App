@@ -178,9 +178,9 @@ public class CourseModel implements ModelAccessor{
 		ArrayList<Course> u2List = new ArrayList<Course>();
 		tempSemesters.put("2u", u2List);
 		ArrayList<Course> u3List = new ArrayList<Course>();
-		tempSemesters.put("u3", u3List);
+		tempSemesters.put("3u", u3List);
 		ArrayList<Course> u4List = new ArrayList<Course>();
-		tempSemesters.put("u4", u4List);
+		tempSemesters.put("4u", u4List);
 		
 		/*Technical Elective Defined as:
 		Any ENGEC Classes
@@ -316,9 +316,9 @@ public class CourseModel implements ModelAccessor{
 		ArrayList<Course> u2List = new ArrayList<Course>();
 		tempSemesters.put("2u", u2List);
 		ArrayList<Course> u3List = new ArrayList<Course>();
-		tempSemesters.put("u3", u3List);
+		tempSemesters.put("3u", u3List);
 		ArrayList<Course> u4List = new ArrayList<Course>();
-		tempSemesters.put("u4", u4List);
+		tempSemesters.put("4u", u4List);
 		
 		return tempSemesters;
 	}
@@ -413,9 +413,9 @@ public class CourseModel implements ModelAccessor{
 		ArrayList<Course> u2List = new ArrayList<Course>();
 		tempSemesters.put("2u", u2List);
 		ArrayList<Course> u3List = new ArrayList<Course>();
-		tempSemesters.put("u3", u3List);
+		tempSemesters.put("3u", u3List);
 		ArrayList<Course> u4List = new ArrayList<Course>();
-		tempSemesters.put("u4", u4List);
+		tempSemesters.put("4u", u4List);
 		
 		/*
 		Professional Electives Defined as:
@@ -672,7 +672,7 @@ public class CourseModel implements ModelAccessor{
 	    e.printStackTrace();
 	    }
 		
-		 /*HashMap <String, ArrayList<Course>> tempSemesters = new HashMap<String, ArrayList<Course>> ();
+		 HashMap <String, ArrayList<Course>> tempSemesters = new HashMap<String, ArrayList<Course>> ();
 		 
 		 ArrayList <String> semesterLabels = new ArrayList<String>();
 		 semesterLabels.add("1f");
@@ -706,10 +706,10 @@ public class CourseModel implements ModelAccessor{
 		 
 		 semesterLists = tempSemesters;
 		 //Tim : Added to change default stores
+		 semesterLists = this.BMEDefault();
+		 //System.out.println(getCourseByTitle("ENGEK127"));
+		//semesterLists = new HashMap<String, ArrayList<Course>> ();
 
-		 //semesterLists = this.BMEDefault();
-		 //System.out.println(getCourseByTitle("ENGEK127"));*/
-		semesterLists = new HashMap<String, ArrayList<Course>> ();
 	}
 
 	public ArrayList<Course> getClassWithYear(int year, char semester) {
@@ -800,6 +800,7 @@ public class CourseModel implements ModelAccessor{
 			 String tempString;
 			 for (String semString: semesterLabels) {
 				 tempString = new String("");
+				 System.out.println(semString);
 				 for (Course c: semesterLists.get(semString)) {
 					 if (c!= null)
 						 tempString = tempString + c.getTitle() + " ";
