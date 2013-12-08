@@ -35,8 +35,8 @@ public class ClassButton extends RelativeLayout implements GestureDetector.OnDou
 	 * @param context
 	 */
 	 
-	final static int WIDTH = 150;
-	final static int HEIGHT = 100;
+	final static int WIDTH = 160;
+	final static int HEIGHT = 120;
 	
 	final static int STANDARD_BUTTON = 0;
 	final static int ADD_BUTTON = 1;
@@ -99,7 +99,10 @@ public class ClassButton extends RelativeLayout implements GestureDetector.OnDou
 		setUpButtonListener(context, identifier);
 		
 		int randomnumber = rnd.nextInt(buttonPictures.length);
-		button.setBackgroundResource(buttonPictures[randomnumber]);
+		if(buttonType == STANDARD_BUTTON)
+			button.setBackgroundResource(buttonPictures[randomnumber]);
+		else
+			button.setBackgroundResource(R.drawable.generic_class);
 		//Set check mark
 		check = new ImageView(context);
 		check.setImageResource(R.drawable.checkmark);

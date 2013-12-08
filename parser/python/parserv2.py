@@ -21,8 +21,8 @@ url_list = ["http://www.bu.edu/academics/eng/courses/electrical-computer-enginee
             "http://www.bu.edu/academics/eng/courses/mechanical-engineering/0/",
             "http://www.bu.edu/academics/eng/courses/biomedical-engineering/0/",
             "http://www.bu.edu/academics/eng/courses/engineering-core/0/",
-            #"http://www.bu.edu/academics/cas/courses/mathematics-statistics/0",
-            #"http://www.bu.edu/academics/cas/courses/0"
+            "http://www.bu.edu/academics/cas/courses/mathematics-statistics/0",
+            "http://www.bu.edu/academics/cas/courses/physics/0/"
             ]
 
 delta = {}

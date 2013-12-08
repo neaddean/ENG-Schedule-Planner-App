@@ -43,5 +43,11 @@ public class Course {
 	String getFullTitle() {
 		return school + " " + dept + cid + ": " + name;
 	}
+	
+	public String getTitleWithSpace()
+	{
+		return school+"\n"+dept+cid;
+	
+	}
 
 }
