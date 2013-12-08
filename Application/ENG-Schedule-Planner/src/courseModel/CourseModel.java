@@ -590,7 +590,7 @@ public class CourseModel implements ModelAccessor{
 				tempCourse.dept = eElement.getElementsByTagName("dept").item(0).getTextContent();
 				tempCourse.cid = eElement.getElementsByTagName("cid").item(0).getTextContent();
 				tempCourse.description = eElement.getElementsByTagName("description").item(0).getTextContent();
-				tempCourse.cid = eElement.getElementsByTagName("link").item(0).getTextContent();
+				//tempCourse.cid = eElement.getElementsByTagName("link").item(0).getTextContent();
 				String prereqs = eElement.getElementsByTagName("prereqs").item(0).getTextContent();
 				ArrayList<String> prereqlist = new ArrayList<String>(Arrays.asList(prereqs.split(",")));
 				tempCourse.prereqs = prereqlist;
@@ -701,7 +701,7 @@ public class CourseModel implements ModelAccessor{
 		return courseTitleList.indexOf(s);
 	}
 
-	public void saveState(String filename) {
+	/*public void saveState(String filename) {
 		FileOutputStream fos = openFileOutput(filename, Context.MODE_PRIVATE);
 		
 		  try {
@@ -792,7 +792,8 @@ public class CourseModel implements ModelAccessor{
 		
 		
 	}
-	
+	}
+	*/
 	
 	
 }

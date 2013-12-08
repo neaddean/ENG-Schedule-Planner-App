@@ -40,7 +40,7 @@ public class addClassActivity extends Activity {
     ArrayAdapter<String> adapter;
     // Search EditText
     EditText inputSearch;
-
+    ArrayList<String> titleList;
 	
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -49,7 +49,7 @@ public class addClassActivity extends Activity {
 		addCustomButton = (Button) findViewById(R.id.customClassButton);
 		// Listview Data
         
-        ArrayList<String> titleList = CourseModel.getInstance().getCourseTitleList();
+        titleList = CourseModel.getInstance().getCourseTitleList();
         title = (TextView) findViewById(R.id.addClassText);
         lv = (ListView) findViewById(R.id.list_view);
         inputSearch = (EditText) findViewById(R.id.inputSearch);
@@ -78,7 +78,21 @@ public class addClassActivity extends Activity {
 		    @Override
 		    public void onTextChanged(CharSequence cs, int arg1, int arg2, int arg3) {
 		        // When user changed the Text
-		        addClassActivity.this.adapter.getFilter().filter(cs);   
+		        //addClassActivity.this.adapter.getFilter().filter(cs);   
+		    	 if (!cs.toString().toLowerCase().equals("")) {
+		              ArrayList<String> filteredTitles = new ArrayList<String>();
+		              for (int i=0; i<titleList.size(); i++) {
+		                   if (titleList.get(i).toString().toLowerCase().contains(cs)) {
+		                       filteredTitles.add(titleList.get(i));                   
+		                   }            
+		              }
+		              adapter = new ArrayAdapter<String>(addClassActivity.this, R.layout.addsearchableclass_item, R.id.product_name, filteredTitles);
+		              lv.setAdapter(adapter);
+		         }
+		         else {
+		        	 adapter = new ArrayAdapter<String>(addClassActivity.this, R.layout.addsearchableclass_item, R.id.product_name, titleList);
+		              lv.setAdapter(adapter);             
+		         }
 		    }
 		     
 		    @Override
