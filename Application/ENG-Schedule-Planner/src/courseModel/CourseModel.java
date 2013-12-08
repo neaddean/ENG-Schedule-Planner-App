@@ -799,7 +799,6 @@ public class CourseModel implements ModelAccessor{
 			 String tempString;
 			 for (String semString: semesterLabels) {
 				 tempString = new String("");
-				 System.out.println(semString);
 				 for (Course c: semesterLists.get(semString)) {
 					 if (c!= null)
 						 tempString = tempString + c.getTitle() + " ";
