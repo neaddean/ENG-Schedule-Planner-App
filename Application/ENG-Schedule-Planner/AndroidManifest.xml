@@ -22,7 +22,8 @@
             android:name="com.example.eng_schedule_planner.addClassActivity.addClassActivity">
         </activity>
         <activity
-            android:name="com.example.eng_schedule_planner.menus.mainMenuActivity">
+            android:name="com.example.eng_schedule_planner.menus.mainMenuActivity"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name="com.example.eng_schedule_planner.addClassActivity.addCustomClassActivity">
