@@ -4,14 +4,20 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.concurrent.Semaphore;
 
 import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
 
 import android.content.Context;
 import courseModel.Course;
 
 import javax.xml.parsers.DocumentBuilder;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
 
 import org.apache.http.conn.BasicManagedEntity;
 import org.w3c.dom.Document;
@@ -20,6 +26,7 @@ import org.w3c.dom.Node;
 import org.w3c.dom.Element;
 import org.xml.sax.InputSource;
 
+import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader; 
@@ -695,6 +702,94 @@ public class CourseModel implements ModelAccessor{
 	}
 
 	public void saveState(String filename) {
+		FileOutputStream fos = openFileOutput(filename, Context.MODE_PRIVATE);
+		
+		  try {
+	 
+			DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
+			DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
+	 
+			// semester elements
+			Document doc = docBuilder.newDocument();
+			Element semestersElement = doc.createElement("semesters");
+			doc.appendChild(semestersElement);
+	 
+			String tempString = new String("");
+			for(Course c: semesterLists.get("1f")) {
+				tempString += c.getTitle();
+			}			
+			Element f1 = doc.createElement("1f");
+			f1.appendChild(doc.createTextNode(new String(tempString)));
+			
+			 ArrayList <String> semesterLabels = new ArrayList<String>();
+			 semesterLabels.add("1f");
+			 semesterLabels.add("1s");
+			 semesterLabels.add("1u");
+			 semesterLabels.add("2f");
+			 semesterLabels.add("2s");
+			 semesterLabels.add("2u");
+			 semesterLabels.add("3f");
+			 semesterLabels.add("3s");
+			 semesterLabels.add("3u");
+			 semesterLabels.add("4f");
+			 semesterLabels.add("4s");
+			 semesterLabels.add("4u");
+
+			 String tempString = "";
+			 for (String semString: semesterLabels) {
+				 for (Course c: semesterLists.get(semString)) {
+					 tempString += c.getTitle();
+				 }
+				 Element tempEl = doc.createElement(semString);
+				 tempEl.appendChild(doc.createTextNode(new String (tempString));
+			 }
+			 
+			
+			// set attribute to staff element
+			Attr attr = doc.createAttribute("id");
+			attr.setValue("1");
+			staff.setAttributeNode(attr);
+	 
+			// shorten way
+			// staff.setAttribute("id", "1");
+	 
+			// firstname elements
+			Element firstname = doc.createElement("firstname");
+			firstname.appendChild(doc.createTextNode("yong"));
+			staff.appendChild(firstname);
+	 
+			// lastname elements
+			Element lastname = doc.createElement("lastname");
+			lastname.appendChild(doc.createTextNode("mook kim"));
+			staff.appendChild(lastname);
+	 
+			// nickname elements
+			Element nickname = doc.createElement("nickname");
+			nickname.appendChild(doc.createTextNode("mkyong"));
+			staff.appendChild(nickname);
+	 
+			// salary elements
+			Element salary = doc.createElement("salary");
+			salary.appendChild(doc.createTextNode("100000"));
+			staff.appendChild(salary);
+	 
+			// write the content into xml file
+			TransformerFactory transformerFactory = TransformerFactory.newInstance();
+			Transformer transformer = transformerFactory.newTransformer();
+			DOMSource source = new DOMSource(doc);
+			
+			// Output to console for testing
+			// StreamResult result = new StreamResult(System.out);
+	 
+			transformer.transform(source, result);
+	 
+			System.out.println("File saved!");
+	 
+		  } catch (ParserConfigurationException pce) {
+			pce.printStackTrace();
+		  } catch (TransformerException tfe) {
+			tfe.printStackTrace();
+		
 		
 	}
 	
