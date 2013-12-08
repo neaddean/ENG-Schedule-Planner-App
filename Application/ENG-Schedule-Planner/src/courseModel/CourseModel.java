@@ -25,6 +25,7 @@ import org.w3c.dom.Element;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -33,6 +34,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader; 
+import java.io.StringReader;
 import java.io.StringWriter;
 
 public class CourseModel implements ModelAccessor{
@@ -568,9 +570,9 @@ public class CourseModel implements ModelAccessor{
 		ArrayList<Course> u2List = new ArrayList<Course>();
 		tempSemesters.put("2u", u2List);
 		ArrayList<Course> u3List = new ArrayList<Course>();
-		tempSemesters.put("u3", u3List);
+		tempSemesters.put("3u", u3List);
 		ArrayList<Course> u4List = new ArrayList<Course>();
-		tempSemesters.put("u4", u4List);
+		tempSemesters.put("3u", u4List);
 		
 		/* Advanced Elective Defined as:
 		  	All ENG courses 300 level or above, (without overlap)
@@ -845,12 +847,21 @@ public class CourseModel implements ModelAccessor{
 	public void loadState(String filename, Context context) {
 		try {
 			FileInputStream fis = context.getApplicationContext().openFileInput(filename);
-			File fXmlFile = new File(fis.toString());
-			InputStream inputStream= new FileInputStream(fXmlFile);
-			
+			 InputStreamReader inputStreamReader = new InputStreamReader(fis);
+			 BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+			 StringBuilder sb = new StringBuilder();
+			 String line;
+			 while ((line = bufferedReader.readLine()) != null) {
+			     sb.append(line);
+			 }
+			//InputStream inputStream= new FileInputStream(fXmlFile);
+			System.out.println("dean" + sb.toString());
 			DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 			DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-			Document doc = dBuilder.parse(fXmlFile);
+			
+			InputSource is = new InputSource(new StringReader(sb.toString()));
+			
+			Document doc = dBuilder.parse(is);
 		 
 			//optional, but recommended
 			//read this - http://stackoverflow.com/questions/13786607/normalization-in-dom-parsing-with-java-how-does-it-work
