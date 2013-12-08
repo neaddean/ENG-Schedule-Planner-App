@@ -79,10 +79,10 @@ public class addClassActivity extends Activity {
 		    public void onTextChanged(CharSequence cs, int arg1, int arg2, int arg3) {
 		        // When user changed the Text
 		        //addClassActivity.this.adapter.getFilter().filter(cs);   
-		    	 if (!cs.toString().toLowerCase().equals("")) {
+		    	 if (!cs.toString().replace(" ", "").toLowerCase().equals("")) {
 		              ArrayList<String> filteredTitles = new ArrayList<String>();
 		              for (int i=0; i<titleList.size(); i++) {
-		                   if (titleList.get(i).toString().toLowerCase().contains(cs)) {
+		                   if (titleList.get(i).toString().replace(" ", "").toLowerCase().contains(cs)) {
 		                       filteredTitles.add(titleList.get(i));                   
 		                   }            
 		              }
