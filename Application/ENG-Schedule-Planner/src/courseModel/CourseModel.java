@@ -707,9 +707,9 @@ public class CourseModel implements ModelAccessor{
 		 
 		 semesterLists = tempSemesters;
 		 //Tim : Added to change default stores
-		 semesterLists = this.BMEDefault();
+		 //semesterLists = this.BMEDefault();
 		 //System.out.println(getCourseByTitle("ENGEK127"));
-		//semesterLists = new HashMap<String, ArrayList<Course>> ();
+		semesterLists = new HashMap<String, ArrayList<Course>> ();
 
 	}
 
@@ -801,7 +801,6 @@ public class CourseModel implements ModelAccessor{
 			 String tempString;
 			 for (String semString: semesterLabels) {
 				 tempString = new String("");
-				 System.out.println(semString);
 				 for (Course c: semesterLists.get(semString)) {
 					 if (c!= null)
 						 tempString = tempString + c.getTitle() + " ";
@@ -910,10 +909,10 @@ public class CourseModel implements ModelAccessor{
 					
 					ArrayList<Course> tempSemCourseList = new ArrayList<Course>();
 					for (String courseTitle: tempSemCourses) {
+						System.out.println(courseTitle);
 						tempSemCourseList.add(getCourseByTitle(courseTitle));
 					}
 					semesterLists.put(new StringBuffer(eElement.getNodeName()).reverse().toString(), new ArrayList<Course>(tempSemCourseList)); 
-					
 				}
 			}
 			

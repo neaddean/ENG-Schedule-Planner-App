@@ -200,6 +200,7 @@ public class YearView extends LinearLayout{
 
 	public void printCoursesInStore()
 	{
+		System.out.println("List:");
 		ArrayList<Course> c = CourseModel.getInstance().getClassWithYear(year, semester);
 		for(Course a : c)
 		{
