@@ -94,6 +94,13 @@ public class Course {
 			return CATEGORY_DEFAULT;
 		}
 	}
+	public String getDescription()
+	{
+		return description;
+	}
+	public ArrayList<String> getPrereqs(){
+		return prereqs;
+	}
 		
 }
 

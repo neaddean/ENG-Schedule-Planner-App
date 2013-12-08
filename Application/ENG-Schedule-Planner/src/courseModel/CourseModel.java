@@ -913,8 +913,8 @@ public class CourseModel implements ModelAccessor{
 				if (sNode.getNodeType() == Node.ELEMENT_NODE) {
 					 
 					Element eElement = (Element) sNode;
-					
-					String semCourseList = eElement.getElementsByTagName(eElement.getNodeName()).item(0).getTextContent();
+					String semCourseList = eElement.getTextContent();
+					//String semCourseList = eElement.getElementsByTagName(eElement.getNodeName()).item(0).getTextContent();
 					tempSemCourses = new ArrayList<String>(Arrays.asList(semCourseList.split(".")));
 					
 					ArrayList<Course> tempSemCourseList = new ArrayList<Course>();

@@ -102,4 +102,5 @@
 	        android:text="Add" />
 	
 	</LinearLayout>
+    android:layout_height="wrap_content"
 </ScrollView>

@@ -6,6 +6,7 @@ import java.util.Random;
 import com.example.eng_schedule_planner.R;
 import com.example.eng_schedule_planner.Global.Global;
 import com.example.eng_schedule_planner.addClassActivity.addClassActivity;
+import com.example.eng_schedule_planner.menus.descriptionActivity;
 
 import courseModel.Course;
 
@@ -211,7 +212,7 @@ public class ClassButton extends RelativeLayout implements GestureDetector.OnDou
 		if(buttonType == STANDARD_BUTTON)
 		{
 			String completeStr =(isCompleted == COMPLETED)? "Mark as not Completed" : "Mark as Completed";
-			CharSequence colors[] = new CharSequence[] {completeStr, "View Syllabus", "Check for Prerequisites", "Delete"};
+			CharSequence colors[] = new CharSequence[] {completeStr, "View Description", "Delete"};
 			if(alertDialog == null)
 			{
 				final ClassButton buttonPtr = this;
@@ -228,7 +229,15 @@ public class ClassButton extends RelativeLayout implements GestureDetector.OnDou
 				    	   Toast.makeText(buttonPtr.getContext(), "Tip: Double Click Button to Mark Complete", Toast.LENGTH_SHORT).show();
 				    	   break;
 				       }
-				       case 3:{
+				       case 1:{
+				    	   //go to description activity, also shows prereqs
+				    	   Global.courseDescriptionTitle = myCourse.getFullTitle();
+				    	   Global.courseDescriptionText = myCourse.getDescription();
+				    	   Global.courseDescriptionPrereqs = myCourse.getPrereqs();
+				    	   Intent goToDescriptionActivity = new Intent(buttonPtr.getContext(), descriptionActivity.class);
+				    	   buttonPtr.getContext().startActivity(goToDescriptionActivity);
+				       }
+				       case 2:{
 				    	   YearView yearPtr = (YearView) buttonPtr.getParent().getParent().getParent();
 				    	   try {
 							yearPtr.removeButton(buttonPtr);

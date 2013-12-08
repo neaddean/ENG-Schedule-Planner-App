@@ -31,6 +31,9 @@
         <activity
             android:name="com.example.eng_schedule_planner.menus.aboutActivity">
         </activity>
+        <activity
+            android:name="com.example.eng_schedule_planner.menus.descriptionActivity">
+        </activity>
         
         <activity
             android:name="com.example.eng_schedule_planner.Splash.SplashActivity">
