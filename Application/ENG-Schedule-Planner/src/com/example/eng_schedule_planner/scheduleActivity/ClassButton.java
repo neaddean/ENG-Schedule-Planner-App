@@ -7,6 +7,8 @@ import com.example.eng_schedule_planner.R;
 import com.example.eng_schedule_planner.Global.Global;
 import com.example.eng_schedule_planner.addClassActivity.addClassActivity;
 
+import courseModel.Course;
+
 import android.app.ActivityOptions;
 import android.app.AlertDialog;
 import android.content.ClipData;
@@ -71,37 +73,46 @@ public class ClassButton extends RelativeLayout implements GestureDetector.OnDou
 	int buttonType; 
 	GestureDetectorCompat myDetector;
 	AlertDialog.Builder alertDialog;
+	Course myCourse;
 	
- 	public ClassButton(final Context context, int identifier, final String title) {
+ 	public ClassButton(final Context context, int identifier, Course myCourse) {
 		super(context);
+		
+		//Set up variables
+		buttonType = identifier;
+		this.myCourse = myCourse;
+		
 		
 		this.setLayoutParams(new LayoutParams(WIDTH,HEIGHT));
 		
+		//Detector Listeners
 		myDetector = new GestureDetectorCompat(context, this);
 		myDetector.setOnDoubleTapListener(this);
 		
+		
+		//Set up button
 		button = new Button(context);
 		button.setLayoutParams(new LayoutParams(WIDTH,HEIGHT));
 		button.setTextSize(15);
-		button.setText(title);		
+		if(buttonType == STANDARD_BUTTON)
+			button.setText(myCourse.getTitleWithSpace());
+		else if(buttonType == ADD_BUTTON)
+			button.setText("Add");
 		Random rnd = new Random(); 
 		int color = Color.argb(255, rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256));   
 		button.getBackground().setColorFilter(color,PorterDuff.Mode.MULTIPLY);
 		button.setOnTouchListener(new OnTouchListener() {
-			@Override
 			public boolean onTouch(View v, MotionEvent event) {
 				return myDetector.onTouchEvent(event);
 			}
 		});
 		this.addView(button);
-		
-		buttonType = identifier;
-		setUpButtonListener(context, identifier);
+	
 		
 		int randomnumber = rnd.nextInt(buttonPictures.length);
 		if(buttonType == STANDARD_BUTTON)
 			button.setBackgroundResource(buttonPictures[randomnumber]);
-		else
+		else if(buttonType == ADD_BUTTON)
 			button.setBackgroundResource(R.drawable.generic_class);
 		//Set check mark
 		check = new ImageView(context);
@@ -117,17 +128,6 @@ public class ClassButton extends RelativeLayout implements GestureDetector.OnDou
  	}
 	
  	
- 	
-	private void setUpButtonListener(final Context context, int identifier)
-	{
-		if(identifier == STANDARD_BUTTON)
-		{
-			
-		}else if(identifier == ADD_BUTTON)
-		{		
-			button.setText("Add");	
-		}
-	}
 	
 	public void toggleCompleted()
 	{
@@ -163,7 +163,7 @@ public class ClassButton extends RelativeLayout implements GestureDetector.OnDou
 
 	public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX,
 			float velocityY) {
-		// TODO Auto-generated method stub
+		
 		return false;
 	}
 
@@ -172,7 +172,6 @@ public class ClassButton extends RelativeLayout implements GestureDetector.OnDou
 		{
 			final Button b = this.button;
 			this.animate().alpha(0).scaleX(0).withEndAction(new Runnable() {
-				
 				public void run() {
 					ClipData data = ClipData.newPlainText("", "");
 					DragShadowBuilder shadowBuilder = new View.DragShadowBuilder(b);

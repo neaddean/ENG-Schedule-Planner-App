@@ -660,17 +660,24 @@ public class CourseModel implements ModelAccessor{
 	return semesterLists.get(semesterChoice.toString());
 }
 
-	public void addClassWithYear(Course course, int year, char semester, int position) {
+	public void addClassWithYearToEnd(Course course, int year, char semester) {
 		char yearChar = Character.forDigit(year, 10); 
 		StringBuilder semesterChoice = new StringBuilder(2).append(yearChar).append(semester);
 		semesterLists.get(semesterChoice.toString()).add(new Course(course));
+	}
+	
+	public void addClassWithYear(Course course, int year, char semester, int position) {
+		char yearChar = Character.forDigit(year, 10); 
+		StringBuilder semesterChoice = new StringBuilder(2).append(yearChar).append(semester);
+		semesterLists.get(semesterChoice.toString()).add(position,new Course(course));
+		
 	}
 	
 	public Course removeClassWithYear(Course c, int year, char semester) {
 		char yearChar = Character.forDigit(year, 10); 
 		StringBuilder semesterChoice = new StringBuilder(2).append(yearChar).append(semester);
 		for (Course remc: semesterLists.get(semesterChoice.toString())) {
-			if (c.getTitle() == remc.getTitle()) {
+			if (c.getTitle().equals(remc.getTitle())) {
 				semesterLists.get(semesterChoice.toString()).remove(remc);
 				return c;
 			}

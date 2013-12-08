@@ -87,13 +87,13 @@ public class YearView extends LinearLayout{
 		for(int j = 0; j <cs.size(); j++)
 		{
 			if(cs.get(j) != null)
-			{ClassButton myButton = new ClassButton(context,ClassButton.STANDARD_BUTTON, cs.get(j).getTitle());
+			{ClassButton myButton = new ClassButton(context,ClassButton.STANDARD_BUTTON, cs.get(j));
 			horizontalLayout.addView(myButton);
 			classList.add(myButton);}
 		}
 		
 	
-		ClassButton addButton = new ClassButton(context, ClassButton.ADD_BUTTON, "Add");
+		ClassButton addButton = new ClassButton(context, ClassButton.ADD_BUTTON, null);;
 		horizontalLayout.addView(addButton);
 		
 		this.addView(horizontalScroll);
@@ -175,21 +175,25 @@ public class YearView extends LinearLayout{
 		//System.out.println(index);
 		horizontalLayout.addView(button,index+1);
 		classList.add(index, button);
+		
 		//System.out.println(classList);
 	}
 
 	public void addNewClassWithName(String s)
 	{
-		ClassButton myButton = new ClassButton(this.getContext(),ClassButton.STANDARD_BUTTON, s);
-		horizontalLayout.addView(myButton,horizontalLayout.getChildCount()-2);
-		classList.add(myButton);
+		//ClassButton myButton = new ClassButton(this.getContext(),ClassButton.STANDARD_BUTTON, s);
+		//horizontalLayout.addView(myButton,horizontalLayout.getChildCount()-2);
+		//classList.add(myButton);
+		System.out.println("NEED TO ADD CLASS WITH STRING");
+		//NEED ADD THAT LATER
 	}
 	
 	public void addNewClassWithCourse(Course s)
 	{
-		ClassButton myButton = new ClassButton(this.getContext(),ClassButton.STANDARD_BUTTON, s.getTitleWithSpace());
+		ClassButton myButton = new ClassButton(this.getContext(),ClassButton.STANDARD_BUTTON, s);
 		horizontalLayout.addView(myButton,horizontalLayout.getChildCount()-2);
 		classList.add(myButton);
+		CourseModel.getInstance().addClassWithYearToEnd(s, year, semester);
 	}
 }
 
