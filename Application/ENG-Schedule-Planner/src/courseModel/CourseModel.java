@@ -193,7 +193,7 @@ public class CourseModel implements ModelAccessor{
 			CASCS460: Database Systems 
 			CASCS350: Fundamentals of Computer Systems
 			CASCS480: Computer Graphics
-		 */
+		 */  
 		return tempSemesters;
 	}
 
@@ -583,10 +583,11 @@ public class CourseModel implements ModelAccessor{
 				tempCourse.dept = eElement.getElementsByTagName("dept").item(0).getTextContent();
 				tempCourse.cid = eElement.getElementsByTagName("cid").item(0).getTextContent();
 				tempCourse.description = eElement.getElementsByTagName("description").item(0).getTextContent();
-				//tempCourse.cid = eElement.getElementsByTagName("link").item(0).getTextContent();
+				tempCourse.cid = eElement.getElementsByTagName("link").item(0).getTextContent();
 				String prereqs = eElement.getElementsByTagName("prereqs").item(0).getTextContent();
 				ArrayList<String> prereqlist = new ArrayList<String>(Arrays.asList(prereqs.split(",")));
 				tempCourse.prereqs = prereqlist;
+				tempCourse.credits = eElement.getElementsByTagName("credits").item(0).getTextContent();
 
 				
 				tempCourseList.add(tempCourse);
@@ -632,7 +633,7 @@ public class CourseModel implements ModelAccessor{
 				 tempList.add(courseList.get(i));
 				 i++;
 			 }
-			 tempSemesters.put(mystr, tempList);
+			 tempSemesters.put(mystr, new ArrayList<Course>(tempList));
 		 }
 		 
 		 semesterLists = tempSemesters;
@@ -667,9 +668,9 @@ public class CourseModel implements ModelAccessor{
 	}
 	
 	public Course addCourse(String name, String school, String dept, String cid,
-			String description, ArrayList<String> prereqs) {
+			String description, ArrayList<String> prereqs, String credits) {
 		Course c = new Course(name, school, dept, cid,
-				description, prereqs);
+				description, prereqs, credits);
 		courseList.add(c);
 		return c;
 	}
@@ -692,6 +693,12 @@ public class CourseModel implements ModelAccessor{
 	public int getIndexWithTitle(String s) {
 		return courseTitleList.indexOf(s);
 	}
+
+	public void saveState(String filename) {
+		
+	}
+	
+	
 	
 }
 
