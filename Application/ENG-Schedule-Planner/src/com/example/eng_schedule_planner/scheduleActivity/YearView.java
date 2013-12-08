@@ -165,7 +165,7 @@ public class YearView extends LinearLayout{
 		parent.removeView(button);
 		if(!classList.remove(button))
 			throw new Exception("Fail to remove button from classlist.");
-		
+		CourseModel.getInstance().removeClassWithYear(button.myCourse, year, semester);
 	}
 	
 	public void addButton(ClassButton button, int index)
@@ -176,8 +176,7 @@ public class YearView extends LinearLayout{
 		//System.out.println(index);
 		horizontalLayout.addView(button,index+1);
 		classList.add(index, button);
-		
-		//System.out.println(classList);
+		CourseModel.getInstance().addClassWithYear(button.myCourse, year, semester, index);
 	}
 
 	public void addNewClassWithName(String s)
@@ -206,6 +205,11 @@ public class YearView extends LinearLayout{
 		{
 			System.out.println(a.getTitle());
 		}
+		System.out.println("ButtonList:");
+		for(ClassButton q : classList){
+			System.out.println(q.myCourse.getTitle());
+		}
+		
 	}
 }
 
