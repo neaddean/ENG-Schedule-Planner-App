@@ -29,6 +29,7 @@ public class mainMenuActivity extends Activity {
 			setContentView(R.layout.main_menu);
 			aboutButton = (Button) findViewById(R.id.about_button);
 			newPlanButton = (Button) findViewById(R.id.newplan_button);
+			loadPlanButton = (Button) findViewById(R.id.loadplan_button);
 			
 			aboutButton.setOnClickListener(new OnClickListener() {
 				@Override
@@ -47,16 +48,14 @@ public class mainMenuActivity extends Activity {
 				}
 			});
 			
-			/*
 			loadPlanButton.setOnClickListener(new OnClickListener() {
 				@Override
 				public void onClick(View arg0){
-					//load previous plan
+					//TODO: load previous plan
 					Intent goToScheduleActivity = new Intent(arg0.getContext(), ScheduleActivity.class);
 					startActivity(goToScheduleActivity);
 				}
 			});
-			*/
 		}
 		
 		public void clickNewPlanButton(){

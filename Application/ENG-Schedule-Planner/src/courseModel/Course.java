@@ -59,5 +59,26 @@ public class Course {
 		return school+"\n"+dept+cid;
 	
 	}
-
+	
+	public int getCategory()
+	{
+		if (school == "CAS"){
+				if (dept == "MA"){
+					return CATEGORY_MATH;
+				}
+				else if (dept == "PY" || dept == "BI" || dept == "CH"){
+					return CATEGORY_NAT_SCI;
+				}
+				else{
+					return CATEGORY_GEN_ED;
+				}
+		}
+		else if (school == "ENG"){
+					return CATEGORY_ENG_CORE;
+		}
+		return 0;
+						
+		}
+		
 }
+
