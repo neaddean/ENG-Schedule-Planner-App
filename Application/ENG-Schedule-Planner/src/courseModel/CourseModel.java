@@ -32,7 +32,9 @@ import org.w3c.dom.Element;
 import org.w3c.dom.TypeInfo;
 import org.w3c.dom.UserDataHandler;
 import org.xml.sax.InputSource;
+import org.xml.sax.SAXException;
 
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -741,7 +743,6 @@ public class CourseModel implements ModelAccessor{
 		return courseTitleList.indexOf(s);
 	}
 
-
 	public void saveState(String filename, Context context) {
 		  try {
 			  
@@ -812,5 +813,100 @@ public class CourseModel implements ModelAccessor{
 			e.printStackTrace();
 		} finally {} 
 	}
+
+	public void loadState(String filename, Context context) {
+		try {
+			FileInputStream fis = context.getApplicationContext().openFileInput(filename);
+			
+			DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+			DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+			Document doc = dBuilder.parse(fis.toString());
+		 
+			//optional, but recommended
+			//read this - http://stackoverflow.com/questions/13786607/normalization-in-dom-parsing-with-java-how-does-it-work
+			doc.getDocumentElement().normalize();
+		 
+//			NodeList nList = doc.getElementsByTagName("course");
+//			
+//			ArrayList <Course> tempCourseList = new ArrayList<Course> ();
+//			
+//			for (int temp = 0; temp < nList.getLength(); temp++) {
+//				 
+//				Node nNode = nList.item(temp);
+//				
+//				Course tempCourse = new Course();
+//		 
+//				if (nNode.getNodeType() == Node.ELEMENT_NODE) {
+//		 
+//					Element eElement = (Element) nNode;
+//					
+//					tempCourse.name = eElement.getElementsByTagName("name").item(0).getTextContent();
+//					tempCourse.school = eElement.getElementsByTagName("school").item(0).getTextContent();
+//					tempCourse.dept = eElement.getElementsByTagName("dept").item(0).getTextContent();
+//					tempCourse.cid = eElement.getElementsByTagName("cid").item(0).getTextContent();
+//					tempCourse.description = eElement.getElementsByTagName("description").item(0).getTextContent();
+//					//tempCourse.cid = eElement.getElementsByTagName("link").item(0).getTextContent();
+//					String prereqs = eElement.getElementsByTagName("prereqs").item(0).getTextContent();
+//					ArrayList<String> prereqlist = new ArrayList<String>(Arrays.asList(prereqs.split(",")));
+//					tempCourse.prereqs = (ArrayList<String>) prereqlist;
+//					tempCourse.credits = eElement.getElementsByTagName("credits").item(0).getTextContent();
+//					
+//					tempCourseList.add(tempCourse);
+//		 
+//				}
+//		 
+//			
+//			}
+//			
+//			courseList.addAll(tempCourseList);
+			
+			NodeList sList = doc.getElementsByTagName("semesters");
+			
+			ArrayList<String> tempSemCourses = new ArrayList<String>();
+			
+			for (int temp = 0; temp < sList.getLength(); temp++) {
+				 
+				Node nNode = sList.item(temp);
+			
+				tempSemCourses.clear();
+				
+				if (nNode.getNodeType() == Node.ELEMENT_NODE) {
+					 
+					Element eElement = (Element) nNode;
+					
+					String semCourseList = eElement.getElementsByTagName(eElement.getNodeName()).item(0).getTextContent();
+					tempSemCourses = new ArrayList<String>(Arrays.asList(semCourseList.split(".")));
+					
+					ArrayList<Course> tempSemCourseList = new ArrayList<Course>();
+					for (String courseTitle: tempSemCourses) {
+						tempSemCourseList.add(getCourseByTitle(courseTitle));
+					}
+					semesterLists.put(eElement.getNodeName(), new ArrayList<Course>(tempSemCourseList));
+					
+				}
+			}
+			
+			
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SAXException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (ParserConfigurationException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+	}
+
+
+
+
+
 }
 
