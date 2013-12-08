@@ -682,6 +682,7 @@ public class CourseModel implements ModelAccessor{
 		 //Tim : Added to change default stores
 		// semesterLists = this.BMEDefault();
 		 //System.out.println(getCourseByTitle("ENGEK127"));
+		 
 
 	}
 
@@ -886,6 +887,7 @@ public class CourseModel implements ModelAccessor{
 				}
 			}
 			
+			fis.close();
 			
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
@@ -900,6 +902,7 @@ public class CourseModel implements ModelAccessor{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+
 		
 		
 	}
