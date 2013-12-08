@@ -2,6 +2,8 @@ package courseModel;
 
 import java.util.ArrayList;
 
+import android.content.Context;
+
 public interface ModelAccessor{
 
 	public ArrayList<Course> getClassWithYear(int year, char semester);
@@ -15,4 +17,5 @@ public interface ModelAccessor{
 	public Course removeClassWithYear(Course c, int year, char semester) throws Exception;
 
 	public int getIndexWithTitle(String s);
+	
 }
