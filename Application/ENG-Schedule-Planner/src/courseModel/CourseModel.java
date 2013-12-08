@@ -4,8 +4,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Map.Entry;
-import java.util.concurrent.Semaphore;
 
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -14,23 +12,16 @@ import android.content.Context;
 import courseModel.Course;
 
 import javax.xml.parsers.DocumentBuilder;
-import javax.xml.transform.Result;
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 
-import org.apache.http.conn.BasicManagedEntity;
-import org.w3c.dom.Attr;
-import org.w3c.dom.DOMException;
 import org.w3c.dom.Document;
-import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.NodeList;
 import org.w3c.dom.Node;
 import org.w3c.dom.Element;
-import org.w3c.dom.TypeInfo;
-import org.w3c.dom.UserDataHandler;
 import org.xml.sax.InputSource;
 
 import java.io.FileNotFoundException;
@@ -38,7 +29,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.OutputStream;
 import java.io.Reader; 
 import java.io.StringWriter;
 
@@ -678,7 +668,7 @@ public class CourseModel implements ModelAccessor{
 		 
 		 semesterLists = tempSemesters;
 		 //Tim : Added to change default stores
-		// semesterLists = this.BMEDefault();
+		 semesterLists = this.BMEDefault();
 		 //System.out.println(getCourseByTitle("ENGEK127"));
 
 	}
