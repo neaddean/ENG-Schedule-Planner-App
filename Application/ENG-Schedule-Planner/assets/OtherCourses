@@ -1,0 +1,70 @@
+  <course name="Writing Seminar">
+    <school>CAS</school>
+    <dept>WR</dept>
+    <cid>100</cid>
+    <description>Topic-based seminar in academic reading and writing. Attention to reading and analyzing primary and secondary sources, argumentation, prose style, revision, and citation. Significant writing and individual conferences.</description>
+    <link>http://www.bu.edu/academics/cas/courses/cas-wr-100/</link>
+    <credits>4</credits>
+    <prereqs>CAS WR 098</prereqs>
+  </course>
+  
+  <course name="Writing and Research Seminar">
+    <school>CAS</school>
+    <dept>WR</dept>
+    <cid>150</cid>
+    <description>Topic-based seminar in academic reading, writing, and research. Continuing attention to argumentation, prose style, revision, and citation, with additional emphasis on college-level research. Significant writing and individual conferences.</description>
+    <link>http://www.bu.edu/academics/cas/courses/cas-wr-150/</link>
+    <credits>4</credits>
+    <prereqs>CAS WR 100</prereqs>
+  </course>
+  
+  <course name="General Chemistry 1">
+    <school>CAS</school>
+    <dept>CH</dept>
+    <cid>101</cid>
+    <description>For science majors and minors who require a two-semester general chemistry course. Topics include: atoms and molecules; molecular connectivity, infrared spectroscopy, and mass spectrometry; stoichiometry and introduction to reactions in aqueous solutions; thermochemistry and the first law of thermodynamics; quantum aspects of light and matter; and bonding in diatomic and polyatomic molecules. Laboratory exercises include: the size of an atom, qualitative analysis, thermochemistry, and quantum aspects of light and matter. Students must register for the following four course components: lecture, discussion, pre-lab lecture and laboratory. Carries natural science divisional credit (with lab) in CAS.</description>
+    <link>http://www.bu.edu/academics/cas/courses/cas-ch-101/</link>
+    <credits>4</credits>
+    <prereqs>Two years of high school algebra</prereqs>
+  </course>
+  
+   <course name="General Chemistry 2">
+    <school>CAS</school>
+    <dept>CH</dept>
+    <cid>102</cid>
+    <description>For science majors and minors who require a two-semester general chemistry course. Topics include: properties of gases; solutions and solubility; equilibrium; acids, bases, and buffers; electrochemistry; spontaneity, free energy and the second law of thermodynamics; and chemical kinetics. Students must have completed CAS CH 101 prior to enrolling in CAS CH 102. Students must register for the following four course components: lecture, discussion, pre-lab lecture, and laboratory. Carries natural science divisional credit (with lab) in CAS.</description>
+    <link>http://www.bu.edu/academics/cas/courses/cas-ch-102/</link>
+    <credits>4</credits>
+    <prereqs>CAS CH 101</prereqs>
+  </course>
+  
+   <course name="General Chemistry for the Engineering Sciences">
+    <school>CAS</school>
+    <dept>CH</dept>
+    <cid>131</cid>
+    <description>A one-semester, terminal general chemistry course for students who do not require a two-semester sequence. Stoichiometry, atomic and molecular structure, bonding, chemistry of solid state, chemical thermodynamics, and equilibrium. Three hours lecture, one hour discussion, three and a half hours lab. Carries natural science divisional credit (with lab) in CAS.</description>
+    <link> http://www.bu.edu/academics/cas/courses/cas-ch-131/</link>
+    <credits>4</credits>
+    <prereqs>CAS MA 123</prereqs>
+  </course>
+ 
+ <course name="Elementary Modern Physics">
+    <school>CAS</school>
+    <dept>PY</dept>
+    <cid>313</cid>
+    <description>Physics 313 will examine the development of modern physics leading up to and including quantum mechanics, relativity and their application to problems in atomic, molecular, solid state, nuclear and particle physics. These applications lie at the heart of much of current technology.</description>
+    <link>http://www.bu.edu/abroad/files/2009/12/cas-py-313-syllabus-dresden-engineering.pdf</link>
+    <credits>4</credits>
+    <prereqs>CAS PY 211, CAS PY 212 and CAS MA 124</prereqs>
+  </course>
+ 
+ 
+  <course name="Systems Physiology">
+    <school>CAS</school>
+    <dept>BI</dept>
+    <cid>315</cid>
+    <description>An introduction to physiological principles applied across all levels of organization (cell, tissue, organ system). Preparation for more advanced courses in physiology. Topics include homeostasis and neural, muscle, respiratory, cardiovascular, renal, endocrine, gastrointestinal, and metabolic physiology. Three hours lecture, three hours lab.</description>
+    <link>http://www.bu.edu/academics/cas/courses/cas-bi-315/</link>
+    <credits>4</credits>
+    <prereqs>CAS BI 108 or CAS BI 118 or ENG BE 209;and CASCH101 and CASCH102, or equivalent.</prereqs>
+  </course>
