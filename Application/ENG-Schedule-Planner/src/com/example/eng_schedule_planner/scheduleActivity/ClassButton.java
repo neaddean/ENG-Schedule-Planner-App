@@ -50,21 +50,15 @@ public class ClassButton extends RelativeLayout implements GestureDetector.OnDou
 	final static int CHECK_HEIGHT = 40;
 	
 	final static int buttonPictures[] = {
-		R.drawable.aero_conc,
-		R.drawable.bme_elec,
-		R.drawable.aero_conc,
-		R.drawable.bme_req,
-		R.drawable.ece_elec,
-		R.drawable.ece_req,
-		R.drawable.energy_conc,
 		R.drawable.eng_core,
-		R.drawable.gen_ed,
-		R.drawable.manuf_conc,
-		R.drawable.math,
-		R.drawable.me_elec,
-		R.drawable.nano_conc,
 		R.drawable.nat_sci,
-		R.drawable.tech_conc
+		R.drawable.math,
+		R.drawable.gen_ed,
+		R.drawable.me_req,
+		R.drawable.ece_req,
+		R.drawable.bme_req,
+		R.drawable.default_course,
+		R.drawable.generic_class,
 		};
 	
 	Button button;
@@ -109,9 +103,9 @@ public class ClassButton extends RelativeLayout implements GestureDetector.OnDou
 		this.addView(button);
 	
 		
-		int randomnumber = rnd.nextInt(buttonPictures.length);
+		//int randomnumber = rnd.nextInt(buttonPictures.length);
 		if(buttonType == STANDARD_BUTTON)
-			button.setBackgroundResource(buttonPictures[randomnumber]);
+			button.setBackgroundResource(buttonPictures[myCourse.getCategory()]);
 		else if(buttonType == ADD_BUTTON)
 			button.setBackgroundResource(R.drawable.generic_class);
 		//Set check mark

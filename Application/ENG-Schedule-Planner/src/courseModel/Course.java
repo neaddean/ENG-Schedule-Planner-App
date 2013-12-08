@@ -59,5 +59,41 @@ public class Course {
 		return school+"\n"+dept+cid;
 	
 	}
-
+	
+	public int getCategory()
+	{
+		if (school.equals("CAS")){
+				if (dept.equals("MA")){
+					return CATEGORY_MATH;
+				}
+				else if (dept.equals("PY") || dept.equals("BI") || dept.equals("CH")){
+					return CATEGORY_NAT_SCI;
+				}
+				else{
+					return CATEGORY_GEN_ED;
+				}
+		}
+		else if (school.equals("ENG")){
+					if (dept.equals("EK")){
+						return CATEGORY_ENG_CORE;
+					}
+					else if (dept.equals("EC")){
+						return CATEGORY_ECE_REQ;
+					}
+					else if (dept.equals("BE")){
+						return CATEGORY_BME_REQ;
+					}
+					else if (dept.equals("ME")){
+						return CATEGORY_ME_REQ;
+					}
+					else{
+						return CATEGORY_DEFAULT;
+					}
+		}
+		else{
+			return CATEGORY_DEFAULT;
+		}
+	}
+		
 }
+
