@@ -709,6 +709,7 @@ public class CourseModel implements ModelAccessor{
 		 semesterLists = this.BMEDefault();
 		 //System.out.println(getCourseByTitle("ENGEK127"));
 		//semesterLists = new HashMap<String, ArrayList<Course>> ();
+
 	}
 
 	public ArrayList<Course> getClassWithYear(int year, char semester) {
@@ -907,11 +908,12 @@ public class CourseModel implements ModelAccessor{
 					for (String courseTitle: tempSemCourses) {
 						tempSemCourseList.add(getCourseByTitle(courseTitle));
 					}
-					semesterLists.put(eElement.getNodeName(), new ArrayList<Course>(tempSemCourseList));
+					semesterLists.put(new StringBuffer(eElement.getNodeName()).reverse().toString(), new ArrayList<Course>(tempSemCourseList)); 
 					
 				}
 			}
 			
+			fis.close();
 			
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
@@ -926,6 +928,7 @@ public class CourseModel implements ModelAccessor{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+
 		
 		
 	}
