@@ -708,9 +708,9 @@ public class CourseModel implements ModelAccessor{
 		 
 		 semesterLists = tempSemesters;
 		 //Tim : Added to change default stores
-		 semesterLists = this.BMEDefault();
+		 //semesterLists = this.BMEDefault();
 		 //System.out.println(getCourseByTitle("ENGEK127"));
-		//semesterLists = new HashMap<String, ArrayList<Course>> ();
+		semesterLists = new HashMap<String, ArrayList<Course>> ();
 
 	}
 

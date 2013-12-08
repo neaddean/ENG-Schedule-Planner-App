@@ -1,98 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical" >
-
-    <TextView
-        android:id="@+id/addClassLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Add Class:"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textSize="40sp" />
-	<TextView
-        android:id="@+id/classNameLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Class Title:"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textSize="20sp" />
-    <EditText
-        android:id="@+id/editClassName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Ex: Intro. to Software Engineering" >
-
-    </EditText>
-    <TextView
-        android:id="@+id/classSchoolLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="School :"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textSize="20sp" />
-    <EditText
-        android:id="@+id/editDept"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Ex: ENG" >
-
-    </EditText>
-    
-    <TextView
-        android:id="@+id/classDeptLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Class Title:"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textSize="20sp" />
-    <EditText
-        android:id="@+id/editDept"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Ex: EC" >
-
-    </EditText>
-    <TextView
-        android:id="@+id/classIdLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Class ID:"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textSize="20sp" />
-    <EditText
-        android:id="@+id/editID"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Ex: 327" >
-
-    </EditText>
-    
-        <TextView
-        android:id="@+id/classCreditLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Number of Credits:"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textSize="20sp" />
-    <EditText
-        android:id="@+id/editCredit"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Ex: 4" >
-    </EditText>
-
-    <Button
-        android:id="@+id/addClassButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Add" />
-
-</LinearLayout>
+ <ScrollView
+     xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:overScrollMode="never"
+        android:scrollbars="none" >
+        
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:orientation="vertical" >
+	
+	    <TextView
+	        android:id="@+id/addClassLabel"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="Add Class:"
+	        android:textAppearance="?android:attr/textAppearanceLarge"
+	        android:textSize="40sp" />
+		<TextView
+	        android:id="@+id/classNameLabel"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="Class Title:"
+	        android:textAppearance="?android:attr/textAppearanceLarge"
+	        android:textSize="20sp" />
+	    <EditText
+	        android:id="@+id/editClassName"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:ems="10"
+	        android:hint="Ex: Intro. to Software Engineering" >
+	
+	    </EditText>
+	    <TextView
+	        android:id="@+id/classSchoolLabel"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="School :"
+	        android:textAppearance="?android:attr/textAppearanceLarge"
+	        android:textSize="20sp" />
+	    <EditText
+	        android:id="@+id/editDept"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:ems="10"
+	        android:hint="Ex: ENG" >
+	
+	    </EditText>
+	    
+	    <TextView
+	        android:id="@+id/classDeptLabel"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="Class Title:"
+	        android:textAppearance="?android:attr/textAppearanceLarge"
+	        android:textSize="20sp" />
+	    <EditText
+	        android:id="@+id/editDept"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:ems="10"
+	        android:hint="Ex: EC" >
+	
+	    </EditText>
+	    <TextView
+	        android:id="@+id/classIdLabel"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="Class ID:"
+	        android:textAppearance="?android:attr/textAppearanceLarge"
+	        android:textSize="20sp" />
+	    <EditText
+	        android:id="@+id/editID"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:ems="10"
+	        android:hint="Ex: 327" >
+	
+	    </EditText>
+	    
+	        <TextView
+	        android:id="@+id/classCreditLabel"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="Number of Credits:"
+	        android:textAppearance="?android:attr/textAppearanceLarge"
+	        android:textSize="20sp" />
+	    <EditText
+	        android:id="@+id/editCredit"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:ems="10"
+	        android:hint="Ex: 4" >
+	    </EditText>
+	
+	    <Button
+	        android:id="@+id/addClassButton"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="Add" />
+	
+	</LinearLayout>
+</ScrollView>
