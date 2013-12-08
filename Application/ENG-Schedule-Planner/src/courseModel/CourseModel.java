@@ -25,6 +25,7 @@ import org.w3c.dom.Element;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -844,10 +845,12 @@ public class CourseModel implements ModelAccessor{
 	public void loadState(String filename, Context context) {
 		try {
 			FileInputStream fis = context.getApplicationContext().openFileInput(filename);
+			File fXmlFile = new File(fis.toString());
+			InputStream inputStream= new FileInputStream(fXmlFile);
 			
 			DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 			DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-			Document doc = dBuilder.parse(fis.toString());
+			Document doc = dBuilder.parse(inputStream);
 		 
 			//optional, but recommended
 			//read this - http://stackoverflow.com/questions/13786607/normalization-in-dom-parsing-with-java-how-does-it-work
@@ -893,13 +896,13 @@ public class CourseModel implements ModelAccessor{
 			
 			for (int temp = 0; temp < sList.getLength(); temp++) {
 				 
-				Node nNode = sList.item(temp);
+				Node sNode = sList.item(temp);
 			
 				tempSemCourses.clear();
 				
-				if (nNode.getNodeType() == Node.ELEMENT_NODE) {
+				if (sNode.getNodeType() == Node.ELEMENT_NODE) {
 					 
-					Element eElement = (Element) nNode;
+					Element eElement = (Element) sNode;
 					
 					String semCourseList = eElement.getElementsByTagName(eElement.getNodeName()).item(0).getTextContent();
 					tempSemCourses = new ArrayList<String>(Arrays.asList(semCourseList.split(".")));
