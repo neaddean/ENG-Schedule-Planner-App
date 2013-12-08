@@ -909,7 +909,7 @@ public class CourseModel implements ModelAccessor{
 					for (String courseTitle: tempSemCourses) {
 						tempSemCourseList.add(getCourseByTitle(courseTitle));
 					}
-					semesterLists.put(eElement.getNodeName(), new ArrayList<Course>(tempSemCourseList));
+					semesterLists.put(new StringBuffer(eElement.getNodeName()).reverse().toString(), new ArrayList<Course>(tempSemCourseList)); 
 					
 				}
 			}
