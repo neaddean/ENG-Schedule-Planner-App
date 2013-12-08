@@ -172,6 +172,15 @@ public class CourseModel implements ModelAccessor{
 		//s4List.add(getCourseByTitle("General Education Elective"));
 		tempSemesters.put("4s", s4List);
 
+		//To initialize summer semesters as empty
+		ArrayList<Course> u1List = new ArrayList<Course>();
+		tempSemesters.put("1u", u1List);
+		ArrayList<Course> u2List = new ArrayList<Course>();
+		tempSemesters.put("2u", u2List);
+		ArrayList<Course> u3List = new ArrayList<Course>();
+		tempSemesters.put("u3", u3List);
+		ArrayList<Course> u4List = new ArrayList<Course>();
+		tempSemesters.put("u4", u4List);
 		
 		/*Technical Elective Defined as:
 		Any ENGEC Classes
@@ -300,7 +309,17 @@ public class CourseModel implements ModelAccessor{
 								
 		*/
 		tempSemesters.put("4s", s4List);
-
+		
+		//To initialize summer semesters as empty
+		ArrayList<Course> u1List = new ArrayList<Course>();
+		tempSemesters.put("1u", u1List);
+		ArrayList<Course> u2List = new ArrayList<Course>();
+		tempSemesters.put("2u", u2List);
+		ArrayList<Course> u3List = new ArrayList<Course>();
+		tempSemesters.put("u3", u3List);
+		ArrayList<Course> u4List = new ArrayList<Course>();
+		tempSemesters.put("u4", u4List);
+		
 		return tempSemesters;
 	}
 	
@@ -388,7 +407,15 @@ public class CourseModel implements ModelAccessor{
 		s4List.add(getCourseByTitle("ENGEC464"));
 		tempSemesters.put("4s", s4List);
 
-		
+		//To initialize summer semesters as empty
+		ArrayList<Course> u1List = new ArrayList<Course>();
+		tempSemesters.put("1u", u1List);
+		ArrayList<Course> u2List = new ArrayList<Course>();
+		tempSemesters.put("2u", u2List);
+		ArrayList<Course> u3List = new ArrayList<Course>();
+		tempSemesters.put("u3", u3List);
+		ArrayList<Course> u4List = new ArrayList<Course>();
+		tempSemesters.put("u4", u4List);
 		
 		/*
 		Professional Electives Defined as:
@@ -534,6 +561,15 @@ public class CourseModel implements ModelAccessor{
 		//s4List.add(getCourseByTitle("General Education Elective"));
 		tempSemesters.put("4s", s4List);
 
+		//To initialize summer semesters as empty
+		ArrayList<Course> u1List = new ArrayList<Course>();
+		tempSemesters.put("1u", u1List);
+		ArrayList<Course> u2List = new ArrayList<Course>();
+		tempSemesters.put("2u", u2List);
+		ArrayList<Course> u3List = new ArrayList<Course>();
+		tempSemesters.put("u3", u3List);
+		ArrayList<Course> u4List = new ArrayList<Course>();
+		tempSemesters.put("u4", u4List);
 		
 		/* Advanced Elective Defined as:
 		  	All ENG courses 300 level or above, (without overlap)
