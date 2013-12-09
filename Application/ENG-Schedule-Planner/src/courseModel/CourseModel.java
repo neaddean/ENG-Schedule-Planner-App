@@ -709,7 +709,7 @@ public class CourseModel implements ModelAccessor{
 				tempCourse.description = eElement.getElementsByTagName("description").item(0).getTextContent();
 				//tempCourse.cid = eElement.getElementsByTagName("link").item(0).getTextContent();
 				String prereqs = eElement.getElementsByTagName("prereqs").item(0).getTextContent();
-				ArrayList<String> prereqlist = new ArrayList<String>(Arrays.asList(prereqs.split(",")));
+				ArrayList<String> prereqlist = new ArrayList<String>(Arrays.asList(prereqs.split(" ")));
 				tempCourse.prereqs = (ArrayList<String>) prereqlist;
 				tempCourse.credits = Integer.parseInt(eElement.getElementsByTagName("credits").item(0).getTextContent());
 				tempCourse.user = false;
@@ -819,12 +819,12 @@ public class CourseModel implements ModelAccessor{
 	}
 	
 	public Course addCourse(String name, String school, String dept, String cid,
-			String description, ArrayList<String> prereqs, int credits) {
+			String description, ArrayList<String> prereqs, int credits, Context context) {
 		Course c = new Course(name, school, dept, cid,
 				description, prereqs, credits);
 		courseList.add(c);
 		courseTitleList.add(c.getFullTitle());
-		this.saveState("savefile", Global.myContext);
+		this.saveState("savefile", context.getApplicationContext());
 		return c;
 	}
 	
@@ -883,13 +883,22 @@ public class CourseModel implements ModelAccessor{
 						cdes.appendChild(doc1.createTextNode(new String(c.description)));
 						courseEL.appendChild(cdes);					
 						
-						String tempString = new String ("");
-						 for (String semString: c.prereqs) {
-							 tempString = tempString + semString + " ";							 
-							 }
-						 Element cprereq = doc1.createElement("prereqs");
-							cdes.appendChild(doc1.createTextNode(new String(tempString)));
-							courseEL.appendChild(cdes);
+						if (!c.prereqs.isEmpty()) {
+							String tempString = new String ("");
+							 for (String semString: c.prereqs) {
+								 tempString = tempString + semString + " ";							 
+								 }
+							 Element cprereq = doc1.createElement("prereqs");
+								cprereq.appendChild(doc1.createTextNode(new String(tempString)));
+								courseEL.appendChild(cprereq);
+						}
+						else {
+							Element cprereq = doc1.createElement("prereqs");
+							cprereq.appendChild(doc1.createTextNode(new String()));
+							courseEL.appendChild(cprereq);
+						}
+						
+						
 							
 						Element ccredits = doc1.createElement("credits");
 						ccredits.appendChild(doc1.createTextNode(new String(String.valueOf(c.credits))));
@@ -940,8 +949,9 @@ public class CourseModel implements ModelAccessor{
 
 			 String tempString;
 			 for (String semString: semesterLabels) {
-				 tempString = new String("");
+				 tempString = new String();
 				 for (Course c: semesterLists.get(semString)) {
+					 System.out.println(c.getFullTitle());
 					 if (c!= null)
 						 if (c.completed)
 							 tempString = tempString + c.getTitle() + "!T ";
@@ -987,6 +997,60 @@ public class CourseModel implements ModelAccessor{
 
 	public void loadState(String filename, Context context) {
 		try {
+			FileInputStream fis1 = context.getApplicationContext().openFileInput("usercourses");
+			 InputStreamReader inputStreamReader1 = new InputStreamReader(fis1);
+			 BufferedReader bufferedReader1 = new BufferedReader(inputStreamReader1);
+			 StringBuilder sb1 = new StringBuilder();
+			 String line1;
+			 while ((line1 = bufferedReader1.readLine()) != null) {
+			     sb1.append(line1);
+			 }
+			//InputStream inputStream= new FileInputStream(fXmlFile);
+			DocumentBuilderFactory dbFactory1 = DocumentBuilderFactory.newInstance();
+			DocumentBuilder dBuilder1 = dbFactory1.newDocumentBuilder();
+			
+			InputSource is1 = new InputSource(new StringReader(sb1.toString()));
+			
+			Document doc1 = dBuilder1.parse(is1);
+		 
+			//optional, but recommended
+			//read this - http://stackoverflow.com/questions/13786607/normalization-in-dom-parsing-with-java-how-does-it-work
+			doc1.getDocumentElement().normalize();
+			
+			NodeList nList = doc1.getElementsByTagName("course");
+			
+			
+			for (int temp = 0; temp < nList.getLength(); temp++) {
+				 
+				Node nNode = nList.item(temp);
+				
+				Course tempCourse = new Course();
+		 
+				if (nNode.getNodeType() == Node.ELEMENT_NODE) {
+		 
+					Element eElement = (Element) nNode;
+					
+					tempCourse.name = eElement.getAttribute("name");
+					tempCourse.school = eElement.getElementsByTagName("school").item(0).getTextContent();
+					tempCourse.dept = eElement.getElementsByTagName("dept").item(0).getTextContent();
+					tempCourse.cid = eElement.getElementsByTagName("cid").item(0).getTextContent();
+					tempCourse.description = eElement.getElementsByTagName("description").item(0).getTextContent();
+					//tempCourse.cid = eElement.getElementsByTagName("link").item(0).getTextContent();
+					String prereqs = eElement.getElementsByTagName("prereqs").item(0).getTextContent();
+					ArrayList<String> prereqlist = new ArrayList<String>(Arrays.asList(prereqs.split(" ")));
+					tempCourse.prereqs = (ArrayList<String>) prereqlist;
+					tempCourse.credits = Integer.parseInt(eElement.getElementsByTagName("credits").item(0).getTextContent());
+					tempCourse.user = true;
+					
+					courseList.add(tempCourse);
+					courseTitleList.add(tempCourse.getFullTitle());
+				}
+			
+			
+			}
+			
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////			
+			
 			FileInputStream fis = context.getApplicationContext().openFileInput(filename);
 			 InputStreamReader inputStreamReader = new InputStreamReader(fis);
 			 BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
