@@ -31,6 +31,9 @@ public class descriptionActivity extends Activity{
 		if(Global.courseDescriptionPrereqs != null){
     		for(int i = 0; i < Global.courseDescriptionPrereqs.size(); i++){
     			prereqs = prereqs.concat(Global.courseDescriptionPrereqs.get(i));
+    			if (i+1 < Global.courseDescriptionPrereqs.size()){
+    				prereqs = prereqs.concat(", ");
+    			}
 	    	}
     		if (prereqs.contentEquals("Prerequisites: ")){
     			prereqs = prereqs.concat("None for this course");
