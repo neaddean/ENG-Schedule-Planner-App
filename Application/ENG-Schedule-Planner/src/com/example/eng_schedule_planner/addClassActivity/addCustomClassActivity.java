@@ -48,7 +48,7 @@ public class addCustomClassActivity extends Activity {
                     		editDept.getText().toString(), 
                     		editId.getText().toString(), 
                     		new String(), null, 
-                    		Integer.parseInt(editCredits.getText().toString()));
+                    		Integer.parseInt(editCredits.getText().toString()),addCustomClassActivity.this);
                     Global.courseToAdd = newCustomCourse;
                     setResult(Activity.RESULT_OK,i);
                     finish();
