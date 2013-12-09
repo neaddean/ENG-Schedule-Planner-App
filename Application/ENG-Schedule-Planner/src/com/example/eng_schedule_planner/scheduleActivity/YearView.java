@@ -102,6 +102,7 @@ public class YearView extends LinearLayout{
 		afterSpace.setLayoutParams(spaceParam);
 		horizontalLayout.addView(afterSpace);
 		horizontalLayout.setOnDragListener(new ClassDragListener());
+		
 	}
 			
 	class ClassDragListener implements OnDragListener
