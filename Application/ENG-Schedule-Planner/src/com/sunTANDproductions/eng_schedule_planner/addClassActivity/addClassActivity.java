@@ -1,14 +1,14 @@
-package com.example.eng_schedule_planner.addClassActivity;
+package com.sunTANDproductions.eng_schedule_planner.addClassActivity;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import com.example.eng_schedule_planner.R;
-import com.example.eng_schedule_planner.Global.Global;
-import com.example.eng_schedule_planner.scheduleActivity.YearView;
+import com.sunTANDproductions.eng_schedule_planner.R;
+import com.sunTANDproductions.eng_schedule_planner.Global.Global;
+import com.sunTANDproductions.eng_schedule_planner.courseModel.Course;
+import com.sunTANDproductions.eng_schedule_planner.courseModel.CourseModel;
+import com.sunTANDproductions.eng_schedule_planner.scheduleActivity.YearView;
 
-import courseModel.Course;
-import courseModel.CourseModel;
 
 import android.app.Activity;
 import android.content.Intent;

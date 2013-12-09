@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.eng_schedule_planner"
+    package="com.sunTANDproductions.eng_schedule_planner"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -14,31 +14,31 @@
         android:label="@string/app_name"
         android:theme="@android:style/Theme.Light.NoTitleBar" >
         <activity
-            android:name="com.example.eng_schedule_planner.scheduleActivity.ScheduleActivity"
+            android:name="com.sunTANDproductions.eng_schedule_planner.scheduleActivity.ScheduleActivity"
             android:label="@string/app_name" >
             
         </activity>
         <activity
-            android:name="com.example.eng_schedule_planner.addClassActivity.addClassActivity" 
+            android:name="com.sunTANDproductions.eng_schedule_planner.addClassActivity.addClassActivity" 
           android:windowSoftInputMode="adjustResize" >
         </activity>
         <activity
-            android:name="com.example.eng_schedule_planner.menus.mainMenuActivity"
+            android:name="com.sunTANDproductions.eng_schedule_planner.menus.mainMenuActivity"
             android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name="com.example.eng_schedule_planner.addClassActivity.addCustomClassActivity"
+            android:name="com.sunTANDproductions.eng_schedule_planner.addClassActivity.addCustomClassActivity"
             android:windowSoftInputMode="adjustResize">
         </activity>
         <activity
-            android:name="com.example.eng_schedule_planner.menus.aboutActivity">
+            android:name="com.sunTANDproductions.eng_schedule_planner.menus.aboutActivity">
         </activity>
         <activity
-            android:name="com.example.eng_schedule_planner.menus.descriptionActivity">
+            android:name="com.sunTANDproductions.eng_schedule_planner.menus.descriptionActivity">
         </activity>
         
         <activity
-            android:name="com.example.eng_schedule_planner.Splash.SplashActivity">
+            android:name="com.sunTANDproductions.eng_schedule_planner.Splash.SplashActivity">
         	<intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

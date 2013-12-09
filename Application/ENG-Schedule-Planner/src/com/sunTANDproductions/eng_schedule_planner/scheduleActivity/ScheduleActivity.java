@@ -1,10 +1,10 @@
-package com.example.eng_schedule_planner.scheduleActivity;
+package com.sunTANDproductions.eng_schedule_planner.scheduleActivity;
 
 
-import com.example.eng_schedule_planner.R;
-import com.example.eng_schedule_planner.Global.Global;
+import com.sunTANDproductions.eng_schedule_planner.R;
+import com.sunTANDproductions.eng_schedule_planner.Global.Global;
+import com.sunTANDproductions.eng_schedule_planner.courseModel.CourseModel;
 
-import courseModel.CourseModel;
 
 
 import android.os.Bundle;

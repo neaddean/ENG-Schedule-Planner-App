@@ -1,12 +1,12 @@
-package com.example.eng_schedule_planner.Global;
+package com.sunTANDproductions.eng_schedule_planner.Global;
 
 import java.util.ArrayList;
 
 import android.content.Context;
 
-import com.example.eng_schedule_planner.scheduleActivity.YearView;
+import com.sunTANDproductions.eng_schedule_planner.courseModel.Course;
+import com.sunTANDproductions.eng_schedule_planner.scheduleActivity.YearView;
 
-import courseModel.Course;
 
 public class Global {
 	//For storing any global variable

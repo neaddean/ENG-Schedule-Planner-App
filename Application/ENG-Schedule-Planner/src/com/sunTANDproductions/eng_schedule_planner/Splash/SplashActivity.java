@@ -1,14 +1,14 @@
-package com.example.eng_schedule_planner.Splash;
+package com.sunTANDproductions.eng_schedule_planner.Splash;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 
-import com.example.eng_schedule_planner.R;
-import com.example.eng_schedule_planner.Global.Global;
-import com.example.eng_schedule_planner.menus.mainMenuActivity;
-import com.example.eng_schedule_planner.scheduleActivity.ScheduleActivity;
+import com.sunTANDproductions.eng_schedule_planner.R;
+import com.sunTANDproductions.eng_schedule_planner.Global.Global;
+import com.sunTANDproductions.eng_schedule_planner.courseModel.CourseModel;
+import com.sunTANDproductions.eng_schedule_planner.menus.mainMenuActivity;
+import com.sunTANDproductions.eng_schedule_planner.scheduleActivity.ScheduleActivity;
 
-import courseModel.CourseModel;
 
 import android.app.Activity;
 import android.content.Context;

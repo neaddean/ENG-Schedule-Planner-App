@@ -1,4 +1,4 @@
-package courseModel;
+package com.sunTANDproductions.eng_schedule_planner.courseModel;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -9,7 +9,6 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
 import android.content.Context;
-import courseModel.Course;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.transform.Transformer;
@@ -25,7 +24,8 @@ import org.w3c.dom.Element;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
-import com.example.eng_schedule_planner.Global.Global;
+import com.sunTANDproductions.eng_schedule_planner.Global.Global;
+import com.sunTANDproductions.eng_schedule_planner.courseModel.Course;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;

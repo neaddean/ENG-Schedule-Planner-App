@@ -1,13 +1,13 @@
-package com.example.eng_schedule_planner.menus;
+package com.sunTANDproductions.eng_schedule_planner.menus;
 
 
 import java.util.concurrent.Semaphore;
 
-import com.example.eng_schedule_planner.R;
-import com.example.eng_schedule_planner.scheduleActivity.ScheduleActivity;
+import com.sunTANDproductions.eng_schedule_planner.R;
+import com.sunTANDproductions.eng_schedule_planner.courseModel.Course;
+import com.sunTANDproductions.eng_schedule_planner.courseModel.CourseModel;
+import com.sunTANDproductions.eng_schedule_planner.scheduleActivity.ScheduleActivity;
 
-import courseModel.Course;
-import courseModel.CourseModel;
 
 import android.app.Activity;
 import android.app.AlertDialog;

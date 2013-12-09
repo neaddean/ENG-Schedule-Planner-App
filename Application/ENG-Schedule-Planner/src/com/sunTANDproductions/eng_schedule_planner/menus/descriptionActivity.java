@@ -1,7 +1,7 @@
-package com.example.eng_schedule_planner.menus;
+package com.sunTANDproductions.eng_schedule_planner.menus;
 
-import com.example.eng_schedule_planner.R;
-import com.example.eng_schedule_planner.Global.Global;
+import com.sunTANDproductions.eng_schedule_planner.R;
+import com.sunTANDproductions.eng_schedule_planner.Global.Global;
 
 import android.app.Activity;
 import android.os.Bundle;

@@ -1,10 +1,8 @@
-package com.example.eng_schedule_planner.scheduleActivity;
+package com.sunTANDproductions.eng_schedule_planner.scheduleActivity;
 
 
 import java.util.ArrayList;
 
-import courseModel.Course;
-import courseModel.CourseModel;
 
 
 import android.animation.LayoutTransition;
@@ -21,7 +19,9 @@ import android.widget.ScrollView;
 import android.widget.Space;
 import android.widget.TextView;
 
-import com.example.eng_schedule_planner.scheduleActivity.ClassButton;
+import com.sunTANDproductions.eng_schedule_planner.courseModel.Course;
+import com.sunTANDproductions.eng_schedule_planner.courseModel.CourseModel;
+import com.sunTANDproductions.eng_schedule_planner.scheduleActivity.ClassButton;
 
 public class YearView extends LinearLayout{
 

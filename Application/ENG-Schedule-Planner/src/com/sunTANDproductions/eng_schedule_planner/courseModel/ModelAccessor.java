@@ -1,4 +1,4 @@
-package courseModel;
+package com.sunTANDproductions.eng_schedule_planner.courseModel;
 
 import java.util.ArrayList;
 
