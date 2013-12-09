@@ -240,7 +240,7 @@ public class ClassButton extends RelativeLayout implements GestureDetector.OnDou
 				    	   Global.courseDescriptionPrereqs = myCourse.getPrereqs();
 				    	   Intent goToDescriptionActivity = new Intent(buttonPtr.getContext(), descriptionActivity.class);
 				    	   buttonPtr.getContext().startActivity(goToDescriptionActivity);
-				       }
+				       }break;
 				       case 2:{
 				    	   YearView yearPtr = (YearView) buttonPtr.getParent().getParent().getParent();
 				    	   try {
