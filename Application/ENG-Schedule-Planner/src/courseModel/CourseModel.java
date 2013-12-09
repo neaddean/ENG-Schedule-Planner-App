@@ -851,7 +851,7 @@ public class CourseModel implements ModelAccessor{
 	public void saveState(String filename, Context context) {
 		  try {
 			  
-			  FileOutputStream cos = context.getApplicationContext().openFileOutput("usercourses", 0);
+			  FileOutputStream cos = context.getApplicationContext().openFileOutput("usercourses", context.MODE_PRIVATE);
 			  
 				DocumentBuilderFactory docFactory1 = DocumentBuilderFactory.newInstance();
 				DocumentBuilder docBuilder1 = docFactory1.newDocumentBuilder();
@@ -924,7 +924,7 @@ public class CourseModel implements ModelAccessor{
 			  
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 			  
-			FileOutputStream fos = context.getApplicationContext().openFileOutput(filename, 0);
+			FileOutputStream fos = context.getApplicationContext().openFileOutput(filename, context.MODE_PRIVATE);
 			  
 			DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
 			DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
@@ -1007,7 +1007,7 @@ public class CourseModel implements ModelAccessor{
 			 }
 			//InputStream inputStream= new FileInputStream(fXmlFile);
 			DocumentBuilderFactory dbFactory1 = DocumentBuilderFactory.newInstance();
-			DocumentBuilder dBuilder1 = dbFactory1.newDocumentBuilder();
+			DocumentBuilder dBuilder1 =  dbFactory1.newDocumentBuilder();
 			
 			InputSource is1 = new InputSource(new StringReader(sb1.toString()));
 			
@@ -1155,6 +1155,15 @@ public class CourseModel implements ModelAccessor{
 		default:
 			break;
 		}
+		
+	}
+	
+	public boolean checkFiles(Context context) {
+		String[] fileListString = context.getApplicationContext().fileList();
+	if (fileListString.length > 0)
+		return true;
+	else
+		return false;
 		
 	}
 	
