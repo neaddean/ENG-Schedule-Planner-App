@@ -73,23 +73,29 @@ public class mainMenuActivity extends Activity {
 					alertDialog = null;
 					switch(which){
 					case 0:	{
-						//load BME
-						//CourseModel.getInstance().
-					}
+						CourseModel.getInstance().setSemester(CourseModel.PLANNER_BME);
+						CourseModel.getInstance().save();
+					}break;
 					case 1: {
-						//load ME
-					}
+						CourseModel.getInstance().setSemester(CourseModel.PLANNER_EE);
+						CourseModel.getInstance().save();
+					}break;
 					case 2: {
-						//load EE
-					}
+						CourseModel.getInstance().setSemester(CourseModel.PLANNER_CE);
+						CourseModel.getInstance().save();
+					}break;
 					case 3: {
-						//load CE
+						CourseModel.getInstance().setSemester(CourseModel.PLANNER_ME);
+						CourseModel.getInstance().save();
 					}
 					case 4:{
-						//blank schedule
+						CourseModel.getInstance().setSemester(CourseModel.PLANNER_DEFAULT);
+						CourseModel.getInstance().save();
+					}break;
 					}
-					}
-					}
+					Intent goToScheduleActivity = new Intent(mainMenuActivity.this, ScheduleActivity.class);
+					startActivity(goToScheduleActivity);
+				}
 			});
 			alertDialog.setOnCancelListener(new OnCancelListener() {
 				@Override

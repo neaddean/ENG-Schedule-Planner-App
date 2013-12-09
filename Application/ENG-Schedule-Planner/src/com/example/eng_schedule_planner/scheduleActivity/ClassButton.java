@@ -9,6 +9,7 @@ import com.example.eng_schedule_planner.addClassActivity.addClassActivity;
 import com.example.eng_schedule_planner.menus.descriptionActivity;
 
 import courseModel.Course;
+import courseModel.CourseModel;
 
 import android.app.ActivityOptions;
 import android.app.AlertDialog;
@@ -146,6 +147,7 @@ public class ClassButton extends RelativeLayout implements GestureDetector.OnDou
 			}
 			
 			myCourse.completed = isCompleted;
+			CourseModel.getInstance().save();
 		}
 		
 		
@@ -168,7 +170,7 @@ public class ClassButton extends RelativeLayout implements GestureDetector.OnDou
 		if(buttonType == STANDARD_BUTTON)
 		{
 			final Button b = this.button;
-			this.animate().alpha(0).scaleX(0).withEndAction(new Runnable() {
+			this.animate().alpha(0).scaleX(0).withStartAction(new Runnable() {
 				public void run() {
 					ClipData data = ClipData.newPlainText("", "");
 					DragShadowBuilder shadowBuilder = new View.DragShadowBuilder(b);
@@ -238,7 +240,7 @@ public class ClassButton extends RelativeLayout implements GestureDetector.OnDou
 				    	   Global.courseDescriptionPrereqs = myCourse.getPrereqs();
 				    	   Intent goToDescriptionActivity = new Intent(buttonPtr.getContext(), descriptionActivity.class);
 				    	   buttonPtr.getContext().startActivity(goToDescriptionActivity);
-				       }
+				       }break;
 				       case 2:{
 				    	   YearView yearPtr = (YearView) buttonPtr.getParent().getParent().getParent();
 				    	   try {

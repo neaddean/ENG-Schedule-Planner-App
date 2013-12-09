@@ -25,6 +25,8 @@ import org.w3c.dom.Element;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
+import com.example.eng_schedule_planner.Global.Global;
+
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -707,13 +709,14 @@ public class CourseModel implements ModelAccessor{
 		// semesterLists = tempSemesters;
 		 //Tim : Added to change default stores
 		 //System.out.println(getCourseByTitle("ENGEK127"));
-		//semesterLists = new HashMap<String, ArrayList<Course>> ();
-			semesterLists = BMEDefault();
+		semesterLists = new HashMap<String, ArrayList<Course>> ();
+			//semesterLists = BMEDefault();
 	}
 
 	public ArrayList<Course> getClassWithYear(int year, char semester) {
 	char yearChar = Character.forDigit(year, 10); 
 	StringBuilder semesterChoice = new StringBuilder(2).append(yearChar).append(semester);
+	System.out.println(semesterLists);
 	return semesterLists.get(semesterChoice.toString());
 }
 
@@ -721,12 +724,16 @@ public class CourseModel implements ModelAccessor{
 		char yearChar = Character.forDigit(year, 10); 
 		StringBuilder semesterChoice = new StringBuilder(2).append(yearChar).append(semester);
 		semesterLists.get(semesterChoice.toString()).add(new Course(course));
+
+		this.save();
 	}
 	
 	public void addClassWithYear(Course course, int year, char semester, int position) {
 		char yearChar = Character.forDigit(year, 10); 
 		StringBuilder semesterChoice = new StringBuilder(2).append(yearChar).append(semester);
 		semesterLists.get(semesterChoice.toString()).add(position,new Course(course));
+
+		this.save();
 		
 	}
 	
@@ -736,10 +743,17 @@ public class CourseModel implements ModelAccessor{
 		for (Course remc: semesterLists.get(semesterChoice.toString())) {
 			if (c.getTitle().equals(remc.getTitle())) {
 				semesterLists.get(semesterChoice.toString()).remove(remc);
+				this.save();
 				return c;
 			}
 		}
+
 	    return null;
+	}
+	
+	public void save()
+	{
+		this.saveState("savefile", Global.myContext);
 	}
 	
 	public Course addCourse(String name, String school, String dept, String cid,
@@ -748,6 +762,7 @@ public class CourseModel implements ModelAccessor{
 				description, prereqs, credits);
 		courseList.add(c);
 		courseTitleList.add(c.getFullTitle());
+		this.saveState("savefile", Global.myContext);
 		return c;
 	}
 	
@@ -993,22 +1008,23 @@ public class CourseModel implements ModelAccessor{
 	public final static int PLANNER_DEFAULT = 4;
 	
 	
-	void setSemester(int major) {
+	public void setSemester(int major) {
 		switch (major) {
-		case PLANNER_BME:
+		case PLANNER_BME:{
 			semesterLists = BMEDefault();
-			break;
-		case PLANNER_EE:
+			break;}
+		case PLANNER_EE:{
 			semesterLists = EEDefault();
-			break;
-		case PLANNER_CE:
+			break;}
+		case PLANNER_CE:{
 			semesterLists = CEDefault();
-		case PLANNER_ME:
+			break;}
+		case PLANNER_ME:{
 			semesterLists = MEDefault();
-			break;
-		case PLANNER_DEFAULT:
+			break;}
+		case PLANNER_DEFAULT:{
 			semesterLists = new HashMap<String, ArrayList<Course>>();
-			break;
+			break;}
 		default:
 			break;
 		}
