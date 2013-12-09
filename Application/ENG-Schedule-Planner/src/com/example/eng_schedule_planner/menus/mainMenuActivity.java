@@ -1,8 +1,13 @@
 package com.example.eng_schedule_planner.menus;
 
 
+import java.util.concurrent.Semaphore;
+
 import com.example.eng_schedule_planner.R;
 import com.example.eng_schedule_planner.scheduleActivity.ScheduleActivity;
+
+import courseModel.Course;
+import courseModel.CourseModel;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -63,12 +68,13 @@ public class mainMenuActivity extends Activity {
 			alertDialog.setTitle("Choose a Plan Type");
 			CharSequence options[] = new CharSequence[] {"Biomedical Engineering", "Mechanical Engineering", "Electrical Engineering", "Computer Engineering", "Blank Schedule"};
 			alertDialog.setItems(options, new DialogInterface.OnClickListener() {
-				@Override
+				@Override 
 				public void onClick(DialogInterface dialog, int which) {
 					alertDialog = null;
 					switch(which){
 					case 0:	{
 						//load BME
+						//CourseModel.getInstance().
 					}
 					case 1: {
 						//load ME

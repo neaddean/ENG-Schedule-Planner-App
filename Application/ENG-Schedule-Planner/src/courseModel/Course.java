@@ -50,7 +50,7 @@ public class Course {
 	int credits;
 	ArrayList<String> prereqs;
 	boolean user;
-	boolean completed;
+	public boolean completed;
 	
 	public String getTitle() {
 		return school+ dept + cid;

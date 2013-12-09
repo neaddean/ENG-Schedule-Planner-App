@@ -1,5 +1,8 @@
 package com.example.eng_schedule_planner.Splash;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 import com.example.eng_schedule_planner.R;
 import com.example.eng_schedule_planner.menus.mainMenuActivity;
 import com.example.eng_schedule_planner.scheduleActivity.ScheduleActivity;
@@ -46,7 +49,7 @@ public class SplashActivity extends Activity {
     	// TODO Auto-generated method stub
     	super.onStart();
     	
-        CourseModel model = CourseModel.getInstance();
+    	CourseModel model = CourseModel.getInstance();
 		model.loadCourseFile(this);
     	//model.saveState("savefile", this);
 		//model.loadState("savefile", this);

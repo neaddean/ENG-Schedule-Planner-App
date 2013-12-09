@@ -64,7 +64,7 @@ public class ClassButton extends RelativeLayout implements GestureDetector.OnDou
 	
 	Button button;
 	ImageView check;
-	int isCompleted;
+	boolean isCompleted;
 	int buttonType; 
 	GestureDetectorCompat myDetector;
 	AlertDialog.Builder alertDialog;
@@ -119,33 +119,28 @@ public class ClassButton extends RelativeLayout implements GestureDetector.OnDou
 		params.rightMargin = 10;
 		params.bottomMargin = 10;
 		this.addView(check,params);
-		setCompleted(NOT_COMPLETED);
+		setCompleted(myCourse.completed);
  	}
 	
  	
 	
 	public void toggleCompleted()
 	{
-		if(isCompleted == 0) setCompleted(1);
-		else setCompleted(0);
+		setCompleted(!isCompleted);
 	}
 	
-	public void setCompleted(int completed)
+	public void setCompleted(boolean completed)
 	{
-		switch(completed)
-		{
-		case NOT_COMPLETED:{
+		if(completed){
 			isCompleted = completed;
 			check.setVisibility(View.INVISIBLE);
-			break;
-		}
-		case COMPLETED:{
+
+		}else{
 			isCompleted = completed;
 			check.setVisibility(View.VISIBLE);
-			break;
 		}
-		default: System.out.println("ERROR Setting completion of button");
-		}
+		
+		myCourse.completed = isCompleted;
 		
 	}
 
@@ -211,7 +206,7 @@ public class ClassButton extends RelativeLayout implements GestureDetector.OnDou
 	public boolean onSingleTapConfirmed(MotionEvent e) {
 		if(buttonType == STANDARD_BUTTON)
 		{
-			String completeStr =(isCompleted == COMPLETED)? "Mark as not Completed" : "Mark as Completed";
+			String completeStr =(isCompleted)? "Mark as not Completed" : "Mark as Completed";
 			CharSequence colors[] = new CharSequence[] {completeStr, "View Description", "Delete"};
 			if(alertDialog == null)
 			{
