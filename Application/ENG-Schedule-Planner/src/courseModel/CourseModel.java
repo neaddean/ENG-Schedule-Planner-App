@@ -953,7 +953,9 @@ public class CourseModel implements ModelAccessor{
 							Course tempc;
 							for (String courseTitle: tempSemCourses) {
 								//System.out.println(courseTitle);
-								
+								if (courseTitle.isEmpty()) {
+									break;
+								}
 								ArrayList<String> tempSemCoursesSep = new ArrayList<String>(Arrays.asList(new String(courseTitle).split("!")));
 								
 								tempc = new Course(getCourseByTitle(tempSemCoursesSep.get(0)));
@@ -983,7 +985,7 @@ public class CourseModel implements ModelAccessor{
 			e.printStackTrace();
 		}	
 	}
-	
+//	
 //	void setSemester(int major) {
 //		switch (major) {
 //		case BME:
