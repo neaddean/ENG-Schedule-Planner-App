@@ -15,7 +15,7 @@ public class Course {
 	public final static int CATEGORY_GENERIC = 8;
 	
 	public Course(String name, String school, String dept, String cid,
-			String description, ArrayList<String> prereqs, String credits) {
+			String description, ArrayList<String> prereqs, int credits) {
 		super();
 		this.name = name;
 		this.school = school;
@@ -43,7 +43,7 @@ public class Course {
 	String dept;
 	String cid;
 	String description;
-	String credits;
+	int credits;
 	ArrayList<String> prereqs;
 	
 	public String getTitle() {

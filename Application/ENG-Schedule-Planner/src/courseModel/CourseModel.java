@@ -65,7 +65,6 @@ public class CourseModel implements ModelAccessor{
 	public static CourseModel getInstance() {
 		if (instance == null) {
 			instance = new CourseModel();
-			System.out.println("creating singleton");
 		}
 		return instance;
 	}
@@ -658,9 +657,8 @@ public class CourseModel implements ModelAccessor{
 				String prereqs = eElement.getElementsByTagName("prereqs").item(0).getTextContent();
 				ArrayList<String> prereqlist = new ArrayList<String>(Arrays.asList(prereqs.split(",")));
 				tempCourse.prereqs = (ArrayList<String>) prereqlist;
-				tempCourse.credits = eElement.getElementsByTagName("credits").item(0).getTextContent();
-
-				
+				tempCourse.credits = Integer.parseInt(eElement.getElementsByTagName("credits").item(0).getTextContent());
+		
 				tempCourseList.add(tempCourse);
 	 
 			}
@@ -711,7 +709,7 @@ public class CourseModel implements ModelAccessor{
 		 //Tim : Added to change default stores
 		 //semesterLists = this.BMEDefault();
 		 //System.out.println(getCourseByTitle("ENGEK127"));
-		semesterLists = new HashMap<String, ArrayList<Course>> ();
+	//	semesterLists = new HashMap<String, ArrayList<Course>> ();
 
 	}
 
@@ -747,7 +745,7 @@ public class CourseModel implements ModelAccessor{
 	}
 	
 	public Course addCourse(String name, String school, String dept, String cid,
-			String description, ArrayList<String> prereqs, String credits) {
+			String description, ArrayList<String> prereqs, int credits) {
 		Course c = new Course(name, school, dept, cid,
 				description, prereqs, credits);
 		courseList.add(c);
@@ -889,8 +887,7 @@ public class CourseModel implements ModelAccessor{
 //					String prereqs = eElement.getElementsByTagName("prereqs").item(0).getTextContent();
 //					ArrayList<String> prereqlist = new ArrayList<String>(Arrays.asList(prereqs.split(",")));
 //					tempCourse.prereqs = (ArrayList<String>) prereqlist;
-//					tempCourse.credits = eElement.getElementsByTagName("credits").item(0).getTextContent();
-//					
+//					tempCourse.credits = Integer.parseInt*eElement.getElementsByTagName("credits").item(0).getTextContent())
 //					tempCourseList.add(tempCourse);
 //		 
 //				}
@@ -941,15 +938,7 @@ public class CourseModel implements ModelAccessor{
 		} catch (ParserConfigurationException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
-
-		
-		
+		}	
 	}
-
-
-
-
-
 }
 
