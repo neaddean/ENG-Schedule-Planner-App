@@ -1,5 +1,7 @@
 package com.example.eng_schedule_planner.addClassActivity;
 
+import java.util.ArrayList;
+
 import com.example.eng_schedule_planner.R;
 
 import com.example.eng_schedule_planner.Global.Global;
@@ -47,7 +49,7 @@ public class addCustomClassActivity extends Activity {
                     Course newCustomCourse = CourseModel.getInstance().addCourse(editClass.getText().toString(), editSchool.getText().toString(), 
                     		editDept.getText().toString(), 
                     		editId.getText().toString(), 
-                    		new String(), null, 
+                    		new String(), new ArrayList<String>(), 
                     		Integer.parseInt(editCredits.getText().toString()),addCustomClassActivity.this);
                     Global.courseToAdd = newCustomCourse;
                     setResult(Activity.RESULT_OK,i);

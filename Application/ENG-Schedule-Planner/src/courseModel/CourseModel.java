@@ -883,7 +883,7 @@ public class CourseModel implements ModelAccessor{
 						Element cdes = doc1.createElement("description");
 						cdes.appendChild(doc1.createTextNode(new String(c.description)));
 						courseEL.appendChild(cdes);					
-						if(c.prereqs != null)
+						
 						if (!c.prereqs.isEmpty()) {
 							String tempString = new String ("");
 							 for (String semString: c.prereqs) {
