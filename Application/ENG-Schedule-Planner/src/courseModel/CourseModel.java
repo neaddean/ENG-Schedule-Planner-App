@@ -985,6 +985,7 @@ public class CourseModel implements ModelAccessor{
 			e.printStackTrace();
 		}	
 	}
+<<<<<<< HEAD
 //	
 //	void setSemester(int major) {
 //		switch (major) {
@@ -1005,6 +1006,37 @@ public class CourseModel implements ModelAccessor{
 //		}
 //		}
 //	}
+=======
+	
+	public final static int PLANNER_BME = 0;
+	public final static int PLANNER_EE = 1;
+	public final static int PLANNER_CE = 2;
+	public final static int PLANNER_ME = 3;
+	public final static int PLANNER_DEFAULT = 4;
+	
+	
+	void setSemester(int major) {
+		switch (major) {
+		case PLANNER_BME:
+			semesterLists = BMEDefault();
+			break;
+		case PLANNER_EE:
+			semesterLists = EEDefault();
+			break;
+		case PLANNER_CE:
+			semesterLists = CEDefault();
+		case PLANNER_ME:
+			semesterLists = MEDefault();
+			break;
+		case PLANNER_DEFAULT:
+			semesterLists = new HashMap<String, ArrayList<Course>>();
+			break;
+		default:
+			break;
+		}
+		
+	}
+>>>>>>> d3d6b5879e8c0c814065d2cd7fbe3ddbc3c11e6e
 	
 }
 
