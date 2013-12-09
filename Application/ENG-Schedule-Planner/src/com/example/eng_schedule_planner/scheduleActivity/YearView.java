@@ -83,6 +83,7 @@ public class YearView extends LinearLayout{
 		
 		horizontalLayout.addView(beforeSpace);
 		ArrayList<Course> cs= CourseModel.getInstance().getClassWithYear(year, semester);
+		System.out.println(cs.size());
 		if(cs != null)
 		for(int j = 0; j <cs.size(); j++)
 		{

@@ -74,19 +74,24 @@ public class mainMenuActivity extends Activity {
 					switch(which){
 					case 0:	{
 						CourseModel.getInstance().setSemester(CourseModel.PLANNER_BME);
-					}
+						CourseModel.getInstance().save();
+					}break;
 					case 1: {
 						CourseModel.getInstance().setSemester(CourseModel.PLANNER_EE);
-					}
+						CourseModel.getInstance().save();
+					}break;
 					case 2: {
 						CourseModel.getInstance().setSemester(CourseModel.PLANNER_CE);
-					}
+						CourseModel.getInstance().save();
+					}break;
 					case 3: {
 						CourseModel.getInstance().setSemester(CourseModel.PLANNER_ME);
+						CourseModel.getInstance().save();
 					}
 					case 4:{
 						CourseModel.getInstance().setSemester(CourseModel.PLANNER_DEFAULT);
-					}
+						CourseModel.getInstance().save();
+					}break;
 					}
 					Intent goToScheduleActivity = new Intent(mainMenuActivity.this, ScheduleActivity.class);
 					startActivity(goToScheduleActivity);
