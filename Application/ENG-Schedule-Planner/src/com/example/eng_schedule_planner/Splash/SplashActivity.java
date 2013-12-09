@@ -53,7 +53,6 @@ public class SplashActivity extends Activity {
 		model.loadCourseFile(this);
     	//model.saveState("savefile", this);
 		//model.loadState("savefile", this);
-		//model.printLists();
 		System.out.println("done");
     }
 }
