@@ -688,7 +688,7 @@ public class CourseModel implements ModelAccessor{
 		doc.getDocumentElement().normalize();
 	 
 		NodeList nList = doc.getElementsByTagName("course");
-		
+		n
 		ArrayList <Course> tempCourseList = new ArrayList<Course> ();
 		ArrayList<String> tempCourseTitle = new ArrayList<String>();
 		
@@ -778,7 +778,7 @@ public class CourseModel implements ModelAccessor{
 	public ArrayList<Course> getClassWithYear(int year, char semester) {
 	char yearChar = Character.forDigit(year, 10); 
 	StringBuilder semesterChoice = new StringBuilder(2).append(yearChar).append(semester);
-	System.out.println(semesterLists);
+	//System.out.println(semesterLists);
 	return semesterLists.get(semesterChoice.toString());
 }
 
@@ -952,7 +952,7 @@ public class CourseModel implements ModelAccessor{
 			 for (String semString: semesterLabels) {
 				 tempString = new String();
 				 for (Course c: semesterLists.get(semString)) {
-					 System.out.println(c.getFullTitle());
+					// System.out.println(c.getFullTitle());
 					 if (c!= null)
 						 if (c.completed)
 							 tempString = tempString + c.getTitle() + "!T ";
