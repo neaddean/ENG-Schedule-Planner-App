@@ -820,9 +820,9 @@ public class CourseModel implements ModelAccessor{
 				 for (Course c: semesterLists.get(semString)) {
 					 if (c!= null)
 						 if (c.completed)
-							 tempString = tempString + c.getTitle() + ".T ";
+							 tempString = tempString + c.getTitle() + "!T ";
 						 else if (!c.completed)
-							 tempString = tempString + c.getTitle() + ".C ";
+							 tempString = tempString + c.getTitle() + "!F ";
 				 }
 				 Element tempEl = doc.createElement(new StringBuffer(semString).reverse().toString());
 				 tempEl.appendChild(doc.createTextNode(tempString));
@@ -935,17 +935,17 @@ public class CourseModel implements ModelAccessor{
 		                     ArrayList<String> tempSemCourses = new ArrayList<String>(Arrays.asList(new String(semCourseList).split(" ")));
 
 							ArrayList<Course> tempSemCourseList = new ArrayList<Course>();
-							ArrayList<String> tempSemCoursesSep;
+							//ArrayList<String> tempSemCoursesSep;
 							Course tempc;
 							for (String courseTitle: tempSemCourses) {
 								//System.out.println(courseTitle);
 								
-								tempSemCoursesSep = new ArrayList<String>(Arrays.asList(new String(courseTitle).split(".")));
+								ArrayList<String> tempSemCoursesSep = new ArrayList<String>(Arrays.asList(new String(courseTitle).split("!")));
 								
 								tempc = new Course(getCourseByTitle(tempSemCoursesSep.get(0)));
 								if (tempSemCoursesSep.get(1).equals("T"))
 									tempc.completed = true;
-								else if (tempSemCoursesSep.get(1).equals("C"))
+								else if (tempSemCoursesSep.get(1).equals("F"))
 									tempc.completed = false;
 								tempSemCourseList.add(tempc);
 							}
