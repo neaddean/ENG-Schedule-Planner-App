@@ -24,6 +24,8 @@ public class Course {
 		this.description = description;
 		this.prereqs = prereqs;
 		this.credits = credits;
+		this.user = true;
+		this.completed = false;
 	}
 	
 	public Course (Course c) {
@@ -34,6 +36,8 @@ public class Course {
 		this.description = c.description;
 		this.prereqs = c.prereqs;
 		this.credits = c.credits;
+		this.user = c.user;
+		this.completed = c.completed;
 	}
 	 
 	public Course() {}
@@ -45,6 +49,8 @@ public class Course {
 	String description;
 	int credits;
 	ArrayList<String> prereqs;
+	boolean user;
+	boolean completed;
 	
 	public String getTitle() {
 		return school+ dept + cid;
