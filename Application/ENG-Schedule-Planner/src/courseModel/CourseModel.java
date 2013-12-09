@@ -855,7 +855,6 @@ public class CourseModel implements ModelAccessor{
 			     sb.append(line);
 			 }
 			//InputStream inputStream= new FileInputStream(fXmlFile);
-			System.out.println("dean" + sb.toString());
 			DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 			DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
 			
@@ -903,30 +902,31 @@ public class CourseModel implements ModelAccessor{
 			
 			NodeList sList = doc.getElementsByTagName("semesters");
 			
-			ArrayList<String> tempSemCourses = new ArrayList<String>();
+		//	ArrayList<String> tempSemCourses = new ArrayList<String>();
 			
-			for (int temp = 0; temp < sList.getLength(); temp++) {
+			HashMap<String, ArrayList<Course>> semesterListsTEMP = new HashMap<String, ArrayList<Course>>();		
 				 
-				Node sNode = sList.item(temp);
-			
-				tempSemCourses.clear();
-				
-				if (sNode.getNodeType() == Node.ELEMENT_NODE) {
-					 
-					Element eElement = (Element) sNode;
-					String semCourseList = eElement.getTextContent();
-					//String semCourseList = eElement.getElementsByTagName(eElement.getNodeName()).item(0).getTextContent();
-					tempSemCourses = new ArrayList<String>(Arrays.asList(semCourseList.split(".")));
+				Node sNode = sList.item(0);
+				//tempSemCourses.clear();
+
+		                 NodeList nl = sNode.getChildNodes();
+		                 for(int j=0; j<nl.getLength(); j++)
+		                 {
+		                     Node nd = nl.item(j);
+		                    // System.out.println(nd.getTextContent());
 					
-					ArrayList<Course> tempSemCourseList = new ArrayList<Course>();
-					for (String courseTitle: tempSemCourses) {
-						System.out.println(courseTitle);
-						tempSemCourseList.add(getCourseByTitle(courseTitle));
-					}
-					semesterLists.put(new StringBuffer(eElement.getNodeName()).reverse().toString(), new ArrayList<Course>(tempSemCourseList)); 
+		                     String semCourseList = nd.getTextContent();
+		                     ArrayList<String> tempSemCourses = new ArrayList<String>(Arrays.asList(new String(semCourseList).split(" ")));
+
+							ArrayList<Course> tempSemCourseList = new ArrayList<Course>();
+							for (String courseTitle: tempSemCourses) {
+								//System.out.println(courseTitle);
+								tempSemCourseList.add(new Course(getCourseByTitle(courseTitle)));
+							}
+				//			System.out.println(nd.getNodeName());
+							semesterListsTEMP.put(new StringBuffer(nd.getNodeName()).reverse().toString(), new ArrayList<Course>(tempSemCourseList)); 
 				}
-			}
-			
+			semesterLists = semesterListsTEMP;
 			fis.close();
 			
 		} catch (FileNotFoundException e) {
