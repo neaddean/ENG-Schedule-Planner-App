@@ -1094,28 +1094,6 @@ public class CourseModel implements ModelAccessor{
 		
 	}
 	
-	public HashMap <String, ArrayList<Course>> BlankDefault() {
-		HashMap <String, ArrayList<Course>> tempSemesters = new HashMap<String, ArrayList<Course>> ();
-		 
-		 ArrayList <String> semesterLabels = new ArrayList<String>();
-		 semesterLabels.add("1f");
-		 semesterLabels.add("1s");
-		 semesterLabels.add("1u");
-		 semesterLabels.add("2f");
-		 semesterLabels.add("2s");
-		 semesterLabels.add("2u");
-		 semesterLabels.add("3f");
-		 semesterLabels.add("3s");
-		 semesterLabels.add("3u");
-		 semesterLabels.add("4f");
-		 semesterLabels.add("4s");
-		 semesterLabels.add("4u");
-		 	 
-		 for (String mystr : semesterLabels) {
-			 tempSemesters.put(new String(mystr), new ArrayList<Course>());
-			 }
-		 return tempSemesters;
-	}
 	
 }
 
