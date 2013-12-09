@@ -991,7 +991,7 @@ public class CourseModel implements ModelAccessor{
 	public final static int PLANNER_DEFAULT = 4;
 	
 	
-	void setSemester(int major) {
+	public void setSemester(int major) {
 		switch (major) {
 		case PLANNER_BME:
 			semesterLists = BMEDefault();
