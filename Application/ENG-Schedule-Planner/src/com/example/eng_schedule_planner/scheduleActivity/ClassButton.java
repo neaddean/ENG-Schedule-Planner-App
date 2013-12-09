@@ -136,7 +136,7 @@ public class ClassButton extends RelativeLayout implements GestureDetector.OnDou
 	{
 		if(buttonType == STANDARD_BUTTON)
 		{
-			if(completed){
+			if(!completed){
 				isCompleted = completed;
 				check.setVisibility(View.INVISIBLE);
 
