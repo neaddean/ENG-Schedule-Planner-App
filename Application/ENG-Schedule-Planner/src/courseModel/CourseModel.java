@@ -688,7 +688,7 @@ public class CourseModel implements ModelAccessor{
 		doc.getDocumentElement().normalize();
 	 
 		NodeList nList = doc.getElementsByTagName("course");
-		n
+		
 		ArrayList <Course> tempCourseList = new ArrayList<Course> ();
 		ArrayList<String> tempCourseTitle = new ArrayList<String>();
 		
@@ -952,7 +952,6 @@ public class CourseModel implements ModelAccessor{
 			 for (String semString: semesterLabels) {
 				 tempString = new String();
 				 for (Course c: semesterLists.get(semString)) {
-					// System.out.println(c.getFullTitle());
 					 if (c!= null)
 						 if (c.completed)
 							 tempString = tempString + c.getTitle() + "!T ";

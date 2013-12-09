@@ -19,14 +19,16 @@
             
         </activity>
         <activity
-            android:name="com.example.eng_schedule_planner.addClassActivity.addClassActivity">
+            android:name="com.example.eng_schedule_planner.addClassActivity.addClassActivity" 
+          android:windowSoftInputMode="adjustResize" >
         </activity>
         <activity
             android:name="com.example.eng_schedule_planner.menus.mainMenuActivity"
             android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name="com.example.eng_schedule_planner.addClassActivity.addCustomClassActivity">
+            android:name="com.example.eng_schedule_planner.addClassActivity.addCustomClassActivity"
+            android:windowSoftInputMode="adjustResize">
         </activity>
         <activity
             android:name="com.example.eng_schedule_planner.menus.aboutActivity">

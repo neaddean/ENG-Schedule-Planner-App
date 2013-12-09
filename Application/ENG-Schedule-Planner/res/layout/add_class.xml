@@ -4,7 +4,8 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:overScrollMode="never"
-        android:scrollbars="none" >
+        android:scrollbars="none"
+        android:windowSoftInputMode="stateVisible|adjustResize" >
         
 	<LinearLayout 
 	    android:layout_width="match_parent"
@@ -41,7 +42,7 @@
 	        android:textAppearance="?android:attr/textAppearanceLarge"
 	        android:textSize="20sp" />
 	    <EditText
-	        android:id="@+id/editDept"
+	        android:id="@+id/editSchool"
 	        android:layout_width="match_parent"
 	        android:layout_height="wrap_content"
 	        android:ems="10"
@@ -53,7 +54,7 @@
 	        android:id="@+id/classDeptLabel"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:text="Class Title:"
+	        android:text="Class Department:"
 	        android:textAppearance="?android:attr/textAppearanceLarge"
 	        android:textSize="20sp" />
 	    <EditText
