@@ -5,6 +5,9 @@ import com.example.eng_schedule_planner.R;
 import com.example.eng_schedule_planner.Global.Global;
 import com.example.eng_schedule_planner.scheduleActivity.YearView;
 
+import courseModel.Course;
+import courseModel.CourseModel;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -18,26 +21,35 @@ import android.view.View.OnClickListener;
 public class addCustomClassActivity extends Activity {
 	
 	TextView title;
-	EditText editText;
+	EditText editClass,editSchool,editDept,editId,editCredits;
 	Button addCustomButton;
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.add_class);
 		
 		title = (TextView) findViewById(R.id.addClassLabel);
-		editText = (EditText) findViewById(R.id.editClassName);
+		editClass= (EditText) findViewById(R.id.editClassName);
 		addCustomButton = (Button) findViewById(R.id.addClassButton);
+		editSchool= (EditText) findViewById(R.id.editSchool);
+		editDept= (EditText) findViewById(R.id.editDept);
+		editId= (EditText) findViewById(R.id.editID);
+		editCredits= (EditText) findViewById(R.id.editCredit);
 		
 		addCustomButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
                     addCustomClassActivity c = (addCustomClassActivity) v.getContext();
-                    if(c.isEmpty(c.editText)){
+                    if(c.isEmpty(c.editClass)){
                             Toast.makeText(c, "Enter Class Name Please", Toast.LENGTH_SHORT).show();
                             return;
                     }
                     Intent i = new Intent();
-                    i.putExtra("className", c.editText.getText().toString());
+                    Course newCustomCourse = CourseModel.getInstance().addCourse(editClass.getText().toString(), editSchool.getText().toString(), 
+                    		editDept.getText().toString(), 
+                    		editId.getText().toString(), 
+                    		new String(), null, 
+                    		Integer.parseInt(editCredits.getText().toString()));
+                    Global.courseToAdd = newCustomCourse;
                     setResult(Activity.RESULT_OK,i);
                     finish();
             }
