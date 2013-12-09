@@ -56,11 +56,11 @@ public class CourseModel implements ModelAccessor{
 	public final static int JUNIOR_YEAR = 3;
 	public final static int SENIOR_YEAR = 4;
 	
-	public static HashMap <String, ArrayList<Course>> PLANNER_CE = CEDefault();
-	public static HashMap <String, ArrayList<Course>> PLANNER_EE = EEDefault();
-	public static HashMap <String, ArrayList<Course>> PLANNER_ME = MEDefault();
-	public static HashMap <String, ArrayList<Course>> PLANNER_BME = BMEDefault();
-	public static HashMap <String, ArrayList<Course>> PLANNER_DEFAULT = BlankDefault();
+//	public static HashMap <String, ArrayList<Course>> PLANNER_CE = CEDefault();
+//	public static HashMap <String, ArrayList<Course>> PLANNER_EE = EEDefault();
+//	public static HashMap <String, ArrayList<Course>> PLANNER_ME = MEDefault();
+//	public static HashMap <String, ArrayList<Course>> PLANNER_BME = BMEDefault();
+//	public static HashMap <String, ArrayList<Course>> PLANNER_DEFAULT = BlankDefault();
 	
 	
 	public ArrayList<Course> getCourseList() {
@@ -626,7 +626,7 @@ public class CourseModel implements ModelAccessor{
 		ArrayList<Course> u3List = new ArrayList<Course>();
 		tempSemesters.put("3u", u3List);
 		ArrayList<Course> u4List = new ArrayList<Course>();
-		tempSemesters.put("3u", u4List);
+		tempSemesters.put("4u", u4List);
 		
 		/* Advanced Elective Defined as:
 		  	All ENG courses 300 level or above, (without overlap)
@@ -1062,14 +1062,7 @@ public class CourseModel implements ModelAccessor{
 			e.printStackTrace();
 		}	
 	}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> b9e81d55c71bd7421bbffb4a528f391e994fac03
-=======
->>>>>>> b9e81d55c71bd7421bbffb4a528f391e994fac03
+
 	
 	public final static int PLANNER_BME = 0;
 	public final static int PLANNER_EE = 1;
@@ -1093,20 +1086,13 @@ public class CourseModel implements ModelAccessor{
 			semesterLists = MEDefault();
 			break;}
 		case PLANNER_DEFAULT:{
-			semesterLists = new HashMap<String, ArrayList<Course>>();
+			semesterLists = BlankDefault();
 			break;}
 		default:
 			break;
 		}
 		
 	}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b9e81d55c71bd7421bbffb4a528f391e994fac03
-=======
->>>>>>> b9e81d55c71bd7421bbffb4a528f391e994fac03
-=======
->>>>>>> b9e81d55c71bd7421bbffb4a528f391e994fac03
 	
 }
 
