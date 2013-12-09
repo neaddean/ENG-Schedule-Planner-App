@@ -65,7 +65,6 @@ public class CourseModel implements ModelAccessor{
 	public static CourseModel getInstance() {
 		if (instance == null) {
 			instance = new CourseModel();
-			System.out.println("creating singleton");
 		}
 		return instance;
 	}
@@ -657,9 +656,8 @@ public class CourseModel implements ModelAccessor{
 				String prereqs = eElement.getElementsByTagName("prereqs").item(0).getTextContent();
 				ArrayList<String> prereqlist = new ArrayList<String>(Arrays.asList(prereqs.split(",")));
 				tempCourse.prereqs = (ArrayList<String>) prereqlist;
-				tempCourse.credits = eElement.getElementsByTagName("credits").item(0).getTextContent();
-
-				
+				tempCourse.credits = Integer.parseInt(eElement.getElementsByTagName("credits").item(0).getTextContent());
+		
 				tempCourseList.add(tempCourse);
 	 
 			}
@@ -708,9 +706,8 @@ public class CourseModel implements ModelAccessor{
 		 
 		 semesterLists = tempSemesters;
 		 //Tim : Added to change default stores
-		 semesterLists = this.BMEDefault();
 		 //System.out.println(getCourseByTitle("ENGEK127"));
-		//semesterLists = new HashMap<String, ArrayList<Course>> ();
+		semesterLists = new HashMap<String, ArrayList<Course>> ();
 
 	}
 
@@ -746,7 +743,7 @@ public class CourseModel implements ModelAccessor{
 	}
 	
 	public Course addCourse(String name, String school, String dept, String cid,
-			String description, ArrayList<String> prereqs, String credits) {
+			String description, ArrayList<String> prereqs, int credits) {
 		Course c = new Course(name, school, dept, cid,
 				description, prereqs, credits);
 		courseList.add(c);
@@ -854,7 +851,6 @@ public class CourseModel implements ModelAccessor{
 			     sb.append(line);
 			 }
 			//InputStream inputStream= new FileInputStream(fXmlFile);
-			System.out.println("dean" + sb.toString());
 			DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 			DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
 			
@@ -889,8 +885,7 @@ public class CourseModel implements ModelAccessor{
 //					String prereqs = eElement.getElementsByTagName("prereqs").item(0).getTextContent();
 //					ArrayList<String> prereqlist = new ArrayList<String>(Arrays.asList(prereqs.split(",")));
 //					tempCourse.prereqs = (ArrayList<String>) prereqlist;
-//					tempCourse.credits = eElement.getElementsByTagName("credits").item(0).getTextContent();
-//					
+//					tempCourse.credits = Integer.parseInt*eElement.getElementsByTagName("credits").item(0).getTextContent())
 //					tempCourseList.add(tempCourse);
 //		 
 //				}
@@ -902,30 +897,31 @@ public class CourseModel implements ModelAccessor{
 			
 			NodeList sList = doc.getElementsByTagName("semesters");
 			
-			ArrayList<String> tempSemCourses = new ArrayList<String>();
+		//	ArrayList<String> tempSemCourses = new ArrayList<String>();
 			
-			for (int temp = 0; temp < sList.getLength(); temp++) {
+			HashMap<String, ArrayList<Course>> semesterListsTEMP = new HashMap<String, ArrayList<Course>>();		
 				 
-				Node sNode = sList.item(temp);
-			
-				tempSemCourses.clear();
-				
-				if (sNode.getNodeType() == Node.ELEMENT_NODE) {
-					 
-					Element eElement = (Element) sNode;
-					String semCourseList = eElement.getTextContent();
-					//String semCourseList = eElement.getElementsByTagName(eElement.getNodeName()).item(0).getTextContent();
-					tempSemCourses = new ArrayList<String>(Arrays.asList(semCourseList.split(".")));
+				Node sNode = sList.item(0);
+				//tempSemCourses.clear();
+
+		                 NodeList nl = sNode.getChildNodes();
+		                 for(int j=0; j<nl.getLength(); j++)
+		                 {
+		                     Node nd = nl.item(j);
+		                    // System.out.println(nd.getTextContent());
 					
-					ArrayList<Course> tempSemCourseList = new ArrayList<Course>();
-					for (String courseTitle: tempSemCourses) {
-						System.out.println(courseTitle);
-						tempSemCourseList.add(getCourseByTitle(courseTitle));
-					}
-					semesterLists.put(new StringBuffer(eElement.getNodeName()).reverse().toString(), new ArrayList<Course>(tempSemCourseList)); 
+		                     String semCourseList = nd.getTextContent();
+		                     ArrayList<String> tempSemCourses = new ArrayList<String>(Arrays.asList(new String(semCourseList).split(" ")));
+
+							ArrayList<Course> tempSemCourseList = new ArrayList<Course>();
+							for (String courseTitle: tempSemCourses) {
+								//System.out.println(courseTitle);
+								tempSemCourseList.add(new Course(getCourseByTitle(courseTitle)));
+							}
+				//			System.out.println(nd.getNodeName());
+							semesterListsTEMP.put(new StringBuffer(nd.getNodeName()).reverse().toString(), new ArrayList<Course>(tempSemCourseList)); 
 				}
-			}
-			
+			semesterLists = semesterListsTEMP;
 			fis.close();
 			
 		} catch (FileNotFoundException e) {
@@ -940,15 +936,7 @@ public class CourseModel implements ModelAccessor{
 		} catch (ParserConfigurationException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
-
-		
-		
+		}	
 	}
-
-
-
-
-
 }
 
