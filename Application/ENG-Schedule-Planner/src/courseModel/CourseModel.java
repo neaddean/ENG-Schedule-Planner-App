@@ -83,13 +83,6 @@ public class CourseModel implements ModelAccessor{
 	
 	public ArrayList<String> getCourseTitleList()
 	{
-		if(courseTitleList == null){
-			courseTitleList = new ArrayList<String>();
-			for(Course c: courseList)
-			{
-				courseTitleList.add(c.getFullTitle());
-			}
-		}
 		return courseTitleList;
 	}
 	
@@ -636,7 +629,7 @@ public class CourseModel implements ModelAccessor{
 		NodeList nList = doc.getElementsByTagName("course");
 		
 		ArrayList <Course> tempCourseList = new ArrayList<Course> ();
-		
+		ArrayList<String> tempCourseTitle = new ArrayList<String>();
 		
 		for (int temp = 0; temp < nList.getLength(); temp++) {
 			 
@@ -658,15 +651,17 @@ public class CourseModel implements ModelAccessor{
 				ArrayList<String> prereqlist = new ArrayList<String>(Arrays.asList(prereqs.split(",")));
 				tempCourse.prereqs = (ArrayList<String>) prereqlist;
 				tempCourse.credits = Integer.parseInt(eElement.getElementsByTagName("credits").item(0).getTextContent());
-		
+				tempCourse.user = false;
+				
 				tempCourseList.add(tempCourse);
-	 
+				tempCourseTitle.add(tempCourse.getFullTitle());
 			}
 	 
 		
 		}
 		
 		courseList = tempCourseList;
+		courseTitleList = tempCourseTitle;
 		
 	} 
 	catch (Exception e) {
@@ -695,6 +690,7 @@ public class CourseModel implements ModelAccessor{
 		 
 		 ArrayList<Course> tempList = new ArrayList<Course>();
 
+		 
 		 for (String mystr : semesterLabels) {
 			 tempList.clear();
 			 for (int j = 0; j < 5; j++) { 
@@ -704,7 +700,13 @@ public class CourseModel implements ModelAccessor{
 			 }
 			 tempSemesters.put(mystr, new ArrayList<Course>(tempList));
 		 }
-		 
+			if(courseTitleList == null){
+				courseTitleList = new ArrayList<String>();
+				for(Course c: courseList)
+				{
+					courseTitleList.add(c.getFullTitle());
+				}
+			}
 		 semesterLists = tempSemesters;
 		 //Tim : Added to change default stores
 		 //semesterLists = this.BMEDefault();
@@ -749,6 +751,7 @@ public class CourseModel implements ModelAccessor{
 		Course c = new Course(name, school, dept, cid,
 				description, prereqs, credits);
 		courseList.add(c);
+		courseTitleList.add(c.getFullTitle());
 		return c;
 	}
 	
@@ -773,6 +776,19 @@ public class CourseModel implements ModelAccessor{
 
 	public void saveState(String filename, Context context) {
 		  try {
+			  
+			  FileOutputStream cos = context.getApplicationContext().openFileOutput("usercourses", 0);
+			  
+				DocumentBuilderFactory docFactory1 = DocumentBuilderFactory.newInstance();
+				DocumentBuilder docBuilder1 = docFactory1.newDocumentBuilder();
+			  
+				Document doc1 = docBuilder1.newDocument();
+				Element coursesElement = doc1.createElement("courses");
+				doc1.appendChild(coursesElement);
+				
+				
+			  
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 			  
 			FileOutputStream fos = context.getApplicationContext().openFileOutput(filename, 0);
 			  
@@ -803,7 +819,10 @@ public class CourseModel implements ModelAccessor{
 				 tempString = new String("");
 				 for (Course c: semesterLists.get(semString)) {
 					 if (c!= null)
-						 tempString = tempString + c.getTitle() + " ";
+						 if (c.completed)
+							 tempString = tempString + c.getTitle() + ".T ";
+						 else if (!c.completed)
+							 tempString = tempString + c.getTitle() + ".C ";
 				 }
 				 Element tempEl = doc.createElement(new StringBuffer(semString).reverse().toString());
 				 tempEl.appendChild(doc.createTextNode(tempString));
@@ -916,9 +935,19 @@ public class CourseModel implements ModelAccessor{
 		                     ArrayList<String> tempSemCourses = new ArrayList<String>(Arrays.asList(new String(semCourseList).split(" ")));
 
 							ArrayList<Course> tempSemCourseList = new ArrayList<Course>();
+							ArrayList<String> tempSemCoursesSep;
+							Course tempc;
 							for (String courseTitle: tempSemCourses) {
 								//System.out.println(courseTitle);
-								tempSemCourseList.add(new Course(getCourseByTitle(courseTitle)));
+								
+								tempSemCoursesSep = new ArrayList<String>(Arrays.asList(new String(courseTitle).split(".")));
+								
+								tempc = new Course(getCourseByTitle(tempSemCoursesSep.get(0)));
+								if (tempSemCoursesSep.get(1).equals("T"))
+									tempc.completed = true;
+								else if (tempSemCoursesSep.get(1).equals("C"))
+									tempc.completed = false;
+								tempSemCourseList.add(tempc);
 							}
 				//			System.out.println(nd.getNodeName());
 							semesterListsTEMP.put(new StringBuffer(nd.getNodeName()).reverse().toString(), new ArrayList<Course>(tempSemCourseList)); 
