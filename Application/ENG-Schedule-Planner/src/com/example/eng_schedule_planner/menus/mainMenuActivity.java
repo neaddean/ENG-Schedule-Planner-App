@@ -77,17 +77,17 @@ public class mainMenuActivity extends Activity {
 						CourseModel.getInstance().save();
 					}break;
 					case 1: {
-						CourseModel.getInstance().setSemester(CourseModel.PLANNER_EE);
+						CourseModel.getInstance().setSemester(CourseModel.PLANNER_ME);
 						CourseModel.getInstance().save();
 					}break;
 					case 2: {
-						CourseModel.getInstance().setSemester(CourseModel.PLANNER_CE);
+						CourseModel.getInstance().setSemester(CourseModel.PLANNER_EE);
 						CourseModel.getInstance().save();
 					}break;
 					case 3: {
-						CourseModel.getInstance().setSemester(CourseModel.PLANNER_ME);
+						CourseModel.getInstance().setSemester(CourseModel.PLANNER_CE);
 						CourseModel.getInstance().save();
-					}
+					}break;
 					case 4:{
 						CourseModel.getInstance().setSemester(CourseModel.PLANNER_DEFAULT);
 						CourseModel.getInstance().save();
