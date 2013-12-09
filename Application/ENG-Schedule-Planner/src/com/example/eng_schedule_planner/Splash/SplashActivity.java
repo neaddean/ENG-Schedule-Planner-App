@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 import com.example.eng_schedule_planner.R;
+import com.example.eng_schedule_planner.Global.Global;
 import com.example.eng_schedule_planner.menus.mainMenuActivity;
 import com.example.eng_schedule_planner.scheduleActivity.ScheduleActivity;
 
@@ -23,7 +24,7 @@ public class SplashActivity extends Activity {
     /** Called when the activity is first created. */
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        
+        Global.myContext = this;
         
         setContentView(R.layout.splash_screen);
 

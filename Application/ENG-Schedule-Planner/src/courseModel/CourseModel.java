@@ -25,8 +25,9 @@ import org.w3c.dom.Element;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
+import com.example.eng_schedule_planner.Global.Global;
+
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -54,6 +55,12 @@ public class CourseModel implements ModelAccessor{
 	public final static int SOPHOMORE_YEAR = 2;
 	public final static int JUNIOR_YEAR = 3;
 	public final static int SENIOR_YEAR = 4;
+	
+	public static HashMap <String, ArrayList<Course>> PLANNER_CE = CEDefault();
+	public static HashMap <String, ArrayList<Course>> PLANNER_EE = EEDefault();
+	public static HashMap <String, ArrayList<Course>> PLANNER_ME = MEDefault();
+	public static HashMap <String, ArrayList<Course>> PLANNER_BME = BMEDefault();
+	public static HashMap <String, ArrayList<Course>> PLANNER_DEFAULT = BlankDefault();
 	
 	
 	public ArrayList<Course> getCourseList() {
@@ -84,6 +91,62 @@ public class CourseModel implements ModelAccessor{
 	{
 		return courseTitleList;
 	}
+	//Blank Default Planning Sheet
+
+		HashMap <String, ArrayList<Course>> BlankDefault() {
+			HashMap <String, ArrayList<Course>> tempSemesters = new HashMap<String, ArrayList<Course>> ();
+			
+			//Freshman Semester 1
+			ArrayList<Course> f1List = new ArrayList<Course>();
+			tempSemesters.put("1f", f1List);
+			
+			//Freshman Semester 2
+			ArrayList<Course> s1List = new ArrayList<Course>();
+			tempSemesters.put("1s", s1List);
+		
+			//Sophomore Semester 1
+			ArrayList<Course> f2List = new ArrayList<Course>();
+			tempSemesters.put("2f", f2List);
+
+			
+			//Sophomore Semester 2
+			ArrayList<Course> s2List = new ArrayList<Course>();
+			tempSemesters.put("2s", s2List);
+
+			
+			//Junior Semester 1
+			ArrayList<Course> f3List = new ArrayList<Course>();
+			tempSemesters.put("3f", f3List);
+
+			
+			//Junior Semester 2
+			ArrayList<Course> s3List = new ArrayList<Course>();
+			tempSemesters.put("3s", s3List);
+
+			
+			//Senior Semester 1
+			ArrayList<Course> f4List = new ArrayList<Course>();
+			tempSemesters.put("4f", f4List);
+
+			
+			//Senior Semester 2
+			ArrayList<Course> s4List = new ArrayList<Course>();
+			tempSemesters.put("4s", s4List);
+
+			//To initialize summer semesters as empty
+			ArrayList<Course> u1List = new ArrayList<Course>();
+			tempSemesters.put("1u", u1List);
+			ArrayList<Course> u2List = new ArrayList<Course>();
+			tempSemesters.put("2u", u2List);
+			ArrayList<Course> u3List = new ArrayList<Course>();
+			tempSemesters.put("3u", u3List);
+			ArrayList<Course> u4List = new ArrayList<Course>();
+			tempSemesters.put("4u", u4List);
+			
+			return tempSemesters;
+		}
+
+	
 	
 	//Computer Engineering Planning Sheet
 	HashMap <String, ArrayList<Course>> CEDefault() {
@@ -708,13 +771,14 @@ public class CourseModel implements ModelAccessor{
 		// semesterLists = tempSemesters;
 		 //Tim : Added to change default stores
 		 //System.out.println(getCourseByTitle("ENGEK127"));
-		//semesterLists = new HashMap<String, ArrayList<Course>> ();
-			semesterLists = BMEDefault();
+		semesterLists = new HashMap<String, ArrayList<Course>> ();
+			//semesterLists = BMEDefault();
 	}
 
 	public ArrayList<Course> getClassWithYear(int year, char semester) {
 	char yearChar = Character.forDigit(year, 10); 
 	StringBuilder semesterChoice = new StringBuilder(2).append(yearChar).append(semester);
+	System.out.println(semesterLists);
 	return semesterLists.get(semesterChoice.toString());
 }
 
@@ -722,12 +786,16 @@ public class CourseModel implements ModelAccessor{
 		char yearChar = Character.forDigit(year, 10); 
 		StringBuilder semesterChoice = new StringBuilder(2).append(yearChar).append(semester);
 		semesterLists.get(semesterChoice.toString()).add(new Course(course));
+
+		this.save();
 	}
 	
 	public void addClassWithYear(Course course, int year, char semester, int position) {
 		char yearChar = Character.forDigit(year, 10); 
 		StringBuilder semesterChoice = new StringBuilder(2).append(yearChar).append(semester);
 		semesterLists.get(semesterChoice.toString()).add(position,new Course(course));
+
+		this.save();
 		
 	}
 	
@@ -737,10 +805,17 @@ public class CourseModel implements ModelAccessor{
 		for (Course remc: semesterLists.get(semesterChoice.toString())) {
 			if (c.getTitle().equals(remc.getTitle())) {
 				semesterLists.get(semesterChoice.toString()).remove(remc);
+				this.save();
 				return c;
 			}
 		}
+
 	    return null;
+	}
+	
+	public void save()
+	{
+		this.saveState("savefile", Global.myContext);
 	}
 	
 	public Course addCourse(String name, String school, String dept, String cid,
@@ -749,6 +824,7 @@ public class CourseModel implements ModelAccessor{
 				description, prereqs, credits);
 		courseList.add(c);
 		courseTitleList.add(c.getFullTitle());
+		this.saveState("savefile", Global.myContext);
 		return c;
 	}
 	
@@ -783,24 +859,58 @@ public class CourseModel implements ModelAccessor{
 				Element coursesElement = doc1.createElement("courses");
 				doc1.appendChild(coursesElement);
 				
-//				for (Course c: courseList) {
-//					if (c.user) {
-//						Element courseEL = doc1.createElement("course");
-//						
-//						
-//						
-//						tempCourse.name = eElement.getAttribute("name");
-//						tempCourse.school = eElement.getElementsByTagName("school").item(0).getTextContent();
-//						tempCourse.dept = eElement.getElementsByTagName("dept").item(0).getTextContent();
-//						tempCourse.cid = eElement.getElementsByTagName("cid").item(0).getTextContent();
-//						tempCourse.description = eElement.getElementsByTagName("description").item(0).getTextContent();
-//						//tempCourse.cid = eElement.getElementsByTagName("link").item(0).getTextContent();
-//						String prereqs = eElement.getElementsByTagName("prereqs").item(0).getTextContent();
-//						ArrayList<String> prereqlist = new ArrayList<String>(Arrays.asList(prereqs.split(",")));
-//						tempCourse.prereqs = (ArrayList<String>) prereqlist;
-//						tempCourse.credits = Integer.parseInt(eElement.getElementsByTagName("credits").item(0).getTextContent());
-//					}
-//				}
+				for (Course c: courseList) {
+					if (c.user) {
+						Element courseEL = doc1.createElement("course");
+						
+						Element cname = doc1.createElement("name");
+						cname.appendChild(doc1.createTextNode(new String(c.name)));
+						courseEL.appendChild(cname);
+						
+						Element cschool = doc1.createElement("school");
+						cschool.appendChild(doc1.createTextNode(new String(c.school)));
+						courseEL.appendChild(cschool);
+						
+						Element cdept = doc1.createElement("dept");
+						cdept.appendChild(doc1.createTextNode(new String(c.dept)));
+						courseEL.appendChild(cdept);
+						
+						Element ccid = doc1.createElement("cid");
+						ccid.appendChild(doc1.createTextNode(new String(c.cid)));
+						courseEL.appendChild(ccid);
+						
+						Element cdes = doc1.createElement("description");
+						cdes.appendChild(doc1.createTextNode(new String(c.description)));
+						courseEL.appendChild(cdes);					
+						
+						String tempString = new String ("");
+						 for (String semString: c.prereqs) {
+							 tempString = tempString + semString + " ";							 
+							 }
+						 Element cprereq = doc1.createElement("prereqs");
+							cdes.appendChild(doc1.createTextNode(new String(tempString)));
+							courseEL.appendChild(cdes);
+							
+						Element ccredits = doc1.createElement("credits");
+						ccredits.appendChild(doc1.createTextNode(new String(String.valueOf(c.credits))));
+						courseEL.appendChild(ccredits);
+						
+						coursesElement.appendChild(courseEL);
+						
+					}
+				}
+				
+				TransformerFactory transformerFactory1 = TransformerFactory.newInstance();
+				Transformer transformer1 = transformerFactory1.newTransformer();
+				DOMSource source1 = new DOMSource(doc1);
+				StringWriter writer1 = new StringWriter();
+				
+				transformer1.transform(source1, new StreamResult(writer1));
+				String output1 = writer1.getBuffer().toString().replaceAll("\n|\r", "");
+				// Output to console for testing
+				// StreamResult result = new StreamResult(System.out);
+				cos.write(output1.getBytes());
+				cos.close();
 			  
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 			  
@@ -896,39 +1006,6 @@ public class CourseModel implements ModelAccessor{
 			//optional, but recommended
 			//read this - http://stackoverflow.com/questions/13786607/normalization-in-dom-parsing-with-java-how-does-it-work
 			doc.getDocumentElement().normalize();
-		 
-//			NodeList nList = doc.getElementsByTagName("course");
-//			
-//			ArrayList <Course> tempCourseList = new ArrayList<Course> ();
-//			
-//			for (int temp = 0; temp < nList.getLength(); temp++) {
-//				 
-//				Node nNode = nList.item(temp);
-//				
-//				Course tempCourse = new Course();
-//		 
-//				if (nNode.getNodeType() == Node.ELEMENT_NODE) {
-//		 
-//					Element eElement = (Element) nNode;
-//					
-//					tempCourse.name = eElement.getElementsByTagName("name").item(0).getTextContent();
-//					tempCourse.school = eElement.getElementsByTagName("school").item(0).getTextContent();
-//					tempCourse.dept = eElement.getElementsByTagName("dept").item(0).getTextContent();
-//					tempCourse.cid = eElement.getElementsByTagName("cid").item(0).getTextContent();
-//					tempCourse.description = eElement.getElementsByTagName("description").item(0).getTextContent();
-//					//tempCourse.cid = eElement.getElementsByTagName("link").item(0).getTextContent();
-//					String prereqs = eElement.getElementsByTagName("prereqs").item(0).getTextContent();
-//					ArrayList<String> prereqlist = new ArrayList<String>(Arrays.asList(prereqs.split(",")));
-//					tempCourse.prereqs = (ArrayList<String>) prereqlist;
-//					tempCourse.credits = Integer.parseInt*eElement.getElementsByTagName("credits").item(0).getTextContent())
-//					tempCourseList.add(tempCourse);
-//		 
-//				}
-//		 
-//			
-//			}
-//			
-//			courseList.addAll(tempCourseList);
 			
 			NodeList sList = doc.getElementsByTagName("semesters");
 			
@@ -985,7 +1062,6 @@ public class CourseModel implements ModelAccessor{
 			e.printStackTrace();
 		}	
 	}
-
 	
 }
 
