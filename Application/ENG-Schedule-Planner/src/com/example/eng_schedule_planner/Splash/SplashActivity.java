@@ -48,9 +48,9 @@ public class SplashActivity extends Activity {
     	
         CourseModel model = CourseModel.getInstance();
 		model.loadCourseFile(this);
-    	model.saveState("savefile", this);
+    	//model.saveState("savefile", this);
 		//model.loadState("savefile", this);
-		model.printLists();
+		//model.printLists();
 		System.out.println("done");
     }
 }
