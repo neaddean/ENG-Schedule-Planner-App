@@ -56,6 +56,12 @@ public class CourseModel implements ModelAccessor{
 	public final static int JUNIOR_YEAR = 3;
 	public final static int SENIOR_YEAR = 4;
 	
+//	public static HashMap <String, ArrayList<Course>> PLANNER_CE = CEDefault();
+//	public static HashMap <String, ArrayList<Course>> PLANNER_EE = EEDefault();
+//	public static HashMap <String, ArrayList<Course>> PLANNER_ME = MEDefault();
+//	public static HashMap <String, ArrayList<Course>> PLANNER_BME = BMEDefault();
+//	public static HashMap <String, ArrayList<Course>> PLANNER_DEFAULT = BlankDefault();
+	
 	
 	public ArrayList<Course> getCourseList() {
 		return courseList;
@@ -85,6 +91,62 @@ public class CourseModel implements ModelAccessor{
 	{
 		return courseTitleList;
 	}
+	//Blank Default Planning Sheet
+
+		HashMap <String, ArrayList<Course>> BlankDefault() {
+			HashMap <String, ArrayList<Course>> tempSemesters = new HashMap<String, ArrayList<Course>> ();
+			
+			//Freshman Semester 1
+			ArrayList<Course> f1List = new ArrayList<Course>();
+			tempSemesters.put("1f", f1List);
+			
+			//Freshman Semester 2
+			ArrayList<Course> s1List = new ArrayList<Course>();
+			tempSemesters.put("1s", s1List);
+		
+			//Sophomore Semester 1
+			ArrayList<Course> f2List = new ArrayList<Course>();
+			tempSemesters.put("2f", f2List);
+
+			
+			//Sophomore Semester 2
+			ArrayList<Course> s2List = new ArrayList<Course>();
+			tempSemesters.put("2s", s2List);
+
+			
+			//Junior Semester 1
+			ArrayList<Course> f3List = new ArrayList<Course>();
+			tempSemesters.put("3f", f3List);
+
+			
+			//Junior Semester 2
+			ArrayList<Course> s3List = new ArrayList<Course>();
+			tempSemesters.put("3s", s3List);
+
+			
+			//Senior Semester 1
+			ArrayList<Course> f4List = new ArrayList<Course>();
+			tempSemesters.put("4f", f4List);
+
+			
+			//Senior Semester 2
+			ArrayList<Course> s4List = new ArrayList<Course>();
+			tempSemesters.put("4s", s4List);
+
+			//To initialize summer semesters as empty
+			ArrayList<Course> u1List = new ArrayList<Course>();
+			tempSemesters.put("1u", u1List);
+			ArrayList<Course> u2List = new ArrayList<Course>();
+			tempSemesters.put("2u", u2List);
+			ArrayList<Course> u3List = new ArrayList<Course>();
+			tempSemesters.put("3u", u3List);
+			ArrayList<Course> u4List = new ArrayList<Course>();
+			tempSemesters.put("4u", u4List);
+			
+			return tempSemesters;
+		}
+
+	
 	
 	//Computer Engineering Planning Sheet
 	HashMap <String, ArrayList<Course>> CEDefault() {
@@ -564,7 +626,7 @@ public class CourseModel implements ModelAccessor{
 		ArrayList<Course> u3List = new ArrayList<Course>();
 		tempSemesters.put("3u", u3List);
 		ArrayList<Course> u4List = new ArrayList<Course>();
-		tempSemesters.put("3u", u4List);
+		tempSemesters.put("4u", u4List);
 		
 		/* Advanced Elective Defined as:
 		  	All ENG courses 300 level or above, (without overlap)
@@ -1000,6 +1062,7 @@ public class CourseModel implements ModelAccessor{
 			e.printStackTrace();
 		}	
 	}
+
 	
 	public final static int PLANNER_BME = 0;
 	public final static int PLANNER_EE = 1;
