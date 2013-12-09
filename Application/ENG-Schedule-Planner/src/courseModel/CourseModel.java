@@ -1063,7 +1063,10 @@ public class CourseModel implements ModelAccessor{
 		}	
 	}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> b9e81d55c71bd7421bbffb4a528f391e994fac03
 	
 	public final static int PLANNER_BME = 0;
 	public final static int PLANNER_EE = 1;
@@ -1094,6 +1097,9 @@ public class CourseModel implements ModelAccessor{
 		}
 		
 	}
+<<<<<<< HEAD
+>>>>>>> b9e81d55c71bd7421bbffb4a528f391e994fac03
+=======
 >>>>>>> b9e81d55c71bd7421bbffb4a528f391e994fac03
 	
 }
