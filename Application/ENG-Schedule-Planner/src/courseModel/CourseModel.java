@@ -953,7 +953,9 @@ public class CourseModel implements ModelAccessor{
 							Course tempc;
 							for (String courseTitle: tempSemCourses) {
 								//System.out.println(courseTitle);
-								
+								if (courseTitle.isEmpty()) {
+									break;
+								}
 								ArrayList<String> tempSemCoursesSep = new ArrayList<String>(Arrays.asList(new String(courseTitle).split("!")));
 								
 								tempc = new Course(getCourseByTitle(tempSemCoursesSep.get(0)));
@@ -983,6 +985,28 @@ public class CourseModel implements ModelAccessor{
 			e.printStackTrace();
 		}	
 	}
+<<<<<<< HEAD
+//	
+//	void setSemester(int major) {
+//		switch (major) {
+//		case BME:
+//			semesterLists = BMEDefault();
+//			break;
+//		case EE:
+//			semesterLists = EEDefault();
+//			break;
+//		case CE:
+//			semesterLists = CEDefault();
+//		case ME:
+//			semesterLists = MEDefault();
+//			break
+//		case DEFAULT:
+//			semesterLists = new HashMap<String, ArrayList<Course>>();
+//			break;
+//		}
+//		}
+//	}
+=======
 	
 	public final static int PLANNER_BME = 0;
 	public final static int PLANNER_EE = 1;
@@ -1012,6 +1036,7 @@ public class CourseModel implements ModelAccessor{
 		}
 		
 	}
+>>>>>>> d3d6b5879e8c0c814065d2cd7fbe3ddbc3c11e6e
 	
 }
 
