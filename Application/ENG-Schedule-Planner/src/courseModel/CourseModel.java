@@ -824,6 +824,7 @@ public class CourseModel implements ModelAccessor{
 				description, prereqs, credits);
 		courseList.add(c);
 		courseTitleList.add(c.getFullTitle());
+		System.out.println(c.getFullTitle());
 		this.saveState("savefile", context.getApplicationContext());
 		return c;
 	}
