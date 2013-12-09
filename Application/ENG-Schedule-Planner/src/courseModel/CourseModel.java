@@ -1064,7 +1064,10 @@ public class CourseModel implements ModelAccessor{
 	}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> b9e81d55c71bd7421bbffb4a528f391e994fac03
 =======
 >>>>>>> b9e81d55c71bd7421bbffb4a528f391e994fac03
 	
@@ -1098,6 +1101,9 @@ public class CourseModel implements ModelAccessor{
 		
 	}
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> b9e81d55c71bd7421bbffb4a528f391e994fac03
+=======
 >>>>>>> b9e81d55c71bd7421bbffb4a528f391e994fac03
 =======
 >>>>>>> b9e81d55c71bd7421bbffb4a528f391e994fac03
