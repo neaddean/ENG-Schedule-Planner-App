@@ -706,7 +706,7 @@ public class CourseModel implements ModelAccessor{
 					courseTitleList.add(c.getFullTitle());
 				}
 			}
-		 semesterLists = tempSemesters;
+		// semesterLists = tempSemesters;
 		 //Tim : Added to change default stores
 		 //System.out.println(getCourseByTitle("ENGEK127"));
 		semesterLists = new HashMap<String, ArrayList<Course>> ();
@@ -784,7 +784,24 @@ public class CourseModel implements ModelAccessor{
 				Element coursesElement = doc1.createElement("courses");
 				doc1.appendChild(coursesElement);
 				
-				
+				for (Course c: courseList) {
+					if (c.user) {
+						Element courseEL = doc1.createElement("course");
+						
+						
+						
+						tempCourse.name = eElement.getAttribute("name");
+						tempCourse.school = eElement.getElementsByTagName("school").item(0).getTextContent();
+						tempCourse.dept = eElement.getElementsByTagName("dept").item(0).getTextContent();
+						tempCourse.cid = eElement.getElementsByTagName("cid").item(0).getTextContent();
+						tempCourse.description = eElement.getElementsByTagName("description").item(0).getTextContent();
+						//tempCourse.cid = eElement.getElementsByTagName("link").item(0).getTextContent();
+						String prereqs = eElement.getElementsByTagName("prereqs").item(0).getTextContent();
+						ArrayList<String> prereqlist = new ArrayList<String>(Arrays.asList(prereqs.split(",")));
+						tempCourse.prereqs = (ArrayList<String>) prereqlist;
+						tempCourse.credits = Integer.parseInt(eElement.getElementsByTagName("credits").item(0).getTextContent());
+					}
+				}
 			  
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 			  
@@ -967,5 +984,26 @@ public class CourseModel implements ModelAccessor{
 			e.printStackTrace();
 		}	
 	}
+	
+	void setSemester(int major) {
+		switch (major) {
+		case BME:
+			semesterLists = BMEDefault();
+			break;
+		case EE:
+			semesterLists = EEDefault();
+			break;
+		case CE:
+			semesterLists = CEDefault();
+		case ME:
+			semesterLists = MEDefault();
+			break
+		case DEFAULT:
+			semesterLists = new HashMap<String, ArrayList<Course>>();
+			break;
+		}
+		}
+	}
+	
 }
 
