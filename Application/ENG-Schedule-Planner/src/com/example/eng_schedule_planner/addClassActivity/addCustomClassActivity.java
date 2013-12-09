@@ -41,13 +41,35 @@ public class addCustomClassActivity extends Activity {
             @Override
             public void onClick(View v) {
                     addCustomClassActivity c = (addCustomClassActivity) v.getContext();
-                    if(c.isEmpty(c.editClass)){
-                            Toast.makeText(c, "Enter Class Name Please", Toast.LENGTH_SHORT).show();
+                    if(!c.editClass.getText().toString().matches("\\S+")){
+                            Toast.makeText(c, "Invalid Class Name", Toast.LENGTH_SHORT).show();
+                            c.editClass.requestFocus();
                             return;
                     }
+                    if(!c.editSchool.getText().toString().matches("\\S{3}")){
+                        Toast.makeText(c, "Invalid School", Toast.LENGTH_SHORT).show();
+                        c.editSchool.requestFocus();
+                        return;
+                    }
+                    if(!c.editDept.getText().toString().matches("\\S{2}")){
+                        Toast.makeText(c, "Invalid Department", Toast.LENGTH_SHORT).show();
+                        c.editDept.requestFocus();
+                        return;
+                    }
+                    if(!c.editId.getText().toString().matches("\\d{3}")){
+                        Toast.makeText(c, "Invalid Class ID", Toast.LENGTH_SHORT).show();
+                        c.editId.requestFocus();
+                        return;
+                    }
+                    if(!c.editCredits.getText().toString().matches("\\d+")){
+                        Toast.makeText(c, "Invalid Number of Credits", Toast.LENGTH_SHORT).show();
+                        c.editCredits.requestFocus();
+                        return;
+                    }
+                    
                     Intent i = new Intent();
-                    Course newCustomCourse = CourseModel.getInstance().addCourse(editClass.getText().toString(), editSchool.getText().toString(), 
-                    		editDept.getText().toString(), 
+                    Course newCustomCourse = CourseModel.getInstance().addCourse(editClass.getText().toString(), editSchool.getText().toString().toUpperCase(), 
+                    		editDept.getText().toString().toUpperCase(), 
                     		editId.getText().toString(), 
                     		new String(), new ArrayList<String>(), 
                     		Integer.parseInt(editCredits.getText().toString()),addCustomClassActivity.this);
