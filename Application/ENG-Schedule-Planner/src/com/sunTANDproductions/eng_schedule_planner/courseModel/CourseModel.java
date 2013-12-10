@@ -1158,9 +1158,9 @@ public class CourseModel implements ModelAccessor{
 		
 	}
 	
-	public boolean checkFiles(Context context) {
+	public static boolean checkFiles(Context context) {
 		String[] fileListString = context.getApplicationContext().fileList();
-	if (fileListString.length > 0)
+	if (fileListString.length > 1)
 		return true;
 	else
 		return false;

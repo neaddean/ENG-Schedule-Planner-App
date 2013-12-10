@@ -52,7 +52,9 @@ public class mainMenuActivity extends Activity {
 					clickNewPlanButton();					
 				}
 			});
-			
+			if(!CourseModel.checkFiles(loadPlanButton.getContext())){
+				loadPlanButton.setVisibility(View.GONE);
+			}
 			loadPlanButton.setOnClickListener(new OnClickListener() {
 				@Override
 				public void onClick(View arg0){

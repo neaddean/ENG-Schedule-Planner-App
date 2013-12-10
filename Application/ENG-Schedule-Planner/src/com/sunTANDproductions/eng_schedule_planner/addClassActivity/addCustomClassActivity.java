@@ -41,7 +41,7 @@ public class addCustomClassActivity extends Activity {
             @Override
             public void onClick(View v) {
                     addCustomClassActivity c = (addCustomClassActivity) v.getContext();
-                    if(!c.editClass.getText().toString().matches("\\S+")){
+                    if(!c.editClass.getText().toString().matches("\\S+.*")){
                             Toast.makeText(c, "Invalid Class Name", Toast.LENGTH_SHORT).show();
                             c.editClass.requestFocus();
                             return;
