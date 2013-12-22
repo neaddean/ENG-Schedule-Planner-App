@@ -195,7 +195,7 @@ public class CourseModel implements ModelAccessor{
 		
 		//Junior Semester 1
 		ArrayList<Course> f3List = new ArrayList<Course>();
-		f3List.add(getCourseByTitle("ENGEC481"));
+		f3List.add(getCourseByTitle("ENGEC381"));
 		f3List.add(getCourseByTitle("ENGEC413"));
 		f3List.add(getCourseByTitle("ENGEC410"));
 		f3List.add(getCourseByTitle("CASMA193"));
@@ -451,7 +451,6 @@ public class CourseModel implements ModelAccessor{
 		//f4List.add(getCourseByTitle("Professional Elective"));
 		f4List.add(getCourseByTitle("ENGBE467"));
 		f4List.add(getCourseByTitle("ENGBE465"));
-		//f4List.add(getCourseByTitle("Computer Elective")); //ENGEC327, ENGEC413, or ENGEC441
 		//f4List.add(getCourseByTitle("General Education Elective"));
 		tempSemesters.put("4f", f4List);
 
@@ -461,7 +460,7 @@ public class CourseModel implements ModelAccessor{
 		//s4List.add(getCourseByTitle("Biomedical Elective"));
 		//s4List.add(getCourseByTitle("Biomedical Elective"));
 		//s4List.add(getCourseByTitle("Professional Elective"));
-		s4List.add(getCourseByTitle("ENGEC464"));
+		s4List.add(getCourseByTitle("ENGBE466"));
 		tempSemesters.put("4s", s4List);
 
 		//To initialize summer semesters as empty
@@ -606,7 +605,7 @@ public class CourseModel implements ModelAccessor{
 		f4List.add(getCourseByTitle("ENGME460"));
 		//f4List.add(getCourseByTitle("Advanced Elective"));
 		//f4List.add(getCourseByTitle("Advanced Elective"));
-		f4List.add(getCourseByTitle("ENGME410"));
+		f4List.add(getCourseByTitle("ENGME310"));
 		tempSemesters.put("4f", f4List);
 
 		
