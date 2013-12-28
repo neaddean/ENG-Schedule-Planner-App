@@ -1,9 +1,9 @@
-package com.sunTANDproductions.eng_schedule_planner.scheduleActivity;
+package com.sunTANDProd.EYD.scheduleActivity;
 
 
+import com.sunTANDProd.EYD.Global.Global;
+import com.sunTANDProd.EYD.courseModel.CourseModel;
 import com.sunTANDproductions.eng_schedule_planner.R;
-import com.sunTANDproductions.eng_schedule_planner.Global.Global;
-import com.sunTANDproductions.eng_schedule_planner.courseModel.CourseModel;
 
 
 

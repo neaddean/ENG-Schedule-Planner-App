@@ -1,4 +1,4 @@
-package com.sunTANDproductions.eng_schedule_planner.courseModel;
+package com.sunTANDProd.EYD.courseModel;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -24,8 +24,8 @@ import org.w3c.dom.Element;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
-import com.sunTANDproductions.eng_schedule_planner.Global.Global;
-import com.sunTANDproductions.eng_schedule_planner.courseModel.Course;
+import com.sunTANDProd.EYD.Global.Global;
+import com.sunTANDProd.EYD.courseModel.Course;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;

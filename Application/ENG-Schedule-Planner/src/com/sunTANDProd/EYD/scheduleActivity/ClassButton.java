@@ -1,14 +1,14 @@
-package com.sunTANDproductions.eng_schedule_planner.scheduleActivity;
+package com.sunTANDProd.EYD.scheduleActivity;
 
 
 import java.util.Random;
 
+import com.sunTANDProd.EYD.Global.Global;
+import com.sunTANDProd.EYD.addClassActivity.addClassActivity;
+import com.sunTANDProd.EYD.courseModel.Course;
+import com.sunTANDProd.EYD.courseModel.CourseModel;
+import com.sunTANDProd.EYD.menus.descriptionActivity;
 import com.sunTANDproductions.eng_schedule_planner.R;
-import com.sunTANDproductions.eng_schedule_planner.Global.Global;
-import com.sunTANDproductions.eng_schedule_planner.addClassActivity.addClassActivity;
-import com.sunTANDproductions.eng_schedule_planner.courseModel.Course;
-import com.sunTANDproductions.eng_schedule_planner.courseModel.CourseModel;
-import com.sunTANDproductions.eng_schedule_planner.menus.descriptionActivity;
 
 
 import android.app.ActivityOptions;

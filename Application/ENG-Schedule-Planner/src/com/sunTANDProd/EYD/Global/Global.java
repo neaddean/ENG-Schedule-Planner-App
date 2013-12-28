@@ -1,11 +1,11 @@
-package com.sunTANDproductions.eng_schedule_planner.Global;
+package com.sunTANDProd.EYD.Global;
 
 import java.util.ArrayList;
 
 import android.content.Context;
 
-import com.sunTANDproductions.eng_schedule_planner.courseModel.Course;
-import com.sunTANDproductions.eng_schedule_planner.scheduleActivity.YearView;
+import com.sunTANDProd.EYD.courseModel.Course;
+import com.sunTANDProd.EYD.scheduleActivity.YearView;
 
 
 public class Global {
