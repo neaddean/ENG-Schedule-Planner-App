@@ -40,6 +40,8 @@ import java.io.StringWriter;
 
 public class CourseModel implements ModelAccessor{
 	
+	
+	//
 	ArrayList<Course> courseList;
 	
 	HashMap<String, ArrayList<Course>> semesterLists;
@@ -67,6 +69,8 @@ public class CourseModel implements ModelAccessor{
 		return courseList;
 	}
 	
+	
+	//Ensures single instance of CourseModel is created
 	private static CourseModel instance = null;
 	protected CourseModel() {}
 	public static CourseModel getInstance() {
@@ -76,6 +80,7 @@ public class CourseModel implements ModelAccessor{
 		return instance;
 	}
 	
+	//Returns the course contained in courseList (from XML)
 	public Course getCourseByTitle(String Title) {
 		for (Course c: courseList) {
 			if (c.getTitle().equals(Title)) {

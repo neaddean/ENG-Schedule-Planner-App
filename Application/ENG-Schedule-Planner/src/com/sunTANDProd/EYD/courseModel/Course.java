@@ -22,6 +22,7 @@ public class Course extends GenericCourse {
 	public final static int CATEGORY_GENERIC = 8;
 	
 	//Maybe we should add another color for the Electives while they are a generic course and not an actual course yet
+	//Ideally this would be the pale purple color that appears on the academic planning sheets
 
 	
 	public Course(String name, String school, String dept, String cid,
@@ -62,20 +63,26 @@ public class Course extends GenericCourse {
 	boolean user;
 	public boolean completed;
 	
+	//Creates string that is used as argument in "getCourseByTitle()"
+	//As used in the CourseModel Default Functions to initialize all necessary Course Objects
 	public String getTitle() {
 		return school+ dept + cid;
 	}
 	
+	//Appears on top of menus that provide more information for the course
 	public String getFullTitle() {
 		return school + " " + dept + cid + ": " + name;
 	}
 	
+	//Space is actually newline
+	//Used on the "ClassButton"
 	public String getTitleWithSpace()
 	{
 		return school+"\n"+dept+cid;
 	
 	}
 	
+	//Assigns the category for the course object as it appears to the user (implements color coding)
 	public int getCategory()
 	{
 		if (school.equals("CAS")){
@@ -110,10 +117,14 @@ public class Course extends GenericCourse {
 			return CATEGORY_DEFAULT;
 		}
 	}
+	
+	//Accessor Method for description
 	public String getDescription()
 	{
 		return description;
 	}
+	
+	//Accessor Method for prereqs
 	public ArrayList<String> getPrereqs(){
 		return prereqs;
 	}
