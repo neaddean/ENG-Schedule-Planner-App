@@ -63,7 +63,7 @@ public class CourseModel implements ModelAccessor{
 //	public static HashMap <String, ArrayList<Course>> PLANNER_ME = MEDefault();
 //	public static HashMap <String, ArrayList<Course>> PLANNER_BME = BMEDefault();
 //	public static HashMap <String, ArrayList<Course>> PLANNER_DEFAULT = BlankDefault();
-	
+//Just adding a comment to test if my username shows up correctly now...	
 	
 	public ArrayList<Course> getCourseList() {
 		return courseList;
