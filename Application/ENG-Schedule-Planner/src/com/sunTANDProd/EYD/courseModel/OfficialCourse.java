@@ -8,6 +8,7 @@ public class OfficialCourse extends GenericCourse {
 	String dept; //Two character Department code
 	String cid; //course ID number; 3 digits
 	ArrayList <String> prereqs; //Prerequisites for the OfficialCourse
+	boolean isCustom; //Rather than have separate CustomCourse Class, to distinguish
 	
 	public OfficialCourse(GenericCourse gc) {
 		super(gc);
@@ -32,11 +33,12 @@ public class OfficialCourse extends GenericCourse {
 		this.editCategory = false; //Official courses cannot have category changed by user
 		this.user = oc.user;
 		this.completed = oc.completed;
+		this.isCustom = isCustom;
 	}
 	
 	//Will be used with the XML to create all of the course objects
 	public OfficialCourse(String name, String school, String dept, String cid, String description, 
-			ArrayList<String> prereqs, double credits)
+			ArrayList<String> prereqs, double credits, boolean isCustom)
 	{
 		this.name = name;
 		this.school = school;
@@ -56,6 +58,7 @@ public class OfficialCourse extends GenericCourse {
 		setCategory();
 		this.user = true;
 		this.completed = false;
+		this.isCustom = isCustom;
 		
 	}
 
@@ -63,9 +66,24 @@ public class OfficialCourse extends GenericCourse {
 
 	}
 
-
+//With current system, possible
 public void setCategory(int cat)
 {
+	if (editCategory)
+	{
+		//Should probably check for valid int values
+		//1 = NAT_SCI
+		//3 = GEN_ED
+		//4 = ME
+		//5 = ECE
+		//6 = BME
+		//8 = Engineering Elective
+		this.category = cat;
+	}
+	else 
+	{
+		//AN ERROR OF SORTS BECAUSE YOU CANNOT CHANGE THIS CATEGORY
+	}
 }
 
 public void setCategory()
