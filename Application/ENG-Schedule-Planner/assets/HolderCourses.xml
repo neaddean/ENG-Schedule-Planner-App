@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genericCourses>
+    <GC title = "BMEELEC">
+    <name>Biomedical Elective</name>
+    <iconTitle></iconTitle>
+    <description></description>
+    <link></link>
+    <credits>4</credits>
+    <category></category>
+    </GC>
+    
+    <GC title = "BMEFIELDS">
+    <name>Fields Elective</name>
+    <iconTitle></iconTitle>
+    <description></description>
+    <link></link>
+    <credits>4</credits>
+    <category></category>
+    </GC>
+    
+    <GC title = "BMEENG">
+    <name>Engineering Elective</name>
+    <iconTitle></iconTitle>
+    <description></description>
+    <link></link>
+    <credits>4</credits>
+    <category></category>
+    </GC>  
+      
+    <GC title = "BMEPROF">
+    <name>Professional Elective</name>
+    <iconTitle></iconTitle>
+    <description></description>
+    <link></link>
+    <credits>4</credits>
+    <category></category>
+    </GC>  
+      
+    <GC title = "CETRACK">
+    <name>Track Elective</name>
+    <iconTitle></iconTitle>
+    <description></description>
+    <link></link>
+    <credits>4</credits>
+    <category></category>
+    </GC>    
+    
+    <GC title = "CEBREAD">
+    <name>Breadth Elective</name>
+    <iconTitle></iconTitle>
+    <description></description>
+    <link></link>
+    <credits>4</credits>
+    <category></category>
+    </GC>
+    
+    <GC title = "CETECH">
+    <name>Technical Elective</name>
+    <iconTitle></iconTitle>
+    <description></description>
+    <link></link>
+    <credits>4</credits>
+    <category></category>
+    </GC>
+    
+    <GC title = "EETECH">
+    <name>Technical Elective</name>
+    <iconTitle></iconTitle>
+    <description></description>
+    <link></link>
+    <credits>4</credits>
+    <category></category>
+    </GC>
+    
+    <GC title = "EESYSTEMS">
+    <name>Systems Elective</name>
+    <iconTitle></iconTitle>
+    <description></description>
+    <link></link>
+    <credits>4</credits>
+    <category></category>
+    </GC>
+    
+    <GC title = "EEELECTRON">
+    <name>Electronics Elective</name>
+    <iconTitle></iconTitle>
+    <description></description>
+    <link></link>
+    <credits>4</credits>
+    <category></category>
+    </GC>    
+    
+    <GC title = "EEELECPHYSICS">
+    <name>Electrophysics Elective</name>
+    <iconTitle></iconTitle>
+    <description></description>
+    <link></link>
+    <credits>4</credits>
+    <category></category>
+    </GC>  
+    
+    <GC title = "EECOMP">
+    <name>Computer Elective</name>
+    <iconTitle></iconTitle>
+    <description></description>
+    <link></link>
+    <credits>4</credits>
+    <category></category>
+    </GC>  
+    
+    <GC title = "MEADVAN">
+    <name>Advanced Elective</name>
+    <iconTitle></iconTitle>
+    <description></description>
+    <link></link>
+    <credits>4</credits>
+    <category></category>
+    </GC>  
+    
+    <GC title = "GSOCSCI">
+    <name>Social Science Elective</name>
+    <iconTitle></iconTitle>
+    <description></description>
+    <link></link>
+    <credits>4</credits>
+    <category>3</category>
+    </GC>  
+    
+    <GC title = "GHUMAN">
+    <name>Humanities Elective</name>
+    <iconTitle>Human- ities</iconTitle>
+    <description></description>
+    <link></link>
+    <credits>4</credits>
+    <category>3</category>
+    </GC> 
+     
+    <GC title = "GSOCSCIHUMAN">
+    <name>Social Science or Humanities Elective</name>
+    <iconTitle>SocSci Human</iconTitle>
+    <description></description>
+    <link></link>
+    <credits>4</credits>
+    <category>3</category>
+    </GC>  
+    
+    <GC title = "GGENED">
+    <name>General Education Elective</name>
+    <iconTitle>Gen Ed</iconTitle>
+    <description></description>
+    <link></link>
+    <credits>4</credits>
+    <category>3</category>
+    </GC>  
+    
+</genericCourses>
