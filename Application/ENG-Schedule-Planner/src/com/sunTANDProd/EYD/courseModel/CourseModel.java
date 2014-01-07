@@ -42,9 +42,9 @@ public class CourseModel implements ModelAccessor{
 	
 	
 	//
-	ArrayList<Course> courseList;
+	ArrayList<GenericCourse> courseList;
 	
-	HashMap<String, ArrayList<Course>> semesterLists;
+	HashMap<String, ArrayList<GenericCourse>> semesterLists;
 
 	ArrayList<String> courseTitleList;
 	
@@ -63,9 +63,9 @@ public class CourseModel implements ModelAccessor{
 //	public static HashMap <String, ArrayList<Course>> PLANNER_ME = MEDefault();
 //	public static HashMap <String, ArrayList<Course>> PLANNER_BME = BMEDefault();
 //	public static HashMap <String, ArrayList<Course>> PLANNER_DEFAULT = BlankDefault();
-//Just adding a comment to test if my username shows up correctly now...	
 	
-	public ArrayList<Course> getCourseList() {
+	
+	public ArrayList<GenericCourse> getCourseList() {
 		return courseList;
 	}
 	
@@ -81,10 +81,11 @@ public class CourseModel implements ModelAccessor{
 	}
 	
 	//Returns the course contained in courseList (from XML)
-	public Course getCourseByTitle(String Title) {
-		for (Course c: courseList) {
-			if (c.getTitle().equals(Title)) {
-				Course retCourse  = new Course(c);
+	public GenericCourse getCourseByTitle(String Title) {
+		for (GenericCourse gc: courseList) {
+			if (gc.getTitle().equals(Title)) {
+				//May we need to initialize this differently?
+				Course retCourse  = new GenericCourse(gc);
 				return retCourse;
 			}
 		}
