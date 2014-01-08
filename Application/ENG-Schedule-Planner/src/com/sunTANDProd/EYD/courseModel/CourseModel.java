@@ -97,7 +97,33 @@ public class CourseModel implements ModelAccessor{
 		return null;
 	}
 	
+	//getOfficialCourseByTitle 
+	public OfficialCourse getOCByTitle(String Title)
+	{
+		for (OfficialCourse oc: officialCourseList) {
+			if (oc.getTitle().equals(Title))
+			{
+				OfficialCourse retCourse = new OfficialCourse(oc);
+				return retCourse;
+			}
+		}
+		return null;
+	}
 	
+	//getHolderCourseByTitle
+	public HolderCourse getHCByTitle(String Title)
+	{
+		for (HolderCourse hc: holderCourseList) {
+			if(hc.getTitle().equals(Title))
+			{
+				HolderCourse retCourse = new HolderCourse(hc);
+				return retCourse;
+			}
+		}
+		return null;
+	}
+	
+
 	public ArrayList<String> getCourseTitleList()
 	{
 		return courseTitleList;
@@ -161,8 +187,8 @@ public class CourseModel implements ModelAccessor{
 	
 	//Computer Engineering Planning Sheet
 	//Graduation Requirement: 132 credits
-	HashMap <String, ArrayList<Course>> CEDefault() {
-		HashMap <String, ArrayList<Course>> tempSemesters = new HashMap<String, ArrayList<Course>> ();
+	HashMap <String, ArrayList<GenericCourse>> CEDefault() {
+		HashMap <String, ArrayList<GenericCourse>> tempSemesters = new HashMap<String, ArrayList<GenericCourse>> ();
 		
 		
 		//Freshman Semester 1

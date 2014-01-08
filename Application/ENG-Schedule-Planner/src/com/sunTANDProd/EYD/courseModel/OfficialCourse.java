@@ -58,8 +58,7 @@ public class OfficialCourse extends GenericCourse {
 		setCategory();
 		this.user = true;
 		this.completed = false;
-		this.isCustom = isCustom;
-		
+		this.isCustom = isCustom;	
 	}
 
 	public OfficialCourse() {
