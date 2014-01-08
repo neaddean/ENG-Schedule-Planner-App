@@ -27,9 +27,6 @@ public abstract class GenericCourse {
 	//Data Fields
 
 		String name; //Full name that appears for Course
-		String title; //To use when finding course
-		String iconTitle; //With Spaces to appear on icons
-		String fullTitle; //As appears with course code and name in other versions
 		String description; //Text that appears in Description Activity
 		double credits; //Number of credits
 		int category; //For the color
@@ -42,9 +39,6 @@ public abstract class GenericCourse {
 		public GenericCourse(GenericCourse gc)
 		{
 			this.name = gc.name;
-			this.title = gc.title;
-			this.iconTitle = gc.iconTitle;
-			this.fullTitle = gc.fullTitle;
 			this.description = gc.description;
 			this.credits = gc.credits;
 			this.category = gc.category;
@@ -59,17 +53,17 @@ public abstract class GenericCourse {
 		
 		public String getTitle()
 		{
-			return title;
+			return null;
 		}
 		
 		public String getIconTitle()
 		{
-			return iconTitle;
+			return null;
 		}
 		
 		public String getFullTitle()
 		{
-			return fullTitle;
+			return null;
 		}
 		
 		public int getCategory()

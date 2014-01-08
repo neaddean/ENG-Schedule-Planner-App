@@ -21,12 +21,8 @@ public class OfficialCourse extends GenericCourse {
 		this.dept = oc.dept;
 		this.cid = oc.cid;
 		this.prereqs = oc.prereqs;
-		
 		this.name = oc.name;
-		this.title = oc.title;
-		this.iconTitle = oc.iconTitle;
-		this.fullTitle = oc.fullTitle;
-		
+
 		this.description = oc.description;
 		this.credits = oc.credits;
 		this.category = oc.category;
@@ -44,11 +40,6 @@ public class OfficialCourse extends GenericCourse {
 		this.school = school;
 		this.dept = dept;
 		this.cid = cid;
-		
-		//Using name, school, dept, and cid, creates title, iconTitle, and fullTitle fields
-		setTitle();
-		setIconTitle();
-		setFullTitle();
 		
 		this.description = description;
 		this.prereqs = prereqs;
@@ -122,19 +113,19 @@ public void setCategory()
 	}
 }
 
-public void setTitle()
+public String getTitle()
 {
-	this.title = school+dept+cid;
+	return school+dept+cid;
 }
 
-public void setIconTitle()
+public String getIconTitle()
 {
-	this.iconTitle = school+"\n"+dept+cid;
+	return school+"\n"+dept+cid;
 }
 
-public void setFullTitle()
+public String getFullTitle()
 {
-	this.fullTitle = school + " " + dept + cid + ": " + name;
+	return school + " " + dept + cid + ": " + name;
 }
 
 	

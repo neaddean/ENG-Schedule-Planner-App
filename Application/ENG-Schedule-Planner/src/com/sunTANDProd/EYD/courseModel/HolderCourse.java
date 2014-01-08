@@ -16,6 +16,11 @@ public class HolderCourse extends GenericCourse {
 	public boolean completed; //For checkmark
 	*/
 	
+	//New Data Fields
+	String title;
+	String iconTitle;
+	
+	
 	//From Base Class
 	public HolderCourse(GenericCourse gc) {
 		super(gc);
@@ -33,7 +38,6 @@ public class HolderCourse extends GenericCourse {
 		this.name = hc.name;
 		this.title = hc.title;
 		this.iconTitle = hc.iconTitle;
-		this.fullTitle = hc.fullTitle;
 		this.description = hc.description;
 		this.credits = hc.credits;
 		this.category = hc.category;
@@ -52,32 +56,28 @@ public class HolderCourse extends GenericCourse {
 		this.description = description;
 		this.credits = credits;
 		
-		//setName(title);
-		//setIconTitle();
-		setFullTitle();
-		
 		this.description = description;
 		this.credits = credits;
 		
-		setCategory(category);
+		this.category = category;
 		this.editCategory = false;
 		this.user = true;
 		this.completed = false;
 	}
 	
-	public void setName(String title)
+	public String getTitle()
 	{
-
+		return title;
 	}
 	
-	public void setIconTitle()
+	public String getIconTitle()
 	{
-		
-		
+		return iconTitle;
 	}
+	
 	
 	//The full title will be the same as the name
-	public void setFullTitle()
+	public String getFullTitle()
 	{
 		this.fullTitle = name;
 	}

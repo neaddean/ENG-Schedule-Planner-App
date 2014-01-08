@@ -44,9 +44,9 @@ public class CourseModel implements ModelAccessor{
 	//
 	ArrayList<GenericCourse> courseList;
 	
-	ArrayList<OfficialCourse> officialCourseList;
+	//ArrayList<OfficialCourse> officialCourseList;
 	
-	ArrayList<HolderCourse> holderCourseList;
+	//ArrayList<HolderCourse> holderCourseList;
 	
 	HashMap<String, ArrayList<GenericCourse>> semesterLists;
 
@@ -353,7 +353,7 @@ public class CourseModel implements ModelAccessor{
 
 		
 		//Sophomore Semester 2
-		ArrayList<Course> s2List = new ArrayList<Course>();
+		ArrayList<GenericCourse> s2List = new ArrayList<GenericCourse>();
 		s2List.add(getCourseByTitle("CASMA226"));
 		s2List.add(getCourseByTitle("CASPY313"));
 		s2List.add(getCourseByTitle("ENGEK301"));
