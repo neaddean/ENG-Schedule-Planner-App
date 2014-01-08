@@ -44,6 +44,10 @@ public class CourseModel implements ModelAccessor{
 	//
 	ArrayList<GenericCourse> courseList;
 	
+	ArrayList<OfficialCourse> officialCourseList;
+	
+	ArrayList<HolderCourse> holderCourseList;
+	
 	HashMap<String, ArrayList<GenericCourse>> semesterLists;
 
 	ArrayList<String> courseTitleList;
@@ -85,7 +89,8 @@ public class CourseModel implements ModelAccessor{
 		for (GenericCourse gc: courseList) {
 			if (gc.getTitle().equals(Title)) {
 				//May we need to initialize this differently?
-				Course retCourse  = new GenericCourse(gc);
+				//Perhaps we do dynamic casting to determine if it's a holder course or 
+				GenericCourse retCourse  = new GenericCourse(gc);
 				return retCourse;
 			}
 		}
@@ -155,6 +160,7 @@ public class CourseModel implements ModelAccessor{
 	
 	
 	//Computer Engineering Planning Sheet
+	//Graduation Requirement: 132 credits
 	HashMap <String, ArrayList<Course>> CEDefault() {
 		HashMap <String, ArrayList<Course>> tempSemesters = new HashMap<String, ArrayList<Course>> ();
 		
@@ -286,6 +292,7 @@ public class CourseModel implements ModelAccessor{
 	}
 
 	//Electrical Engineering Planning Sheet
+	//Graduation Requirement: 130 credits
 	HashMap <String, ArrayList<Course>> EEDefault() {
 		HashMap <String, ArrayList<Course>> tempSemesters = new HashMap<String, ArrayList<Course>> ();
 		
@@ -387,6 +394,7 @@ public class CourseModel implements ModelAccessor{
 	}
 	
 	//Biomedical Engineering Planning Sheet
+	//Graduation Requirement: 136 Credits
 	HashMap <String, ArrayList<Course>> BMEDefault() {
 		HashMap <String, ArrayList<Course>> tempSemesters = new HashMap<String, ArrayList<Course>> ();
 
@@ -542,6 +550,7 @@ public class CourseModel implements ModelAccessor{
 	}
 	
 	//Mechanical Engineering Planning Sheet
+	//Graduation Requirement: 136 Credits
 	HashMap <String, ArrayList<Course>> MEDefault() {
 		HashMap <String, ArrayList<Course>> tempSemesters = new HashMap<String, ArrayList<Course>> ();
 	
@@ -837,14 +846,14 @@ public class CourseModel implements ModelAccessor{
 	
 	public void printLists() {
 		 for (Map.Entry entry : semesterLists.entrySet()) {
-			 ArrayList<Course> iterList = (ArrayList<Course>) entry.getValue();
-			 for (Course c : iterList) {
+			 ArrayList<GenericCourse> iterList = (ArrayList<GenericCourse>) entry.getValue();
+			 for (GenericCourse c : iterList) {
 					System.out.println(entry.getKey() + " : " + c.getFullTitle()); 
 			 }
 		 }
 	}
 	@Override
-	public void printCourseArray(ArrayList<Course> list) {
+	public void printCourseArray(ArrayList<GenericCourse> list) {
 		// TODO Auto-generated method stub
 		
 	}

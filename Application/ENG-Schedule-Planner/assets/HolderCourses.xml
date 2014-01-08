@@ -1,164 +1,330 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<genericCourses>
-    <GC title = "BMEELEC">
+
+<holderCourses>
+    <HC title = "BMEELEC">
     <name>Biomedical Elective</name>
     <iconTitle>BME Elec</iconTitle>
-    <description></description>
-    <link></link>
+    <description>
+        All ENG BE 400 and 500 level courses (except BE 500); BE 700 level courses may be petitioned. 
+		ENG EC410: Introduction to Electronics*;
+		ENG BF527: Application in Bioinformatics;
+		GMS PH730: Human Physiology A
+		*One of the elective courses must included 4 credits of courses from the design electives list 
+    </description>
+    <link>http://www.bu.edu/eng/current-students/ugrad/requirements/planning-sheets/documents/BME%202017.pdf</link>
     <credits>4</credits>
     <category>6</category>
-    </GC>
+    </HC>
     
-    <GC title = "BMEFIELDS">
-    <name>Fields Elective</name>
+    <HC title = "BMEFIELDS">
+    <name>Continua and Fields Elective</name>
     <iconTitle>Fields Elec</iconTitle>
-    <description></description>
-    <link></link>
+    <description>ENG BE419: Principles of Continuum Mechanics and Transport; 
+        ENG BE435: Transport Phenomena in Living Systems*; 
+        ENG BE420: Introduction to Solid Biomechanics; 
+        ENG BE436: Fundamentals of Fluid Mechanics
+        *One of the elective choices must included 4 credits of courses from the design electives list </description>
+    <link>http://www.bu.edu/eng/current-students/ugrad/requirements/planning-sheets/documents/BME%202017.pdf</link>
     <credits>4</credits>
     <category>6</category>
-    </GC>
+    </HC>
     
-    <GC title = "BMEENG">
+    <HC title = "BMEENG">
     <name>Engineering Elective</name>
     <iconTitle>Eng Elec</iconTitle>
-    <description></description>
-    <link></link>
+    <description>
+        ENG EC311: Intro to Logic Design* 
+		ENG EC312: Computer Organization 
+		ENG EC412: Analog Electronics* 
+		ENG EC415: Communications Systems 
+		ENG EC416: Intro Digital Signal Processing* 
+		ENG EC450: Microprocessors 
+		ENG EC455: Electromagnetic Systems I 
+		ENG EC471: Physics Semiconductor Devices 
+		ENG EC481: Nanomatrls & Nanotechnology 
+		ENG EC505: Stochastic Processes 
+		ENG EC580: Modern Active Circuit Design* 
+		ENG ME302: Engineering Mechanics II 
+		ENG ME304: Energy & Thermodynamics 
+		ENG ME305: Mechanics of Materials 
+		ENG ME309: Structural Mechanics 
+		ENG ME400: Engineering Mathematics 
+		ENG ME407: Computer-Aided Design & Manufacture* 
+		ENG ME419: Heat Transfer 
+		ENG ME441: Mechanical Vibrations 
+		ENG ME502: Intellectual Assets* 
+		ENG ME555: MEMS: Fabrication & Materials 
+		ENG EC456: Electromagnetic Systems II 
+		ENG ME306: Material Science 
+		Additionally, any Biomedical Elective that has not been used to satisfy the BME Elective requirement (except BF 527) may be used as an 
+Engineering Elective
+	*One of the elective choices must included 4 credits of courses from the design electives list 
+    </description>
+    <link>http://www.bu.edu/eng/current-students/ugrad/requirements/planning-sheets/documents/BME%202017.pdf</link>
     <credits>4</credits>
     <category>6</category>
-    </GC>  
+    </HC>  
       
-    <GC title = "BMEPROF">
+    <HC title = "BMEPROF">
     <name>Professional Elective</name>
     <iconTitle>Profess Elec</iconTitle>
-    <description></description>
-    <link></link>
+    <description>All ENG BE, EC, EK, and ME 300, 400, and 500 level courses are suitable as a professional elective
+        [Exceptions due to overlap of material *: BE 500, EC 381, EC 402, EK 500, ME 308, ME 403, ME 404, ME 501] 
+        CAS CH203, CAS CH204 and all CAS CH 300, 400, and 500 level courses (except: CAS CH 391, 392, 401, 402, 491, 492). 
+        All CAS PY 300 and 400 level courses (except PY 371, 401, 402, 482, 491, 492). 
+        All CAS MA 300, 400, and 500 level courses (except CAS MA 381, 401, 402). 
+        All CAS BI 300, 400 and 500 level courses (except BI 315, 371, 372, 391, 392) 
+        ENG BF527: Applications in Bioinformatics 
+        SAR HS360: Muscle Biology in Health & Disease 
+        CAS CH629: DNA Nanotechnology 
+        ENG EK156: Design & Manufacture* 
+        SMG SI480: The Business of Technology Innovation
+        *One of the elective choices must included 4 credits of courses from the design electives list    
+    </description>
+    <link>http://www.bu.edu/eng/current-students/ugrad/requirements/planning-sheets/documents/BME%202017.pdf</link>
     <credits>4</credits>
     <category>6</category>
-    </GC>  
+    </HC>  
       
-    <GC title = "CETRACK">
+    <HC title = "CETRACK">
     <name>Track Elective</name>
     <iconTitle>Track Elec</iconTitle>
-    <description></description>
-    <link></link>
+    <description>
+        Choose from the following four courses:
+        ENG EC441: Introduction to Computer Networking
+        ENG EC447: Software Design
+        ENG EC535: Introduction to Embedded Systems
+        ENG EC571: Digital VLSI Circuit Design
+    </description>
+    <link>http://www.bu.edu/eng/current-students/ugrad/requirements/planning-sheets/documents/COMP%20ENG%202017.pdf</link>
     <credits>4</credits>
     <category>5</category>
-    </GC>    
+    </HC>    
     
-    <GC title = "CEBREAD">
+    <HC title = "CEBREAD">
     <name>Breadth Elective</name>
     <iconTitle>Breadth Elec</iconTitle>
-    <description></description>
-    <link></link>
+    <description>
+        Computer Engineering majors complete 1 Breadth Elective course from the following list (normally taken in senior year). Additionally, any ENG 
+course level 400 or above and any CAS CS course level 500 and above are acceptable as Breadth Electives. 
+	ENG BE209: Principles of Molecular Cell Biology & Biotechnology 
+	CAS PY313: Modern Physics  
+	CAS CS212: Distributed Programming  
+	CAS CS235: Algebraic Algorithms  
+	CAS CS320: Concepts in Programming Languages  
+	CAS CS332: Elementary Theory of Computation  
+	CAS CS350: Fundamentals of Computer Systems 
+	CAS CS410: Advanced Software Systems 
+	CAS CS411: Software Engineering
+	CAS CS431: Algorithms for Life Sciences
+	CAS CS440: Artificial Intelligence
+	CAS CS451: Distributed Systems
+	CAS CS460: Database Systems
+	CAS CS480: Computer Graphics
+    </description>
+    <link>http://www.bu.edu/eng/current-students/ugrad/requirements/planning-sheets/documents/COMP%20ENG%202017.pdf</link>
     <credits>4</credits>
     <category>5</category>
-    </GC>
+    </HC>
     
-    <GC title = "CETECH">
+    <HC title = "CETECH">
     <name>Technical Elective</name>
     <iconTitle>Tech Elec</iconTitle>
-    <description></description>
-    <link></link>
+    <description>
+        Computer Engineering majors complete 2 Technical Elective courses. Acceptable courses include all EC courses. Additionally all ENG BE, EK and 
+ME courses at the 300-level or above are acceptable as Technical Electives.  
+	Pre-Approved Courses Outside Engineering that fulfill a Technical Elective: 
+	CAS AS414: Solar and Space Physics 
+	CAS CS440: Introduction to Artificial Intelligence 
+	CAS CS480: Introduction to Computer Graphics
+	CAS CS585: Image and Video Computing 
+	CAS MA511: Introduction to Analysis I 
+	CAS MA528: Introduction to Modern Geometry 
+ 	CAS MA531: Computability and Logic
+ 	CAS MA541: Modern Algebra I 
+  	CAS MA583: Introduction to Stochastic Processes 
+  	CAS PY451: Quantum Physics I 
+  	CAS PY452: Quantum Physics II 
+  	SMG SI480: The Business of Technology Innovation
+    </description>
+    <link>http://www.bu.edu/eng/current-students/ugrad/requirements/planning-sheets/documents/COMP%20ENG%202017.pdf</link>
     <credits>4</credits>
     <category>5</category>
-    </GC>
+    </HC>
     
-    <GC title = "EETECH">
+    <HC title = "EETECH">
     <name>Technical Elective</name>
     <iconTitle>Tech Elec</iconTitle>
-    <description></description>
+    <description>
+        Electrical Engineering majors complete 3 Technical Elective courses. Acceptable courses include all EC courses. Additionally all 
+ENG BE, EK and ME courses at the 300-level and above are acceptable as Technical Electives. 
+Pre-Approved Courses Outside Engineering that fulfill a Technical Elective: 
+CAS AS 414:Solar and Space Physics 
+CAS CS 440: Artificial Intelligence 
+CAS CS 480: Intro to Computer Graphics 
+SMG SI 480: The Business of Technology Innovation
+    </description>
     <link></link>
     <credits>4</credits>
     <category>5</category>
-    </GC>
+    </HC>
     
-    <GC title = "EESYSTEMS">
+    <HC title = "EESYSTEMS">
     <name>Systems Elective</name>
     <iconTitle>Systems Elec</iconTitle>
-    <description></description>
-    <link></link>
+    <description>
+        Choose from the following three courses:
+        ENG EC402: Control Systems
+        ENG EC415: Communication Systems
+        ENG EC416: Introduction to Digital Siganl Processing
+    </description>
+    <link>http://www.bu.edu/eng/current-students/ugrad/requirements/planning-sheets/documents/ELECTRICAL%202017.pdf</link>
     <credits>4</credits>
     <category>5</category>
-    </GC>
+    </HC>
     
-    <GC title = "EEELECTRON">
+    <HC title = "EEELECTRON">
     <name>Electronics Elective</name>
     <iconTitle>Elec- tronics</iconTitle>
-    <description></description>
-    <link></link>
+    <description>
+        Choose from the following six courses:
+        ENG EC412: Analog Electronics
+        ENG EC417: Eletric Energy Systems: Adapting to Renewable Resources
+        ENG EC450: Microprocessors
+        ENG EC470: Sensors in Space
+        ENG EC571: Digital VLSI Circuit Design
+        ENG EC583: Power Electronics for Energy Systems
+    </description>
+    <link>http://www.bu.edu/eng/current-students/ugrad/requirements/planning-sheets/documents/ELECTRICAL%202017.pdf</link>
     <credits>4</credits>
     <category>5</category>
-    </GC>    
+    </HC>    
     
-    <GC title = "EEELECPHYSICS">
+    <HC title = "EEELECPHYSICS">
     <name>Electrophysics Elective</name>
     <iconTitle>Electro- Physics</iconTitle>
-    <description></description>
-    <link></link>
+    <description>
+        Choose from the following five courses:
+        ENG EC456: Electromagnetic Systems II
+        ENG EC470: Sensors in Space
+        ENG EC471: Physics of Semiconductor Devices
+        ENG EC481: Fundamentals of Nanomaterials and Nanotechnology
+        ENG EC560: Introduction to Photonics
+    </description>
+    <link>http://www.bu.edu/eng/current-students/ugrad/requirements/planning-sheets/documents/ELECTRICAL%202017.pdf</link>
     <credits>4</credits>
     <category>5</category>
-    </GC>  
+    </HC>  
     
-    <GC title = "EECOMP">
+    <HC title = "EECOMP">
     <name>Computer Elective</name>
     <iconTitle>Comp Elec</iconTitle>
-    <description></description>
-    <link></link>
+    <description>
+        Choose from the following three courses:
+        ENG EC327: Introduction to Software Engineering
+        ENG EC413: Computer Organization
+        ENG EC441: Introduction to Computer Networking
+    </description>
+    <link>http://www.bu.edu/eng/current-students/ugrad/requirements/planning-sheets/documents/ELECTRICAL%202017.pdf</link>
     <credits>4</credits>
     <category>5</category>
-    </GC>  
+    </HC>  
     
-    <GC title = "MEADVAN">
-    <name>Advanced Elective</name>
-    <iconTitle>Advanced Elec</iconTitle>
-    <description></description>
-    <link></link>
-    <credits>4</credits>
-    <category>4</category>
-    </GC>  
-    
-    <GC title = "GSOCSCI">
-    <name>Social Science Elective</name>
-    <iconTitle>Social Sci Elec</iconTitle>
-    <description></description>
-    <link></link>
-    <credits>4</credits>
-    <category>3</category>
-    </GC>  
-    
-    <GC title = "GHUMAN">
-    <name>Humanities Elective</name>
-    <iconTitle>Human- ities</iconTitle>
-    <description></description>
-    <link></link>
-    <credits>4</credits>
-    <category>3</category>
-    </GC> 
-     
-    <GC title = "GSOCSCIHUMAN">
-    <name>Social Science or Humanities Elective</name>
-    <iconTitle>SocSci Human</iconTitle>
-    <description></description>
-    <link></link>
-    <credits>4</credits>
-    <category>3</category>
-    </GC>  
-    
-    <GC title = "GGENED">
-    <name>General Education Elective</name>
-    <iconTitle>Gen Ed Elec</iconTitle>
-    <description></description>
-    <link></link>
-    <credits>4</credits>
-    <category>3</category>
-    </GC>  
-    
-    <GC title = "NATSCI">
+    <HC title = "NATSCI">
     <name>Natural Science Elective</name>
     <iconTitle>Nat Sci Elec</iconTitle>
-    <description></description>
+    <description>
+    The Natural Science Elective for Mechanical Engineering majors can be satisfied by: 
+    ENG BE 209: Principles of Molecular Cell Biology & Biotechnology 
+	Astronomy (AS):  Any 200-level or higher course or any 100-level course that includes a lab 
+	Biology (BI): Any 200-level or higher course or any 100-level course that includes a lab 
+	Neuroscience (NE): All 
+	Chemistry (CH): Any 200-level or higher course 
+	Physics (PY): Any 300-level or higher course, CAS PY 231- The Physics in Music 
+	Earth Science (ES): Any 300-level or higher course. Also the following: 
+		CAS ES101: Dynamic Earth 
+ 		CAS ES105: Environmental Earth Sciences 
+ 		CAS ES140: Earthquakes, Volcanoes, Natural Disasters
+ 		CAS ES142: Intro Beach & Shoreline Processes 
+ 		CAS ES144: Oceanography  
+ 		CAS ES222: Mineralogy 
+	The following GE courses: 
+ 		CAS GE101: Natural Environ: Atmosphere CAS GE 375 – Intro Quant Environmental Modeling 
+ 		CAS GE104: Natural Environ: Physical Landscape CAS GE 440 – Digital Image Proc & Remote Sensing 
+ 		CAS GE110: Our Changing Planet CAS GE 445 – Physical Models in Remote Sensing 
+ 		CAS GE302: Remote Sensing of the Environment CAS GE 448 – Remote Sensing of Vegetation 
+ 		CAS GE307: Biogeography CAS GE 456 – Terrestrial Ecosystems & Carbon Cycle 
+ 		CAS GE310: Climate & the Environment CAS GE 483 – Geodynamics II: Fluids & Fluid Transport 
+ 		CAS GE365: Intro Geographic Information Systems     
+    </description>
+    <link>http://www.bu.edu/eng/current-students/ugrad/requirements/planning-sheets/documents/MECH%202017.pdf</link>
+    <credits>4</credits>
+    <category>1</category>
+    </HC>
+    
+    
+    <HC title = "MEADVAN">
+    <name>Advanced Elective</name>
+    <iconTitle>Advanced Elec</iconTitle>
+    <description>
+	Mechanical Engineering majors complete 4 Advanced Elective courses. Acceptable courses include all engineering (ENG) courses 300 level 
+or above, as long as there is not significant overlap with other courses being used for the degree (See Notes below). Acceptable courses 
+outside of ENG include: 
+	CAS AS414: Solar and Space Physics 
+	SMG SI480: The Business of Technology Innovation. 
+	Additionally other 300-level or above Mathematics and Natural Science courses may be acceptable by petition. 
+    </description>
+    <link>http://www.bu.edu/eng/current-students/ugrad/requirements/planning-sheets/documents/MECH%202017.pdf</link>
+    <credits>4</credits>
+    <category>4</category>
+    </HC>  
+    
+    <HC title = "GSOCSCI">
+    <name>Social Science Elective</name>
+    <iconTitle>Social Sci Elec</iconTitle>
+    <description>
+        The Social Sciences are the study of individual relationships in and with society. Students must take at least one course in the social sciences. Courses that fulfill this requirement must be chosen from the approved list.
+        
+    </description>
     <link></link>
-    <credits>1</credits>
-    <category></category>
-    </GC>  
-</genericCourses>
+    <credits>4</credits>
+    <category>3</category>
+    </HC>  
+    
+    <HC title = "GHUMAN">
+    <name>Humanities Elective</name>
+    <iconTitle>Human- ities</iconTitle>
+    <description>
+        The humanities are the branches of knowledge concerned with individuals and their culture. Students must take at least one course in the humanities. Courses that fulfill this requirement must be chosen from an approved list.
+        
+    </description>
+    <link></link>
+    <credits>4</credits>
+    <category>3</category>
+    </HC> 
+     
+    <HC title = "GSOCSCIHUMAN">
+    <name>Social Science or Humanities Elective</name>
+    <iconTitle>SocSci Human</iconTitle>
+    <description>
+        Students must take at least one additional four-credit course in either social sciences or humanities.  
+    </description>
+    <link></link>
+    <credits>4</credits>
+    <category>3</category>
+    </HC>  
+    
+    <HC title = "GGENED">
+    <name>General Education Elective</name>
+    <iconTitle>Gen Ed Elec</iconTitle>
+    <description>
+        The general education elective allows students to be exposed to fields of study beyond social sciences and humanities in order to further broaden their education. This 4-credit elective can be satisfied by appropriate combinations of 1-4 credit courses that include additional writing, social sciences, humanities, languages, fine arts, among others. Courses that can be used to satisfy this requirement are listed here.
+    </description>
+    <link></link>
+    <credits>4</credits>
+    <category>3</category>
+    </HC>  
+    
+ 
+     
+</holderCourses>
