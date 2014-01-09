@@ -660,7 +660,7 @@ public class CourseModel{
 		
 	}
 	
-	public OfficialCourse removeClassWithYear(OfficialCourse c, int year, char semester) {
+	public GenericCourse removeClassWithYear(GenericCourse c, int year, char semester) {
 		char yearChar = Character.forDigit(year, 10); 
 		StringBuilder semesterChoice = new StringBuilder(2).append(yearChar).append(semester);
 		for (GenericCourse remc: semesterLists.get(semesterChoice.toString())) {

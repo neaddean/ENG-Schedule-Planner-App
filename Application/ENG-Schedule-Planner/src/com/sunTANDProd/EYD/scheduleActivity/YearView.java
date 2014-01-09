@@ -19,7 +19,6 @@ import android.widget.ScrollView;
 import android.widget.Space;
 import android.widget.TextView;
 
-import com.sunTANDProd.EYD.courseModel.Course;
 import com.sunTANDProd.EYD.courseModel.CourseModel;
 import com.sunTANDProd.EYD.courseModel.GenericCourse;
 import com.sunTANDProd.EYD.courseModel.OfficialCourse;
@@ -180,7 +179,7 @@ public class YearView extends LinearLayout{
 		//System.out.println(index);
 		horizontalLayout.addView(button,index+1);
 		classList.add(index, button);
-		CourseModel.getInstance().addClassWithYear(button.myCourse, year, semester, index);
+		CourseModel.getInstance().addClassWithYear((OfficialCourse)button.myCourse, year, semester, index);
 	}
 
 	public void addNewClassWithName(String s)
