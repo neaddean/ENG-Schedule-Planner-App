@@ -3,7 +3,6 @@ package com.sunTANDProd.EYD.menus;
 
 import java.util.concurrent.Semaphore;
 
-import com.sunTANDProd.EYD.courseModel.Course;
 import com.sunTANDProd.EYD.courseModel.CourseModel;
 import com.sunTANDProd.EYD.scheduleActivity.ScheduleActivity;
 import com.sunTANDproductions.eng_schedule_planner.R;

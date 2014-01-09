@@ -5,11 +5,10 @@ import java.util.Random;
 
 import com.sunTANDProd.EYD.Global.Global;
 import com.sunTANDProd.EYD.addClassActivity.addClassActivity;
-import com.sunTANDProd.EYD.courseModel.Course;
 import com.sunTANDProd.EYD.courseModel.CourseModel;
+import com.sunTANDProd.EYD.courseModel.GenericCourse;
 import com.sunTANDProd.EYD.menus.descriptionActivity;
 import com.sunTANDproductions.eng_schedule_planner.R;
-
 
 import android.app.ActivityOptions;
 import android.app.AlertDialog;
@@ -19,9 +18,7 @@ import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
 import android.content.Intent;
 import android.graphics.Color;
-
 import android.graphics.PorterDuff;
-
 import android.support.v4.view.GestureDetectorCompat;
 import android.view.GestureDetector;
 import android.view.GestureDetector.OnGestureListener;
@@ -30,7 +27,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
-
 import android.widget.RelativeLayout;
 
 public class ClassButton extends RelativeLayout implements GestureDetector.OnDoubleTapListener, OnGestureListener{
@@ -69,9 +65,9 @@ public class ClassButton extends RelativeLayout implements GestureDetector.OnDou
 	int buttonType; 
 	GestureDetectorCompat myDetector;
 	AlertDialog.Builder alertDialog;
-	Course myCourse;
+	GenericCourse myCourse;
 	
- 	public ClassButton(final Context context, int identifier, Course myCourse) {
+ 	public ClassButton(final Context context, int identifier, GenericCourse myCourse) {
 		super(context);
 		
 		//Set up variables
@@ -91,7 +87,7 @@ public class ClassButton extends RelativeLayout implements GestureDetector.OnDou
 		button.setLayoutParams(new LayoutParams(WIDTH,HEIGHT));
 		button.setTextSize(15);
 		if(buttonType == STANDARD_BUTTON)
-			button.setText(myCourse.getTitleWithSpace());
+			button.setText(myCourse.getFullTitle());
 		else if(buttonType == ADD_BUTTON)
 			button.setText("Add");
 		Random rnd = new Random(); 

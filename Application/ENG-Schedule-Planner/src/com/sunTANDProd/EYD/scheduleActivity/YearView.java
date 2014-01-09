@@ -5,12 +5,12 @@ import java.util.ArrayList;
 
 
 
+
+
 import android.animation.LayoutTransition;
 import android.content.Context;
 import android.graphics.Color;
-
 import android.view.DragEvent;
-
 import android.view.View;
 import android.widget.Button;
 import android.widget.HorizontalScrollView;
@@ -21,6 +21,8 @@ import android.widget.TextView;
 
 import com.sunTANDProd.EYD.courseModel.Course;
 import com.sunTANDProd.EYD.courseModel.CourseModel;
+import com.sunTANDProd.EYD.courseModel.GenericCourse;
+import com.sunTANDProd.EYD.courseModel.OfficialCourse;
 import com.sunTANDProd.EYD.scheduleActivity.ClassButton;
 
 public class YearView extends LinearLayout{
@@ -82,7 +84,7 @@ public class YearView extends LinearLayout{
 		beforeSpace.setLayoutParams(spaceParam);
 		
 		horizontalLayout.addView(beforeSpace);
-		ArrayList<Course> cs= CourseModel.getInstance().getClassWithYear(year, semester);
+		ArrayList<GenericCourse> cs= CourseModel.getInstance().getClassWithYear(year, semester);
 		System.out.println(cs.size());
 		if(cs != null)
 		for(int j = 0; j <cs.size(); j++)
@@ -190,7 +192,7 @@ public class YearView extends LinearLayout{
 		//NEED ADD THAT LATER
 	}
 	
-	public void addNewClassWithCourse(Course s)
+	public void addNewClassWithCourse(OfficialCourse s)
 	{
 		ClassButton myButton = new ClassButton(this.getContext(),ClassButton.STANDARD_BUTTON, s);
 		horizontalLayout.addView(myButton,horizontalLayout.getChildCount()-2);
@@ -202,8 +204,8 @@ public class YearView extends LinearLayout{
 	public void printCoursesInStore()
 	{
 		System.out.println("List:");
-		ArrayList<Course> c = CourseModel.getInstance().getClassWithYear(year, semester);
-		for(Course a : c)
+		ArrayList<GenericCourse> c = CourseModel.getInstance().getClassWithYear(year, semester);
+		for(GenericCourse a : c)
 		{
 			System.out.println(a.getTitle());
 		}

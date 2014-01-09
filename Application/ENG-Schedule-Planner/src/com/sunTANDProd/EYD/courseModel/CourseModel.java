@@ -25,7 +25,6 @@ import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
 import com.sunTANDProd.EYD.Global.Global;
-import com.sunTANDProd.EYD.courseModel.Course;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -38,14 +37,14 @@ import java.io.Reader;
 import java.io.StringReader;
 import java.io.StringWriter;
 
-public class CourseModel implements ModelAccessor{
+public class CourseModel{
 	
 	
 	//For all three types?
-	ArrayList<GenericCourse> courseList;
+	ArrayList<OfficialCourse> courseList;
 	
 	//For OfficialCourses only
-	ArrayList<OfficialCourse> officialCourseList;
+//	ArrayList<OfficialCourse> officialCourseList;
 	
 	//For HolderCourses only
 	ArrayList<HolderCourse> holderCourseList;
@@ -71,7 +70,7 @@ public class CourseModel implements ModelAccessor{
 //	public static HashMap <String, ArrayList<Course>> PLANNER_DEFAULT = BlankDefault();
 	
 	
-	public ArrayList<GenericCourse> getCourseList() {
+	public ArrayList<OfficialCourse> getCourseList() {
 		return courseList;
 	}
 	
@@ -95,42 +94,12 @@ public class CourseModel implements ModelAccessor{
 				//Perhaps we do dynamic casting to determine if it's a holder course or 
 				
 				//So since GenericCourse is abstract, this doesn't work...
-				GenericCourse retCourse  = new GenericCourse(gc);
+				GenericCourse retCourse  = new OfficialCourse(gc);
 				return retCourse;
 			}
 		}
 		return null;
 	}
-	
-	//getOfficialCourseByTitle
-	//Maybe this isn't necessary, but maybe it is...
-	public OfficialCourse getOCByTitle(String Title)
-	{
-		//when I make "officialCourseList" into "courseList" then they want the type of "oc" to be "GenericCourse"
-		for (OfficialCourse oc: officialCourseList) {
-			if (oc.getTitle().equals(Title))
-			{
-				OfficialCourse retCourse = new OfficialCourse(oc);
-				return retCourse;
-			}
-		}
-		return null;
-	}
-	
-	//getHolderCourseByTitle
-	//Again, might not be necessary, but I figured I'd make something that might be useful
-	public HolderCourse getHCByTitle(String Title)
-	{
-		for (HolderCourse hc: courseList) {
-			if(hc.getTitle().equals(Title))
-			{
-				HolderCourse retCourse = new HolderCourse(hc);
-				return retCourse;
-			}
-		}
-		return null;
-	}
-	
 
 	public ArrayList<String> getCourseTitleList()
 	{
@@ -138,54 +107,54 @@ public class CourseModel implements ModelAccessor{
 	}
 	//Blank Default Planning Sheet
 
-		HashMap <String, ArrayList<Course>> BlankDefault() {
-			HashMap <String, ArrayList<Course>> tempSemesters = new HashMap<String, ArrayList<Course>> ();
+		HashMap <String, ArrayList<GenericCourse>> BlankDefault() {
+			HashMap <String, ArrayList<GenericCourse>> tempSemesters = new HashMap<String, ArrayList<GenericCourse>> ();
 			
 			//Freshman Semester 1
-			ArrayList<Course> f1List = new ArrayList<Course>();
+			ArrayList<GenericCourse> f1List = new ArrayList<GenericCourse>();
 			tempSemesters.put("1f", f1List);
 			
 			//Freshman Semester 2
-			ArrayList<Course> s1List = new ArrayList<Course>();
+			ArrayList<GenericCourse> s1List = new ArrayList<GenericCourse>();
 			tempSemesters.put("1s", s1List);
 		
 			//Sophomore Semester 1
-			ArrayList<Course> f2List = new ArrayList<Course>();
+			ArrayList<GenericCourse> f2List = new ArrayList<GenericCourse>();
 			tempSemesters.put("2f", f2List);
 
 			
 			//Sophomore Semester 2
-			ArrayList<Course> s2List = new ArrayList<Course>();
+			ArrayList<GenericCourse> s2List = new ArrayList<GenericCourse>();
 			tempSemesters.put("2s", s2List);
 
 			
 			//Junior Semester 1
-			ArrayList<Course> f3List = new ArrayList<Course>();
+			ArrayList<GenericCourse> f3List = new ArrayList<GenericCourse>();
 			tempSemesters.put("3f", f3List);
 
 			
 			//Junior Semester 2
-			ArrayList<Course> s3List = new ArrayList<Course>();
+			ArrayList<GenericCourse> s3List = new ArrayList<GenericCourse>();
 			tempSemesters.put("3s", s3List);
 
 			
 			//Senior Semester 1
-			ArrayList<Course> f4List = new ArrayList<Course>();
+			ArrayList<GenericCourse> f4List = new ArrayList<GenericCourse>();
 			tempSemesters.put("4f", f4List);
 
 			
 			//Senior Semester 2
-			ArrayList<Course> s4List = new ArrayList<Course>();
+			ArrayList<GenericCourse> s4List = new ArrayList<GenericCourse>();
 			tempSemesters.put("4s", s4List);
 
 			//To initialize summer semesters as empty
-			ArrayList<Course> u1List = new ArrayList<Course>();
+			ArrayList<GenericCourse> u1List = new ArrayList<GenericCourse>();
 			tempSemesters.put("1u", u1List);
-			ArrayList<Course> u2List = new ArrayList<Course>();
+			ArrayList<GenericCourse> u2List = new ArrayList<GenericCourse>();
 			tempSemesters.put("2u", u2List);
-			ArrayList<Course> u3List = new ArrayList<Course>();
+			ArrayList<GenericCourse> u3List = new ArrayList<GenericCourse>();
 			tempSemesters.put("3u", u3List);
-			ArrayList<Course> u4List = new ArrayList<Course>();
+			ArrayList<GenericCourse> u4List = new ArrayList<GenericCourse>();
 			tempSemesters.put("4u", u4List);
 			
 			return tempSemesters;
@@ -201,9 +170,9 @@ public class CourseModel implements ModelAccessor{
 		
 		//Freshman Semester 1
 		ArrayList<GenericCourse> f1List = new ArrayList<GenericCourse>();
-		f1List.add(getOCByTitle("CASMA123"));
-		f1List.add(getOCByTitle("CASCH131"));
-		f1List.add(getOCByTitle("ENGEK100"));
+		f1List.add(getCourseByTitle("CASMA123"));
+		f1List.add(getCourseByTitle("CASCH131"));
+		f1List.add(getCourseByTitle("ENGEK100"));
 		f1List.add(getCourseByTitle("ENGEK128")); //Should this be given as a choice with EK127?
 		f1List.add(getCourseByTitle("CASWR100"));
 		tempSemesters.put("1f", f1List);
@@ -211,7 +180,7 @@ public class CourseModel implements ModelAccessor{
 		
 		
 		//Freshman Semester 2
-		ArrayList<Course> s1List = new ArrayList<Course>();
+		ArrayList<GenericCourse> s1List = new ArrayList<GenericCourse>();
 		s1List.add(getCourseByTitle("CASMA124"));
 		s1List.add(getCourseByTitle("CASPY211"));
 		s1List.add(getCourseByTitle("ENGEK131"));
@@ -221,7 +190,7 @@ public class CourseModel implements ModelAccessor{
 
 		
 		//Sophomore Semester 1
-		ArrayList<Course> f2List = new ArrayList<Course>();
+		ArrayList<GenericCourse> f2List = new ArrayList<GenericCourse>();
 		f2List.add(getCourseByTitle("CASMA225"));
 		f2List.add(getCourseByTitle("CASPY212"));
 		f2List.add(getCourseByTitle("ENGEK307"));
@@ -230,7 +199,7 @@ public class CourseModel implements ModelAccessor{
 
 		
 		//Sophomore Semester 2
-		ArrayList<Course> s2List = new ArrayList<Course>();
+		ArrayList<GenericCourse> s2List = new ArrayList<GenericCourse>();
 		s2List.add(getCourseByTitle("CASMA226"));
 		s2List.add(getCourseByTitle("ENGEC311"));
 		s2List.add(getCourseByTitle("ENGEK301"));
@@ -240,7 +209,7 @@ public class CourseModel implements ModelAccessor{
 
 		
 		//Junior Semester 1
-		ArrayList<Course> f3List = new ArrayList<Course>();
+		ArrayList<GenericCourse> f3List = new ArrayList<GenericCourse>();
 		f3List.add(getCourseByTitle("ENGEC381"));
 		f3List.add(getCourseByTitle("ENGEC413"));
 		f3List.add(getCourseByTitle("ENGEC410"));
@@ -250,7 +219,7 @@ public class CourseModel implements ModelAccessor{
 
 		
 		//Junior Semester 2
-		ArrayList<Course> s3List = new ArrayList<Course>();
+		ArrayList<GenericCourse> s3List = new ArrayList<GenericCourse>();
 		s3List.add(getCourseByTitle("ENGEC401"));
 		s3List.add(getCourseByTitle("ENGEC440"));
 		s3List.add(getCourseByTitle("ENGEC330"));
@@ -259,7 +228,7 @@ public class CourseModel implements ModelAccessor{
 
 		
 		//Senior Semester 1
-		ArrayList<Course> f4List = new ArrayList<Course>();
+		ArrayList<GenericCourse> f4List = new ArrayList<GenericCourse>();
 		f4List.add(getCourseByTitle("ENGEC463"));
 		//f4List.add(getCourseByTitle("Track Elective")); //ENGEC441, ENGEC447, ENGEC535, or ENGEC571
 		//f4List.add(getCourseByTitle("Breadth Elective"));
@@ -268,7 +237,7 @@ public class CourseModel implements ModelAccessor{
 
 		
 		//Senior Semester 2
-		ArrayList<Course> s4List = new ArrayList<Course>();
+		ArrayList<GenericCourse> s4List = new ArrayList<GenericCourse>();
 		s4List.add(getCourseByTitle("ENGEC464"));
 		//s4List.add(getCourseByTitle("Technical Elective"));
 		//s4List.add(getCourseByTitle("Technical Elective"));
@@ -276,62 +245,25 @@ public class CourseModel implements ModelAccessor{
 		tempSemesters.put("4s", s4List);
 
 		//To initialize summer semesters as empty
-		ArrayList<Course> u1List = new ArrayList<Course>();
+		ArrayList<GenericCourse> u1List = new ArrayList<GenericCourse>();
 		tempSemesters.put("1u", u1List);
-		ArrayList<Course> u2List = new ArrayList<Course>();
+		ArrayList<GenericCourse> u2List = new ArrayList<GenericCourse>();
 		tempSemesters.put("2u", u2List);
-		ArrayList<Course> u3List = new ArrayList<Course>();
+		ArrayList<GenericCourse> u3List = new ArrayList<GenericCourse>();
 		tempSemesters.put("3u", u3List);
-		ArrayList<Course> u4List = new ArrayList<Course>();
+		ArrayList<GenericCourse> u4List = new ArrayList<GenericCourse>();
 		tempSemesters.put("4u", u4List);
-		
-		/*Technical Elective Defined as:
-		Any ENGEC Classes
-		All ENG BE, EK, and ME courses at the 300-level and above
-		Pre-approved CAS courses:
-			CASAS414: Solar and Space Physics
-			CASCS440: Artificial Intelligence
-			CASCS480: Introduction to Computer Graphics
-			CASCS585: Image and Video Computing
-			CASMA511: Introduction to Analysis I
-			CASMA528: Introduction to Geometry
-			CASMA531: Computability and Logic
-			CASMA541: Modern Algebra I
-			CASMA583: Introduction to Stochastic Processes
-			CASPY451: Quantum Physics I
-			CASPY452: Quantum Physics II
-			SMG SI480:The Business of Technology Innovation						
-		*/
-		
-		/*Breadth Elective Defined as:
-		  Any ENG course 400 or above
-		  Any CS class 500 or above
-		  Pre-approved Courses:
-		 	ENGBE209: Principles of Molecular Cell Biology and Biotechnology
-		 	CASCS410: Advanced Software Systems 
-			CASPY313: Modern Physics 
-			CASCS411: Software Engineering 
-			CASCS212: Distributed Programming
-			CASCS431: Algorithms for Life Sciences 
-			CASCS235: Algebraic Algorithms 
-			CASCS440: Artificial Intelligence 
-			CASCS320: Concepts in Programming Languages 
-			CASCS451: Distributed Systems 
-			CASCS332: Elementary Theory of Computation 
-			CASCS460: Database Systems 
-			CASCS350: Fundamentals of Computer Systems
-			CASCS480: Computer Graphics
-		 */  
+ 
 		return tempSemesters;
 	}
 
 	//Electrical Engineering Planning Sheet
 	//Graduation Requirement: 130 credits
-	HashMap <String, ArrayList<Course>> EEDefault() {
-		HashMap <String, ArrayList<Course>> tempSemesters = new HashMap<String, ArrayList<Course>> ();
+	HashMap <String, ArrayList<GenericCourse>> EEDefault() {
+		HashMap <String, ArrayList<GenericCourse>> tempSemesters = new HashMap<String, ArrayList<GenericCourse>> ();
 		
 		//Freshman Semester 1
-		ArrayList<Course> f1List = new ArrayList<Course>();
+		ArrayList<GenericCourse> f1List = new ArrayList<GenericCourse>();
 		f1List.add(getCourseByTitle("CASMA123"));
 		f1List.add(getCourseByTitle("CASCH131"));
 		f1List.add(getCourseByTitle("ENGEK100"));
@@ -341,7 +273,7 @@ public class CourseModel implements ModelAccessor{
 
 		
 		//Freshman Semester 2
-		ArrayList<Course> s1List = new ArrayList<Course>();
+		ArrayList<GenericCourse> s1List = new ArrayList<GenericCourse>();
 		s1List.add(getCourseByTitle("CASMA124"));
 		s1List.add(getCourseByTitle("CASPY211"));
 		s1List.add(getCourseByTitle("ENGEK131"));
@@ -351,7 +283,7 @@ public class CourseModel implements ModelAccessor{
 
 		
 		//Sophomore Semester 1
-		ArrayList<Course> f2List = new ArrayList<Course>();
+		ArrayList<GenericCourse> f2List = new ArrayList<GenericCourse>();
 		f2List.add(getCourseByTitle("CASMA225"));
 		f2List.add(getCourseByTitle("CASPY212"));
 		f2List.add(getCourseByTitle("ENGEK307"));
@@ -370,7 +302,7 @@ public class CourseModel implements ModelAccessor{
 
 		
 		//Junior Semester 1
-		ArrayList<Course> f3List = new ArrayList<Course>();
+		ArrayList<GenericCourse> f3List = new ArrayList<GenericCourse>();
 		f3List.add(getCourseByTitle("ENGEC401"));
 		f3List.add(getCourseByTitle("ENGEC410"));
 		f3List.add(getCourseByTitle("ENGEC311"));
@@ -379,7 +311,7 @@ public class CourseModel implements ModelAccessor{
 
 		
 		//Junior Semester 2
-		ArrayList<Course> s3List = new ArrayList<Course>();
+		ArrayList<GenericCourse> s3List = new ArrayList<GenericCourse>();
 		s3List.add(getCourseByTitle("ENGEC381"));
 		//s3List.add(getCourseByTitle("Systems Elective")); //ENGEC402, ENGEC415, or ENGEC416
 		//tempList.add(getCourseByTitle("Electronics Elective")); //ENGEC412, ENGEC417, ENGEC450, ENGEC470, ENGEC571, or ENGEC583
@@ -388,7 +320,7 @@ public class CourseModel implements ModelAccessor{
 
 		
 		//Senior Semester 1
-		ArrayList<Course> f4List = new ArrayList<Course>();
+		ArrayList<GenericCourse> f4List = new ArrayList<GenericCourse>();
 		f4List.add(getCourseByTitle("ENGEC463"));
 		//f4List.add(getCourseByTitle("Technical Elective"));
 		//f4List.add(getCourseByTitle("Computer Elective")); //ENGEC327, ENGEC413, or ENGEC441
@@ -397,31 +329,22 @@ public class CourseModel implements ModelAccessor{
 
 		
 		//Senior Semester 2
-		ArrayList<Course> s4List = new ArrayList<Course>();
+		ArrayList<GenericCourse> s4List = new ArrayList<GenericCourse>();
 		s4List.add(getCourseByTitle("ENGEC464"));
 		//s4List.add(getCourseByTitle("Technical Elective"));
 		//s4List.add(getCourseByTitle("Technical Elective"));
 		//s4List.add(getCourseByTitle("General Education Elective"));
-		/*Technical Elective Defined as:
-		Any ENGEC Classes
-		All ENG BE, EK, and ME courses at the 300-level and above
-		Pre-approved CAS courses:
-			CASAS414: Solar and Space Physics
-			CASCS440: Artificial Intelligence
-			CASCS480: Introduction to Computer Graphics
-			SMG SI480:The Business of Technology Innovation
-								
-		*/
+
 		tempSemesters.put("4s", s4List);
 		
 		//To initialize summer semesters as empty
-		ArrayList<Course> u1List = new ArrayList<Course>();
+		ArrayList<GenericCourse> u1List = new ArrayList<GenericCourse>();
 		tempSemesters.put("1u", u1List);
-		ArrayList<Course> u2List = new ArrayList<Course>();
+		ArrayList<GenericCourse> u2List = new ArrayList<GenericCourse>();
 		tempSemesters.put("2u", u2List);
-		ArrayList<Course> u3List = new ArrayList<Course>();
+		ArrayList<GenericCourse> u3List = new ArrayList<GenericCourse>();
 		tempSemesters.put("3u", u3List);
-		ArrayList<Course> u4List = new ArrayList<Course>();
+		ArrayList<GenericCourse> u4List = new ArrayList<GenericCourse>();
 		tempSemesters.put("4u", u4List);
 		
 		return tempSemesters;
@@ -429,12 +352,12 @@ public class CourseModel implements ModelAccessor{
 	
 	//Biomedical Engineering Planning Sheet
 	//Graduation Requirement: 136 Credits
-	HashMap <String, ArrayList<Course>> BMEDefault() {
-		HashMap <String, ArrayList<Course>> tempSemesters = new HashMap<String, ArrayList<Course>> ();
+	HashMap <String, ArrayList<GenericCourse>> BMEDefault() {
+		HashMap <String, ArrayList<GenericCourse>> tempSemesters = new HashMap<String, ArrayList<GenericCourse>> ();
 
 		
 		//Freshman Semester 1
-		ArrayList<Course> f1List = new ArrayList<Course>();
+		ArrayList<GenericCourse> f1List = new ArrayList<GenericCourse>();
 		f1List.add(getCourseByTitle("CASMA123"));
 		f1List.add(getCourseByTitle("ENGEK100"));
 		f1List.add(getCourseByTitle("CASCH101"));
@@ -444,7 +367,7 @@ public class CourseModel implements ModelAccessor{
 
 		
 		//Freshman Semester 2
-		ArrayList<Course> s1List = new ArrayList<Course>();
+		ArrayList<GenericCourse> s1List = new ArrayList<GenericCourse>();
 		s1List.add(getCourseByTitle("CASMA124"));
 		s1List.add(getCourseByTitle("CASPY211"));
 		s1List.add(getCourseByTitle("CASCH102"));
@@ -454,7 +377,7 @@ public class CourseModel implements ModelAccessor{
 
 		
 		//Sophomore Semester 1
-		ArrayList<Course> f2List = new ArrayList<Course>();
+		ArrayList<GenericCourse> f2List = new ArrayList<GenericCourse>();
 		f2List.add(getCourseByTitle("CASMA225"));
 		f2List.add(getCourseByTitle("CASPY212"));
 		f2List.add(getCourseByTitle("ENGEK307"));
@@ -464,7 +387,7 @@ public class CourseModel implements ModelAccessor{
 
 		
 		//Sophomore Semester 2
-		ArrayList<Course> s2List = new ArrayList<Course>();
+		ArrayList<GenericCourse> s2List = new ArrayList<GenericCourse>();
 		s2List.add(getCourseByTitle("CASMA226"));
 		s2List.add(getCourseByTitle("ENGBE209"));
 		s2List.add(getCourseByTitle("ENGEK301"));
@@ -474,7 +397,7 @@ public class CourseModel implements ModelAccessor{
 
 		
 		//Junior Semester 1
-		ArrayList<Course> f3List = new ArrayList<Course>();
+		ArrayList<GenericCourse> f3List = new ArrayList<GenericCourse>();
 		f3List.add(getCourseByTitle("ENGEK424"));
 		f3List.add(getCourseByTitle("CASBI315"));
 		f3List.add(getCourseByTitle("ENGBE491"));
@@ -484,7 +407,7 @@ public class CourseModel implements ModelAccessor{
 
 		
 		//Junior Semester 2
-		ArrayList<Course> s3List = new ArrayList<Course>();
+		ArrayList<GenericCourse> s3List = new ArrayList<GenericCourse>();
 		//s3List.add(getCourseByTitle("Biomedical Elective"));
 		//s3List.add(getCourseByTitle("Fields Elective")); //ENGBE419, ENGBE420, ENGBE435, ENGBE436
 		s3List.add(getCourseByTitle("ENGBE492"));
@@ -494,7 +417,7 @@ public class CourseModel implements ModelAccessor{
 
 		
 		//Senior Semester 1
-		ArrayList<Course> f4List = new ArrayList<Course>();
+		ArrayList<GenericCourse> f4List = new ArrayList<GenericCourse>();
 		//f4List.add(getCourseByTitle("Engineering Elective"));
 		//f4List.add(getCourseByTitle("Professional Elective"));
 		f4List.add(getCourseByTitle("ENGBE467"));
@@ -504,7 +427,7 @@ public class CourseModel implements ModelAccessor{
 
 		
 		//Senior Semester 2
-		ArrayList<Course> s4List = new ArrayList<Course>();
+		ArrayList<GenericCourse> s4List = new ArrayList<GenericCourse>();
 		//s4List.add(getCourseByTitle("Biomedical Elective"));
 		//s4List.add(getCourseByTitle("Biomedical Elective"));
 		//s4List.add(getCourseByTitle("Professional Elective"));
@@ -512,67 +435,24 @@ public class CourseModel implements ModelAccessor{
 		tempSemesters.put("4s", s4List);
 
 		//To initialize summer semesters as empty
-		ArrayList<Course> u1List = new ArrayList<Course>();
+		ArrayList<GenericCourse> u1List = new ArrayList<GenericCourse>();
 		tempSemesters.put("1u", u1List);
-		ArrayList<Course> u2List = new ArrayList<Course>();
+		ArrayList<GenericCourse> u2List = new ArrayList<GenericCourse>();
 		tempSemesters.put("2u", u2List);
-		ArrayList<Course> u3List = new ArrayList<Course>();
+		ArrayList<GenericCourse> u3List = new ArrayList<GenericCourse>();
 		tempSemesters.put("3u", u3List);
-		ArrayList<Course> u4List = new ArrayList<Course>();
+		ArrayList<GenericCourse> u4List = new ArrayList<GenericCourse>();
 		tempSemesters.put("4u", u4List);
-		
-		/*
-		Professional Electives Defined as:
-		All BE, EC, EK, and ME 300 level or above courses
-		CAS CH 203, CAS CH 204 and all CAS CH 300, 400 and 500 level courses (except: CAS CH 391, 392, 401, 402, 491, 492). 
-		All CAS PY 300 and 400 level courses (except PY 371, 401, 402, 482, 491, 492). 
-		All CAS MA 300, 400, and 500 level courses (except CAS MA 381, 401, 402). 
-		All CAS BI 300, 400 and 500 level courses (except BI 315, 371, 372, 391, 392) 
-		ENG BF 527 Applications in Bioinformatics SAR HS 360 Muscle Biology in Health & Disease CAS CH 629 � DNA Nanotechnology 
-		ENG EK 156 Design & Manufacture SMG SI 480 The Business of Technology Innovation
-		 */
-		
-		/* Engineering Electives Defined as:
-		 * 
-			ENG EC 311 Intro to Logic Design 
-			ENG EC 312 Computer Organization 
-			ENG EC 412 Analog Electronics 
-			ENG EC 415 Communications Systems 
-			ENG EC 416 Intro Digital Signal Processing 
-			ENG EC 450 Microprocessors 
-			ENG EC 455 Electromagnetic Systems I 
-			ENG EC 471 Physics Semiconductor Devices 
-			ENG EC 481 Nanomatrls & Nanotechnology 
-			ENG EC 505 Stochastic Processes 
-			ENG EC 580 Modern Active Circuit Design 
-			ENG ME 302 Engineering Mechanics II 
-			ENG ME 304 Energy & Thermodynamics 
-			ENG ME 305 Mechanics of Materials 
-			ENG ME 309 Structural Mechanics 
-			ENG ME 400 Engineering Mathematics 
-			ENG ME 407** Comp-Aided Design & Mnfcture 
-			ENG ME 419 Heat Transfer 
-			ENG ME 441 Mechanical Vibrations 
-			ENG ME 502 Intellectual Assets 
-			ENG ME 555 MEMS: Fabrication & Materials 
-			ENG EC 456 Electromagnetic Systems II ENG ME 306 Material Science 
-			Additionally, any Biomedical Elective (below) that has not been used to satisfy the BME Elective requirement (except BF 527) may be used as an Engineering Elective. 
-		 * 
-		 */
-		
-		/*Biomedical Engineering Electives
-		 * 
-		 * 
-		 */
+
 		return tempSemesters;
 	}
 	
 	
-	HashMap <String, ArrayList<Course>> TestDefault(){
-		HashMap <String, ArrayList<Course>> tempSemesters = new HashMap<String, ArrayList<Course>> ();
+	HashMap <String, ArrayList<GenericCourse>> TestDefault(){
+		HashMap <String, ArrayList<GenericCourse>> tempSemesters = new HashMap<String, ArrayList<GenericCourse>> ();
 		
 		
-		ArrayList<Course> tempList = new ArrayList<Course>();
+		ArrayList<GenericCourse> tempList = new ArrayList<GenericCourse>();
 		tempList.add(getCourseByTitle("CASMA123"));
 		tempList.add(getCourseByTitle("CASCH131"));
 		tempList.add(getCourseByTitle("ENGEK100"));
@@ -585,12 +465,12 @@ public class CourseModel implements ModelAccessor{
 	
 	//Mechanical Engineering Planning Sheet
 	//Graduation Requirement: 136 Credits
-	HashMap <String, ArrayList<Course>> MEDefault() {
-		HashMap <String, ArrayList<Course>> tempSemesters = new HashMap<String, ArrayList<Course>> ();
+	HashMap <String, ArrayList<GenericCourse>> MEDefault() {
+		HashMap <String, ArrayList<GenericCourse>> tempSemesters = new HashMap<String, ArrayList<GenericCourse>> ();
 	
 		
 		//Freshman Semester 1
-		ArrayList<Course> f1List = new ArrayList<Course>();
+		ArrayList<GenericCourse> f1List = new ArrayList<GenericCourse>();
 		f1List.add(getCourseByTitle("CASMA123"));
 		f1List.add(getCourseByTitle("CASCH131"));
 		f1List.add(getCourseByTitle("ENGEK100"));
@@ -600,7 +480,7 @@ public class CourseModel implements ModelAccessor{
 
 		
 		//Freshman Semester 2
-		ArrayList<Course> s1List = new ArrayList<Course>();
+		ArrayList<GenericCourse> s1List = new ArrayList<GenericCourse>();
 		s1List.add(getCourseByTitle("CASMA124"));
 		s1List.add(getCourseByTitle("CASPY211"));
 		s1List.add(getCourseByTitle("ENGEK131"));
@@ -610,7 +490,7 @@ public class CourseModel implements ModelAccessor{
 
 		
 		//Sophomore Semester 1
-		ArrayList<Course> f2List = new ArrayList<Course>();
+		ArrayList<GenericCourse> f2List = new ArrayList<GenericCourse>();
 		f2List.add(getCourseByTitle("CASMA225"));
 		f2List.add(getCourseByTitle("CASPY212"));
 		f2List.add(getCourseByTitle("ENGEK301"));
@@ -620,7 +500,7 @@ public class CourseModel implements ModelAccessor{
 
 		
 		//Sophomore Semester 2
-		ArrayList<Course> s2List = new ArrayList<Course>();
+		ArrayList<GenericCourse> s2List = new ArrayList<GenericCourse>();
 		s2List.add(getCourseByTitle("CASMA226"));
 		//s2List.add(getCourseByTitle("Natural Science Elective"));
 		s2List.add(getCourseByTitle("ENGEK307"));
@@ -630,7 +510,7 @@ public class CourseModel implements ModelAccessor{
 
 		
 		//Junior Semester 1
-		ArrayList<Course> f3List = new ArrayList<Course>();
+		ArrayList<GenericCourse> f3List = new ArrayList<GenericCourse>();
 		f3List.add(getCourseByTitle("ENGME359"));
 		f3List.add(getCourseByTitle("ENGME305"));
 		f3List.add(getCourseByTitle("ENGME304"));
@@ -640,7 +520,7 @@ public class CourseModel implements ModelAccessor{
 
 		
 		//Junior Semester 2
-		ArrayList<Course> s3List = new ArrayList<Course>();
+		ArrayList<GenericCourse> s3List = new ArrayList<GenericCourse>();
 		s3List.add(getCourseByTitle("ENGME360"));
 		s3List.add(getCourseByTitle("ENGME302"));
 		s3List.add(getCourseByTitle("ENGME306"));
@@ -650,7 +530,7 @@ public class CourseModel implements ModelAccessor{
 
 		
 		//Senior Semester 1
-		ArrayList<Course> f4List = new ArrayList<Course>();
+		ArrayList<GenericCourse> f4List = new ArrayList<GenericCourse>();
 		f4List.add(getCourseByTitle("ENGME460"));
 		//f4List.add(getCourseByTitle("Advanced Elective"));
 		//f4List.add(getCourseByTitle("Advanced Elective"));
@@ -659,7 +539,7 @@ public class CourseModel implements ModelAccessor{
 
 		
 		//Senior Semester 2
-		ArrayList<Course> s4List = new ArrayList<Course>();
+		ArrayList<GenericCourse> s4List = new ArrayList<GenericCourse>();
 		s4List.add(getCourseByTitle("ENGME461"));
 		//s4List.add(getCourseByTitle("Advanced Elective"));
 		//s4List.add(getCourseByTitle("Advanced Elective"));
@@ -667,51 +547,20 @@ public class CourseModel implements ModelAccessor{
 		tempSemesters.put("4s", s4List);
 
 		//To initialize summer semesters as empty
-		ArrayList<Course> u1List = new ArrayList<Course>();
+		ArrayList<GenericCourse> u1List = new ArrayList<GenericCourse>();
 		tempSemesters.put("1u", u1List);
-		ArrayList<Course> u2List = new ArrayList<Course>();
+		ArrayList<GenericCourse> u2List = new ArrayList<GenericCourse>();
 		tempSemesters.put("2u", u2List);
-		ArrayList<Course> u3List = new ArrayList<Course>();
+		ArrayList<GenericCourse> u3List = new ArrayList<GenericCourse>();
 		tempSemesters.put("3u", u3List);
-		ArrayList<Course> u4List = new ArrayList<Course>();
+		ArrayList<GenericCourse> u4List = new ArrayList<GenericCourse>();
 		tempSemesters.put("4u", u4List);
-		
-		/* Advanced Elective Defined as:
-		  	All ENG courses 300 level or above, (without overlap)
-			Additional Pre-approved:
-				CAS AS 414 � Solar and Space Physics 
-				SMG SI 480 � The Business of Technology Innovation. 
-			Other 300-level or above Mathematics and Natural Science courses may be acceptable by petition
-		 */
-		
-		/*
-		 * The Natural Science Elective:
-			ENG BE 209 � Principles of Molecular Cell Biology & Biotechnology 
-			Astronomy (AS) - 200-level or higher course or any 100-level course that includes a lab 
-			Biology (BI) - Any 200-level or higher course or any 100-level course that includes a lab 
-			Neuroscience (NE) - All 
-			Chemistry (CH) - Any 200-level or higher course 
-			Physics (PY) - Any 300-level or higher course, CAS PY 231- The Physics in Music 
-			Earth Science (ES) - Any 300-level or higher course. Also the following: 
-				CAS ES 101 � Dynamic Earth CAS ES 142 � Intro Beach & Shoreline Processes 
- 				CAS ES 105 � Environmental Earth Sciences CAS ES 144 - Oceanography 
- 				CAS ES 140 � Earthquakes, Volcanoes, Natural Disasters CAS ES 222 - Mineralogy 
-			The following GE courses: 
- 				CAS GE 101 � Natural Environ: Atmosphere CAS GE 375 � Intro Quant Environmental Modeling 
- 				CAS GE 104 � Natural Environ: Physical Landscape CAS GE 440 � Digital Image Proc & Remote Sensing 
- 				CAS GE 110 � Our Changing Planet CAS GE 445 � Physical Models in Remote Sensing 
- 				CAS GE 302 � Remote Sensing of the Environment CAS GE 448 � Remote Sensing of Vegetation 
- 				CAS GE 307 � Biogeography CAS GE 456 � Terrestrial Ecosystems & Carbon Cycle 
- 				CAS GE 310 � Climate & the Environment CAS GE 483 � Geodynamics II: Fluids & Fluid Transport 
- 				CAS GE 365 � Intro Geographic Information Systems 
 
-		 */
-	
 		return tempSemesters;
 	}
 	
 	public void printStuff() {
-		for (Course c : courseList) {
+		for (GenericCourse c : courseList) {
 			System.out.println("name : " + c.getFullTitle());
 			System.out.println(courseList.indexOf(c));
 		}
@@ -737,14 +586,14 @@ public class CourseModel implements ModelAccessor{
 	 
 		NodeList nList = doc.getElementsByTagName("course");
 		
-		ArrayList <Course> tempCourseList = new ArrayList<Course> ();
+		ArrayList<OfficialCourse> tempCourseList = new ArrayList<OfficialCourse> ();
 		ArrayList<String> tempCourseTitle = new ArrayList<String>();
 		
 		for (int temp = 0; temp < nList.getLength(); temp++) {
 			 
 			Node nNode = nList.item(temp);
 			
-			Course tempCourse = new Course();
+			OfficialCourse tempCourse = new OfficialCourse();
 	 
 			if (nNode.getNodeType() == Node.ELEMENT_NODE) {
 	 
@@ -760,7 +609,7 @@ public class CourseModel implements ModelAccessor{
 				ArrayList<String> prereqlist = new ArrayList<String>(Arrays.asList(prereqs.split(" ")));
 				tempCourse.prereqs = (ArrayList<String>) prereqlist;
 				tempCourse.credits = Integer.parseInt(eElement.getElementsByTagName("credits").item(0).getTextContent());
-				tempCourse.user = false;
+				tempCourse.isCustom = false;
 				
 				tempCourseList.add(tempCourse);
 				tempCourseTitle.add(tempCourse.getFullTitle());
@@ -777,80 +626,44 @@ public class CourseModel implements ModelAccessor{
 	    e.printStackTrace();
 	    }
 		
-		 HashMap <String, ArrayList<Course>> tempSemesters = new HashMap<String, ArrayList<Course>> ();
-		 
-		 ArrayList <String> semesterLabels = new ArrayList<String>();
-		 semesterLabels.add("1f");
-		 semesterLabels.add("1s");
-		 semesterLabels.add("1u");
-		 semesterLabels.add("2f");
-		 semesterLabels.add("2s");
-		 semesterLabels.add("2u");
-		 semesterLabels.add("3f");
-		 semesterLabels.add("3s");
-		 semesterLabels.add("3u");
-		 semesterLabels.add("4f");
-		 semesterLabels.add("4s");
-		 semesterLabels.add("4u");
-		 
-		 int i = 0;
-		 
-		 //Tim : I added some line to make an array of Strings of Course names For display on serach
-		 
-		 ArrayList<Course> tempList = new ArrayList<Course>();
-
-		 
-		 for (String mystr : semesterLabels) {
-			 tempList.clear();
-			 for (int j = 0; j < 5; j++) { 
-//				 System.out.println(i);
-				 tempList.add(courseList.get(i));
-				 i++;
-			 }
-			 tempSemesters.put(mystr, new ArrayList<Course>(tempList));
-		 }
 			if(courseTitleList == null){
 				courseTitleList = new ArrayList<String>();
-				for(Course c: courseList)
+				for(GenericCourse c: courseList)
 				{
 					courseTitleList.add(c.getFullTitle());
 				}
 			}
-		// semesterLists = tempSemesters;
-		 //Tim : Added to change default stores
-		 //System.out.println(getCourseByTitle("ENGEK127"));
-		semesterLists = new HashMap<String, ArrayList<Course>> ();
-			//semesterLists = BMEDefault();
+		semesterLists = new HashMap<String, ArrayList<GenericCourse>> ();
 	}
 
-	public ArrayList<Course> getClassWithYear(int year, char semester) {
+	public ArrayList<GenericCourse> getClassWithYear(int year, char semester) {
 	char yearChar = Character.forDigit(year, 10); 
 	StringBuilder semesterChoice = new StringBuilder(2).append(yearChar).append(semester);
 	//System.out.println(semesterLists);
 	return semesterLists.get(semesterChoice.toString());
 }
 
-	public void addClassWithYearToEnd(Course course, int year, char semester) {
+	public void addClassWithYearToEnd(OfficialCourse course, int year, char semester) {
 		char yearChar = Character.forDigit(year, 10); 
 		StringBuilder semesterChoice = new StringBuilder(2).append(yearChar).append(semester);
-		semesterLists.get(semesterChoice.toString()).add(new Course(course));
+		semesterLists.get(semesterChoice.toString()).add(new OfficialCourse(course));
 
 		this.save();
 	}
 	
-	public void addClassWithYear(Course course, int year, char semester, int position) {
+	public void addClassWithYear(OfficialCourse course, int year, char semester, int position) {
 		char yearChar = Character.forDigit(year, 10); 
 		StringBuilder semesterChoice = new StringBuilder(2).append(yearChar).append(semester);
-		semesterLists.get(semesterChoice.toString()).add(position,new Course(course));
+		semesterLists.get(semesterChoice.toString()).add(position,new OfficialCourse(course));
 
 		this.save();
 		
 	}
 	
-	public Course removeClassWithYear(Course c, int year, char semester) {
+	public OfficialCourse removeClassWithYear(OfficialCourse c, int year, char semester) {
 		char yearChar = Character.forDigit(year, 10); 
 		StringBuilder semesterChoice = new StringBuilder(2).append(yearChar).append(semester);
-		for (Course remc: semesterLists.get(semesterChoice.toString())) {
+		for (GenericCourse remc: semesterLists.get(semesterChoice.toString())) {
 			if (c.getTitle().equals(remc.getTitle())) {
 				semesterLists.get(semesterChoice.toString()).remove(remc);
 				this.save();
@@ -866,9 +679,9 @@ public class CourseModel implements ModelAccessor{
 		this.saveState("savefile", Global.myContext);
 	}
 	
-	public Course addCourse(String name, String school, String dept, String cid,
+	public OfficialCourse addCourse(String name, String school, String dept, String cid,
 			String description, ArrayList<String> prereqs, int credits, Context context) {
-		Course c = new Course(name, school, dept, cid,
+		OfficialCourse c = new OfficialCourse(name, school, dept, cid,
 				description, prereqs, credits);
 		courseList.add(c);
 		courseTitleList.add(c.getFullTitle());
@@ -878,6 +691,7 @@ public class CourseModel implements ModelAccessor{
 	}
 	
 	
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public void printLists() {
 		 for (Map.Entry entry : semesterLists.entrySet()) {
 			 ArrayList<GenericCourse> iterList = (ArrayList<GenericCourse>) entry.getValue();
@@ -886,12 +700,10 @@ public class CourseModel implements ModelAccessor{
 			 }
 		 }
 	}
-	@Override
 	public void printCourseArray(ArrayList<GenericCourse> list) {
 		// TODO Auto-generated method stub
 		
 	}
-	@Override
 	public int getIndexWithTitle(String s) {
 		return courseTitleList.indexOf(s);
 	}
@@ -908,8 +720,8 @@ public class CourseModel implements ModelAccessor{
 				Element coursesElement = doc1.createElement("courses");
 				doc1.appendChild(coursesElement);
 				
-				for (Course c: courseList) {
-					if (c.user) {
+				for (OfficialCourse c: courseList) {
+					if (c.isCustom) {
 						Element courseEL = doc1.createElement("course");
 						
 						Element cname = doc1.createElement("name");
@@ -999,7 +811,7 @@ public class CourseModel implements ModelAccessor{
 			 String tempString;
 			 for (String semString: semesterLabels) {
 				 tempString = new String();
-				 for (Course c: semesterLists.get(semString)) {
+				 for (GenericCourse c: semesterLists.get(semString)) {
 					 if (c!= null)
 						 if (c.completed)
 							 tempString = tempString + c.getTitle() + "!T ";
@@ -1072,7 +884,7 @@ public class CourseModel implements ModelAccessor{
 				 
 				Node nNode = nList.item(temp);
 				
-				Course tempCourse = new Course();
+				OfficialCourse tempCourse = new OfficialCourse();
 		 
 				if (nNode.getNodeType() == Node.ELEMENT_NODE) {
 		 
@@ -1088,7 +900,7 @@ public class CourseModel implements ModelAccessor{
 					ArrayList<String> prereqlist = new ArrayList<String>(Arrays.asList(prereqs.split(" ")));
 					tempCourse.prereqs = (ArrayList<String>) prereqlist;
 					tempCourse.credits = Integer.parseInt(eElement.getElementsByTagName("credits").item(0).getTextContent());
-					tempCourse.user = true;
+					tempCourse.isCustom = true;
 					
 					courseList.add(tempCourse);
 					courseTitleList.add(tempCourse.getFullTitle());
@@ -1123,7 +935,7 @@ public class CourseModel implements ModelAccessor{
 			
 		//	ArrayList<String> tempSemCourses = new ArrayList<String>();
 			
-			HashMap<String, ArrayList<Course>> semesterListsTEMP = new HashMap<String, ArrayList<Course>>();		
+			HashMap<String, ArrayList<GenericCourse>> semesterListsTEMP = new HashMap<String, ArrayList<GenericCourse>>();		
 				 
 				Node sNode = sList.item(0);
 				//tempSemCourses.clear();
@@ -1137,9 +949,9 @@ public class CourseModel implements ModelAccessor{
 		                     String semCourseList = nd.getTextContent();
 		                     ArrayList<String> tempSemCourses = new ArrayList<String>(Arrays.asList(new String(semCourseList).split(" ")));
 
-							ArrayList<Course> tempSemCourseList = new ArrayList<Course>();
+							ArrayList<GenericCourse> tempSemCourseList = new ArrayList<GenericCourse>();
 							//ArrayList<String> tempSemCoursesSep;
-							Course tempc;
+							GenericCourse tempc;
 							for (String courseTitle: tempSemCourses) {
 								//System.out.println(courseTitle);
 								if (courseTitle.isEmpty()) {
@@ -1147,7 +959,7 @@ public class CourseModel implements ModelAccessor{
 								}
 								ArrayList<String> tempSemCoursesSep = new ArrayList<String>(Arrays.asList(new String(courseTitle).split("!")));
 								
-								tempc = new Course(getCourseByTitle(tempSemCoursesSep.get(0)));
+								tempc = new OfficialCourse(getCourseByTitle(tempSemCoursesSep.get(0)));
 								if (tempSemCoursesSep.get(1).equals("T"))
 									tempc.completed = true;
 								else if (tempSemCoursesSep.get(1).equals("F"))
@@ -1155,7 +967,7 @@ public class CourseModel implements ModelAccessor{
 								tempSemCourseList.add(tempc);
 							}
 				//			System.out.println(nd.getNodeName());
-							semesterListsTEMP.put(new StringBuffer(nd.getNodeName()).reverse().toString(), new ArrayList<Course>(tempSemCourseList)); 
+							semesterListsTEMP.put(new StringBuffer(nd.getNodeName()).reverse().toString(), new ArrayList<GenericCourse>(tempSemCourseList)); 
 				}
 			semesterLists = semesterListsTEMP;
 			fis.close();

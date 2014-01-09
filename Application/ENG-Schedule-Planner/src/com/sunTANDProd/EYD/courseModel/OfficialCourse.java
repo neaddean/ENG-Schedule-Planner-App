@@ -31,12 +31,12 @@ public class OfficialCourse extends GenericCourse {
 		this.category = oc.category;
 		this.editCategory = false; //Official courses cannot have category changed by user
 		this.completed = oc.completed;
-		this.isCustom = isCustom;
+		this.isCustom = oc.isCustom;
 	}
 	
 	//Will be used with the XML to create all of the course objects
 	public OfficialCourse(String name, String school, String dept, String cid, String description, 
-			ArrayList<String> prereqs, double credits, boolean isCustom)
+			ArrayList<String> prereqs, double credits)
 	{
 		this.name = name;
 		this.school = school;
@@ -50,7 +50,7 @@ public class OfficialCourse extends GenericCourse {
 		this.editCategory = false;
 		setCategory();
 		this.completed = false;
-		this.isCustom = isCustom;	//user was set at true in Course, so maybe this should be true as well
+		this.isCustom = true;
 	}
 
 	public OfficialCourse() {

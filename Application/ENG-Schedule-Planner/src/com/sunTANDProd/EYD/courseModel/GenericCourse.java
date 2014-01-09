@@ -1,5 +1,7 @@
 package com.sunTANDProd.EYD.courseModel;
 
+import java.util.ArrayList;
+
 public abstract class GenericCourse {
 
 	public final static int CATEGORY_ENG_CORE = 0;
@@ -83,6 +85,11 @@ public abstract class GenericCourse {
 		public String getDescription()
 		{
 			return description;
+		}
+
+		public ArrayList<String> getPrereqs() {
+			// TODO Auto-generated method stub
+			return null;
 		}
 
 	

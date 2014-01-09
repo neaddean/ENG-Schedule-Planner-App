@@ -1,10 +1,9 @@
-apackage com.sunTANDProd.EYD.addClassActivity;
+package com.sunTANDProd.EYD.addClassActivity;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 
 import com.sunTANDProd.EYD.Global.Global;
-import com.sunTANDProd.EYD.courseModel.Course;
 import com.sunTANDProd.EYD.courseModel.CourseModel;
 import com.sunTANDProd.EYD.scheduleActivity.YearView;
 import com.sunTANDproductions.eng_schedule_planner.R;
