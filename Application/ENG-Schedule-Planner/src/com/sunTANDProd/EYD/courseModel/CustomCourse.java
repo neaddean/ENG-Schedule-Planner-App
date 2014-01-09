@@ -39,16 +39,13 @@ public class CustomCourse extends GenericCourse {
 		this.dept = cc.dept;
 		this.cid = cc.cid;
 		
-		this.title = cc.title;
-		this.iconTitle = cc.iconTitle;
-		this.fullTitle = cc.fullTitle;
 		
 		this.description = cc.description;
 		this.credits = cc.credits;
 		
 		this.category = cc.category;
 		this.editCategory = cc.editCategory;
-		this.user = cc.user;
+		//this.user = cc.user;
 		this.completed = cc.completed;
 	}
 	
@@ -59,32 +56,28 @@ public class CustomCourse extends GenericCourse {
 		this.dept = dept;
 		this.cid = cid;
 		
-		setTitle();
-		setIconTitle();
-		setFullTitle();
-		
 		this.description = description;
 		this.credits = credits;
 		
 		setCategory();
 		this.editCategory = true;
-		this.user = true;
+		//this.user = true;
 		this.completed = false;
 	}
 	
-	public void setTitle()
+	public String getTitle()
 	{
-		this.title = school+dept+cid;
+		return school+dept+cid;
 	}
 
-	public void setIconTitle()
+	public String getIconTitle()
 	{
-		this.iconTitle = school+"\n"+dept+cid;
+		return school+"\n"+dept+cid;
 	}
 
-	public void setFullTitle()
+	public String getFullTitle()
 	{
-		this.fullTitle = school + " " + dept + cid + ": " + name;
+		return school + " " + dept + cid + ": " + name;
 	}
 	
 	//The user is able to make changes here

@@ -41,12 +41,14 @@ import java.io.StringWriter;
 public class CourseModel implements ModelAccessor{
 	
 	
-	//
+	//For all three types?
 	ArrayList<GenericCourse> courseList;
 	
-	//ArrayList<OfficialCourse> officialCourseList;
+	//For OfficialCourses only
+	ArrayList<OfficialCourse> officialCourseList;
 	
-	//ArrayList<HolderCourse> holderCourseList;
+	//For HolderCourses only
+	ArrayList<HolderCourse> holderCourseList;
 	
 	HashMap<String, ArrayList<GenericCourse>> semesterLists;
 
@@ -84,12 +86,15 @@ public class CourseModel implements ModelAccessor{
 		return instance;
 	}
 	
-	//Returns the course contained in courseList (from XML)
+	//So there are methods below that are for the inherited classes
+	//However, if there is a switch statement of sorts, maybe it can just be one function that works for all 3
 	public GenericCourse getCourseByTitle(String Title) {
 		for (GenericCourse gc: courseList) {
 			if (gc.getTitle().equals(Title)) {
 				//May we need to initialize this differently?
 				//Perhaps we do dynamic casting to determine if it's a holder course or 
+				
+				//So since GenericCourse is abstract, this doesn't work...
 				GenericCourse retCourse  = new GenericCourse(gc);
 				return retCourse;
 			}
@@ -97,9 +102,11 @@ public class CourseModel implements ModelAccessor{
 		return null;
 	}
 	
-	//getOfficialCourseByTitle 
+	//getOfficialCourseByTitle
+	//Maybe this isn't necessary, but maybe it is...
 	public OfficialCourse getOCByTitle(String Title)
 	{
+		//when I make "officialCourseList" into "courseList" then they want the type of "oc" to be "GenericCourse"
 		for (OfficialCourse oc: officialCourseList) {
 			if (oc.getTitle().equals(Title))
 			{
@@ -111,9 +118,10 @@ public class CourseModel implements ModelAccessor{
 	}
 	
 	//getHolderCourseByTitle
+	//Again, might not be necessary, but I figured I'd make something that might be useful
 	public HolderCourse getHCByTitle(String Title)
 	{
-		for (HolderCourse hc: holderCourseList) {
+		for (HolderCourse hc: courseList) {
 			if(hc.getTitle().equals(Title))
 			{
 				HolderCourse retCourse = new HolderCourse(hc);
@@ -192,10 +200,10 @@ public class CourseModel implements ModelAccessor{
 		
 		
 		//Freshman Semester 1
-		ArrayList<Course> f1List = new ArrayList<Course>();
-		f1List.add(getCourseByTitle("CASMA123"));
-		f1List.add(getCourseByTitle("CASCH131"));
-		f1List.add(getCourseByTitle("ENGEK100"));
+		ArrayList<GenericCourse> f1List = new ArrayList<GenericCourse>();
+		f1List.add(getOCByTitle("CASMA123"));
+		f1List.add(getOCByTitle("CASCH131"));
+		f1List.add(getOCByTitle("ENGEK100"));
 		f1List.add(getCourseByTitle("ENGEK128")); //Should this be given as a choice with EK127?
 		f1List.add(getCourseByTitle("CASWR100"));
 		tempSemesters.put("1f", f1List);

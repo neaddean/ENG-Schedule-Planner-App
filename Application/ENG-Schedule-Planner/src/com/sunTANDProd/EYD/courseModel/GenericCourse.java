@@ -31,7 +31,7 @@ public abstract class GenericCourse {
 		double credits; //Number of credits
 		int category; //For the color
 		boolean editCategory; //If the user can edit Category or if preset
-		boolean user; //Purpose unknown
+		//boolean user; //Purpose unknown
 		public boolean completed; //For checkmark
 
 	//Constructors
@@ -43,7 +43,7 @@ public abstract class GenericCourse {
 			this.credits = gc.credits;
 			this.category = gc.category;
 			this.editCategory = gc.editCategory;
-			this.user = gc.user;
+			//this.user = gc.user;
 			this.completed = gc.completed;
 		}
 		

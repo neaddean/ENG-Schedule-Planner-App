@@ -10,11 +10,14 @@ public class OfficialCourse extends GenericCourse {
 	ArrayList <String> prereqs; //Prerequisites for the OfficialCourse
 	boolean isCustom; //Rather than have separate CustomCourse Class, to distinguish
 	
+	
+	//This showed up when I created the derived class. I'm not sure what to do with it
 	public OfficialCourse(GenericCourse gc) {
 		super(gc);
 
 	}
-
+	
+	//I made this one modeling after "Course" but perhaps it's not ideal
 	public OfficialCourse(OfficialCourse oc) {
 		
 		this.school = oc.school;
@@ -27,7 +30,6 @@ public class OfficialCourse extends GenericCourse {
 		this.credits = oc.credits;
 		this.category = oc.category;
 		this.editCategory = false; //Official courses cannot have category changed by user
-		this.user = oc.user;
 		this.completed = oc.completed;
 		this.isCustom = isCustom;
 	}
@@ -47,9 +49,8 @@ public class OfficialCourse extends GenericCourse {
 		
 		this.editCategory = false;
 		setCategory();
-		this.user = true;
 		this.completed = false;
-		this.isCustom = isCustom;	
+		this.isCustom = isCustom;	//user was set at true in Course, so maybe this should be true as well
 	}
 
 	public OfficialCourse() {
@@ -76,6 +77,7 @@ public void setCategory(int cat)
 	}
 }
 
+//Following the scheme provided in the Planning Sheet to color the icons 
 public void setCategory()
 {
 	if (school.equals("CAS")){
@@ -113,21 +115,26 @@ public void setCategory()
 	}
 }
 
+
+//Accessors for various Title formats
+
+//Used to find a course to add to the HashMap in CourseModel
 public String getTitle()
 {
 	return school+dept+cid;
 }
 
+//As appears on the icons
 public String getIconTitle()
 {
 	return school+"\n"+dept+cid;
 }
 
+//As appears in menus and in the search
 public String getFullTitle()
 {
 	return school + " " + dept + cid + ": " + name;
 }
-
 	
 	
 }

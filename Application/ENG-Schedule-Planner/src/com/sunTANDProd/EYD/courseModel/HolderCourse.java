@@ -12,7 +12,7 @@ public class HolderCourse extends GenericCourse {
 	double credits; //Number of credits
 	int category; //For the color
 	boolean editCategory; //If the user can edit Category or if preset
-	boolean user; //Purpose unknown
+	//boolean user; //Purpose unknown
 	public boolean completed; //For checkmark
 	*/
 	
@@ -42,7 +42,7 @@ public class HolderCourse extends GenericCourse {
 		this.credits = hc.credits;
 		this.category = hc.category;
 		this.editCategory = hc.editCategory;
-		this.user = hc.user;
+		//this.user = hc.user;
 		this.completed = hc.completed;
 		
 	}
@@ -61,7 +61,7 @@ public class HolderCourse extends GenericCourse {
 		
 		this.category = category;
 		this.editCategory = false;
-		this.user = true;
+		//this.user = true;
 		this.completed = false;
 	}
 	
@@ -79,6 +79,6 @@ public class HolderCourse extends GenericCourse {
 	//The full title will be the same as the name
 	public String getFullTitle()
 	{
-		this.fullTitle = name;
+		return name;
 	}
 }

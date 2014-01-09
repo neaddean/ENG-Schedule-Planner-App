@@ -1,4 +1,4 @@
-package com.sunTANDProd.EYD.addClassActivity;
+apackage com.sunTANDProd.EYD.addClassActivity;
 
 import java.util.ArrayList;
 import java.util.HashMap;
