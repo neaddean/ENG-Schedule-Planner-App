@@ -1158,13 +1158,20 @@ public class CourseModel implements ModelAccessor{
 		
 	}
 	
-	public boolean checkFiles(Context context) {
+	public boolean checkSaveFile(Context context) {
 		String[] fileListString = context.getApplicationContext().fileList();
-	if (fileListString.length > 0)
-		return true;
-	else
-		return false;
-		
+		if (Arrays.asList(fileListString).contains("savefile"))
+			return true;
+		else
+			return false;
+	}
+	
+	public boolean checkUserCourseFile(Context context) {
+		String[] fileListString = context.getApplicationContext().fileList();
+		if (Arrays.asList(fileListString).contains("usercourses"))
+			return true;
+		else
+			return false;
 	}
 	
 	
