@@ -100,7 +100,8 @@ public class CourseModel{
 		}
 		return null;
 	}
-
+	
+	
 	public ArrayList<String> getCourseTitleList()
 	{
 		return courseTitleList;
