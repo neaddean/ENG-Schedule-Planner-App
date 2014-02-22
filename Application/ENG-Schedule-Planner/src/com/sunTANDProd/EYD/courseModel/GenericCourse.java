@@ -24,6 +24,7 @@ public abstract class GenericCourse {
 	//Maybe we should add another color for the Electives while they are a generic course and not an actual course yet
 	//Ideally this would be the pale purple color that appears on the academic planning sheets
 	
+	//I'm demonstrating the benefit of a commit!!!! :)
 	
 	
 	//Data Fields
