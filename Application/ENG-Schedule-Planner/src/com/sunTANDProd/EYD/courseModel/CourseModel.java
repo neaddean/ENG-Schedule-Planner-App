@@ -41,13 +41,13 @@ public class CourseModel{
 	
 	
 	//For all three types?
-	ArrayList<OfficialCourse> courseList;
+	ArrayList<GenericCourse> courseList;
 	
-	//For OfficialCourses only
-//	ArrayList<OfficialCourse> officialCourseList;
+	//For GenericCourses only
+//	ArrayList<GenericCourse> GenericCourseList;
 	
 	//For HolderCourses only
-	ArrayList<HolderCourse> holderCourseList;
+	ArrayList<GenericCourse> holderCourseList;
 	
 	HashMap<String, ArrayList<GenericCourse>> semesterLists;
 
@@ -70,7 +70,7 @@ public class CourseModel{
 //	public static HashMap <String, ArrayList<Course>> PLANNER_DEFAULT = BlankDefault();
 	
 	
-	public ArrayList<OfficialCourse> getCourseList() {
+	public ArrayList<GenericCourse> getCourseList() {
 		return courseList;
 	}
 	
@@ -94,7 +94,7 @@ public class CourseModel{
 				//Perhaps we do dynamic casting to determine if it's a holder course or 
 				
 				//So since GenericCourse is abstract, this doesn't work...
-				GenericCourse retCourse  = new OfficialCourse(gc);
+				GenericCourse retCourse  = new GenericCourse(gc);
 				return retCourse;
 			}
 		}
@@ -587,14 +587,15 @@ public class CourseModel{
 	 
 		NodeList nList = doc.getElementsByTagName("course");
 		
-		ArrayList<OfficialCourse> tempCourseList = new ArrayList<OfficialCourse> ();
+		ArrayList<GenericCourse> tempCourseList = new ArrayList<GenericCourse> ();
 		ArrayList<String> tempCourseTitle = new ArrayList<String>();
 		
 		for (int temp = 0; temp < nList.getLength(); temp++) {
 			 
 			Node nNode = nList.item(temp);
 			
-			OfficialCourse tempCourse = new OfficialCourse();
+			//NRM March 2014: new method for loading courses with annie's revamp.  Comment Dean's code
+			/*GenericCourse tempCourse = new GenericCourse();
 	 
 			if (nNode.getNodeType() == Node.ELEMENT_NODE) {
 	 
@@ -615,14 +616,26 @@ public class CourseModel{
 				tempCourseList.add(tempCourse);
 				tempCourseTitle.add(tempCourse.getFullTitle());
 			}
-	 
-		
+			*/
+			if (nNode.getNodeType() == Node.ELEMENT_NODE) {
+				 
+				Element eElement = (Element) nNode;
+				String prereqs = eElement.getElementsByTagName("prereqs").item(0).getTextContent();
+				ArrayList<String> prereqlist = new ArrayList<String>(Arrays.asList(prereqs.split(" ")));
+				
+				GenericCourse tempCourse = new GenericCourse(eElement.getAttribute("name"), eElement.getElementsByTagName("school").item(0).getTextContent(),
+																eElement.getElementsByTagName("dept").item(0).getTextContent().toString(), eElement.getElementsByTagName("cid").item(0).getTextContent(),
+																eElement.getElementsByTagName("description").item(0).getTextContent(), (ArrayList<String>) prereqlist, 
+																Integer.parseInt(eElement.getElementsByTagName("credits").item(0).getTextContent()));
+				tempCourseList.add(tempCourse);
+				tempCourseTitle.add(tempCourse.getFullTitle());
+			}
 		}
 		
 		courseList = tempCourseList;
 		courseTitleList = tempCourseTitle;
-		
-	} 
+	}
+	 
 	catch (Exception e) {
 	    e.printStackTrace();
 	    }
@@ -644,18 +657,18 @@ public class CourseModel{
 	return semesterLists.get(semesterChoice.toString());
 }
 
-	public void addClassWithYearToEnd(OfficialCourse course, int year, char semester) {
+	public void addClassWithYearToEnd(GenericCourse courseToAdd, int year, char semester) {
 		char yearChar = Character.forDigit(year, 10); 
 		StringBuilder semesterChoice = new StringBuilder(2).append(yearChar).append(semester);
-		semesterLists.get(semesterChoice.toString()).add(new OfficialCourse(course));
+		semesterLists.get(semesterChoice.toString()).add(new GenericCourse(courseToAdd));
 
 		this.save();
 	}
 	
-	public void addClassWithYear(OfficialCourse course, int year, char semester, int position) {
+	public void addClassWithYear(GenericCourse course, int year, char semester, int position) {
 		char yearChar = Character.forDigit(year, 10); 
 		StringBuilder semesterChoice = new StringBuilder(2).append(yearChar).append(semester);
-		semesterLists.get(semesterChoice.toString()).add(position,new OfficialCourse(course));
+		semesterLists.get(semesterChoice.toString()).add(position,new GenericCourse(course));
 
 		this.save();
 		
@@ -680,9 +693,9 @@ public class CourseModel{
 		this.saveState("savefile", Global.myContext);
 	}
 	
-	public OfficialCourse addCourse(String name, String school, String dept, String cid,
+	public GenericCourse addCourse(String name, String school, String dept, String cid,
 			String description, ArrayList<String> prereqs, int credits, Context context) {
-		OfficialCourse c = new OfficialCourse(name, school, dept, cid,
+		GenericCourse c = new GenericCourse(name, school, dept, cid,
 				description, prereqs, credits);
 		courseList.add(c);
 		courseTitleList.add(c.getFullTitle());
@@ -721,7 +734,7 @@ public class CourseModel{
 				Element coursesElement = doc1.createElement("courses");
 				doc1.appendChild(coursesElement);
 				
-				for (OfficialCourse c: courseList) {
+				for (GenericCourse c: courseList) {
 					if (c.isCustom) {
 						Element courseEL = doc1.createElement("course");
 						
@@ -814,9 +827,9 @@ public class CourseModel{
 				 tempString = new String();
 				 for (GenericCourse c: semesterLists.get(semString)) {
 					 if (c!= null)
-						 if (c.completed)
+						 if (c.isCompleted)
 							 tempString = tempString + c.getTitle() + "!T ";
-						 else if (!c.completed)
+						 else if (!c.isCompleted)
 							 tempString = tempString + c.getTitle() + "!F ";
 				 }
 				 Element tempEl = doc.createElement(new StringBuffer(semString).reverse().toString());
@@ -856,7 +869,7 @@ public class CourseModel{
 		} finally {} 
 	}
 
-	public void loadState(String filename, Context context) {
+	/*public void loadState(String filename, Context context) {
 		try {
 			FileInputStream fis1 = context.getApplicationContext().openFileInput("usercourses");
 			 InputStreamReader inputStreamReader1 = new InputStreamReader(fis1);
@@ -885,7 +898,7 @@ public class CourseModel{
 				 
 				Node nNode = nList.item(temp);
 				
-				OfficialCourse tempCourse = new OfficialCourse();
+				GenericCourse tempCourse = new GenericCourse();
 		 
 				if (nNode.getNodeType() == Node.ELEMENT_NODE) {
 		 
@@ -960,7 +973,7 @@ public class CourseModel{
 								}
 								ArrayList<String> tempSemCoursesSep = new ArrayList<String>(Arrays.asList(new String(courseTitle).split("!")));
 								
-								tempc = new OfficialCourse(getCourseByTitle(tempSemCoursesSep.get(0)));
+								tempc = new GenericCourse(getCourseByTitle(tempSemCoursesSep.get(0)));
 								if (tempSemCoursesSep.get(1).equals("T"))
 									tempc.completed = true;
 								else if (tempSemCoursesSep.get(1).equals("F"))
@@ -987,7 +1000,7 @@ public class CourseModel{
 			e.printStackTrace();
 		}	
 	}
-
+*/
 	
 	public final static int PLANNER_BME = 0;
 	public final static int PLANNER_EE = 1;

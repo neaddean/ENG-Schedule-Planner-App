@@ -117,7 +117,7 @@ public class ClassButton extends RelativeLayout implements GestureDetector.OnDou
 		params.bottomMargin = 10;
 		this.addView(check,params);
 		if(buttonType == STANDARD_BUTTON)
-			setCompleted(myCourse.completed);
+			setCompleted(myCourse.isCompleted);
 		else
 			check.setVisibility(View.INVISIBLE);
  	}
@@ -142,7 +142,7 @@ public class ClassButton extends RelativeLayout implements GestureDetector.OnDou
 				check.setVisibility(View.VISIBLE);
 			}
 			
-			myCourse.completed = isCompleted;
+			myCourse.isCompleted = isCompleted;
 			CourseModel.getInstance().save();
 		}
 		
@@ -198,6 +198,12 @@ public class ClassButton extends RelativeLayout implements GestureDetector.OnDou
 		if(buttonType == STANDARD_BUTTON)
 		{
 			toggleCompleted();
+			Context context = this.getContext();
+			CharSequence text = myCourse.getTitle();
+			int duration = Toast.LENGTH_SHORT;
+
+			Toast toast = Toast.makeText(context, text, duration);
+			toast.show();
 		}
 		return false;
 	}

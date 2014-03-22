@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import com.sunTANDProd.EYD.Global.Global;
 import com.sunTANDProd.EYD.courseModel.CourseModel;
-import com.sunTANDProd.EYD.courseModel.OfficialCourse;
+import com.sunTANDProd.EYD.courseModel.GenericCourse;
 import com.sunTANDProd.EYD.scheduleActivity.YearView;
 import com.sunTANDproductions.eng_schedule_planner.R;
 
@@ -69,7 +69,7 @@ public class addCustomClassActivity extends Activity {
                     }
                     
                     Intent i = new Intent();
-                    OfficialCourse newCustomCourse = CourseModel.getInstance().addCourse(editClass.getText().toString(), editSchool.getText().toString().toUpperCase(), 
+                    GenericCourse newCustomCourse = CourseModel.getInstance().addCourse(editClass.getText().toString(), editSchool.getText().toString().toUpperCase(), 
                     		editDept.getText().toString().toUpperCase(), 
                     		editId.getText().toString(), 
                     		new String(), new ArrayList<String>(), 

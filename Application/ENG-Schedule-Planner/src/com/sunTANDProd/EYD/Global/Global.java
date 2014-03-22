@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import android.content.Context;
 
-import com.sunTANDProd.EYD.courseModel.OfficialCourse;
+import com.sunTANDProd.EYD.courseModel.GenericCourse;
 import com.sunTANDProd.EYD.scheduleActivity.YearView;
 
 
@@ -13,7 +13,7 @@ public class Global {
 	//Everything should be static
 	 
 	public static YearView YearToAddClass;
-	public static OfficialCourse courseToAdd;
+	public static GenericCourse courseToAdd;
 	
 	public static String courseDescriptionTitle;
 	public static String courseDescriptionText;

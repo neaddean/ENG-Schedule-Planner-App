@@ -21,7 +21,6 @@ import android.widget.TextView;
 
 import com.sunTANDProd.EYD.courseModel.CourseModel;
 import com.sunTANDProd.EYD.courseModel.GenericCourse;
-import com.sunTANDProd.EYD.courseModel.OfficialCourse;
 import com.sunTANDProd.EYD.scheduleActivity.ClassButton;
 
 public class YearView extends LinearLayout{
@@ -179,7 +178,7 @@ public class YearView extends LinearLayout{
 		//System.out.println(index);
 		horizontalLayout.addView(button,index+1);
 		classList.add(index, button);
-		CourseModel.getInstance().addClassWithYear((OfficialCourse)button.myCourse, year, semester, index);
+		CourseModel.getInstance().addClassWithYear((GenericCourse)button.myCourse, year, semester, index);
 	}
 
 	public void addNewClassWithName(String s)
@@ -191,12 +190,12 @@ public class YearView extends LinearLayout{
 		//NEED ADD THAT LATER
 	}
 	
-	public void addNewClassWithCourse(OfficialCourse s)
+	public void addNewClassWithCourse(GenericCourse courseToAdd)
 	{
-		ClassButton myButton = new ClassButton(this.getContext(),ClassButton.STANDARD_BUTTON, s);
+		ClassButton myButton = new ClassButton(this.getContext(),ClassButton.STANDARD_BUTTON, courseToAdd);
 		horizontalLayout.addView(myButton,horizontalLayout.getChildCount()-2);
 		classList.add(myButton);
-		CourseModel.getInstance().addClassWithYearToEnd(s, year, semester);
+		CourseModel.getInstance().addClassWithYearToEnd(courseToAdd, year, semester);
 	}
 
 
