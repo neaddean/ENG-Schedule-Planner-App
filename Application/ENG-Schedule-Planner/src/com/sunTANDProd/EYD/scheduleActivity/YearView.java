@@ -82,6 +82,7 @@ public class YearView extends LinearLayout{
 		beforeSpace.setLayoutParams(spaceParam);
 		
 		horizontalLayout.addView(beforeSpace);
+		if (year != CourseModel.EXTERNAL_CREDITS){
 		ArrayList<GenericCourse> cs= CourseModel.getInstance().getClassWithYear(year, semester);
 		System.out.println(cs.size());
 		if(cs != null)
@@ -92,7 +93,7 @@ public class YearView extends LinearLayout{
 			horizontalLayout.addView(myButton);
 			classList.add(myButton);}
 		}
-		
+		}
 	
 		ClassButton addButton = new ClassButton(context, ClassButton.ADD_BUTTON, null);;
 		horizontalLayout.addView(addButton);

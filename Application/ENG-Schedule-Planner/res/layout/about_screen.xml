@@ -22,10 +22,6 @@
         android:typeface="sans"
         android:textSize="30sp"
         android:textColor="#ff000000"
-        android:shadowDx="2"
-        android:shadowDy="2"
-        android:shadowColor="#ff000000"
-        android:shadowRadius="10"
         />
     
     <TextView

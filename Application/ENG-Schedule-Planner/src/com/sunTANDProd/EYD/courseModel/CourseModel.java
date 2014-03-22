@@ -56,6 +56,7 @@ public class CourseModel{
 	public final static char FALL = 'f';
 	public final static char SPRING = 's';
 	public final static char SUMMER = 'u';
+	public final static char NOTIME = 'e';
 	
 	public final static int EXTERNAL_CREDITS = 0;
 	public final static int FRESHMAN_YEAR = 1;
